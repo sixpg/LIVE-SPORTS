@@ -3,47 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M3U8 Player</title>
+  <title>HLS Player</title>
+
   <style>
     body {
-      background: #111;
-      color: white;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
       text-align: center;
-      font-family: Arial, sans-serif;
-      margin-top: 50px;
     }
     video {
-      width: 80%;
-      max-width: 800px;
-      border: 3px solid #444;
+      width: 90%;
+      max-width: 900px;
       border-radius: 10px;
+      outline: none;
+      border: 2px solid #333;
+      background: #000;
+    }
+    input {
+      width: 90%;
+      max-width: 700px;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #0078ff;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #005fcc;
     }
   </style>
 </head>
+
 <body>
-  <h1>SAMOA VS QATAR</h1>
+  <h1>🎥 HLS (.m3u8) Player</h1>
   <video id="video" controls></video>
+
+  <input
+    type="text"
+    id="streamURL"
+    placeholder="Enter .m3u8 stream URL here and click Play"
+  />
+  <button onclick="loadStream()">Play Stream</button>
 
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
     const video = document.getElementById('video');
-    const videoSrc = 'https://in-mc-fdlive.fancode.com/mumbai/137192_english_hls_6f824acfd384332ta-di_h264/index.m3u8'; //
+    const input = document.getElementById('streamURL');
 
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+    function loadStream() {
+      const url = input.value.trim();
+      if (!url) {
+        alert('Please enter a .m3u8 URL!');
+        return;
+      }
+
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          video.play();
+        });
+        hls.on(Hls.Events.ERROR, function (event, data) {
+          console.error('HLS error:', data);
+          alert('Error loading stream. Check console for details.');
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
         video.play();
-      });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      // For Safari
-      video.src = videoSrc;
-      video.play();
-    } else {
-      alert('Your browser does not support HLS playback.');
+      } else {
+        alert('Your browser does not support HLS playback.');
+      }
     }
   </script>
 </body>
 </html>
-
