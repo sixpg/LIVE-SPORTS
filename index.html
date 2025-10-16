@@ -1,24 +1,341 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Video.js HLS Player</title>
-  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-</head>
-<body style="background:#111; color:white; text-align:center;">
-  <h2>Video.js HLS Player</h2>
-  
-  <video
-    id="my-video"
-    class="video-js vjs-default-skin"
-    controls
-    preload="auto"
-    width="800"
-    height="450"
-    data-setup='{}'>
-    <source src="https://in-mc-fdlive.fancode.com/mumbai/137192_english_hls_6f824acfd384332ta-di_h264/index.m3u8" type="application/x-mpegURL" />
-  </video>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Sports Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 50px 0;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .event-header {
+            position: relative;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .event-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+
+        .event-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .event-status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .status-live {
+            background: #4CAF50;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .status-upcoming {
+            background: #FF9800;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .event-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .event-name {
+            color: #4ecdc4;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .start-time {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .teams {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .team {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .vs {
+            margin: 0 15px;
+            font-size: 1.2rem;
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .no-events {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ccc;
+            margin: 50px 0;
+        }
+
+        .error {
+            text-align: center;
+            color: #ff6b6b;
+            font-size: 1.1rem;
+            margin: 50px 0;
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .event-card {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Live Sports Events</h1>
+            <p>Click on any event to watch live</p>
+        </div>
+        
+        <div id="loading" class="loading">
+            Loading events...
+        </div>
+        
+        <div id="events-container" class="events-grid" style="display: none;">
+        </div>
+        
+        <div id="error" class="error" style="display: none;">
+        </div>
+        
+        <div id="no-events" class="no-events" style="display: none;">
+            No events available at the moment.
+        </div>
+    </div>
+
+    <script>
+        const JSON_URL = 'https://raw.githubusercontent.com/drmlive/fancode-live-events/main/fancode.json';
+        const NEW_DOMAIN = 'https://abcd-foxcon-72bi.vercel.app/';
+        const REDIRECT_BASE = 'https://scoobyff.github.io/test/redirect?url=';
+
+        async function fetchEvents() {
+            const loadingEl = document.getElementById('loading');
+            const eventsContainer = document.getElementById('events-container');
+            const errorEl = document.getElementById('error');
+            const noEventsEl = document.getElementById('no-events');
+
+            try {
+                const response = await fetch(JSON_URL);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch events');
+                }
+                
+                const data = await response.json();
+                const events = data.matches || []; // Access the matches array
+                
+                loadingEl.style.display = 'none';
+                
+                if (events.length === 0) {
+                    noEventsEl.style.display = 'block';
+                    return;
+                }
+                
+                eventsContainer.style.display = 'grid';
+                renderEvents(events);
+                
+            } catch (error) {
+                console.error('Error fetching events:', error);
+                loadingEl.style.display = 'none';
+                errorEl.textContent = 'Failed to load events. Please try again later.';
+                errorEl.style.display = 'block';
+            }
+        }
+
+        function renderEvents(events) {
+            const container = document.getElementById('events-container');
+            
+            events.forEach(event => {
+                const eventCard = createEventCard(event);
+                container.appendChild(eventCard);
+            });
+        }
+
+        function createEventCard(event) {
+            const card = document.createElement('div');
+            card.className = 'event-card';
+            
+            // Determine actual status based on stream availability
+            let displayStatus = event.status;
+            let statusClass = 'status-upcoming';
+            
+            if (event.adfree_url && event.status === 'LIVE') {
+                statusClass = 'status-live';
+                displayStatus = 'LIVE';
+                
+                // Create the modified URL
+                const adfreeUrl = event.adfree_url;
+                const urlPath = adfreeUrl.replace(/^https?:\/\/[^\/]+\/mumbai\//, '');
+                const newUrl = NEW_DOMAIN + urlPath;
+                const finalUrl = REDIRECT_BASE + encodeURIComponent(newUrl);
+                
+                card.addEventListener('click', () => {
+                    window.open(finalUrl, '_blank');
+                });
+                card.style.cursor = 'pointer';
+            } else {
+                // If no stream URL or not live, show as upcoming
+                displayStatus = 'UPCOMING';
+                statusClass = 'status-upcoming';
+                card.style.cursor = 'default';
+                card.style.opacity = '0.8';
+            }
+            
+            card.innerHTML = `
+                <div class="event-header" style="background-image: url('${event.src}')">
+                    <div class="event-category">${event.event_category}</div>
+                    <div class="event-status ${statusClass}">${displayStatus}</div>
+                </div>
+                <div class="event-content">
+                    <div class="event-title">${event.match_name}</div>
+                    <div class="event-details">
+                        <div class="event-name">${event.event_name}</div>
+                        <div class="start-time">${event.startTime}</div>
+                    </div>
+                    <div class="teams">
+                        <div class="team">${event.team_1}</div>
+                        <div class="vs">VS</div>
+                        <div class="team">${event.team_2}</div>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', fetchEvents);
+        
+        // Refresh events every 30 seconds
+        setInterval(fetchEvents, 30 * 1000);
+    </script>
 </body>
 </html>
