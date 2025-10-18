@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Player</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/YC3Npf10/image.webp">
+   <link rel="stylesheet" href="Player.css">
+</head>
+
+<body>  
+	<script src="https://cdn.jwplayer.com/libraries/SAHhwvZq.js"></script>
+<script> jwplayer.defaults = jwDefaults; </script>
+    <div id="jwplayerDiv"></div>
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const mpdLink = queryParams.get('mpd');
+        const m3u8Link = queryParams.get('m3u8');
+        const keyId = queryParams.get('keyId');
+        const key = queryParams.get('key');
+
+        function playMedia() {
+            let playerConfig = {
+            	
+            skin: {
+       name: "Denver",
+       active: "RED", /* kuch bhi colour dalke experiment kro*/
+       inactive: "white",/* kuch bhi colour dalke experiment kro*/
+       background: "black"/* kuch bhi colour dalke experiment kro*/
+    },
+                "autostart": true,
+                "preload": "none",
+                "repeat": true,
+                "Volume": "100",
+                "mute": false,
+                "stretching": "exactfit",
+                "width": "100%",
+                "cast": {},
+                "setPip": false
+            };
+
+            if (mpdLink) {
+                playerConfig = {
+                    ...playerConfig,
+                    file: mpdLink,
+                    type: "dash",
+                    drm: {
+                        clearkey: {
+                            key: key,
+                            keyId: keyId
+                        }
+                    }
+                };
+            } else if (m3u8Link) {
+                playerConfig = {
+                    ...playerConfig,
+                    file: m3u8Link,
+                    type: "hls",
+                    drm: {}
+                };
+            }
+
+            const playerInstance = jwplayer('jwplayerDiv').setup(playerConfig);
+        }
+
+        window.onload = playMedia;
+    </script>
+<div id="loading" class="loading">
+    <div class="loading-text">
+      <span class="loading-text-words">D</span>
+      <span class="loading-text-words">E</span>
+      <span class="loading-text-words">N</span>
+      <span class="loading-text-words">E</span>
+      <span class="loading-text-words">V</span>
+      <span class="loading-text-words">E</span>
+      <span class="loading-text-words">R</span>
+    </div>
+</div>
+
+<script>
+setTimeout(videovisible, 5000)
+function videovisible() {
+    document.getElementById('loading').style.display = 'none'
+}
+</script> 
+
+</body>
+</html>
