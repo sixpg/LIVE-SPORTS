@@ -5,8 +5,8 @@
 <title>TS IPTV Player</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- HLS.js -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15"></script>
+<!-- MPEG-TS Player -->
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
 
 <style>
 body {
@@ -17,23 +17,17 @@ body {
 }
 
 header {
+  background: #11162a;
   padding: 12px;
   text-align: center;
   font-size: 20px;
-  background: #11162a;
   font-weight: bold;
-}
-
-#player-container {
-  padding: 10px;
 }
 
 video {
   width: 100%;
-  max-height: 60vh;
+  height: 60vh;
   background: black;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #00e5ff;
 }
 
 #channels {
@@ -43,9 +37,9 @@ video {
 }
 
 .channel {
+  background: #161c35;
   padding: 8px;
   margin-bottom: 6px;
-  background: #161c35;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -60,24 +54,22 @@ video {
 
 <header>TS IPTV LIVE PLAYER</header>
 
-<div id="player-container">
-  <video id="video" controls autoplay></video>
-</div>
+<video id="video" controls autoplay></video>
 
 <div id="channels"></div>
 
 <script>
-// 🔗 PUT YOUR M3U8 PLAYLIST URL HERE
+// 🔗 YOUR PLAYLIST (contains .ts links)
 const PLAYLIST_URL = "https://dhoomxc.pages.dev/live_ts_only.m3u8";
 
 const video = document.getElementById("video");
-const channelList = document.getElementById("channels");
-let hls;
+const channelsDiv = document.getElementById("channels");
+let player = null;
 
 // Load playlist
 fetch(PLAYLIST_URL)
-  .then(res => res.text())
-  .then(data => parseM3U(data));
+  .then(r => r.text())
+  .then(parseM3U);
 
 function parseM3U(data) {
   const lines = data.split("\n");
@@ -94,28 +86,28 @@ function parseM3U(data) {
       const div = document.createElement("div");
       div.className = "channel";
       div.textContent = name || "Channel";
-      div.onclick = () => playStream(line);
-      channelList.appendChild(div);
+      div.onclick = () => playTS(line);
+      channelsDiv.appendChild(div);
     }
   });
 }
 
-function playStream(url) {
-  if (hls) {
-    hls.destroy();
+function playTS(url) {
+  if (player) {
+    player.destroy();
   }
 
-  if (Hls.isSupported()) {
-    hls = new Hls({
-      lowLatencyMode: true,
-      enableWorker: true
+  if (mpegts.getFeatureList().mseLivePlayback) {
+    player = mpegts.createPlayer({
+      type: 'mpegts',
+      url: url,
+      isLive: true
     });
-    hls.loadSource(url);
-    hls.attachMedia(video);
-  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-    video.src = url;
+    player.attachMediaElement(video);
+    player.load();
+    player.play();
   } else {
-    alert("HLS not supported in this browser");
+    alert("Your browser does not support MPEG-TS playback");
   }
 }
 </script>
