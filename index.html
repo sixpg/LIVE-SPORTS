@@ -5,7 +5,11 @@
 <title>TS IPTV Player</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- MPEG-TS Player -->
+<!-- Plyr -->
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+<!-- MPEGTS -->
 <script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
 
 <style>
@@ -24,9 +28,23 @@ header {
   font-weight: bold;
 }
 
+#controls {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+input, select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
 video {
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   background: black;
 }
 
@@ -52,63 +70,109 @@ video {
 
 <body>
 
-<header>TS IPTV LIVE PLAYER</header>
+<header>TS IPTV PLAYER</header>
 
-<video id="video" controls autoplay></video>
+<video id="video" playsinline controls></video>
+
+<div id="controls">
+  <input type="text" id="search" placeholder="Search channels...">
+  <select id="category">
+    <option value="all">All Categories</option>
+  </select>
+</div>
 
 <div id="channels"></div>
 
 <script>
-// 🔗 YOUR PLAYLIST (contains .ts links)
+// ================= SETTINGS =================
 const PLAYLIST_URL = "https://dhoomxc.pages.dev/live_ts_only.m3u8";
 
-const video = document.getElementById("video");
-const channelsDiv = document.getElementById("channels");
-let player = null;
+// OPTIONAL CORS PROXY (leave empty if not needed)
+const CORS_PROXY = "https://cricfy-cors-proxy.drupani900.workers.dev/?url=https://dhoomxc.pages.dev/live_ts_only.m3u8"; 
+// Example:
+// const CORS_PROXY = "https://cors.isomorphic-git.org/";
 
-// Load playlist
-fetch(PLAYLIST_URL)
+// ============================================
+
+const video = document.getElementById("video");
+const plyr = new Plyr(video);
+const channelsDiv = document.getElementById("channels");
+const searchInput = document.getElementById("search");
+const categorySelect = document.getElementById("category");
+
+let player = null;
+let channels = [];
+
+fetch(CORS_PROXY + PLAYLIST_URL)
   .then(r => r.text())
   .then(parseM3U);
 
 function parseM3U(data) {
   const lines = data.split("\n");
-  let name = "";
+  let name = "", group = "Other";
 
   lines.forEach(line => {
     line = line.trim();
 
     if (line.startsWith("#EXTINF")) {
       name = line.split(",").pop();
+      const match = line.match(/group-title="([^"]+)"/);
+      if (match) group = match[1];
     }
 
     if (line.startsWith("http")) {
-      const div = document.createElement("div");
-      div.className = "channel";
-      div.textContent = name || "Channel";
-      div.onclick = () => playTS(line);
-      channelsDiv.appendChild(div);
+      channels.push({ name, group, url: line });
     }
+  });
+
+  populateCategories();
+  renderChannels();
+}
+
+function populateCategories() {
+  const cats = [...new Set(channels.map(c => c.group))];
+  cats.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c;
+    opt.textContent = c;
+    categorySelect.appendChild(opt);
   });
 }
 
-function playTS(url) {
-  if (player) {
-    player.destroy();
-  }
+function renderChannels() {
+  channelsDiv.innerHTML = "";
+  const q = searchInput.value.toLowerCase();
+  const cat = categorySelect.value;
 
-  if (mpegts.getFeatureList().mseLivePlayback) {
-    player = mpegts.createPlayer({
-      type: 'mpegts',
-      url: url,
-      isLive: true
+  channels
+    .filter(c =>
+      c.name.toLowerCase().includes(q) &&
+      (cat === "all" || c.group === cat)
+    )
+    .forEach(c => {
+      const div = document.createElement("div");
+      div.className = "channel";
+      div.textContent = c.name;
+      div.onclick = () => playTS(c.url);
+      channelsDiv.appendChild(div);
     });
-    player.attachMediaElement(video);
-    player.load();
-    player.play();
-  } else {
-    alert("Your browser does not support MPEG-TS playback");
-  }
+}
+
+searchInput.oninput = renderChannels;
+categorySelect.onchange = renderChannels;
+
+function playTS(url) {
+  if (player) player.destroy();
+
+  player = mpegts.createPlayer({
+    type: "mpegts",
+    url: CORS_PROXY + url,
+    isLive: true
+  });
+
+  player.attachMediaElement(video);
+  player.load();
+  player.play();
 }
 </script>
 
