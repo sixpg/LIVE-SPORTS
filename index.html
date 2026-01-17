@@ -1,178 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>TS IPTV Player</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>HLS IPTV Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Plyr -->
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-
-<!-- MPEGTS -->
-<script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
+<!-- Plyr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.css" />
 
 <style>
-body {
+html, body {
   margin: 0;
-  background: #0b0f1a;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  background: #000;
+  height: 100%;
 }
-
-header {
-  background: #11162a;
-  padding: 12px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#controls {
-  display: flex;
-  gap: 8px;
-  padding: 10px;
-}
-
-input, select {
-  flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-video {
+#player {
   width: 100%;
-  height: 55vh;
-  background: black;
-}
-
-#channels {
-  padding: 10px;
-  max-height: 35vh;
-  overflow-y: auto;
-}
-
-.channel {
-  background: #161c35;
-  padding: 8px;
-  margin-bottom: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.channel:hover {
-  background: #1f2a55;
+  height: 100vh;
 }
 </style>
 </head>
-
 <body>
 
-<header>TS IPTV PLAYER</header>
+<video id="player" controls playsinline></video>
 
-<video id="video" playsinline controls></video>
-
-<div id="controls">
-  <input type="text" id="search" placeholder="Search channels...">
-  <select id="category">
-    <option value="all">All Categories</option>
-  </select>
-</div>
-
-<div id="channels"></div>
+<!-- HLS.js -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- Plyr -->
+<script src="https://cdn.jsdelivr.net/npm/plyr@3"></script>
 
 <script>
-// ================= SETTINGS =================
-const PLAYLIST_URL = "https://dhoomxc.pages.dev/live_ts_only.m3u8";
+/* =======================
+   IPTV ACCOUNT DETAILS
+   ======================= */
+const SERVER   = "https://dhoomtv.xyz:443";
+const USERNAME = "P4B9TB9xR8";
+const PASSWORD = "humongous2tonight";
 
-// OPTIONAL CORS PROXY (leave empty if not needed)
-const CORS_PROXY = "https://cricfy-cors-proxy.drupani900.workers.dev/?url="; 
-// Example:
-// const CORS_PROXY = "https://cors.isomorphic-git.org/";
+/* =======================
+   GET CHANNEL ID (?id=)
+   ======================= */
+const params = new URLSearchParams(window.location.search);
+const channelId = params.get("id");
 
-// ============================================
-
-const video = document.getElementById("video");
-const plyr = new Plyr(video);
-const channelsDiv = document.getElementById("channels");
-const searchInput = document.getElementById("search");
-const categorySelect = document.getElementById("category");
-
-let player = null;
-let channels = [];
-
-fetch(CORS_PROXY + PLAYLIST_URL)
-  .then(r => r.text())
-  .then(parseM3U);
-
-function parseM3U(data) {
-  const lines = data.split("\n");
-  let name = "", group = "Other";
-
-  lines.forEach(line => {
-    line = line.trim();
-
-    if (line.startsWith("#EXTINF")) {
-      name = line.split(",").pop();
-      const match = line.match(/group-title="([^"]+)"/);
-      if (match) group = match[1];
-    }
-
-    if (line.startsWith("http")) {
-      channels.push({ name, group, url: line });
-    }
-  });
-
-  populateCategories();
-  renderChannels();
+if (!channelId) {
+  alert("No channel ID provided.\nExample: ?id=581305");
+  throw new Error("Missing channel ID");
 }
 
-function populateCategories() {
-  const cats = [...new Set(channels.map(c => c.group))];
-  cats.forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c;
-    opt.textContent = c;
-    categorySelect.appendChild(opt);
-  });
-}
+/* =======================
+   BUILD HLS URL
+   ======================= */
+const streamUrl = `${SERVER}/live/${USERNAME}/${PASSWORD}/${channelId}.m3u8`;
 
-function renderChannels() {
-  channelsDiv.innerHTML = "";
-  const q = searchInput.value.toLowerCase();
-  const cat = categorySelect.value;
+const video = document.getElementById("player");
+const player = new Plyr(video, {
+  autoplay: true,
+  ratio: "16:9"
+});
 
-  channels
-    .filter(c =>
-      c.name.toLowerCase().includes(q) &&
-      (cat === "all" || c.group === cat)
-    )
-    .forEach(c => {
-      const div = document.createElement("div");
-      div.className = "channel";
-      div.textContent = c.name;
-      div.onclick = () => playTS(c.url);
-      channelsDiv.appendChild(div);
-    });
-}
-
-searchInput.oninput = renderChannels;
-categorySelect.onchange = renderChannels;
-
-function playTS(url) {
-  if (player) player.destroy();
-
-  player = mpegts.createPlayer({
-    type: "mpegts",
-    url: CORS_PROXY + url,
-    isLive: true
+if (Hls.isSupported()) {
+  const hls = new Hls({
+    lowLatencyMode: true,
+    enableWorker: true
   });
 
-  player.attachMediaElement(video);
-  player.load();
-  player.play();
+  hls.loadSource(streamUrl);
+  hls.attachMedia(video);
+
+  hls.on(Hls.Events.ERROR, (event, data) => {
+    console.error("HLS error:", data);
+  });
+
+} else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+  video.src = streamUrl;
 }
 </script>
 
