@@ -1,126 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Live Matches & Channels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<title>Live Matches</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #111;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
   color: #fff;
 }
 header {
-  padding: 1rem;
-  background: #222;
+  padding: 12px;
+  background: #151515;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
-h1 {
-  margin: 0;
+#searchBox {
+  width: 95%;
+  margin: 10px auto;
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
 }
-.container {
-  padding: 1rem;
+#playerContainer {
+  display: none;
+  background: #000;
+}
+#playerContainer iframe {
+  width: 100%;
+  height: 240px;
+  border: none;
 }
 .category {
-  margin-bottom: 2rem;
+  padding: 10px;
 }
 .category h2 {
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
+  margin: 10px 0;
+  border-bottom: 1px solid #333;
 }
-.channels {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
 }
-.channel {
-  width: 150px;
-  text-align: center;
+.card {
+  background: #181818;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform .15s;
 }
-.channel img {
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
   width: 100%;
-  height: auto;
+  height: 80px;
+  object-fit: contain;
   border-radius: 4px;
 }
-.channel span {
-  display: block;
-  margin-top: 0.3rem;
-  font-size: 0.9rem;
+.card .name {
+  font-size: 14px;
+  margin-top: 6px;
+  text-align: center;
+}
+.live {
+  color: #00ff66;
+  font-size: 12px;
+  text-align: center;
+}
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
 }
 </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Live Matches & Channels</h1>
-</header>
+<header>LIVE MATCHES</header>
 
-<main class="container" id="mainContent">
-  <p>Loading…</p>
-</main>
+<input id="searchBox" placeholder="Search matches or channels...">
+
+<div id="playerContainer">
+  <iframe id="playerFrame" allow="autoplay; fullscreen"></iframe>
+</div>
+
+<div id="content"></div>
 
 <script>
-const API_URL = "https://webiptv.site/api/live.json";
+const API = "https://webiptv.site/api/live.json";
+const content = document.getElementById("content");
+const searchBox = document.getElementById("searchBox");
+const playerContainer = document.getElementById("playerContainer");
+const playerFrame = document.getElementById("playerFrame");
 
-async function fetchData() {
+let allData = [];
+
+async function loadData() {
   try {
-    const res = await fetch(API_URL);
-    if (!res.ok) throw new Error("Network error");
+    const res = await fetch(API);
     const data = await res.json();
-    renderData(data);
-  } catch (err) {
-    document.getElementById("mainContent").innerHTML =
-      "<p style='color: #f55;'>Failed to load data.</p>";
-    console.error("Fetch error:", err);
+    allData = data.categories || [];
+    render(allData);
+  } catch (e) {
+    content.innerHTML = "<div class='error'>Failed to load live data</div>";
   }
 }
 
-function renderData(data) {
-  const container = document.getElementById("mainContent");
-  container.innerHTML = "";
+function render(categories) {
+  content.innerHTML = "";
+  categories.forEach(cat => {
+    const section = document.createElement("div");
+    section.className = "category";
+    section.innerHTML = `<h2>${cat.title}</h2>`;
 
-  if (!data.categories || !data.categories.length) {
-    container.innerHTML = "<p>No live channels found.</p>";
-    return;
-  }
+    const grid = document.createElement("div");
+    grid.className = "grid";
 
-  data.categories.forEach(category => {
-    const catDiv = document.createElement("div");
-    catDiv.className = "category";
-
-    const h2 = document.createElement("h2");
-    h2.textContent = category.title || "Category";
-    catDiv.appendChild(h2);
-
-    const channelsDiv = document.createElement("div");
-    channelsDiv.className = "channels";
-
-    category.channels.forEach(ch => {
-      const chEl = document.createElement("div");
-      chEl.className = "channel";
-
-      const img = document.createElement("img");
-      img.src = ch.thumb || "";
-      img.alt = ch.name || "Channel";
-
-      const name = document.createElement("span");
-      name.textContent = ch.name || "Unnamed";
-
-      chEl.appendChild(img);
-      chEl.appendChild(name);
-
-      channelsDiv.appendChild(chEl);
+    cat.channels.forEach(ch => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${ch.thumb || ""}">
+        <div class="name">${ch.name}</div>
+        <div class="live">LIVE</div>
+      `;
+      card.onclick = () => playStream(ch.url);
+      grid.appendChild(card);
     });
 
-    catDiv.appendChild(channelsDiv);
-    container.appendChild(catDiv);
+    section.appendChild(grid);
+    content.appendChild(section);
   });
 }
 
-fetchData();
+function playStream(url) {
+  playerContainer.style.display = "block";
+  const finalUrl = /\.m3u8/i.test(url)
+    ? `https://webiptv.site/jwlatest?url=${encodeURIComponent(url)}`
+    : url;
+  playerFrame.src = finalUrl;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+searchBox.addEventListener("input", () => {
+  const q = searchBox.value.toLowerCase();
+  const filtered = allData.map(cat => ({
+    ...cat,
+    channels: cat.channels.filter(c =>
+      c.name.toLowerCase().includes(q)
+    )
+  })).filter(c => c.channels.length);
+  render(filtered);
+});
+
+// auto update every 60 sec
+loadData();
+setInterval(loadData, 60000);
 </script>
 
 </body>
