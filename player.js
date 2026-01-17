@@ -12,44 +12,50 @@ const params = new URLSearchParams(window.location.search);
 const channelId = params.get("id");
 
 if (!channelId) {
-  alert("No channel ID provided.\nUse ?id=581305");
+  alert("No channel ID provided.\nExample: ?id=581305");
   throw new Error("Missing channel ID");
 }
 
 /* =======================
    BUILD STREAM URL
 ======================= */
-const streamUrl = `${SERVER}/live/${USERNAME}/${PASSWORD}/${channelId}.m3u8`;
+const streamUrl = `${SERVER}/live/${USERNAME}/${PASSWORD}/${channelId}.ts`;
 
 const video = document.getElementById("video");
 
 /* =======================
    INIT PLYR
 ======================= */
-const player = new Plyr(video, {
+new Plyr(video, {
   autoplay: true,
   controls: [
-    "play", "progress", "current-time",
-    "mute", "volume", "fullscreen"
+    "play",
+    "progress",
+    "current-time",
+    "mute",
+    "volume",
+    "fullscreen"
   ]
 });
 
 /* =======================
-   INIT HLS
+   INIT MPEGTS
 ======================= */
-if (Hls.isSupported()) {
-  const hls = new Hls({
-    enableWorker: true,
-    lowLatencyMode: true
+if (mpegts.getFeatureList().mseLivePlayback) {
+  const player = mpegts.createPlayer({
+    type: "mpegts",
+    url: streamUrl,
+    isLive: true
   });
 
-  hls.loadSource(streamUrl);
-  hls.attachMedia(video);
+  player.attachMediaElement(video);
+  player.load();
+  player.play();
 
-  hls.on(Hls.Events.ERROR, (event, data) => {
-    console.error("HLS ERROR:", data);
+  player.on(mpegts.Events.ERROR, (e) => {
+    console.error("MPEGTS ERROR:", e);
   });
 
-} else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-  video.src = streamUrl;
+} else {
+  alert("MSE Live Playback is not supported in this browser.");
 }
