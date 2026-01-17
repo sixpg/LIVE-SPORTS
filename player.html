@@ -2,33 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>MPEGTS IPTV Player</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- Plyr CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css"/>
+<title>Live Matches & Channels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <style>
-html, body {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #000;
-  height: 100%;
+  background: #111;
+  color: #fff;
 }
-video {
+header {
+  padding: 1rem;
+  background: #222;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+}
+.container {
+  padding: 1rem;
+}
+.category {
+  margin-bottom: 2rem;
+}
+.category h2 {
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.channel {
+  width: 150px;
+  text-align: center;
+}
+.channel img {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  border-radius: 4px;
+}
+.channel span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
 }
 </style>
 </head>
 <body>
 
-<video id="video" controls playsinline></video>
+<header>
+  <h1>Live Matches & Channels</h1>
+</header>
 
-<!-- REQUIRED JS (order matters) -->
-<script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+<main class="container" id="mainContent">
+  <p>Loading…</p>
+</main>
 
-<script src="player.js"></script>
+<script>
+const API_URL = "https://webiptv.site/api/live.json";
+
+async function fetchData() {
+  try {
+    const res = await fetch(API_URL);
+    if (!res.ok) throw new Error("Network error");
+    const data = await res.json();
+    renderData(data);
+  } catch (err) {
+    document.getElementById("mainContent").innerHTML =
+      "<p style='color: #f55;'>Failed to load data.</p>";
+    console.error("Fetch error:", err);
+  }
+}
+
+function renderData(data) {
+  const container = document.getElementById("mainContent");
+  container.innerHTML = "";
+
+  if (!data.categories || !data.categories.length) {
+    container.innerHTML = "<p>No live channels found.</p>";
+    return;
+  }
+
+  data.categories.forEach(category => {
+    const catDiv = document.createElement("div");
+    catDiv.className = "category";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = category.title || "Category";
+    catDiv.appendChild(h2);
+
+    const channelsDiv = document.createElement("div");
+    channelsDiv.className = "channels";
+
+    category.channels.forEach(ch => {
+      const chEl = document.createElement("div");
+      chEl.className = "channel";
+
+      const img = document.createElement("img");
+      img.src = ch.thumb || "";
+      img.alt = ch.name || "Channel";
+
+      const name = document.createElement("span");
+      name.textContent = ch.name || "Unnamed";
+
+      chEl.appendChild(img);
+      chEl.appendChild(name);
+
+      channelsDiv.appendChild(chEl);
+    });
+
+    catDiv.appendChild(channelsDiv);
+    container.appendChild(catDiv);
+  });
+}
+
+fetchData();
+</script>
+
 </body>
 </html>
