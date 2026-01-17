@@ -2,19 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>F1 4K – Shaka Player</title>
+<title>COSMIC SPORTS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Shaka Player -->
 <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.7.11/dist/shaka-player.compiled.js"></script>
 
 <style>
-html, body {
+body {
   margin: 0;
-  padding: 0;
   background: #000;
-  height: 100%;
-  width: 100%;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 1px solid #222;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 220px;
+  background: #0b0b0b;
+  border-right: 1px solid #222;
+  overflow-y: auto;
+}
+
+.channel {
+  padding: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.channel:hover,
+.channel.active {
+  background: #1c1c1c;
+}
+
+.player-area {
+  flex: 1;
 }
 
 video {
@@ -27,44 +61,79 @@ video {
 
 <body>
 
-<video id="video" controls autoplay></video>
+<header>COSMIC SPORTS</header>
+
+<div class="container">
+  <div class="sidebar" id="channelList"></div>
+  <div class="player-area">
+    <video id="video" controls autoplay></video>
+  </div>
+</div>
 
 <script>
-async function initPlayer() {
-  if (!shaka.Player.isBrowserSupported()) {
-    alert("Browser not supported!");
-    return;
-  }
-
-  const video = document.getElementById('video');
-  const player = new shaka.Player(video);
-
-  // Log errors
-  player.addEventListener('error', e => {
-    console.error('Shaka Error', e.detail);
-  });
-
-  // ClearKey configuration
-  player.configure({
-    drm: {
-      clearKeys: {
-        "4a49e721dba048be8bebbab4f0410898": "709561f239d6700b7cd355358aa8e393"
-      }
+const channels = {
+  f1: {
+    name: "F1 4K",
+    type: "dash",
+    url: "https://live1-814bffb9b389f652.fastly.foxtelgroupcdn.net.au/out/v1/4bbc6fe6e52c4b40a33ccc7b338652e5/index.mpd",
+    clearkey: {
+      "4a49e721dba048be8bebbab4f0410898":
+      "709561f239d6700b7cd355358aa8e393"
     }
+  }
+};
+
+const video = document.getElementById("video");
+const player = new shaka.Player(video);
+const list = document.getElementById("channelList");
+
+player.addEventListener("error", e =>
+  console.error("Shaka Error", e.detail)
+);
+
+function loadChannel(id) {
+  const ch = channels[id];
+  if (!ch) return;
+
+  document
+    .querySelectorAll(".channel")
+    .forEach(el => el.classList.remove("active"));
+
+  document.getElementById("ch-" + id).classList.add("active");
+
+  player.configure({
+    drm: { clearKeys: ch.clearkey }
   });
 
-  const manifestUri =
-    "https://live1-814bffb9b389f652.fastly.foxtelgroupcdn.net.au/out/v1/4bbc6fe6e52c4b40a33ccc7b338652e5/index.mpd";
+  player.load(ch.url);
+  history.replaceState(null, "", "?id=" + id);
+}
 
-  try {
-    await player.load(manifestUri);
-    console.log("F1 4K loaded successfully");
-  } catch (error) {
-    console.error("Load error", error);
+function buildList() {
+  for (const id in channels) {
+    const div = document.createElement("div");
+    div.className = "channel";
+    div.id = "ch-" + id;
+    div.textContent = channels[id].name;
+    div.onclick = () => loadChannel(id);
+    list.appendChild(div);
   }
 }
 
-document.addEventListener('DOMContentLoaded', initPlayer);
+async function init() {
+  if (!shaka.Player.isBrowserSupported()) {
+    alert("Browser not supported");
+    return;
+  }
+
+  buildList();
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id") || "f1";
+  loadChannel(id);
+}
+
+document.addEventListener("DOMContentLoaded", init);
 </script>
 
 </body>
