@@ -1,139 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>COSMIC SPORTS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>LIVE SPORTS</title>
 
-<!-- Shaka Player -->
-<script src="https://cdn.jsdelivr.net/npm/shaka-player@4.7.11/dist/shaka-player.compiled.js"></script>
+<!-- Players -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@latest/dist/mpegts.min.js"></script>
 
 <style>
-body {
-  margin: 0;
-  background: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b0b0b;
+        color: #fff;
+    }
 
-header {
-  text-align: center;
-  padding: 15px;
-  font-size: 22px;
-  font-weight: bold;
-  border-bottom: 1px solid #222;
-}
+    header {
+        padding: 12px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        background: #111;
+        border-bottom: 1px solid #222;
+    }
 
-.container {
-  display: flex;
-  height: calc(100vh - 60px);
-}
+    .container {
+        display: flex;
+        height: calc(100vh - 52px);
+    }
 
-.sidebar {
-  width: 220px;
-  background: #0b0b0b;
-  border-right: 1px solid #222;
-  overflow-y: auto;
-}
+    .channels {
+        width: 30%;
+        background: #121212;
+        overflow-y: auto;
+        border-right: 1px solid #222;
+    }
 
-.channel {
-  padding: 14px;
-  cursor: pointer;
-  border-bottom: 1px solid #1a1a1a;
-}
+    .channel {
+        padding: 12px;
+        cursor: pointer;
+        border-bottom: 1px solid #1f1f1f;
+        transition: background 0.2s;
+    }
 
-.channel:hover,
-.channel.active {
-  background: #1c1c1c;
-}
+    .channel:hover {
+        background: #1e1e1e;
+    }
 
-.player-area {
-  flex: 1;
-}
+    .player {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+    }
 
-video {
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
+    video {
+        width: 100%;
+        height: 100%;
+        background: #000;
+    }
 </style>
 </head>
-
 <body>
 
-<header>COSMIC SPORTS</header>
+<header>LIVE SPORTS</header>
 
 <div class="container">
-  <div class="sidebar" id="channelList"></div>
-  <div class="player-area">
-    <video id="video" controls autoplay></video>
-  </div>
+    <div class="channels" id="channels"></div>
+    <div class="player">
+        <video id="video" controls autoplay></video>
+    </div>
 </div>
 
 <script>
-const channels = {
-  f1: {
-    name: "F1 4K",
-    type: "dash",
-    url: "https://live1-814bffb9b389f652.fastly.foxtelgroupcdn.net.au/out/v1/4bbc6fe6e52c4b40a33ccc7b338652e5/index.mpd",
-    clearkey: {
-      "4a49e721dba048be8bebbab4f0410898":
-      "709561f239d6700b7cd355358aa8e393"
-    }
-  }
-};
+const M3U_URL = "https://cosmicsports.pages.dev/playlist/sports.m3u";
 
 const video = document.getElementById("video");
-const player = new shaka.Player(video);
-const list = document.getElementById("channelList");
+const channelList = document.getElementById("channels");
 
-player.addEventListener("error", e =>
-  console.error("Shaka Error", e.detail)
-);
+let hls, dashPlayer, tsPlayer;
 
-function loadChannel(id) {
-  const ch = channels[id];
-  if (!ch) return;
-
-  document
-    .querySelectorAll(".channel")
-    .forEach(el => el.classList.remove("active"));
-
-  document.getElementById("ch-" + id).classList.add("active");
-
-  player.configure({
-    drm: { clearKeys: ch.clearkey }
-  });
-
-  player.load(ch.url);
-  history.replaceState(null, "", "?id=" + id);
+function clearPlayers() {
+    if (hls) { hls.destroy(); hls = null; }
+    if (dashPlayer) { dashPlayer.reset(); dashPlayer = null; }
+    if (tsPlayer) { tsPlayer.destroy(); tsPlayer = null; }
+    video.src = "";
 }
 
-function buildList() {
-  for (const id in channels) {
-    const div = document.createElement("div");
-    div.className = "channel";
-    div.id = "ch-" + id;
-    div.textContent = channels[id].name;
-    div.onclick = () => loadChannel(id);
-    list.appendChild(div);
-  }
+function playStream(url) {
+    clearPlayers();
+
+    if (url.endsWith(".m3u8")) {
+        if (Hls.isSupported()) {
+            hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+        } else {
+            video.src = url;
+        }
+    } 
+    else if (url.endsWith(".mpd")) {
+        dashPlayer = dashjs.MediaPlayer().create();
+        dashPlayer.initialize(video, url, true);
+    } 
+    else if (url.endsWith(".ts")) {
+        if (mpegts.getFeatureList().mseLivePlayback) {
+            tsPlayer = mpegts.createPlayer({
+                type: "mpegts",
+                url: url,
+                isLive: true
+            });
+            tsPlayer.attachMediaElement(video);
+            tsPlayer.load();
+            tsPlayer.play();
+        } else {
+            alert("MPEG-TS not supported in this browser");
+        }
+    } 
+    else {
+        alert("Unknown stream format");
+    }
 }
 
-async function init() {
-  if (!shaka.Player.isBrowserSupported()) {
-    alert("Browser not supported");
-    return;
-  }
+fetch(M3U_URL)
+.then(res => res.text())
+.then(text => {
+    const lines = text.split("\n");
+    let name = "";
 
-  buildList();
-
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id") || "f1";
-  loadChannel(id);
-}
-
-document.addEventListener("DOMContentLoaded", init);
+    lines.forEach(line => {
+        line = line.trim();
+        if (line.startsWith("#EXTINF")) {
+            name = line.split(",").pop();
+        } 
+        else if (line && !line.startsWith("#")) {
+            const channel = document.createElement("div");
+            channel.className = "channel";
+            channel.textContent = name || "Live Channel";
+            channel.onclick = () => playStream(line);
+            channelList.appendChild(channel);
+        }
+    });
+});
 </script>
 
 </body>
