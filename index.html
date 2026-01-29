@@ -1,38 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>VIP TV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- HLS.js -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Loading…</title>
 </head>
 <body>
 
-<header>
-  <h1>📺 VIP TV</h1>
-  <input id="search" placeholder="Search channels..." />
-</header>
+<script>
+const b64 = `PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+RkFOQ09ERSBFVkVOVFM8L3RpdGxlPgoKPHN0eWxlPgo6cm9vdHsKICAtLWJnOiMwNTBiMTg7LS1jYXJkOiMwYjE2MmM7LS1hY2NlbnQ6I2UxMWQ0ODsKICAtLWxpdmU6IzIyYzU1ZTstLXVwY29taW5nOiNmNTllMGI7CiAgLS10ZXh0OiNlNWU3ZWI7LS1tdXRlZDojOTRhM2I4OwogIC0tcHJpb3JpdHk6I2ZhY2MxNTsKfQoqe2JveC1zaXppbmc6Ym9yZGVyLWJveH0KYm9keXsKICBtYXJnaW46MDsKICBmb250LWZhbWlseTpzeXN0ZW0tdWksLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG87CiAgYmFja2dyb3VuZDpyYWRpYWwtZ3JhZGllbnQoY2lyY2xlIGF0IHRvcCwjMGIxNjMzLCMwNTBiMTggNzAlKTsKICBjb2xvcjp2YXIoLS10ZXh0KQp9Cjwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+PC9ib2R5PjwvaHRtbD4=`;
 
-<nav>
-  <button class="tab active" data-category="live">Live</button>
-  <button class="tab" data-category="movies">Movies</button>
-  <button class="tab" data-category="series">Series</button>
-  <button class="tab" data-category="favorites">⭐ Favorites</button>
-</nav>
+// decode + render
+document.open();
+document.write(decodeURIComponent(escape(atob(b64))));
+document.close();
+</script>
 
-<main>
-  <aside id="channelList"></aside>
-
-  <section id="playerSection">
-    <video id="player" controls autoplay></video>
-    <div id="nowPlaying">Select a channel</div>
-  </section>
-</main>
-
-<script src="app.js"></script>
 </body>
 </html>
