@@ -1,171 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LIVE SPORTS</title>
+  <meta charset="UTF-8" />
+  <title>VIP TV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Players -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mpegts.js@latest/dist/mpegts.min.js"></script>
+  <!-- HLS.js -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-<style>
-body {
-    margin: 0;
-    background: #0a0a0a;
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
-header {
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    background: #111;
-    border-bottom: 1px solid #222;
-}
-.main {
-    display: flex;
-    height: calc(100vh - 52px);
-}
-.channels {
-    width: 30%;
-    background: #121212;
-    overflow-y: auto;
-    border-right: 1px solid #222;
-}
-.channel {
-    padding: 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #1f1f1f;
-}
-.channel:hover {
-    background: #1c1c1c;
-}
-.player {
-    width: 70%;
-    background: black;
-}
-video {
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>LIVE SPORTS</header>
+<header>
+  <h1>📺 VIP TV</h1>
+  <input id="search" placeholder="Search channels..." />
+</header>
 
-<div class="main">
-    <div class="channels" id="channelList"></div>
-    <div class="player">
-        <video id="video" controls autoplay></video>
-    </div>
-</div>
+<nav>
+  <button class="tab active" data-category="live">Live</button>
+  <button class="tab" data-category="movies">Movies</button>
+  <button class="tab" data-category="series">Series</button>
+  <button class="tab" data-category="favorites">⭐ Favorites</button>
+</nav>
 
-<script>
-const M3U_URL = "https://cosmicsports.pages.dev/playlist/sports.m3u";
-const video = document.getElementById("video");
-const channelList = document.getElementById("channelList");
+<main>
+  <aside id="channelList"></aside>
 
-let hlsPlayer = null;
-let dashPlayer = null;
-let tsPlayer = null;
+  <section id="playerSection">
+    <video id="player" controls autoplay></video>
+    <div id="nowPlaying">Select a channel</div>
+  </section>
+</main>
 
-/* ---------- PLAYER RESET ---------- */
-function resetPlayers() {
-    if (hlsPlayer) {
-        hlsPlayer.destroy();
-        hlsPlayer = null;
-    }
-    if (dashPlayer) {
-        dashPlayer.reset();
-        dashPlayer = null;
-    }
-    if (tsPlayer) {
-        tsPlayer.destroy();
-        tsPlayer = null;
-    }
-    video.src = "";
-}
-
-/* ---------- STREAM TYPE DETECTION ---------- */
-function getStreamType(url) {
-    url = url.toLowerCase();
-    if (url.includes(".m3u8")) return "hls";
-    if (url.includes(".mpd")) return "dash";
-    if (url.includes(".ts")) return "ts";
-    return "unknown";
-}
-
-/* ---------- PLAY STREAM ---------- */
-function playStream(url) {
-    resetPlayers();
-    const type = getStreamType(url);
-
-    if (type === "hls") {
-        if (Hls.isSupported()) {
-            hlsPlayer = new Hls();
-            hlsPlayer.loadSource(url);
-            hlsPlayer.attachMedia(video);
-        } else {
-            video.src = url;
-        }
-    }
-
-    else if (type === "dash") {
-        dashPlayer = dashjs.MediaPlayer().create();
-        dashPlayer.initialize(video, url, true);
-    }
-
-    else if (type === "ts") {
-        if (mpegts.getFeatureList().mseLivePlayback) {
-            tsPlayer = mpegts.createPlayer({
-                type: "mpegts",
-                url: url,
-                isLive: true
-            });
-            tsPlayer.attachMediaElement(video);
-            tsPlayer.load();
-            tsPlayer.play();
-        } else {
-            alert("MPEG-TS not supported in this browser");
-        }
-    }
-
-    else {
-        alert("Unsupported stream format");
-    }
-}
-
-/* ---------- LOAD M3U ---------- */
-fetch(M3U_URL)
-.then(res => res.text())
-.then(data => {
-    const lines = data.split("\n");
-    let channelName = "Live Channel";
-
-    lines.forEach(line => {
-        line = line.trim();
-
-        if (line.startsWith("#EXTINF")) {
-            channelName = line.split(",").pop();
-        }
-
-        if (line && !line.startsWith("#")) {
-            const div = document.createElement("div");
-            div.className = "channel";
-            div.textContent = channelName;
-            div.onclick = () => playStream(line);
-            channelList.appendChild(div);
-        }
-    });
-});
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>
