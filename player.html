@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COSMIC SPORTS</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .player-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #000;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="player-container">
+  <iframe id="playerFrame" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+</div>
+
+<script>
+(async () => {
+  const JSON_URL = "https://eerajson.pages.dev/Data/frame.json";
+  const id = new URLSearchParams(window.location.search).get("id");
+
+  if (!id) {
+    document.body.innerHTML = "<h2 style='color:white;text-align:center'>Missing ID</h2>";
+    return;
+  }
+
+  try {
+    const res = await fetch(JSON_URL, { cache: "no-store" });
+    const data = await res.json();
+
+    const targetUrl = data[id];
+
+    if (!targetUrl) {
+      document.body.innerHTML = "<h2 style='color:white;text-align:center'>Invalid ID</h2>";
+      return;
+    }
+
+    document.getElementById("playerFrame").src = targetUrl;
+
+  } catch (e) {
+    document.body.innerHTML = "<h2 style='color:white;text-align:center'>Failed to load JSON</h2>";
+    console.error(e);
+  }
+})();
+</script>
+
+</body>
+</html>
