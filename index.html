@@ -6,19 +6,50 @@
 <title>COSMIC SPORTS</title>
 
 <style>
+  :root {
+    --bg: #000;
+    --card: #111;
+    --border: #222;
+    --text: #fff;
+    --muted: #aaa;
+    --accent: #ffcc00;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
-  h1 {
+  header {
+    padding: 18px 15px 10px;
     text-align: center;
-    padding: 15px;
-    font-size: 20px;
   }
 
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  /* ===== NOTE / ANNOUNCEMENT ===== */
+  .note {
+    margin: 12px 15px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ===== CHANNEL GRID ===== */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -27,25 +58,53 @@
   }
 
   .card {
-    background: #111;
-    border-radius: 10px;
-    padding: 15px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 10px;
     text-align: center;
     cursor: pointer;
-    transition: 0.2s;
+    transition: transform 0.2s ease, background 0.2s ease;
+    user-select: none;
   }
 
   .card:hover {
-    background: #1e1e1e;
-    transform: scale(1.03);
+    background: #1a1a1a;
+    transform: translateY(-2px);
+  }
+
+  .card span {
+    font-size: 14px;
+    color: var(--text);
+    word-break: break-word;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    padding: 12px 0 18px;
   }
 </style>
 </head>
 
 <body>
 
-<h1>⚡ COSMIC SPORTS</h1>
-<div class="grid" id="channels"></div>
+<header>
+  <h1>COSMIC SPORTS</h1>
+</header>
+
+<!-- ✏️ EDIT THIS NOTE ANYTIME -->
+<div class="note">
+  ⚠️ ALL LINKS WON'T WORK WILL HIGHLIGHT THE WORKING LINKS ⚠️
+</div>
+
+<!-- CHANNEL LIST -->
+<div class="grid" id="channelGrid"></div>
+
+<footer>
+  © COSMIC SPORTS
+</footer>
 
 <script>
 (async () => {
@@ -53,27 +112,38 @@
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
-  // 🔁 AUTO REDIRECT
+  // 🔁 Auto redirect if id exists
   if (id) {
     window.location.href = `player.html?id=${id}`;
     return;
   }
 
-  // 📡 LOAD CHANNEL LIST
-  const res = await fetch(JSON_URL, { cache: "no-store" });
-  const data = await res.json();
+  try {
+    const res = await fetch(JSON_URL, { cache: "no-store" });
+    const data = await res.json();
 
-  const grid = document.getElementById("channels");
+    const grid = document.getElementById("channelGrid");
 
-  Object.keys(data).forEach(key => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.textContent = key;
-    div.onclick = () => {
-      window.location.href = `player.html?id=${key}`;
-    };
-    grid.appendChild(div);
-  });
+    Object.keys(data).forEach(key => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const label = document.createElement("span");
+      label.textContent = key;
+
+      card.appendChild(label);
+      card.onclick = () => {
+        window.location.href = `player.html?id=${key}`;
+      };
+
+      grid.appendChild(card);
+    });
+
+  } catch (e) {
+    document.querySelector(".note").textContent =
+      "❌ Failed to load channels. Please try again later.";
+    console.error(e);
+  }
 })();
 </script>
 
