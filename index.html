@@ -12,7 +12,7 @@
     --border: #222;
     --text: #fff;
     --muted: #aaa;
-    --accent: #ffcc00;
+    --ok: #1aff6a;
   }
 
   * {
@@ -23,7 +23,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
   }
 
   header {
@@ -37,7 +37,7 @@
     letter-spacing: 1px;
   }
 
-  /* ===== NOTE / ANNOUNCEMENT ===== */
+  /* ===== NOTE ===== */
   .note {
     margin: 12px 15px;
     padding: 12px 14px;
@@ -49,7 +49,7 @@
     text-align: center;
   }
 
-  /* ===== CHANNEL GRID ===== */
+  /* ===== GRID ===== */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -58,13 +58,14 @@
   }
 
   .card {
+    position: relative;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 16px 10px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition: 0.2s ease;
     user-select: none;
   }
 
@@ -75,8 +76,26 @@
 
   .card span {
     font-size: 14px;
-    color: var(--text);
     word-break: break-word;
+  }
+
+  /* ===== WORKING HIGHLIGHT ===== */
+  .working {
+    border-color: var(--ok);
+    box-shadow: 0 0 10px rgba(26,255,106,0.45);
+  }
+
+  .working::after {
+    content: "WORKING";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--ok);
+    color: #000;
+    font-weight: 600;
   }
 
   footer {
@@ -94,12 +113,11 @@
   <h1>COSMIC SPORTS</h1>
 </header>
 
-<!-- ✏️ EDIT THIS NOTE ANYTIME -->
+<!-- ✏️ EDIT NOTE HERE -->
 <div class="note">
-  ⚠️ ALL LINKS WON'T WORK WILL HIGHLIGHT THE WORKING LINKS ⚠️
+  ✅ GREEN HIGHLIGHTED LINKS ARE WORKING LINKS ✅ 
 </div>
 
-<!-- CHANNEL LIST -->
 <div class="grid" id="channelGrid"></div>
 
 <footer>
@@ -109,10 +127,34 @@
 <script>
 (async () => {
   const JSON_URL = "https://eerajson.pages.dev/Data/frame.json";
+
+  /* =========================
+     ✏️ EDIT THIS LIST ONLY
+     ========================= */
+  const WORKING_IDS = [
+  "ss2-hin":
+  "ss2-eng",
+  "ss2-tel",
+  "ss2-tam",
+  "ss2-kan",
+  "ss1-hin",
+  "ss1-eng",
+  "ss1-tam",
+  "ss1-tel",
+  "ss1-kan",
+  "ss3-eng",
+  "ss-khel",
+  "willowios",
+  "clife",
+  "cbuzz2",
+  "ZeeFhd"
+  ];
+  /* ========================= */
+
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
-  // 🔁 Auto redirect if id exists
+  // 🔁 Auto redirect
   if (id) {
     window.location.href = `player.html?id=${id}`;
     return;
@@ -128,10 +170,11 @@
       const card = document.createElement("div");
       card.className = "card";
 
-      const label = document.createElement("span");
-      label.textContent = key;
+      if (WORKING_IDS.includes(key)) {
+        card.classList.add("working");
+      }
 
-      card.appendChild(label);
+      card.innerHTML = `<span>${key}</span>`;
       card.onclick = () => {
         window.location.href = `player.html?id=${key}`;
       };
@@ -141,7 +184,7 @@
 
   } catch (e) {
     document.querySelector(".note").textContent =
-      "❌ Failed to load channels. Please try again later.";
+      "❌ Failed to load channels.";
     console.error(e);
   }
 })();
