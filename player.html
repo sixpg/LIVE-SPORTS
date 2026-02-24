@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Premium Player</title>
 
+<!-- SHAKA -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css">
+
+<!-- HLS -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <style>
@@ -20,7 +23,7 @@ top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 color:white;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 padding:15px 25px;
 border-radius:25px;
 z-index:10;
@@ -39,34 +42,40 @@ z-index:10;
 <script>
 document.addEventListener('DOMContentLoaded', async ()=>{
 
+const PROXY = "https://proxy.drupani900.workers.dev/?url=";
+
 const status=document.getElementById('status');
 const video=document.getElementById('video');
 
 const params=new URLSearchParams(window.location.search);
-const streamUrl=params.get("url");
+const originalUrl=params.get("url");
 const kid=params.get("kid");
 const key=params.get("key");
 const cookie=params.get("cookie");
 
-if(!streamUrl){
+if(!originalUrl){
 status.innerText="Missing stream URL";
 return;
 }
 
-if(streamUrl.includes(".mpd")){
-loadDash(streamUrl,kid,key,cookie);
+/* Proxy the main URL */
+const streamUrl = PROXY + encodeURIComponent(originalUrl);
+
+/* Detect format */
+if(originalUrl.includes(".mpd")){
+loadDash(originalUrl);
 }else{
-loadHls(streamUrl);
+loadHls(originalUrl);
 }
 
 /* ================= DASH ================= */
 
-async function loadDash(url,kid,key,cookie){
+async function loadDash(rawUrl){
 
 shaka.polyfill.installAll();
 
 if(!shaka.Player.isBrowserSupported()){
-status.innerText="Browser not supported";
+status.innerText="Browser Not Supported";
 return;
 }
 
@@ -78,7 +87,7 @@ document.querySelector('.shaka-video-container'),
 video
 );
 
-/* DRM CONFIG */
+/* DRM CONFIG (ClearKey) */
 if(kid && key){
 player.configure({
 drm:{
@@ -89,12 +98,12 @@ clearKeys:{
 });
 }
 
-/* HEADERS */
+/* Proxy ALL network requests */
 player.getNetworkingEngine().registerRequestFilter((type, request)=>{
 
-request.headers['User-Agent']="plaYtv/7.1.5 (Linux;Android 15)";
-request.headers['Referer']="https://www.jiotv.com/";
-request.headers['Origin']="https://www.jiotv.com";
+request.uris = request.uris.map(uri =>
+PROXY + encodeURIComponent(uri)
+);
 
 if(cookie){
 request.headers['Cookie']=cookie;
@@ -102,24 +111,33 @@ request.headers['Cookie']=cookie;
 
 });
 
+/* Load proxied manifest */
 try{
-await player.load(url);
+await player.load(PROXY + encodeURIComponent(rawUrl));
 status.style.display="none";
 }catch(error){
-status.innerText="DASH Error: "+error.code;
 console.error(error);
+status.innerText="DASH Error: "+error.code;
 }
 
 }
 
 /* ================= HLS ================= */
 
-function loadHls(url){
+function loadHls(rawUrl){
 
 if(Hls.isSupported()){
 
-const hls=new Hls();
-hls.loadSource(url);
+const hls=new Hls({
+lowLatencyMode:true,
+maxBufferLength:10,
+backBufferLength:5
+});
+
+/* Proxy URL */
+const proxied = PROXY + encodeURIComponent(rawUrl);
+
+hls.loadSource(proxied);
 hls.attachMedia(video);
 
 hls.on(Hls.Events.MANIFEST_PARSED,function(){
@@ -129,12 +147,13 @@ video.play();
 
 hls.on(Hls.Events.ERROR,function(event,data){
 if(data.fatal){
-status.innerText="HLS Error (CORS?)";
+status.innerText="HLS Error";
+console.error(data);
 }
 });
 
 }else if(video.canPlayType('application/vnd.apple.mpegurl')){
-video.src=url;
+video.src=PROXY + encodeURIComponent(rawUrl);
 video.addEventListener('loadedmetadata',function(){
 status.style.display="none";
 video.play();
