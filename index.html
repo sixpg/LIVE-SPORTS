@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Live Player</title>
+
+<!-- SHAKA -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css">
+
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;height:100vh;width:100vw;overflow:hidden}
+.shaka-video-container{width:100%;height:100%}
+video{width:100%;height:100%;background:#000;object-fit:contain}
+
+.shaka-spinner-container,
+.shaka-spinner,
+.shaka-spinner-svg{
+display:none!important;
+opacity:0!important;
+visibility:hidden!important;
+}
+
+#status{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+background:rgba(0,0,0,0.85);
+padding:15px 25px;
+border-radius:25px;
+z-index:10;
+}
+</style>
+</head>
+
+<body>
+
+<div id="status">Loading Live Stream...</div>
+
+<div class="shaka-video-container">
+<video id="video" autoplay playsinline controls></video>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async ()=>{
+
+const status=document.getElementById('status');
+const video=document.getElementById('video');
+
+/* =========================
+   🔥 YOUR M3U LINK ADDED
+========================= */
+
+const M3U_URL = "https://rkdyiptv.pages.dev/Playlist/Cricket.m3u";
+
+/* =========================
+   FETCH M3U
+========================= */
+
+let streamUrl=null;
+
+try{
+
+const response=await fetch(M3U_URL,{cache:"no-store"});
+const text=await response.text();
+const lines=text.split("\n");
+
+for(let line of lines){
+line=line.trim();
+if(!line || line.startsWith("#")) continue;
+
+if(line.includes(".m3u8") || line.includes(".mpd")){
+streamUrl=line;
+break;
+}
+}
+
+if(!streamUrl){
+status.innerText="No valid stream found in M3U";
+return;
+}
+
+}catch(err){
+status.innerText="Failed to load M3U";
+return;
+}
+
+/* =========================
+   DETECT STREAM TYPE
+========================= */
+
+if(streamUrl.includes(".mpd")){
+loadShaka(streamUrl);
+}else if(streamUrl.includes(".m3u8")){
+loadHLS(streamUrl);
+}else{
+status.innerText="Unsupported format";
+}
+
+/* =========================
+   SHAKA (DASH)
+========================= */
+
+async function loadShaka(url){
+
+shaka.polyfill.installAll();
+
+if(!shaka.Player.isBrowserSupported()){
+status.innerText="Browser Not Supported";
+return;
+}
+
+const player=new shaka.Player(video);
+
+const ui=new shaka.ui.Overlay(
+player,
+document.querySelector('.shaka-video-container'),
+video
+);
+
+ui.configure({
+controlPanelElements:[
+'play_pause',
+'time_and_duration',
+'mute',
+'volume',
+'spacer',
+'quality',
+'fullscreen',
+'overflow_menu'
+]
+});
+
+player.configure({
+abr:{
+enabled:true,
+defaultBandwidthEstimate:25000000,
+switchInterval:1
+},
+streaming:{
+lowLatencyMode:true,
+bufferingGoal:8,
+rebufferingGoal:2,
+bufferBehind:5
+}
+});
+
+player.getNetworkingEngine().registerRequestFilter((type, request)=>{
+request.headers['User-Agent']="plaYtv/7.1.5 (Linux;Android 13)";
+request.headers['Referer']="https://www.jiotv.com/";
+request.headers['Origin']="https://www.jiotv.com";
+});
+
+try{
+await player.load(url);
+status.style.display="none";
+}catch(e){
+status.innerText="DASH Playback Error";
+}
+
+}
+
+/* =========================
+   HLS PLAYER
+========================= */
+
+function loadHLS(url){
+
+if(Hls.isSupported()){
+
+const hls=new Hls({
+lowLatencyMode:true,
+maxBufferLength:10,
+maxMaxBufferLength:20,
+backBufferLength:5
+});
+
+hls.loadSource(url);
+hls.attachMedia(video);
+
+hls.on(Hls.Events.MANIFEST_PARSED,function(){
+status.style.display="none";
+video.play();
+});
+
+hls.on(Hls.Events.ERROR,function(event,data){
+if(data.fatal){
+status.innerText="HLS Playback Error";
+}
+});
+
+}else if(video.canPlayType('application/vnd.apple.mpegurl')){
+video.src=url;
+video.addEventListener('loadedmetadata',function(){
+status.style.display="none";
+video.play();
+});
+}else{
+status.innerText="HLS Not Supported";
+}
+
+}
+
+});
+</script>
+
+</body>
+</html>
