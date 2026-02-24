@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Cricket Live</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(135deg,#000000,#111111,#1a1a1a);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+overflow:hidden;
+}
+
+/* Glow background animation */
+body::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:radial-gradient(circle,#ff0000 0%,transparent 70%);
+filter:blur(120px);
+animation:moveGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes moveGlow{
+0%{transform:translate(-100px,-100px);}
+100%{transform:translate(100px,100px);}
+}
+
+.container{
+text-align:center;
+z-index:2;
+}
+
+h1{
+font-size:2.5rem;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+p{
+opacity:0.7;
+margin-bottom:40px;
+}
+
+.watch-btn{
+padding:15px 40px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:linear-gradient(90deg,#ff0000,#ff6600);
+color:white;
+transition:0.3s;
+box-shadow:0 0 20px rgba(255,0,0,0.6);
+}
+
+.watch-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px rgba(255,0,0,0.9);
+}
+
+.footer{
+position:absolute;
+bottom:20px;
+font-size:12px;
+opacity:0.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🏏 Premium Cricket Live</h1>
+<p>Watch live cricket matches in HD with ultra low latency</p>
+
+<button class="watch-btn" onclick="startStream()">
+▶ Watch Live Now
+</button>
+</div>
+
+<div class="footer">
+Powered by Premium Live Player
+</div>
+
+<script>
+function startStream(){
+window.location.href="player.html";
+}
+</script>
+
+</body>
+</html>
