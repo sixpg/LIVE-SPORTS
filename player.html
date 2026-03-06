@@ -6,26 +6,21 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#000;width:100%;height:100%;font-family:system-ui,sans-serif}
 body{position:absolute;color:#fff;display:flex;justify-content:center;align-items:flex-start}
 .video-container{position:absolute;width:100%;height:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
-.shaka-video-container{position:absolute;width:100%;height:100%}
 video{width:100%;height:100%;background:#000}
-.shaka-spinner-container,.shaka-spinner,.shaka-spinner-svg{display:none!important}
 </style>
 </head>
 
 <body>
 
 <div class="video-container">
-<div class="shaka-video-container" data-shaka-player>
-<video id="video" autoplay muted playsinline preload="auto"></video>
-</div>
+<video id="video" autoplay muted playsinline preload="auto" controls></video>
 </div>
 
 <script>
@@ -72,8 +67,6 @@ return null
 
 const video=document.getElementById('video')
 
-let player
-
 async function initializePlayer(){
 
 try{
@@ -88,77 +81,35 @@ return
 /* APPLY PROXY */
 streamUrl = proxy + streamUrl
 
-player=new shaka.Player()
+if(Hls.isSupported()){
 
-await player.attach(video)
-
-const container=document.querySelector('.shaka-video-container')
-
-const ui=new shaka.ui.Overlay(player,container,video)
-
-ui.configure({
-controlPanelElements:[
-'play_pause',
-'mute',
-'time_and_duration',
-'spacer',
-'fullscreen',
-'overflow_menu'
-]
+const hls = new Hls({
+enableWorker:true,
+lowLatencyMode:true,
+backBufferLength:30
 })
 
-player.configure({
-streaming:{
-bufferingGoal:10,
-rebufferingGoal:2,
-bufferBehind:30
-},
-manifest:{
-retryParameters:{
-timeout:30000,
-maxAttempts:2,
-baseDelay:1000,
-backoffFactor:2
-}
-}
+hls.loadSource(streamUrl)
+
+hls.attachMedia(video)
+
+hls.on(Hls.Events.MANIFEST_PARSED,function(){
+video.play().catch(()=>{})
 })
 
-player.getNetworkingEngine().registerRequestFilter((type,request)=>{
+}else if(video.canPlayType('application/vnd.apple.mpegurl')){
 
-request.headers['User-Agent']='Mozilla/5.0 (Linux; Android 13)'
-request.headers['Referer']='https://fancode.com/'
-request.headers['Origin']='https://fancode.com'
+video.src = streamUrl
+video.play().catch(()=>{})
 
-request.allowCrossSiteCredentials=true
-
-})
-
-video.autoplay=true
-video.controls=false
-video.volume=1
-video.muted=false
-
-await player.load(streamUrl)
-
-const tryPlay=async()=>{
-try{await video.play()}
-catch{
-video.muted=true
-try{await video.play()}catch{}
 }
-}
-
-video.readyState>=2?await tryPlay():video.addEventListener('canplay',tryPlay,{once:true})
 
 }catch(err){
 
 console.error(err)
 
-video.src=streamUrl
-video.autoplay=true
-video.muted=true
-
-try{await video.play()}catch{}
+video.src = streamUrl
+video.play().catch(()=>{})
 
 }
 
