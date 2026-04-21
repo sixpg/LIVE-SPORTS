@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamForge — Playlist Link Converter</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #020510;
+    --bg2: #040c1a;
+    --panel: rgba(6,18,42,0.85);
+    --accent: #00f0ff;
+    --accent2: #7b2fff;
+    --accent3: #ff2d78;
+    --glow: 0 0 20px rgba(0,240,255,0.35);
+    --glow2: 0 0 20px rgba(123,47,255,0.35);
+    --border: rgba(0,240,255,0.18);
+    --text: #c8e8ff;
+    --text-dim: #4a7a9b;
+    --success: #00ff9d;
+    --warn: #ffb700;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Animated grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,240,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,240,255,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123,47,255,0.13) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,240,255,0.07) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 52px 0 36px;
+    position: relative;
+  }
+  .logo-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+  .logo-icon {
+    width: 44px; height: 44px;
+    position: relative;
+  }
+  .logo-icon svg { width: 100%; height: 100%; }
+  h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 60%, var(--accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 18px rgba(0,240,255,0.4));
+  }
+  .tagline {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .header-bar {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 18px auto 0;
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  /* Tab selector */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+  }
+  .tab {
+    flex: 1;
+    min-width: 130px;
+    padding: 11px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+    color: var(--text-dim);
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .tab:hover { color: var(--accent); background: rgba(0,240,255,0.05); }
+  .tab.active {
+    background: linear-gradient(135deg, rgba(0,240,255,0.15), rgba(123,47,255,0.15));
+    color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(0,240,255,0.3), inset 0 1px 0 rgba(0,240,255,0.1);
+  }
+
+  /* Panel */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 48px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,240,255,0.07);
+    position: relative;
+    overflow: hidden;
+  }
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+    opacity: 0.6;
+  }
+
+  .section-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+
+  textarea, input[type="text"] {
+    width: 100%;
+    background: rgba(0,8,24,0.7);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    padding: 14px 16px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    line-height: 1.6;
+  }
+  textarea:focus, input[type="text"]:focus {
+    border-color: rgba(0,240,255,0.5);
+    box-shadow: 0 0 0 3px rgba(0,240,255,0.07), var(--glow);
+  }
+  textarea { min-height: 220px; }
+
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 640px) { .input-row { grid-template-columns: 1fr; } }
+
+  .field-group { display: flex; flex-direction: column; gap: 8px; }
+  .field-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* Buttons */
+  .btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .btn {
+    padding: 13px 28px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #00c8d4, #7b2fff);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(0,200,212,0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,200,212,0.5);
+  }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(0,240,255,0.35);
+  }
+  .btn-secondary:hover {
+    background: rgba(0,240,255,0.08);
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+  }
+  .btn-danger {
+    background: transparent;
+    color: var(--accent3);
+    border: 1px solid rgba(255,45,120,0.35);
+  }
+  .btn-danger:hover {
+    background: rgba(255,45,120,0.08);
+    border-color: var(--accent3);
+  }
+
+  /* Results */
+  #results-panel { display: none; }
+  .result-item {
+    background: rgba(0,8,24,0.8);
+    border: 1px solid rgba(0,240,255,0.12);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .result-item:hover { border-color: rgba(0,240,255,0.3); }
+  .result-channel {
+    font-family: 'Orbitron', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .badge {
+    font-size: 9px;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .badge-drm { background: rgba(123,47,255,0.25); color: #b07aff; border: 1px solid rgba(123,47,255,0.4); }
+  .badge-hdrs { background: rgba(0,240,255,0.15); color: var(--accent); border: 1px solid rgba(0,240,255,0.3); }
+  .badge-plain { background: rgba(0,255,157,0.12); color: var(--success); border: 1px solid rgba(0,255,157,0.3); }
+
+  .result-link {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: #7af0b0;
+    word-break: break-all;
+    background: rgba(0,240,100,0.04);
+    border: 1px solid rgba(0,255,157,0.1);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  .copy-btn {
+    padding: 7px 16px;
+    border-radius: 7px;
+    border: 1px solid rgba(0,240,255,0.25);
+    background: rgba(0,240,255,0.07);
+    color: var(--accent);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.08em;
+  }
+  .copy-btn:hover { background: rgba(0,240,255,0.15); border-color: var(--accent); }
+  .copy-btn.copied { color: var(--success); border-color: var(--success); background: rgba(0,255,157,0.08); }
+
+  /* Meta chips */
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .meta-chip {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: rgba(255,183,0,0.08);
+    border: 1px solid rgba(255,183,0,0.2);
+    color: var(--warn);
+    letter-spacing: 0.08em;
+  }
+
+  /* Status bar */
+  .status-bar {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+  }
+  .status-bar.show { display: flex; }
+  .status-bar.ok { background: rgba(0,255,157,0.08); border: 1px solid rgba(0,255,157,0.2); color: var(--success); }
+  .status-bar.err { background: rgba(255,45,120,0.08); border: 1px solid rgba(255,45,120,0.25); color: var(--accent3); }
+  .status-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .status-dot.ok { background: var(--success); box-shadow: 0 0 8px var(--success); }
+  .status-dot.err { background: var(--accent3); box-shadow: 0 0 8px var(--accent3); }
+
+  /* Export row */
+  .export-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); }
+
+  /* Tab content sections */
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(0,240,255,0.25); border-radius: 4px; }
+
+  /* Pulse animation on logo */
+  @keyframes pulse-glow {
+    0%, 100% { filter: drop-shadow(0 0 12px rgba(0,240,255,0.5)); }
+    50% { filter: drop-shadow(0 0 28px rgba(123,47,255,0.8)); }
+  }
+  h1 { animation: pulse-glow 4s ease-in-out infinite; }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+  .scanline {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0,240,255,0.12), transparent);
+    pointer-events: none;
+    z-index: 999;
+    animation: scanline 8s linear infinite;
+  }
+
+  .count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent2), var(--accent3));
+    color: #fff;
+    font-family: 'Orbitron', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    padding: 0 6px;
+  }
+
+  .help-text {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .help-text code {
+    font-family: 'Share Tech Mono', monospace;
+    background: rgba(0,240,255,0.08);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+
+<div class="container">
+  <header>
+    <div class="logo-line">
+      <div class="logo-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="22,4 40,34 4,34" fill="none" stroke="url(#g1)" stroke-width="2"/>
+          <circle cx="22" cy="22" r="7" fill="url(#g2)" opacity="0.9"/>
+          <defs>
+            <linearGradient id="g1" x1="4" y1="34" x2="40" y2="4" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00f0ff"/><stop offset="1" stop-color="#7b2fff"/>
+            </linearGradient>
+            <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+              <stop stop-color="#00f0ff"/><stop offset="1" stop-color="#7b2fff"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1>STREAMFORGE</h1>
+    </div>
+    <div class="tagline">Universal Playlist → Playable Link Converter</div>
+    <div class="header-bar"></div>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('m3u')">M3U / M3U8</button>
+    <button class="tab" onclick="switchTab('json')">JSON Format</button>
+    <button class="tab" onclick="switchTab('kodi')">Kodi / XSPF</button>
+    <button class="tab" onclick="switchTab('manual')">Manual Entry</button>
+  </div>
+
+  <!-- M3U Tab -->
+  <div id="tab-m3u" class="tab-content active">
+    <div class="panel">
+      <div class="section-label">M3U / M3U8 Playlist Input</div>
+      <p class="help-text">
+        Paste your full M3U playlist. Supports <code>#EXTINF</code> metadata, <code>#EXTVLCOPT</code>, <code>http-user-agent</code>,
+        <code>http-referrer</code>, <code>http-origin</code>, <code>cookie</code>, <code>clearkey</code>, <code>token</code> and more.
+      </p>
+      <textarea id="m3u-input" placeholder="#EXTM3U&#10;#EXTINF:-1 tvg-id=&quot;StarPlus&quot; tvg-name=&quot;Star Plus&quot; group-title=&quot;Entertainment&quot;,Star Plus&#10;#EXTVLCOPT:http-user-agent=Hotstar; ...&#10;#EXTVLCOPT:http-referrer=https://www.hotstar.com/&#10;https://livetv.hotstar.com/.../index.mpd"></textarea>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="convertM3U()">⚡ Convert Playlist</button>
+        <button class="btn btn-secondary" onclick="loadSample('m3u')">Load Sample</button>
+        <button class="btn btn-danger" onclick="clearInput('m3u-input')">Clear</button>
+      </div>
+      <div id="m3u-status" class="status-bar"></div>
+    </div>
+  </div>
+
+  <!-- JSON Tab -->
+  <div id="tab-json" class="tab-content">
+    <div class="panel">
+      <div class="section-label">JSON Playlist Input</div>
+      <p class="help-text">
+        Paste your JSON. Supports flexible structures — arrays of channel objects with fields like
+        <code>name</code>, <code>url</code>, <code>userAgent</code>, <code>referer</code>, <code>origin</code>,
+        <code>cookie</code>, <code>clearkey</code>, <code>drmKey</code>, etc.
+      </p>
+      <textarea id="json-input" placeholder='[&#10;  {&#10;    "name": "Star Plus",&#10;    "url": "https://example.com/stream.mpd",&#10;    "userAgent": "Hotstar; in.startv.hotstar/25.02 (Android/15)",&#10;    "referer": "https://www.hotstar.com/",&#10;    "origin": "https://www.hotstar.com",&#10;    "cookie": "hdntl=exp=...",&#10;    "clearkey": "kid:key"&#10;  }&#10;]'></textarea>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="convertJSON()">⚡ Convert Playlist</button>
+        <button class="btn btn-secondary" onclick="loadSample('json')">Load Sample</button>
+        <button class="btn btn-danger" onclick="clearInput('json-input')">Clear</button>
+      </div>
+      <div id="json-status" class="status-bar"></div>
+    </div>
+  </div>
+
+  <!-- Kodi Tab -->
+  <div id="tab-kodi" class="tab-content">
+    <div class="panel">
+      <div class="section-label">Kodi / XSPF / Strm Format</div>
+      <p class="help-text">
+        Paste Kodi-style playlist data or XSPF XML. Kodi header format uses <code>|</code> pipe-separated headers appended to the URL like <code>url|User-Agent=...&Referer=...</code>.
+        Also supports raw <code>.strm</code> links.
+      </p>
+      <textarea id="kodi-input" placeholder="https://example.com/stream.mpd|User-Agent=Mozilla/5.0&Referer=https://example.com/&Origin=https://example.com&#10;&#10;or XSPF:&#10;&lt;track&gt;&#10;  &lt;title&gt;My Channel&lt;/title&gt;&#10;  &lt;location&gt;https://example.com/stream.mpd|User-Agent=...&lt;/location&gt;&#10;&lt;/track&gt;"></textarea>
+      <div class="field-group" style="margin-top:14px;">
+        <div class="field-label">Channel Names (one per line, matches order)</div>
+        <textarea id="kodi-names" style="min-height:80px;" placeholder="My Channel 1&#10;My Channel 2"></textarea>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="convertKodi()">⚡ Convert Playlist</button>
+        <button class="btn btn-secondary" onclick="loadSample('kodi')">Load Sample</button>
+        <button class="btn btn-danger" onclick="clearInput('kodi-input')">Clear</button>
+      </div>
+      <div id="kodi-status" class="status-bar"></div>
+    </div>
+  </div>
+
+  <!-- Manual Tab -->
+  <div id="tab-manual" class="tab-content">
+    <div class="panel">
+      <div class="section-label">Manual Entry</div>
+      <p class="help-text">Fill in individual fields to build one converted link at a time.</p>
+      <div class="input-row">
+        <div class="field-group">
+          <div class="field-label">Channel Name</div>
+          <input type="text" id="m-name" placeholder="Star Plus">
+        </div>
+        <div class="field-group">
+          <div class="field-label">MPD / Stream URL</div>
+          <input type="text" id="m-url" placeholder="https://example.com/stream.mpd">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="field-group">
+          <div class="field-label">User-Agent</div>
+          <input type="text" id="m-ua" placeholder="Mozilla/5.0 or Hotstar; ...">
+        </div>
+        <div class="field-group">
+          <div class="field-label">Referer</div>
+          <input type="text" id="m-ref" placeholder="https://www.hotstar.com/">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="field-group">
+          <div class="field-label">Origin</div>
+          <input type="text" id="m-origin" placeholder="https://www.hotstar.com">
+        </div>
+        <div class="field-group">
+          <div class="field-label">Cookie / Token</div>
+          <input type="text" id="m-cookie" placeholder="hdntl=exp=...">
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="field-group">
+          <div class="field-label">ClearKey (kid:key or kid=key)</div>
+          <input type="text" id="m-clearkey" placeholder="b7cdde012ce04e90a08b:13603245acab444f">
+        </div>
+        <div class="field-group">
+          <div class="field-label">Extra Headers (key=value, one per line)</div>
+          <textarea id="m-extra" style="min-height:48px;" placeholder="X-Custom-Header=value"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="convertManual()">⚡ Generate Link</button>
+        <button class="btn btn-danger" onclick="clearManual()">Clear All</button>
+      </div>
+      <div id="manual-status" class="status-bar"></div>
+    </div>
+  </div>
+
+  <!-- Results Panel -->
+  <div id="results-panel" class="panel">
+    <div class="section-label">
+      Converted Links
+      <span id="result-count" class="count-badge">0</span>
+    </div>
+    <div id="results-list"></div>
+    <div class="export-row">
+      <button class="btn btn-secondary" onclick="copyAll()">Copy All Links</button>
+      <button class="btn btn-secondary" onclick="exportTxt()">Export .txt</button>
+      <button class="btn btn-secondary" onclick="exportM3U()">Export .m3u</button>
+      <button class="btn btn-danger" onclick="clearResults()">Clear Results</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+// Core converter logic
+// ─────────────────────────────────────────────
+
+let allResults = [];
+
+function buildLink(ch) {
+  const url = (ch.url || '').trim();
+  if (!url) return null;
+
+  let parts = [];
+  const hasHeaders = ch.cookie || ch.userAgent || ch.referer || ch.origin || ch.token || (ch.extra && ch.extra.length);
+  const hasDRM = ch.clearkey;
+
+  if (!hasHeaders && !hasDRM) {
+    // Plain MPD only
+    return url;
+  }
+
+  // Start with URL
+  let link = url;
+
+  // Append | separator
+  let params = [];
+
+  if (ch.cookie) params.push(`cookie=${ch.cookie}`);
+  if (ch.token && !ch.cookie) params.push(`token=${ch.token}`);
+  if (ch.userAgent) params.push(`User-agent=${encodeHeaderValue(ch.userAgent)}`);
+  if (ch.origin) params.push(`origin=${ch.origin}`);
+  if (ch.referer) params.push(`Referer=${ch.referer}`);
+  if (ch.extra && ch.extra.length) {
+    ch.extra.forEach(e => { if (e.trim()) params.push(e.trim()); });
+  }
+
+  // DRM
+  if (ch.clearkey) {
+    let ck = ch.clearkey.trim().replace('=', ':');
+    params.push(`drmScheme=clearkey`);
+    params.push(`drmLicense=${ck}`);
+  }
+
+  if (params.length) link += '|' + params.join('&');
+
+  return link;
+}
+
+function encodeHeaderValue(val) {
+  return val.replace(/ /g, '%20').replace(/;/g, '%3B').replace(/\//g, '%2F').replace(/\(/g, '%28').replace(/\)/g, '%29');
+}
+
+// ─── M3U Parser ───────────────────────────────
+function parseM3U(text) {
+  const lines = text.split('\n').map(l => l.trim());
+  const channels = [];
+  let current = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (!line) continue;
+
+    if (line.startsWith('#EXTINF')) {
+      current = { name: '', url: '', userAgent: '', referer: '', origin: '', cookie: '', token: '', clearkey: '', extra: [] };
+      // Extract channel name (after last comma)
+      const m = line.match(/,(.+)$/);
+      if (m) current.name = m[1].trim();
+      // tvg-name fallback
+      const tvg = line.match(/tvg-name="([^"]+)"/);
+      if (tvg && !current.name) current.name = tvg[1];
+      continue;
+    }
+
+    if (line.startsWith('#EXTVLCOPT') || line.startsWith('#KODIPROP') || line.startsWith('#EXTVLCOPT:')) {
+      if (!current) current = { name: '', url: '', userAgent: '', referer: '', origin: '', cookie: '', token: '', clearkey: '', extra: [] };
+      const val = line.replace(/^#EXTVLCOPT:|^#EXTVLCOPT|^#KODIPROP:/, '').trim();
+      const [k, ...rest] = val.split('=');
+      const v = rest.join('=');
+      const kl = k.toLowerCase().replace(/-/g, '');
+      if (kl === 'httpuseragent') current.userAgent = v;
+      else if (kl === 'httpreferrer' || kl === 'referer') current.referer = v;
+      else if (kl === 'httporigin' || kl === 'origin') current.origin = v;
+      else if (kl === 'cookie') current.cookie = v;
+      else if (kl === 'token') current.token = v;
+      else if (kl === 'inputstreamdrmclearkey' || kl === 'clearkey') current.clearkey = v;
+      else if (kl === 'useragent') current.userAgent = v;
+      else current.extra.push(val);
+      continue;
+    }
+
+    // Inline header line: key=value above URL
+    if (line.match(/^[a-zA-Z\-_]+\s*=\s*.+/) && current && !line.startsWith('http')) {
+      const [k, ...rest] = line.split('=');
+      const v = rest.join('=');
+      const kl = k.trim().toLowerCase().replace(/-/g, '').replace(/\s/g, '');
+      if (kl === 'useragent') current.userAgent = v.trim();
+      else if (kl === 'referer') current.referer = v.trim();
+      else if (kl === 'origin') current.origin = v.trim();
+      else if (kl === 'cookie') current.cookie = v.trim();
+      else if (kl === 'token') current.token = v.trim();
+      else if (kl === 'clearkey') current.clearkey = v.trim();
+      else if (current) current.extra.push(line.trim());
+      continue;
+    }
+
+    if (line.startsWith('http') || line.startsWith('rtmp') || line.endsWith('.mpd') || line.endsWith('.m3u8') || line.endsWith('.ts')) {
+      // Could be a Kodi-style URL with | headers
+      let url = line;
+      let inlineHeaders = {};
+      if (line.includes('|')) {
+        const [base, hdrs] = line.split('|');
+        url = base;
+        hdrs.split('&').forEach(h => {
+          const [k, ...rv] = h.split('=');
+          const v = rv.join('=');
+          const kl = k.toLowerCase().replace(/-/g, '');
+          if (kl === 'useragent' || kl === 'user-agent') inlineHeaders.userAgent = decodeURIComponent(v);
+          else if (kl === 'referer') inlineHeaders.referer = decodeURIComponent(v);
+          else if (kl === 'origin') inlineHeaders.origin = decodeURIComponent(v);
+          else if (kl === 'cookie') inlineHeaders.cookie = v;
+          else if (kl === 'token') inlineHeaders.token = v;
+          else if (kl === 'drmscheme') {}
+          else if (kl === 'drmlicense' || kl === 'clearkey') inlineHeaders.clearkey = v;
+        });
+      }
+      if (!current) current = { name: 'Unknown Channel', url: '', userAgent: '', referer: '', origin: '', cookie: '', token: '', clearkey: '', extra: [] };
+      current.url = url.trim();
+      Object.assign(current, inlineHeaders);
+      channels.push(current);
+      current = null;
+      continue;
+    }
+  }
+  return channels;
+}
+
+// ─── JSON Parser ──────────────────────────────
+function parseJSONPlaylist(text) {
+  let data = JSON.parse(text);
+  if (!Array.isArray(data)) {
+    if (data.channels) data = data.channels;
+    else if (data.playlist) data = data.playlist;
+    else data = [data];
+  }
+
+  return data.map(item => {
+    const find = (obj, ...keys) => {
+      for (const k of keys) {
+        const found = Object.keys(obj).find(ok => ok.toLowerCase().replace(/[_\-\s]/g,'') === k.toLowerCase().replace(/[_\-\s]/g,''));
+        if (found !== undefined && obj[found] !== undefined) return obj[found];
+      }
+      return '';
+    };
+    return {
+      name: find(item, 'name', 'title', 'channelname', 'channel', 'tvgname') || 'Unknown',
+      url: find(item, 'url', 'stream', 'streamurl', 'link', 'mpd', 'mpdurl', 'src') || '',
+      userAgent: find(item, 'useragent', 'user_agent', 'ua', 'httpuseragent') || '',
+      referer: find(item, 'referer', 'referrer', 'httpreferrer') || '',
+      origin: find(item, 'origin', 'httporigin') || '',
+      cookie: find(item, 'cookie', 'cookies', 'httpheaderscookie') || '',
+      token: find(item, 'token', 'accesstoken', 'authtoken') || '',
+      clearkey: find(item, 'clearkey', 'drmkey', 'key', 'drmlicense', 'drmclearkey', 'cipherkey') || '',
+      extra: [],
+    };
+  });
+}
+
+// ─── Kodi Parser ──────────────────────────────
+function parseKodi(text, namesRaw) {
+  const names = namesRaw ? namesRaw.split('\n').map(l => l.trim()).filter(Boolean) : [];
+  const channels = [];
+
+  // Try XSPF XML
+  if (text.trim().startsWith('<')) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/xml');
+    const tracks = doc.querySelectorAll('track');
+    tracks.forEach((t, i) => {
+      const loc = t.querySelector('location')?.textContent || '';
+      const title = t.querySelector('title')?.textContent || names[i] || `Channel ${i+1}`;
+      let url = loc, ch = { name: title, url: '', userAgent: '', referer: '', origin: '', cookie: '', token: '', clearkey: '', extra: [] };
+      if (loc.includes('|')) {
+        const [base, hdrs] = loc.split('|');
+        url = base;
+        hdrs.split('&').forEach(h => applyKodiHeader(ch, h));
+      }
+      ch.url = url;
+      channels.push(ch);
+    });
+    return channels;
+  }
+
+  // Line-by-line Kodi strm / pipe format
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+  lines.forEach((line, i) => {
+    if (!line.startsWith('http') && !line.startsWith('rtmp')) return;
+    const ch = { name: names[i] || `Channel ${i+1}`, url: '', userAgent: '', referer: '', origin: '', cookie: '', token: '', clearkey: '', extra: [] };
+    if (line.includes('|')) {
+      const [base, hdrs] = line.split('|');
+      ch.url = base.trim();
+      hdrs.split('&').forEach(h => applyKodiHeader(ch, h));
+    } else {
+      ch.url = line;
+    }
+    channels.push(ch);
+  });
+  return channels;
+}
+
+function applyKodiHeader(ch, h) {
+  const [k, ...rv] = h.split('=');
+  const v = rv.join('=');
+  const kl = k.trim().toLowerCase().replace(/[_\-\s]/g,'');
+  if (kl === 'useragent' || kl === 'user-agent') ch.userAgent = decodeURIComponent(v);
+  else if (kl === 'referer') ch.referer = decodeURIComponent(v);
+  else if (kl === 'origin') ch.origin = decodeURIComponent(v);
+  else if (kl === 'cookie') ch.cookie = v;
+  else if (kl === 'token') ch.token = v;
+  else if (kl === 'drmlicense' || kl === 'clearkey' || kl === 'drmclearkey') ch.clearkey = v;
+  else if (kl === 'drmscheme') {}
+  else if (k.trim()) ch.extra.push(`${k.trim()}=${v}`);
+}
+
+// ─── Render Results ───────────────────────────
+function renderResults(channels, statusId) {
+  const statusEl = document.getElementById(statusId);
+  if (!channels.length) {
+    showStatus(statusEl, 'No channels found. Check your input format.', 'err');
+    return;
+  }
+
+  const results = channels.map(ch => {
+    const link = buildLink(ch);
+    return { ...ch, link };
+  }).filter(r => r.link);
+
+  allResults = [...allResults, ...results];
+  displayResults(results);
+  showStatus(statusEl, `✓ Converted ${results.length} channel${results.length !== 1 ? 's' : ''} successfully.`, 'ok');
+}
+
+function displayResults(results) {
+  const panel = document.getElementById('results-panel');
+  const list = document.getElementById('results-list');
+  const countEl = document.getElementById('result-count');
+
+  panel.style.display = 'block';
+  countEl.textContent = allResults.length;
+
+  results.forEach((r, idx) => {
+    const div = document.createElement('div');
+    div.className = 'result-item';
+
+    const hasDRM = r.clearkey;
+    const hasHdrs = r.cookie || r.userAgent || r.referer || r.origin || r.token;
+    const badges = [];
+    if (hasDRM) badges.push(`<span class="badge badge-drm">ClearKey DRM</span>`);
+    if (hasHdrs) badges.push(`<span class="badge badge-hdrs">Headers</span>`);
+    if (!hasDRM && !hasHdrs) badges.push(`<span class="badge badge-plain">Plain MPD</span>`);
+
+    const meta = [];
+    if (r.userAgent) meta.push(`UA: ${r.userAgent.substring(0,40)}${r.userAgent.length > 40 ? '…' : ''}`);
+    if (r.referer) meta.push(`Referer: ${r.referer}`);
+    if (r.origin) meta.push(`Origin: ${r.origin}`);
+    if (r.cookie) meta.push(`Cookie: ${r.cookie.substring(0,30)}…`);
+    if (r.clearkey) meta.push(`ClearKey: ${r.clearkey.substring(0,28)}…`);
+
+    const id = `res-${Date.now()}-${idx}`;
+    div.innerHTML = `
+      <div class="result-channel">
+        ${escHtml(r.name || 'Unknown')}
+        ${badges.join('')}
+      </div>
+      ${meta.length ? `<div class="meta-row">${meta.map(m=>`<span class="meta-chip">${escHtml(m)}</span>`).join('')}</div>` : ''}
+      <div class="result-link" id="${id}">${escHtml(r.link)}</div>
+      <button class="copy-btn" onclick="copyLink('${id}', this)">Copy Link</button>
+    `;
+    list.appendChild(div);
+  });
+
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showStatus(el, msg, type) {
+  el.innerHTML = `<span class="status-dot ${type}"></span>${msg}`;
+  el.className = `status-bar show ${type}`;
+}
+
+// ─── Actions ──────────────────────────────────
+function convertM3U() {
+  const text = document.getElementById('m3u-input').value.trim();
+  if (!text) { showStatus(document.getElementById('m3u-status'), 'Please paste your M3U playlist.', 'err'); return; }
+  try {
+    const channels = parseM3U(text);
+    renderResults(channels, 'm3u-status');
+  } catch(e) {
+    showStatus(document.getElementById('m3u-status'), 'Parse error: ' + e.message, 'err');
+  }
+}
+
+function convertJSON() {
+  const text = document.getElementById('json-input').value.trim();
+  if (!text) { showStatus(document.getElementById('json-status'), 'Please paste your JSON playlist.', 'err'); return; }
+  try {
+    const channels = parseJSONPlaylist(text);
+    renderResults(channels, 'json-status');
+  } catch(e) {
+    showStatus(document.getElementById('json-status'), 'JSON parse error: ' + e.message, 'err');
+  }
+}
+
+function convertKodi() {
+  const text = document.getElementById('kodi-input').value.trim();
+  const names = document.getElementById('kodi-names').value;
+  if (!text) { showStatus(document.getElementById('kodi-status'), 'Please paste your Kodi playlist.', 'err'); return; }
+  try {
+    const channels = parseKodi(text, names);
+    renderResults(channels, 'kodi-status');
+  } catch(e) {
+    showStatus(document.getElementById('kodi-status'), 'Parse error: ' + e.message, 'err');
+  }
+}
+
+function convertManual() {
+  const ch = {
+    name: document.getElementById('m-name').value || 'Channel',
+    url: document.getElementById('m-url').value.trim(),
+    userAgent: document.getElementById('m-ua').value.trim(),
+    referer: document.getElementById('m-ref').value.trim(),
+    origin: document.getElementById('m-origin').value.trim(),
+    cookie: document.getElementById('m-cookie').value.trim(),
+    token: '',
+    clearkey: document.getElementById('m-clearkey').value.trim(),
+    extra: document.getElementById('m-extra').value.split('\n').filter(Boolean),
+  };
+  if (!ch.url) { showStatus(document.getElementById('manual-status'), 'Stream URL is required.', 'err'); return; }
+  renderResults([ch], 'manual-status');
+}
+
+function copyLink(id, btn) {
+  const text = document.getElementById(id)?.textContent || '';
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function copyAll() {
+  const links = allResults.map(r => `${r.name}\n${r.link}`).join('\n\n');
+  navigator.clipboard.writeText(links).then(() => alert('All links copied!'));
+}
+
+function exportTxt() {
+  const content = allResults.map(r => `${r.name}\n${r.link}`).join('\n\n');
+  download('streamforge_links.txt', content);
+}
+
+function exportM3U() {
+  let content = '#EXTM3U\n';
+  allResults.forEach(r => {
+    content += `#EXTINF:-1,${r.name}\n${r.link}\n`;
+  });
+  download('streamforge_playlist.m3u', content);
+}
+
+function download(filename, content) {
+  const a = document.createElement('a');
+  a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
+  a.download = filename;
+  a.click();
+}
+
+function clearResults() {
+  allResults = [];
+  document.getElementById('results-list').innerHTML = '';
+  document.getElementById('results-panel').style.display = 'none';
+  document.getElementById('result-count').textContent = '0';
+}
+
+function clearInput(id) { document.getElementById(id).value = ''; }
+function clearManual() {
+  ['m-name','m-url','m-ua','m-ref','m-origin','m-cookie','m-clearkey','m-extra'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    const tabs = ['m3u','json','kodi','manual'];
+    t.classList.toggle('active', tabs[i] === name);
+  });
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById(`tab-${name}`).classList.add('active');
+}
+
+// Sample data
+function loadSample(type) {
+  const samples = {
+    m3u: `#EXTM3U
+#EXTINF:-1 tvg-id="StarPlus" tvg-name="Star Plus" group-title="GEC",Star Plus
+#EXTVLCOPT:http-user-agent=Hotstar; in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTVLCOPT:http-referrer=https://www.hotstar.com/
+#EXTVLCOPT:http-origin=https://www.hotstar.com
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f
+https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd
+
+#EXTINF:-1 tvg-name="Zee TV",Zee TV
+https://a96aivottlinear-a.akamaihd.net/OTTB/iad-nitro/enc/xdwqi5l00r/out/v1/36587570a1c84b31a8fc2b44a7c6dc14/cenc.mpd|drmScheme=clearkey&drmLicense=660b12ab9ff8f5d7a9c9e87d2cd0ac3a:562d1d0574a3d3ea6a85e2500867d4dd`,
+
+    json: `[
+  {
+    "name": "Star Plus",
+    "url": "https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd",
+    "userAgent": "Hotstar; in.startv.hotstar/25.02.24.8.11169 (Android/15)",
+    "referer": "https://www.hotstar.com/",
+    "origin": "https://www.hotstar.com",
+    "cookie": "hdntl=exp=1776765502~acl=/*~id=62ae6eab5fa6c0d6c29440c428ce8e62~data=hdntl~hmac=0cbd01cd12de668e917e38b9ceeb6a0573ed21e9d29079ff2b143f3e4c16d354",
+    "clearkey": "b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f"
+  },
+  {
+    "name": "Zee TV",
+    "url": "https://a96aivottlinear-a.akamaihd.net/OTTB/iad-nitro/enc/xdwqi5l00r/out/v1/36587570a1c84b31a8fc2b44a7c6dc14/cenc.mpd",
+    "clearkey": "660b12ab9ff8f5d7a9c9e87d2cd0ac3a:562d1d0574a3d3ea6a85e2500867d4dd"
+  }
+]`,
+
+    kodi: `https://livetv.hotstar.com/mp1/gec-india-1540065782/index.mpd|User-Agent=Hotstar%3Bin.startv.hotstar%2F25.02.24.8.11169+%28Android%2F15%29&Referer=https://www.hotstar.com/&Origin=https://www.hotstar.com&cookie=hdntl=exp=177676...&drmScheme=clearkey&drmLicense=b7cdde012ce04e90a08b90622e020000:13603245acab444faef6cab5198de55f
+https://a96aivottlinear-a.akamaihd.net/OTTB/iad-nitro/enc/xdwqi5l00r/out/v1/36587570a1c84b31a8fc2b44a7c6dc14/cenc.mpd|drmScheme=clearkey&drmLicense=660b12ab9ff8f5d7a9c9e87d2cd0ac3a:562d1d0574a3d3ea6a85e2500867d4dd`
+  };
+
+  const inputMap = { m3u: 'm3u-input', json: 'json-input', kodi: 'kodi-input' };
+  if (inputMap[type]) document.getElementById(inputMap[type]).value = samples[type];
+  if (type === 'kodi') document.getElementById('kodi-names').value = 'Star Plus\nZee TV';
+}
+</script>
+</body>
+</html>
