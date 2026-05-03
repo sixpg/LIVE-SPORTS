@@ -87,7 +87,7 @@ jobs:
               lines.append(stream)
               lines.append("")
 
-          # STEP 1
+          # STEP 1: All channels
           for ch in main_data:
               add_channel(ch)
 
@@ -100,7 +100,7 @@ jobs:
                   if cid and furl:
                       cookie_map[cid] = furl
 
-          # STEP 2
+          # STEP 2: Star Sports
           for ch in star_data:
               name = (ch.get("channel_name") or ch.get("name") or "").lower()
               cid = str(ch.get("channel_id") or ch.get("id") or "").strip()
@@ -110,7 +110,7 @@ jobs:
                       ch["channel_url"] = cookie_map[cid]
                   add_channel(ch, force_group="Sports")
 
-          # ===== FIXED SONY BLOCK =====
+          # ===== SONY SAB FINAL FIX =====
 
           sony_cookie_map = {}
           if isinstance(sony_cookie_data, dict):
@@ -128,20 +128,22 @@ jobs:
                   if cid and furl:
                       sony_cookie_map[cid] = furl
 
-          # ONLY Sony SAB SD (no HD allowed)
-          for ch in star_data:
-              cid = str(ch.get("channel_id") or ch.get("id") or "").strip()
-              name = (ch.get("channel_name") or ch.get("name") or "").lower()
+          sony_channel = {
+              "name": "Sony SAB SD",
+              "id": "154",
+              "category": "Entertainment",
+              "url": "",
+              "keyId": "ba4d9b38517552de9654d3652d27933b",
+              "key": "31e7cbf3d289d3116386457ed8bac3a2",
+              "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SAB.png"
+          }
 
-              if cid == "154" and "hd" not in name:
-                  if cid in sony_cookie_map:
-                      ch["channel_url"] = sony_cookie_map[cid]
-                  else:
-                      continue  # skip if no cookie
+          # ONLY add if cookie exists (force cookie usage)
+          if "154" in sony_cookie_map:
+              sony_channel["url"] = sony_cookie_map["154"]
+              add_channel(sony_channel, force_group="Entertainment")
 
-                  add_channel(ch, force_group="Entertainment")
-
-          # ===== END FIX =====
+          # ===== END =====
 
           with open("jtv.m3u", "w", encoding="utf-8") as f:
               f.write("\n".join(lines))
