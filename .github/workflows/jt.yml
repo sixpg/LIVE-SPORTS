@@ -91,7 +91,7 @@ jobs:
           for ch in main_data:
               add_channel(ch)
 
-          # Build cookie URL map using channel_id (Star Sports)
+          # Build cookie URL map (Star Sports)
           cookie_map = {}
           if isinstance(cookie_data, dict):
               for item in cookie_data.get("successful_results", []) + cookie_data.get("failed_results", []):
@@ -110,33 +110,31 @@ jobs:
                       ch["channel_url"] = cookie_map[cid]
                   add_channel(ch, force_group="Sports")
 
-          # ===== SONY SAB FINAL FIX (CORRECT COOKIE FORMAT) =====
+          # ===== SONY SAB FIX (SECURE, NO HARDCODE) =====
 
           global_cookie = ""
 
+          # extract cookie
           if isinstance(sony_cookie_data, list):
               for item in sony_cookie_data:
                   if "cookie" in item:
                       global_cookie = item["cookie"]
                       break
 
-          base_url = "https://jiotvmblive.cdn.jio.com/bpk-tv/Sony_SAB_MOB/WDVLive/index.mpd"
+          # get Sony SAB from STAR JSON
+          for ch in star_data:
+              cid = str(ch.get("channel_id") or ch.get("id") or "").strip()
+              name = (ch.get("channel_name") or ch.get("name") or "").lower()
 
-          final_url = base_url
-          if global_cookie:
-              final_url = f"{base_url}?{global_cookie}"
+              if cid == "154" or "sony sab" in name:
 
-          sony_channel = {
-              "name": "Sony SAB SD",
-              "id": "154",
-              "category": "Entertainment",
-              "url": final_url,
-              "keyId": "ba4d9b38517552de9654d3652d27933b",
-              "key": "31e7cbf3d289d3116386457ed8bac3a2",
-              "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SAB.png"
-          }
+                  base_url = ch.get("channel_url") or ch.get("url") or ""
 
-          add_channel(sony_channel, force_group="Entertainment")
+                  if global_cookie and base_url:
+                      ch["channel_url"] = f"{base_url}?{global_cookie}"
+
+                  add_channel(ch, force_group="Entertainment")
+                  break
 
           # ===== END =====
 
