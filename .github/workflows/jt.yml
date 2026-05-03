@@ -123,7 +123,15 @@ jobs:
           if isinstance(sony_cookie_data, dict):
               for item in sony_cookie_data.get("successful_results", []) + sony_cookie_data.get("failed_results", []):
                   cid = str(item.get("channel_id", "")).strip()
-                  furl = item.get("error_details", {}).get("final_url", "") or item.get("channel_url", "")
+
+                  furl = (
+                      item.get("error_details", {}).get("final_url") or
+                      item.get("final_url") or
+                      item.get("url") or
+                      item.get("channel_url") or
+                      ""
+                  )
+
                   if cid and furl:
                       sony_cookie_map[cid] = furl
 
