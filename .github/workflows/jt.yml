@@ -87,11 +87,11 @@ jobs:
               lines.append(stream)
               lines.append("")
 
-          # STEP 1: All channels
+          # STEP 1: Add ALL channels from API_URL
           for ch in main_data:
               add_channel(ch)
 
-          # Star cookie map
+          # Build cookie URL map using channel_id (Star Sports)
           cookie_map = {}
           if isinstance(cookie_data, dict):
               for item in cookie_data.get("successful_results", []) + cookie_data.get("failed_results", []):
@@ -100,7 +100,7 @@ jobs:
                   if cid and furl:
                       cookie_map[cid] = furl
 
-          # STEP 2: Star Sports
+          # STEP 2: Add Star Sports channels
           for ch in star_data:
               name = (ch.get("channel_name") or ch.get("name") or "").lower()
               cid = str(ch.get("channel_id") or ch.get("id") or "").strip()
@@ -110,38 +110,33 @@ jobs:
                       ch["channel_url"] = cookie_map[cid]
                   add_channel(ch, force_group="Sports")
 
-          # ===== SONY SAB FINAL FIX =====
+          # ===== SONY SAB FINAL FIX (CORRECT COOKIE FORMAT) =====
 
-          sony_cookie_map = {}
-          if isinstance(sony_cookie_data, dict):
-              for item in sony_cookie_data.get("successful_results", []) + sony_cookie_data.get("failed_results", []):
-                  cid = str(item.get("channel_id", "")).strip()
+          global_cookie = ""
 
-                  furl = (
-                      item.get("error_details", {}).get("final_url") or
-                      item.get("final_url") or
-                      item.get("url") or
-                      item.get("channel_url") or
-                      ""
-                  )
+          if isinstance(sony_cookie_data, list):
+              for item in sony_cookie_data:
+                  if "cookie" in item:
+                      global_cookie = item["cookie"]
+                      break
 
-                  if cid and furl:
-                      sony_cookie_map[cid] = furl
+          base_url = "https://jiotvmblive.cdn.jio.com/bpk-tv/Sony_SAB_MOB/WDVLive/index.mpd"
+
+          final_url = base_url
+          if global_cookie:
+              final_url = f"{base_url}?{global_cookie}"
 
           sony_channel = {
               "name": "Sony SAB SD",
               "id": "154",
               "category": "Entertainment",
-              "url": "",
+              "url": final_url,
               "keyId": "ba4d9b38517552de9654d3652d27933b",
               "key": "31e7cbf3d289d3116386457ed8bac3a2",
               "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SAB.png"
           }
 
-          # ONLY add if cookie exists (force cookie usage)
-          if "154" in sony_cookie_map:
-              sony_channel["url"] = sony_cookie_map["154"]
-              add_channel(sony_channel, force_group="Entertainment")
+          add_channel(sony_channel, force_group="Entertainment")
 
           # ===== END =====
 
