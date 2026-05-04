@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amaria IPTV Tool</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  body{
+    font-family:'Rajdhani',sans-serif;
+    background:#050507;
+    color:#e0e0e0;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* Animated grid background */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+      linear-gradient(rgba(102,252,241,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(102,252,241,0.03) 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:gridMove 20s linear infinite;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  @keyframes gridMove{
+    0%{background-position:0 0}
+    100%{background-position:40px 40px}
+  }
+
+  /* Scan line effect */
+  body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.08) 2px,
+      rgba(0,0,0,0.08) 4px
+    );
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .wrapper{
+    position:relative;
+    z-index:1;
+    max-width:680px;
+    margin:0 auto;
+    padding:40px 20px 30px;
+  }
+
+  /* Corner decorations */
+  .corner{position:fixed;width:80px;height:80px;pointer-events:none;z-index:2}
+  .corner-tl{top:0;left:0;border-top:2px solid #66fcf1;border-left:2px solid #66fcf1}
+  .corner-tr{top:0;right:0;border-top:2px solid #66fcf1;border-right:2px solid #66fcf1}
+  .corner-bl{bottom:0;left:0;border-bottom:2px solid #66fcf1;border-left:2px solid #66fcf1}
+  .corner-br{bottom:0;right:0;border-bottom:2px solid #66fcf1;border-right:2px solid #66fcf1}
+
+  /* Header */
+  .header{text-align:center;margin-bottom:36px}
+
+  .logo-ring{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:72px;height:72px;
+    border-radius:50%;
+    border:2px solid #66fcf1;
+    margin-bottom:16px;
+    position:relative;
+    animation:spin 8s linear infinite;
+  }
+  .logo-ring::before{
+    content:'';
+    position:absolute;
+    inset:-6px;
+    border-radius:50%;
+    border:1px dashed rgba(102,252,241,0.3);
+    animation:spin 4s linear infinite reverse;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .logo-inner{
+    font-size:28px;
+    animation:spin 8s linear infinite reverse;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .title{
+    font-family:'Orbitron',monospace;
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:4px;
+    color:#fff;
+    text-transform:uppercase;
+  }
+  .title span{color:#66fcf1}
+
+  .subtitle{
+    font-size:13px;
+    letter-spacing:6px;
+    color:rgba(102,252,241,0.5);
+    text-transform:uppercase;
+    margin-top:6px;
+  }
+
+  /* Status bar */
+  .status-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    justify-content:center;
+    margin:10px 0 28px;
+    font-size:11px;
+    letter-spacing:3px;
+    color:rgba(102,252,241,0.4);
+    text-transform:uppercase;
+  }
+  .status-dot{
+    width:6px;height:6px;border-radius:50%;
+    background:#66fcf1;
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+
+  /* Card */
+  .card{
+    background:rgba(15,18,25,0.9);
+    border:1px solid rgba(102,252,241,0.15);
+    border-radius:2px;
+    padding:28px 28px 24px;
+    position:relative;
+    margin-bottom:16px;
+    clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  }
+  .card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:2px;
+    background:linear-gradient(135deg, rgba(102,252,241,0.04) 0%, transparent 60%);
+    pointer-events:none;
+  }
+
+  /* Eyepatch corner badge */
+  .card-tag{
+    position:absolute;
+    top:-1px;right:16px;
+    font-family:'Orbitron',monospace;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#66fcf1;
+    background:#050507;
+    padding:2px 10px;
+    border:1px solid rgba(102,252,241,0.2);
+    border-top:none;
+    text-transform:uppercase;
+  }
+
+  .section-label{
+    font-family:'Orbitron',monospace;
+    font-size:10px;
+    letter-spacing:3px;
+    color:rgba(102,252,241,0.5);
+    text-transform:uppercase;
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-label::after{
+    content:'';flex:1;height:1px;
+    background:linear-gradient(90deg, rgba(102,252,241,0.2), transparent);
+  }
+
+  /* Inputs */
+  .input-group{
+    position:relative;
+    margin-bottom:10px;
+  }
+  .input-group::before{
+    content:'';
+    position:absolute;
+    left:0;top:50%;transform:translateY(-50%);
+    width:3px;height:60%;
+    background:#66fcf1;
+    opacity:0;
+    transition:opacity 0.2s;
+  }
+  .input-group:focus-within::before{opacity:1}
+
+  input{
+    width:100%;
+    padding:12px 16px;
+    background:rgba(102,252,241,0.03);
+    border:1px solid rgba(102,252,241,0.12);
+    border-left:none;
+    color:#e0e0e0;
+    font-family:'Rajdhani',sans-serif;
+    font-size:14px;
+    letter-spacing:1px;
+    outline:none;
+    transition:border-color 0.2s, background 0.2s;
+    border-radius:0;
+  }
+  input:focus{
+    border-color:rgba(102,252,241,0.4);
+    background:rgba(102,252,241,0.06);
+  }
+  input::placeholder{
+    color:rgba(255,255,255,0.55);
+    font-size:14px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+
+  /* Buttons */
+  .btn-primary{
+    width:100%;
+    padding:14px 24px;
+    background:transparent;
+    border:1px solid #66fcf1;
+    color:#66fcf1;
+    font-family:'Orbitron',monospace;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:color 0.3s;
+    margin-top:6px;
+    clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-primary::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:#66fcf1;
+    transform:translateX(-101%);
+    transition:transform 0.3s ease;
+    z-index:0;
+  }
+  .btn-primary:hover::before{transform:translateX(0)}
+  .btn-primary:hover{color:#050507}
+  .btn-primary span{position:relative;z-index:1}
+
+  /* Sweep animation on click */
+  .btn-primary.fired::before{transform:translateX(0);transition:none}
+
+  /* Output */
+  .output-card{
+    background:rgba(8,12,18,0.95);
+    border:1px solid rgba(102,252,241,0.1);
+    border-left:3px solid #66fcf1;
+    padding:16px 18px;
+    margin-top:0;
+    font-family:'Rajdhani',monospace;
+    font-size:13px;
+    color:#66fcf1;
+    word-break:break-all;
+    min-height:52px;
+    letter-spacing:0.5px;
+    line-height:1.6;
+    position:relative;
+  }
+  .output-placeholder{
+    color:rgba(102,252,241,0.2);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+  }
+
+  .btn-copy{
+    width:100%;
+    padding:12px 24px;
+    background:rgba(102,252,241,0.06);
+    border:1px solid rgba(102,252,241,0.2);
+    color:rgba(102,252,241,0.7);
+    font-family:'Orbitron',monospace;
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:all 0.2s;
+    margin-top:8px;
+  }
+  .btn-copy:hover{
+    background:rgba(102,252,241,0.1);
+    border-color:rgba(102,252,241,0.4);
+    color:#66fcf1;
+  }
+
+  /* Divider */
+  .divider{
+    display:flex;align-items:center;gap:12px;
+    margin:6px 0 14px;
+    font-size:10px;letter-spacing:3px;
+    color:rgba(102,252,241,0.25);
+    text-transform:uppercase;
+  }
+  .divider::before,.divider::after{
+    content:'';flex:1;height:1px;
+    background:rgba(102,252,241,0.1);
+  }
+
+  /* Footer */
+  .footer{
+    margin-top:32px;
+    padding:20px 24px;
+    background:rgba(10,12,18,0.8);
+    border:1px solid rgba(255,255,255,0.05);
+    border-top:1px solid rgba(102,252,241,0.08);
+    text-align:center;
+    position:relative;
+    clip-path:polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  }
+  .footer-badge{
+    display:inline-block;
+    font-family:'Orbitron',monospace;
+    font-size:9px;
+    letter-spacing:3px;
+    color:rgba(255,200,80,0.7);
+    background:rgba(255,200,80,0.06);
+    border:1px solid rgba(255,200,80,0.15);
+    padding:4px 14px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  .footer-text{
+    font-size:12px;
+    color:rgba(255,255,255,0.3);
+    line-height:1.7;
+    letter-spacing:0.5px;
+  }
+  .footer-text strong{color:rgba(255,255,255,0.5);font-weight:600}
+
+  .tg-divider{
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(102,252,241,0.12),transparent);
+    margin:18px 0;
+  }
+  .tg-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 28px;
+    background:rgba(41,171,226,0.07);
+    border:1px solid rgba(41,171,226,0.3);
+    color:#29ABE2;
+    font-family:'Orbitron',monospace;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:all 0.25s;
+    clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));
+  }
+  .tg-btn:hover{
+    background:rgba(41,171,226,0.15);
+    border-color:rgba(41,171,226,0.6);
+    color:#5bc8f0;
+  }
+  .tg-label{font-size:10px;color:rgba(41,171,226,0.45);letter-spacing:2px;margin-top:8px;display:block;text-transform:uppercase;font-family:'Orbitron',monospace;}
+  .tg-wrap{text-align:center;}
+
+  /* Floating particles */
+  .particles{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .particle{
+    position:absolute;
+    width:2px;height:2px;
+    background:#66fcf1;
+    border-radius:50%;
+    animation:float linear infinite;
+    opacity:0;
+  }
+  @keyframes float{
+    0%{transform:translateY(100vh) translateX(0);opacity:0}
+    10%{opacity:0.4}
+    90%{opacity:0.4}
+    100%{transform:translateY(-10px) translateX(30px);opacity:0}
+  }
+
+  /* Copied toast */
+  .toast{
+    position:fixed;
+    bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);
+    background:#66fcf1;
+    color:#050507;
+    font-family:'Orbitron',monospace;
+    font-size:11px;
+    letter-spacing:3px;
+    padding:10px 24px;
+    pointer-events:none;
+    opacity:0;
+    transition:all 0.3s;
+    z-index:100;
+    text-transform:uppercase;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="corner corner-tl"></div>
+<div class="corner corner-tr"></div>
+<div class="corner corner-bl"></div>
+<div class="corner corner-br"></div>
+
+<div class="particles" id="particles"></div>
+<div class="toast" id="toast">URL Copied</div>
+
+<div class="wrapper">
+
+  <div class="header">
+    <div class="logo-ring">
+      <div class="logo-inner">ðŸ“¡</div>
+    </div>
+    <div class="title">Amaria<span>.</span>IPTV</div>
+    <div class="subtitle">Playlist Generator</div>
+    <div class="status-bar">
+      <div class="status-dot"></div>
+      System Online
+      <div class="status-dot"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Config</div>
+    <div class="section-label">Required Parameters</div>
+    <div class="input-group">
+      <input id="portal" placeholder="Portal URL  ( without /c )">
+    </div>
+    <div class="input-group">
+      <input id="mac" placeholder="MAC Address">
+    </div>
+
+    <div class="divider">Optional</div>
+
+    <div class="input-group">
+      <input id="sn" placeholder="Serial Number">
+    </div>
+    <div class="input-group">
+      <input id="device_id" placeholder="Device ID">
+    </div>
+    <div class="input-group">
+      <input id="device_id2" placeholder="Device ID 2">
+    </div>
+    <div class="input-group">
+      <input id="signature" placeholder="Signature">
+    </div>
+
+    <button class="btn-primary" onclick="generate()"><span>âš¡ Generate Playlist URL</span></button>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Output</div>
+    <div class="section-label">Generated URL</div>
+    <div class="output-card" id="out">
+      <span class="output-placeholder">[ Awaiting generation... ]</span>
+    </div>
+    <button class="btn-copy" onclick="copy()">â§‰ &nbsp; Copy to Clipboard</button>
+  </div>
+
+  <div class="footer">
+    <div class="footer-badge">âš  Educational Disclaimer</div>
+    <p class="footer-text">
+      This tool is provided <strong>strictly for educational and research purposes only.</strong>
+      We do not host, distribute, stream, or provide access to any IPTV content or services.
+      We are not affiliated with any IPTV provider. Users are solely responsible for ensuring
+      their use complies with all applicable local laws and regulations.
+      <strong>We do not condone piracy or unauthorized use of any kind.</strong>
+    </p>
+    <div class="tg-divider"></div>
+    <div class="tg-wrap">
+      <a href="https://t.me/+RIErJnPLW2YwODU1" target="_blank" class="tg-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.947l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.978.612z"/></svg>
+        Join Our Telegram
+      </a>
+      <span class="tg-label">Updates &nbsp;Â·&nbsp; Support &nbsp;Â·&nbsp; Announcements</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Particles
+  const pc = document.getElementById('particles');
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDuration=(8+Math.random()*14)+'s';
+    p.style.animationDelay=(Math.random()*12)+'s';
+    p.style.width=p.style.height=(Math.random()>0.6?3:2)+'px';
+    p.style.opacity=0;
+    pc.appendChild(p);
+  }
+
+  function generate(){
+    let p=document.getElementById('portal').value;
+    let m=document.getElementById('mac').value;
+    let snv=document.getElementById('sn').value;
+    let d1=document.getElementById('device_id').value;
+    let d2=document.getElementById('device_id2').value;
+    let sig=document.getElementById('signature').value;
+
+    let base=location.origin+"/playlist.m3u?portal="+encodeURIComponent(p)+"&mac="+encodeURIComponent(m);
+
+    if(snv) base+="&sn="+snv;
+    if(d1) base+="&device_id="+d1;
+    if(d2) base+="&device_id2="+d2;
+    if(sig) base+="&signature="+sig;
+
+    const out=document.getElementById('out');
+    out.style.opacity=0;
+    setTimeout(()=>{
+      out.innerHTML=base;
+      out.style.transition='opacity 0.4s';
+      out.style.opacity=1;
+    },150);
+  }
+
+  function copy(){
+    const txt=document.getElementById('out').innerText;
+    if(!txt||txt.includes('Awaiting')) return;
+    navigator.clipboard.writeText(txt);
+    const t=document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2200);
+  }
+</script>
+
+</body>
+</html>
