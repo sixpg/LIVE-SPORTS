@@ -3,7 +3,7 @@ name: Generate Kodi M3U Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" # Runs every 6 hours
+    - cron: "0 */6 * * *"
 
 permissions:
   contents: write
@@ -40,7 +40,7 @@ jobs:
 
           channels = response.json()
 
-          m3u = "#EXTM3U\n"
+          m3u = "#EXTM3U\n\n"
 
           for ch in channels:
               name = ch.get("name", "Unknown")
@@ -50,32 +50,35 @@ jobs:
               license_url = ch.get("license_url", "")
               user_agent = ch.get("user_agent", "")
               cookie = ch.get("headers", {}).get("cookie", "")
-
-              kodi_props = []
-
-              if license_url:
-                  kodi_props.append(
-                      f'#KODIPROP:inputstream.adaptive.license_key={license_url}|Cookie={cookie}|R{{SSM}}|'
-                  )
-
-              kodi_props.extend([
-                  '#KODIPROP:inputstream=inputstream.adaptive',
-                  '#KODIPROP:inputstream.adaptive.manifest_type=mpd',
-                  '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha'
-              ])
-
-              if user_agent and user_agent != "@cloudplay":
-                  kodi_props.append(f'#EXTVLCOPT:http-user-agent={user_agent}')
+              channel_id = ch.get("id", "")
 
               m3u += (
-                  f'#EXTINF:-1 tvg-id="{ch.get("id","")}" '
+                  f'#EXTINF:-1 '
+                  f'tvg-id="{channel_id}" '
                   f'tvg-name="{name}" '
                   f'tvg-logo="{logo}" '
                   f'group-title="{group}",{name}\n'
               )
 
-              m3u += "\n".join(kodi_props) + "\n"
-              m3u += f"{mpd}\n\n"
+              m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
+              m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
+              m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
+
+              if license_url:
+                  m3u += (
+                      f'#KODIPROP:inputstream.adaptive.license_key='
+                      f'{license_url}|Cookie={cookie}|R{{SSM}}|\n'
+                  )
+
+              if user_agent and user_agent != "@cloudplay":
+                  m3u += f'#EXTVLCOPT:http-user-agent={user_agent}\n'
+
+              stream_url = mpd
+
+              if cookie:
+                  stream_url += f'|cookie={cookie}'
+
+              m3u += f"{stream_url}\n\n"
 
           with open("jtv.m3u", "w", encoding="utf-8") as f:
               f.write(m3u)
@@ -90,6 +93,6 @@ jobs:
 
           git add jtv.m3u
 
-          git commit -m "Updated Kodi Playlist" || echo "No changes"
+          git commit -m "Updated JTV Playlist" || echo "No changes"
 
           git push
