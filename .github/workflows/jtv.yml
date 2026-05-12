@@ -30,17 +30,12 @@ jobs:
         run: |
           python << 'EOF'
           import requests
-          import json
           import os
           import urllib.parse
 
           url = os.environ["JSON_URL"]
 
-          headers = {
-              "User-Agent": "Mozilla/5.0"
-          }
-
-          response = requests.get(url, headers=headers)
+          response = requests.get(url)
           response.raise_for_status()
 
           channels = response.json()
@@ -48,30 +43,18 @@ jobs:
           m3u = "#EXTM3U\n\n"
 
           for ch in channels:
+              channel_id = ch.get("id", "")
               name = ch.get("name", "Unknown")
               group = ch.get("group", "Other")
               logo = ch.get("logo", "")
               mpd = ch.get("mpd_url", "")
               license_url = ch.get("license_url", "")
               cookie = ch.get("headers", {}).get("cookie", "")
-              channel_id = ch.get("id", "")
 
-              # URL encode cookie for better player compatibility
-              encoded_cookie = urllib.parse.quote(cookie, safe="=")
+              # Encode cookie properly
+              encoded_cookie = urllib.parse.quote(cookie, safe="=~")
 
-              m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
-              m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
-              m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
-
-              # Proper Widevine license format
-              if license_url:
-                  license_key = license_url
-
-                  if cookie:
-                      license_key += f'|Cookie={encoded_cookie}&User-Agent=Mozilla/5.0|R{{SSM}}|'
-
-                  m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_key}\n'
-
+              # EXTINF
               m3u += (
                   f'#EXTINF:-1 '
                   f'tvg-id="{channel_id}" '
@@ -80,13 +63,24 @@ jobs:
                   f'group-title="{group}",{name}\n'
               )
 
-              # MPD URL with cookie after pipe
+              # Kodi DRM props
+              m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
+              m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
+              m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
+
+              if license_url:
+                  m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_url}\n'
+
+              # Stream URL
               stream_url = mpd
 
               if cookie:
-                  stream_url += f'|cookie={encoded_cookie}&User-Agent=Mozilla/5.0'
+                  stream_url += (
+                      f'|cookie={encoded_cookie}'
+                      f'&User-Agent=Mozilla/5.0'
+                  )
 
-              m3u += f"{stream_url}\n\n"
+              m3u += f'{stream_url}\n\n'
 
           with open("jtv.m3u", "w", encoding="utf-8") as f:
               f.write(m3u)
