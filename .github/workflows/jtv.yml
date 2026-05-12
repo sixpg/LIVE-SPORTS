@@ -48,9 +48,15 @@ jobs:
               logo = ch.get("logo", "")
               mpd = ch.get("mpd_url", "")
               license_url = ch.get("license_url", "")
-              user_agent = ch.get("user_agent", "")
               cookie = ch.get("headers", {}).get("cookie", "")
               channel_id = ch.get("id", "")
+
+              m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
+              m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
+              m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
+
+              if license_url:
+                  m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_url}\n'
 
               m3u += (
                   f'#EXTINF:-1 '
@@ -59,19 +65,6 @@ jobs:
                   f'tvg-logo="{logo}" '
                   f'group-title="{group}",{name}\n'
               )
-
-              m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
-              m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
-              m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
-
-              if license_url:
-                  m3u += (
-                      f'#KODIPROP:inputstream.adaptive.license_key='
-                      f'{license_url}|Cookie={cookie}|R{{SSM}}|\n'
-                  )
-
-              if user_agent and user_agent != "@cloudplay":
-                  m3u += f'#EXTVLCOPT:http-user-agent={user_agent}\n'
 
               stream_url = mpd
 
