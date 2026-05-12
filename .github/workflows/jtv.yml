@@ -1,0 +1,94 @@
+name: Generate Kodi M3U Playlist
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *" # Runs every 6 hours
+
+permissions:
+  contents: write
+
+jobs:
+  generate-playlist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Requests
+        run: pip install requests
+
+      - name: Generate M3U Playlist
+        env:
+          JSON_URL: ${{ secrets.JSON_URL }}
+        run: |
+          python << 'EOF'
+          import requests
+          import json
+
+          url = os.environ["JSON_URL"]
+
+          response = requests.get(url)
+          response.raise_for_status()
+
+          channels = response.json()
+
+          m3u = "#EXTM3U\n"
+
+          for ch in channels:
+              name = ch.get("name", "Unknown")
+              group = ch.get("group", "Other")
+              logo = ch.get("logo", "")
+              mpd = ch.get("mpd_url", "")
+              license_url = ch.get("license_url", "")
+              user_agent = ch.get("user_agent", "")
+              cookie = ch.get("headers", {}).get("cookie", "")
+
+              kodi_props = []
+
+              if license_url:
+                  kodi_props.append(
+                      f'#KODIPROP:inputstream.adaptive.license_key={license_url}|Cookie={cookie}|R{{SSM}}|'
+                  )
+
+              kodi_props.extend([
+                  '#KODIPROP:inputstream=inputstream.adaptive',
+                  '#KODIPROP:inputstream.adaptive.manifest_type=mpd',
+                  '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha'
+              ])
+
+              if user_agent and user_agent != "@cloudplay":
+                  kodi_props.append(f'#EXTVLCOPT:http-user-agent={user_agent}')
+
+              m3u += (
+                  f'#EXTINF:-1 tvg-id="{ch.get("id","")}" '
+                  f'tvg-name="{name}" '
+                  f'tvg-logo="{logo}" '
+                  f'group-title="{group}",{name}\n'
+              )
+
+              m3u += "\n".join(kodi_props) + "\n"
+              m3u += f"{mpd}\n\n"
+
+          with open("playlist.m3u", "w", encoding="utf-8") as f:
+              f.write(m3u)
+
+          print("playlist.m3u generated successfully")
+          EOF
+
+      - name: Commit Playlist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add playlist.m3u
+
+          git commit -m "Updated Kodi Playlist" || echo "No changes"
+
+          git push
