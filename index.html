@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DASH DRM Player</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DRM DASH Player</title>
 
   <!-- DASH.JS -->
   <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 
   <!-- DASH UI -->
-  <link rel="stylesheet" href="https://cdn.dashjs.org/latest/modern/controls.css">
-  <script src="https://cdn.dashjs.org/latest/modern/controls.js"></script>
+  <script src="https://cdn.dashjs.org/latest/modern/ControlBar.js"></script>
+
+  <link rel="stylesheet"
+        href="https://cdn.dashjs.org/latest/modern/controls.css"/>
 
   <style>
 
@@ -26,7 +29,7 @@
       font-family:Arial,sans-serif;
     }
 
-    #player-container{
+    #videoContainer{
       width:100%;
       height:100vh;
       position:relative;
@@ -44,9 +47,9 @@
       top:50%;
       left:50%;
       transform:translate(-50%,-50%);
-      color:#fff;
-      font-size:20px;
+      color:white;
       z-index:9999;
+      font-size:20px;
     }
 
     #error{
@@ -54,26 +57,27 @@
       bottom:20px;
       left:20px;
       color:red;
-      font-size:16px;
       z-index:9999;
+      font-size:16px;
       max-width:90%;
-      word-wrap:break-word;
     }
 
   </style>
+
 </head>
 
 <body>
 
-<div id="player-container">
+<div id="videoContainer">
 
-  <div id="loading">Loading Stream...</div>
+  <div id="loading">
+    Loading Stream...
+  </div>
 
   <div id="error"></div>
 
   <video
     id="videoPlayer"
-    class="dashjs-player"
     controls
     autoplay
     playsinline
@@ -85,99 +89,87 @@
 
 (async () => {
 
-  // =====================================
-  // GET STREAM ID
-  // Example:
-  // player.html?id=3122
-  // =====================================
+  // ==========================
+  // GET ID
+  // ==========================
 
-  const params = new URLSearchParams(window.location.search);
+  const params =
+    new URLSearchParams(window.location.search);
 
-  const streamId = params.get("id");
+  const streamId =
+    params.get("id");
 
   if (!streamId) {
     showError("No stream ID provided");
     return;
   }
 
-  // =====================================
+  // ==========================
   // API URL
-  // =====================================
+  // ==========================
 
   const apiUrl =
     `https://footsters.playsportsapi.workers.dev/?id=${streamId}`;
 
   try {
 
-    // =====================================
+    // ==========================
     // FETCH JSON
-    // =====================================
+    // ==========================
 
-    const response = await fetch(apiUrl);
+    const response =
+      await fetch(apiUrl);
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch API");
-    }
+    const data =
+      await response.json();
 
-    const data = await response.json();
+    console.log(data);
 
-    console.log("FULL JSON:", data);
+    // ==========================
+    // YOUR JSON FORMAT
+    // ==========================
 
-    // =====================================
-    // ACCESS STREAM
-    // JSON FORMAT:
-    // {
-    //   "3122": {
-    //      url: ...
-    //   }
-    // }
-    // =====================================
-
-    const stream = data[streamId];
+    const stream =
+      data[streamId];
 
     if (!stream) {
       throw new Error("Stream not found");
     }
-
-    // =====================================
-    // VALIDATION
-    // =====================================
 
     if (!stream.url) {
       throw new Error("MPD URL missing");
     }
 
     if (!stream.keys) {
-      throw new Error("DRM keys missing");
+      throw new Error("DRM Keys missing");
     }
 
-    // =====================================
-    // VIDEO ELEMENT
-    // =====================================
+    // ==========================
+    // VIDEO
+    // ==========================
 
     const video =
       document.getElementById("videoPlayer");
 
-    // Poster
-    if (stream.poster && stream.poster !== "") {
+    if (stream.poster) {
       video.poster = stream.poster;
     }
 
-    // =====================================
+    // ==========================
     // DASH PLAYER
-    // =====================================
+    // ==========================
 
     const player =
       dashjs.MediaPlayer().create();
 
-    // DRM CLEARKEY
+    // DRM
     player.setProtectionData({
       "org.w3.clearkey": {
         clearkeys: stream.keys
       }
     });
 
-    // PLAYER SETTINGS
+    // SETTINGS
     player.updateSettings({
       streaming: {
         lowLatencyEnabled: true,
@@ -185,34 +177,34 @@
       }
     });
 
-    // INIT PLAYER
+    // INIT
     player.initialize(
       video,
       stream.url,
       true
     );
 
-    // =====================================
-    // DASH UI CONTROLS
-    // =====================================
+    // ==========================
+    // DASH UI
+    // ==========================
 
-    const ui =
+    const controlbar =
       new ControlBar(player);
 
-    ui.initialize();
+    controlbar.initialize();
 
-    // =====================================
+    // ==========================
     // EVENTS
-    // =====================================
+    // ==========================
 
     player.on(
       dashjs.MediaPlayer.events.STREAM_INITIALIZED,
       () => {
 
-        console.log("Stream Started");
-
         document.getElementById("loading")
           .style.display = "none";
+
+        console.log("Playback started");
       }
     );
 
@@ -220,7 +212,7 @@
       dashjs.MediaPlayer.events.ERROR,
       (e) => {
 
-        console.error("DASH ERROR:", e);
+        console.error(e);
 
         showError("Playback Error");
 
@@ -239,9 +231,9 @@
       .style.display = "none";
   }
 
-  // =====================================
+  // ==========================
   // ERROR FUNCTION
-  // =====================================
+  // ==========================
 
   function showError(msg) {
 
