@@ -32,10 +32,15 @@ jobs:
           import requests
           import json
           import os
+          import urllib.parse
 
           url = os.environ["JSON_URL"]
 
-          response = requests.get(url)
+          headers = {
+              "User-Agent": "Mozilla/5.0"
+          }
+
+          response = requests.get(url, headers=headers)
           response.raise_for_status()
 
           channels = response.json()
@@ -51,12 +56,21 @@ jobs:
               cookie = ch.get("headers", {}).get("cookie", "")
               channel_id = ch.get("id", "")
 
+              # URL encode cookie for better player compatibility
+              encoded_cookie = urllib.parse.quote(cookie, safe="=")
+
               m3u += '#KODIPROP:inputstream=inputstream.adaptive\n'
               m3u += '#KODIPROP:inputstream.adaptive.manifest_type=mpd\n'
               m3u += '#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha\n'
 
+              # Proper Widevine license format
               if license_url:
-                  m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_url}\n'
+                  license_key = license_url
+
+                  if cookie:
+                      license_key += f'|Cookie={encoded_cookie}&User-Agent=Mozilla/5.0|R{{SSM}}|'
+
+                  m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_key}\n'
 
               m3u += (
                   f'#EXTINF:-1 '
@@ -66,10 +80,11 @@ jobs:
                   f'group-title="{group}",{name}\n'
               )
 
+              # MPD URL with cookie after pipe
               stream_url = mpd
 
               if cookie:
-                  stream_url += f'|cookie={cookie}'
+                  stream_url += f'|cookie={encoded_cookie}&User-Agent=Mozilla/5.0'
 
               m3u += f"{stream_url}\n\n"
 
