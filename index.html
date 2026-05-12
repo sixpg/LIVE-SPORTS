@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DRM DASH Player</title>
 
-  <!-- DASH.JS -->
   <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 
   <style>
@@ -49,8 +48,10 @@
       bottom:20px;
       left:20px;
       color:red;
-      z-index:999;
       font-size:16px;
+      z-index:999;
+      max-width:90%;
+      word-wrap:break-word;
     }
   </style>
 </head>
@@ -76,116 +77,140 @@
 
 (async () => {
 
-  // =========================
-  // GET STREAM ID
+  // ====================================
+  // GET STREAM ID FROM URL
   // Example:
-  // player.html?id=3121
-  // =========================
+  // player.html?id=3122
+  // player.html?id=Tnt1
+  // ====================================
 
   const params = new URLSearchParams(window.location.search);
 
   const streamId = params.get("id");
 
   if (!streamId) {
-    document.getElementById("error").innerText =
-      "No stream ID provided in URL";
+    showError("No stream ID provided");
     return;
   }
 
-  // =========================
-  // API URL
-  // =========================
+  // ====================================
+  // YOUR JSON API
+  // ====================================
 
   const apiUrl =
     `https://footsters.playsportsapi.workers.dev/?id=${streamId}`;
 
   try {
 
-    // =========================
-    // FETCH STREAM DATA
-    // =========================
+    // ====================================
+    // FETCH JSON
+    // ====================================
 
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      throw new Error("API request failed");
+      throw new Error("Failed to fetch API");
     }
 
-    const stream = await response.json();
+    const data = await response.json();
 
-    console.log("Stream Data:", stream);
+    console.log("FULL API RESPONSE:", data);
 
-    // =========================
+    // ====================================
+    // IMPORTANT FIX
+    // YOUR JSON FORMAT:
+    //
+    // {
+    //   "3122": { ... }
+    // }
+    //
+    // SO WE MUST ACCESS:
+    // data[streamId]
+    // ====================================
+
+    const stream = data[streamId];
+
+    if (!stream) {
+      throw new Error("Stream not found in JSON");
+    }
+
+    // ====================================
     // VALIDATION
-    // =========================
+    // ====================================
 
     if (!stream.url) {
       throw new Error("MPD URL missing");
     }
 
-    if (!stream.keys || Object.keys(stream.keys).length === 0) {
-      throw new Error("DRM keys missing");
+    if (!stream.keys) {
+      throw new Error("DRM Keys missing");
     }
 
-    // =========================
-    // VIDEO ELEMENT
-    // =========================
+    // ====================================
+    // VIDEO
+    // ====================================
 
-    const video = document.getElementById("videoPlayer");
+    const video =
+      document.getElementById("videoPlayer");
 
-    // Poster
     if (stream.poster && stream.poster !== "") {
       video.poster = stream.poster;
     }
 
-    // =========================
+    // ====================================
     // DASH PLAYER
-    // =========================
+    // ====================================
 
-    const player = dashjs.MediaPlayer().create();
+    const player =
+      dashjs.MediaPlayer().create();
 
-    // DRM Protection
+    // CLEARKEY DRM
     player.setProtectionData({
       "org.w3.clearkey": {
         clearkeys: stream.keys
       }
     });
 
-    // Optional settings
+    // PLAYER SETTINGS
     player.updateSettings({
       streaming: {
-        fastSwitchEnabled: true,
-        lowLatencyEnabled: true
+        lowLatencyEnabled: true,
+        fastSwitchEnabled: true
       }
     });
 
-    // Initialize
-    player.initialize(video, stream.url, true);
+    // INIT PLAYER
+    player.initialize(
+      video,
+      stream.url,
+      true
+    );
 
-    // =========================
+    // ====================================
     // EVENTS
-    // =========================
+    // ====================================
 
     player.on(
       dashjs.MediaPlayer.events.STREAM_INITIALIZED,
-      function () {
+      () => {
 
-        console.log("Stream initialized");
+        console.log("Playback Started");
 
-        document.getElementById("loading").style.display = "none";
+        document.getElementById("loading")
+          .style.display = "none";
       }
     );
 
     player.on(
       dashjs.MediaPlayer.events.ERROR,
-      function (e) {
+      (e) => {
 
         console.error("DASH ERROR:", e);
 
-        document.getElementById("error").innerText =
-          "Playback Error";
+        showError("Playback Error");
 
-        document.getElementById("loading").style.display = "none";
+        document.getElementById("loading")
+          .style.display = "none";
       }
     );
 
@@ -193,10 +218,20 @@
 
     console.error(err);
 
-    document.getElementById("loading").style.display = "none";
+    showError(err.message);
 
-    document.getElementById("error").innerText =
-      err.message || "Failed to load stream";
+    document.getElementById("loading")
+      .style.display = "none";
+  }
+
+  // ====================================
+  // ERROR FUNCTION
+  // ====================================
+
+  function showError(msg) {
+
+    document.getElementById("error")
+      .innerText = msg;
   }
 
 })();
