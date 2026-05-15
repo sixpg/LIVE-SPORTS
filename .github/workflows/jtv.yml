@@ -23,9 +23,9 @@ jobs:
 
       - name: Generate Playlist
         env:
-          JSTAR_FETCH: ${{ secrets.JSTAR_FETCH }}
-          COOKIE_FETCH: ${{ secrets.COOKIE_FETCH }}
-          PLLIVE_COOKIE_FETCH: ${{ secrets.PLLIVE_COOKIE_FETCH }}
+          CHANNEL_FETCHER: ${{ secrets.CHANNEL_FETCHER }}
+          COOKIE_FETCHER: ${{ secrets.COOKIE_FETCHER }}
+          PLLIVE_COOKIE_FETCHER: ${{ secrets.PLLIVE_COOKIE_FETCHER }}
 
         run: |
           python <<EOF
@@ -39,34 +39,51 @@ jobs:
           # =====================================================
 
           def safe_json(url):
+
               try:
-                  r = requests.get(url, timeout=60)
+
+                  headers = {
+                      "User-Agent": "Mozilla/5.0"
+                  }
+
+                  r = requests.get(
+                      url,
+                      headers=headers,
+                      timeout=60
+                  )
+
+                  print(f"{url} -> {r.status_code}")
 
                   if r.status_code != 200:
-                      print(f"Failed: {url}")
                       return None
 
                   return r.json()
 
               except Exception as e:
-                  print(f"Error fetching {url}: {e}")
+
+                  print(f"ERROR FETCHING {url}: {e}")
+
                   return None
 
           # =====================================================
           # LOAD SECRETS
           # =====================================================
 
-          JSTAR_FETCH = os.environ["JSTAR_FETCH"]
-          COOKIE_FETCH = os.environ["COOKIE_FETCH"]
-          PLLIVE_COOKIE_FETCH = os.environ["PLLIVE_COOKIE_FETCH"]
+          CHANNEL_FETCHER = os.environ["CHANNEL_FETCHER"]
+          COOKIE_FETCHER = os.environ["COOKIE_FETCHER"]
+          PLLIVE_COOKIE_FETCHER = os.environ["PLLIVE_COOKIE_FETCHER"]
 
           # =====================================================
           # FETCH DATA
           # =====================================================
 
-          channels = safe_json(JSTAR_FETCH) or []
-          cookie_data = safe_json(COOKIE_FETCH) or []
-          pllive_cookie_data = safe_json(PLLIVE_COOKIE_FETCH) or {}
+          channels = safe_json(CHANNEL_FETCHER) or []
+
+          print(f"Total channels fetched: {len(channels)}")
+
+          cookie_data = safe_json(COOKIE_FETCHER) or []
+
+          pllive_cookie_data = safe_json(PLLIVE_COOKIE_FETCHER) or {}
 
           # =====================================================
           # EXTRACT NORMAL COOKIE
@@ -81,7 +98,10 @@ jobs:
                   if isinstance(item, dict) and "cookie" in item:
 
                       normal_cookie = item["cookie"]
+
                       break
+
+          print(f"Normal cookie loaded: {bool(normal_cookie)}")
 
           # =====================================================
           # BUILD PLLIVE COOKIE MAP
@@ -123,6 +143,8 @@ jobs:
 
                   except:
                       pass
+
+          print(f"PLLIVE cookies loaded: {len(pllive_cookie_map)}")
 
           # =====================================================
           # PLAYLIST GENERATION
