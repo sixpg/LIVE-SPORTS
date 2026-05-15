@@ -110,17 +110,13 @@ jobs:
           )
 
           # ==================================================
-          # FETCH ALL DATA
+          # FETCH DATA
           # ==================================================
 
           channels = safe_json(CHANNEL_FETCHER) or []
 
           print("=" * 60)
           print(f"TOTAL CHANNELS: {len(channels)}")
-
-          if len(channels) > 0:
-              print("FIRST CHANNEL:")
-              print(json.dumps(channels[0], indent=2))
 
           cookie_data = safe_json(COOKIE_FETCHER) or []
 
@@ -288,7 +284,7 @@ jobs:
                   final_url = url
 
                   # ======================================
-                  # jiotvpllive
+                  # PLLIVE SPECIAL COOKIE
                   # ======================================
 
                   if (
@@ -309,14 +305,19 @@ jobs:
                               f"{url}|Cookie={cookie}"
                           )
 
+                      else:
+
+                          if normal_cookie:
+
+                              final_url = (
+                                  f"{url}|Cookie={normal_cookie}"
+                              )
+
                   # ======================================
-                  # jiotvmblive
+                  # ALL OTHER CHANNELS
                   # ======================================
 
-                  elif (
-                      "https://jiotvmblive.cdn.jio.com"
-                      in url
-                  ):
+                  else:
 
                       if normal_cookie:
 
