@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>BigFoot Player</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    background:#000;
+    overflow:hidden;
+    font-family:sans-serif;
+}
+
+#wrap{
+    position:absolute;
+    inset:0;
+}
+
+#video{
+    width:100%;
+    height:100%;
+}
+
+.shaka-spinner-container{
+    display:none!important;
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    transition:opacity .4s;
+}
+
+#loader.gone{
+    opacity:0;
+    pointer-events:none;
+}
+
+#ring{
+    width:42px;
+    height:42px;
+    border:3px solid rgba(232,255,71,.12);
+    border-top-color:#e8ff47;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg)
+    }
+}
+
+#llbl{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.12em;
+    color:rgba(255,255,255,.25);
+}
+
+#wm{
+    position:fixed;
+    top:12px;
+    left:1px;
+    z-index:900;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(0,136,204,.18);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(0,136,204,.28);
+    padding:6px 11px;
+    border-radius:7px;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+/* ===== POPUP CSS ===== */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .5s ease;
+}
+
+.modal.hidden{
+    display:none!important;
+}
+
+.modal-content{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:30px 25px;
+    width:90%;
+    max-width:400px;
+    text-align:center;
+    color:#f3f4f6;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+    backdrop-filter:blur(12px);
+    transform:scale(.95);
+    animation:scaleIn .4s ease forwards;
+}
+
+.modal-content h2{
+    font-size:24px;
+    font-weight:700;
+    color:#facc15;
+    margin-bottom:16px;
+}
+
+.modal-content p{
+    font-size:16px;
+    color:#d1d5db;
+    margin-bottom:24px;
+    line-height:1.5;
+}
+
+.modal-content strong{
+    color:#fff;
+}
+
+.modal-content .btn{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    margin-bottom:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#joinButton{
+    background:linear-gradient(to right,#3b82f6,#06b6d4);
+    color:#fff;
+    font-weight:500;
+}
+
+#joinButton:hover{
+    background:linear-gradient(to right,#2563eb,#0891b2);
+    transform:scale(1.02);
+}
+
+#closeButton{
+    background:rgba(255,255,255,0.1);
+    color:#f3f4f6;
+}
+
+#closeButton:hover{
+    background:rgba(255,255,255,0.15);
+    transform:scale(1.02);
+}
+
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes scaleIn{
+    to{
+        transform:scale(1);
+        opacity:1
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a href="https://t.me/+l-BV45YWZoM3ZmE9" target="_blank" id="wm">
+@Shrey7nsh FB
+</a>
+
+<div id="wrap" data-shaka-player-container>
+    <video autoplay playsinline data-shaka-player id="video"></video>
+</div>
+
+<div id="loader">
+    <div id="ring"></div>
+    <div id="llbl">LOADING STREAM</div>
+</div>
+
+<!-- TELEGRAM POPUP -->
+
+<div id="telegramModal" class="modal">
+    <div class="modal-content">
+
+        <h2>Join Our Telegram</h2>
+
+        <p>
+            Stay updated with the latest
+            <strong>Live Match Links</strong>
+            and updates. Click below to join our official Telegram channel.
+        </p>
+
+        <a href="https://t.me/+l-BV45YWZoM3ZmE9" target="_blank" style="text-decoration:none;">
+            <button id="joinButton" class="btn">
+                Join Telegram
+            </button>
+        </a>
+
+        <button id="closeButton" class="btn">
+            Maybe Later
+        </button>
+
+    </div>
+</div>
+
+<script>
+
+document.addEventListener('shaka-ui-loaded', initPlayer);
+
+async function initPlayer(){
+
+    const video = document.getElementById('video');
+    const player = video.ui.getControls().getPlayer();
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if(!id){
+        document.getElementById('llbl').textContent = "NO STREAM ID";
+        return;
+    }
+
+    try{
+
+        // REQUIRED HEADERS FOR MPD + SEGMENTS
+        player.getNetworkingEngine().registerRequestFilter(
+            (type, request) => {
+
+                request.headers["Referer"] =
+                    "https://sportseera2.pages.dev/";
+
+                request.headers["Origin"] =
+                    "https://sportseera2.pages.dev/";
+            }
+        );
+
+        // FETCH CHANNEL DATA BY ID
+        const res = await fetch(
+            `https://allinone.playsportsapi.workers.dev/?id=${id}`
+        );
+
+        const data = await res.json();
+
+        // GET STREAM OBJECT
+        const stream =
+            data[id] ||
+            data[Object.keys(data)[0]];
+
+        if(!stream){
+            document.getElementById('llbl').textContent = "STREAM NOT FOUND";
+            return;
+        }
+
+        // DRM CONFIG
+        player.configure({
+            drm:{
+                clearKeys: stream.keys || {}
+            }
+        });
+
+        // LOAD MPD
+        await player.load(stream.url);
+
+        // OPTIONAL POSTER
+        if(stream.poster){
+            video.poster = stream.poster;
+        }
+
+        // HIDE LOADER
+        document.getElementById('loader').classList.add('gone');
+
+    }catch(e){
+
+        console.error(e);
+
+        document.getElementById('llbl').textContent = "STREAM FAILED";
+
+        document.getElementById('loader').classList.add('gone');
+    }
+}
+
+// POPUP CLOSE
+
+window.addEventListener("DOMContentLoaded", function(){
+
+    document.getElementById("closeButton").onclick = function(){
+
+        document.getElementById("telegramModal").classList.add("hidden");
+    };
+});
+
+// WAKE LOCK
+
+if('wakeLock' in navigator){
+
+    navigator.wakeLock.request('screen').catch(()=>{});
+}
+
+</script>
+
+<!-- Anti-debugging -->
+<script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script>
+DisableDevtool({
+  disable: true,
+  disableMenu: true,
+  clearLog: true,
+  disableSelect: true,
+  disableCopy: true,
+  disableCut: true,
+  disablePaste: true,
+  interval: 10,
+  disableMobile: true,
+  ondevtoolopen: function () {
+    window.location.href = "about:blank";
+  },
+});
+</script> 
+</body>
+</html>
