@@ -295,8 +295,19 @@ async function initPlayer(){
             }
         });
 
+        // LIVE EDGE FIX
+        player.configure({
+            streaming: {
+                lowLatencyMode: true,
+                inaccurateManifestTolerance: 0
+            }
+        });
+
         // LOAD MPD
         await player.load(stream.url);
+
+        // JUMP TO LIVE EDGE
+        video.currentTime = video.seekable.end(0);
 
         // OPTIONAL POSTER
         if(stream.poster){
