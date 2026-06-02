@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
   <title>Football Live — Toxifyxe</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- SHAKA PLAYER -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
 
@@ -22,21 +24,25 @@
       --muted: #666;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     html, body {
       width: 100%;
       overflow-x: hidden;
+    }
+
+    body {
       background: var(--dark);
       color: var(--text);
       font-family: 'Barlow', sans-serif;
       min-height: 100vh;
     }
 
-    .shaka-spinner-container{
-      display:none!important;
-    }
-
+    /* LOADING */
     #loading-screen {
       position: fixed;
       inset: 0;
@@ -56,7 +62,9 @@
       animation: pulse 1.5s ease-in-out infinite;
     }
 
-    .load-logo span { color: var(--red); }
+    .load-logo span {
+      color: var(--red);
+    }
 
     .load-bar-wrap {
       width: min(200px, 60vw);
@@ -76,13 +84,13 @@
     }
 
     @keyframes slide {
-      0%{transform:translateX(-100%)}
-      100%{transform:translateX(350%)}
+      0% { transform: translateX(-100%) }
+      100% { transform: translateX(350%) }
     }
 
     @keyframes pulse {
-      0%,100%{opacity:1}
-      50%{opacity:0.6}
+      0%,100% { opacity: 1 }
+      50% { opacity: 0.6 }
     }
 
     #loading-text {
@@ -92,6 +100,7 @@
       color: var(--muted);
     }
 
+    /* ERROR */
     #error-screen {
       display: none;
       position: fixed;
@@ -134,6 +143,7 @@
       cursor: pointer;
     }
 
+    /* PLAYER */
     #player-container {
       display: none;
       flex-direction: column;
@@ -150,19 +160,24 @@
       overflow: hidden;
     }
 
-    #wrap{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
+    #wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
     }
 
-    #video{
-      width:100%;
-      height:100%;
-      background:#000;
+    #video {
+      width: 100%;
+      height: 100%;
+      background: #000;
     }
 
+    .shaka-spinner-container {
+      display: none !important;
+    }
+
+    /* TOPBAR */
     .topbar {
       display: flex;
       align-items: center;
@@ -174,7 +189,7 @@
       left: 0;
       right: 0;
       z-index: 10;
-      pointer-events:none;
+      pointer-events: none;
     }
 
     .brand {
@@ -183,7 +198,9 @@
       letter-spacing: 4px;
     }
 
-    .brand span { color: var(--red); }
+    .brand span {
+      color: var(--red);
+    }
 
     .live-pill {
       display: flex;
@@ -208,10 +225,11 @@
     }
 
     @keyframes blink {
-      0%,100%{opacity:1}
-      50%{opacity:0.2}
+      0%,100% { opacity:1 }
+      50% { opacity:0.2 }
     }
 
+    /* BOTTOM PANEL */
     .bottom-panel {
       background: var(--card);
       border-top: 1px solid var(--border);
@@ -230,7 +248,10 @@
       flex-wrap: wrap;
     }
 
-    .join-text-block { flex: 1; min-width: 0; }
+    .join-text-block {
+      flex: 1;
+      min-width: 0;
+    }
 
     .join-eyebrow {
       font-size: clamp(9px,2vw,10px);
@@ -311,6 +332,7 @@
       letter-spacing: 0.5px;
     }
 
+    /* POPUP */
     .overlay {
       display: none;
       position: fixed;
@@ -323,7 +345,9 @@
       padding: 20px;
     }
 
-    .overlay.show { display: flex; }
+    .overlay.show {
+      display: flex;
+    }
 
     .popup {
       background: var(--card);
@@ -334,12 +358,6 @@
       max-width: 420px;
       text-align: center;
       box-shadow: 0 32px 80px rgba(0,0,0,0.6);
-      animation: popIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
-    }
-
-    @keyframes popIn {
-      from{transform:scale(0.88) translateY(20px);opacity:0}
-      to{transform:scale(1) translateY(0);opacity:1}
     }
 
     .popup-icon {
@@ -402,7 +420,6 @@
       font-size: clamp(13px,3vw,14px);
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s;
     }
 
     .btn-join {
@@ -416,7 +433,7 @@
       font-weight: 600;
       cursor: pointer;
       box-shadow: 0 4px 16px rgba(0,136,204,0.3);
-      transition: all 0.2s;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -425,13 +442,15 @@
 
   <div id="loading-screen">
     <div class="load-logo">TOXIFY<span>XE</span></div>
-    <div class="load-bar-wrap"><div class="load-bar"></div></div>
+    <div class="load-bar-wrap">
+      <div class="load-bar"></div>
+    </div>
     <div id="loading-text">connecting...</div>
   </div>
 
   <div id="error-screen">
     <h2>Stream Offline</h2>
-    <p>This stream is currently unavailable.<br>The link may have expired — update it in the admin panel.</p>
+    <p>This stream is currently unavailable.</p>
     <button class="retry-btn" onclick="location.reload()">Retry</button>
   </div>
 
@@ -441,9 +460,13 @@
 
       <div class="topbar">
         <div class="brand">TOXIFY<span>XE</span></div>
-        <div class="live-pill"><div class="live-dot"></div>LIVE</div>
+        <div class="live-pill">
+          <div class="live-dot"></div>
+          LIVE
+        </div>
       </div>
 
+      <!-- SHAKA PLAYER -->
       <div id="wrap" data-shaka-player-container>
         <video autoplay playsinline data-shaka-player id="video"></video>
       </div>
@@ -461,7 +484,9 @@
         </div>
 
         <a class="tg-join-btn" onclick="showPopup(); return false;" href="#">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/>
+          </svg>
           Join Telegram
         </a>
 
@@ -473,20 +498,27 @@
       </div>
 
     </div>
+
   </div>
 
   <div class="overlay" id="overlay">
+
     <div class="popup">
 
       <div class="popup-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/>
+        </svg>
       </div>
 
       <div class="accent-line"></div>
 
       <div class="popup-brand">TOXIFYXE</div>
 
-      <p>Join our Telegram for free live streams, match updates, and exclusive content.</p>
+      <p>
+        Join our Telegram for free live streams,
+        match updates, and exclusive content.
+      </p>
 
       <div class="popup-actions">
         <button class="btn-cancel" onclick="closePopup()">Later</button>
@@ -494,31 +526,34 @@
       </div>
 
     </div>
+
   </div>
 
 <script>
 
-const JSON_URL = `https://allinone.playsportsapi.workers.dev/?id=${id}`
-
-setTimeout(showPopup, 800);
-
 document.addEventListener('shaka-ui-loaded', initPlayer);
 
-async function initPlayer(){
+// SHOW POPUP
+setTimeout(showPopup, 800);
+
+async function initPlayer() {
 
     const video = document.getElementById('video');
+
     const player = video.ui.getControls().getPlayer();
 
     const params = new URLSearchParams(window.location.search);
+
     const id = params.get("id");
 
     if (!id) {
-      showError("No stream ID provided in URL.");
-      return;
+        showError("No stream ID provided in URL.");
+        return;
     }
 
-    try{
+    try {
 
+        // REQUIRED HEADERS
         player.getNetworkingEngine().registerRequestFilter(
             (type, request) => {
 
@@ -530,46 +565,42 @@ async function initPlayer(){
             }
         );
 
-        const metaRes = await fetch(JSON_URL + "?t=" + Date.now());
-
-        if (!metaRes.ok) throw new Error("Fetch failed");
-
-        const metaData = await metaRes.json();
-
-        const metaStream = metaData.iframes && metaData.iframes.find(x => x.id === id);
-
-        if (!metaStream) {
-          showError("Stream not found for this ID.");
-          return;
-        }
-
-        document.title = (metaStream.name || "Live Stream") + " — TOXIFYXE";
-        document.getElementById("stream-name-label").innerText =
-          metaStream.name || "Live Stream";
-
-        if (metaStream.hit) fetch(metaStream.hit).catch(() => {});
-
+        // MAIN FETCHER
         const res = await fetch(
             `https://allinone.playsportsapi.workers.dev/?id=${id}`
         );
 
+        if (!res.ok) {
+            throw new Error("Fetch failed");
+        }
+
         const data = await res.json();
 
+        // STREAM OBJECT
         const stream =
             data[id] ||
             data[Object.keys(data)[0]];
 
-        if(!stream){
-            showError("Stream source not found.");
+        if (!stream) {
+            showError("Stream not found.");
             return;
         }
 
+        // TITLE
+        document.title =
+            (stream.name || "Live Stream") + " — TOXIFYXE";
+
+        document.getElementById("stream-name-label").innerText =
+            stream.name || "Live Stream";
+
+        // DRM
         player.configure({
-            drm:{
+            drm: {
                 clearKeys: stream.keys || {}
             }
         });
 
+        // LOW LATENCY
         player.configure({
             streaming: {
                 lowLatencyMode: true,
@@ -577,19 +608,23 @@ async function initPlayer(){
             }
         });
 
+        // LOAD STREAM
         await player.load(stream.url);
 
+        // SHOW PLAYER
         revealPlayer();
 
-        if(video.seekable.length){
+        // LIVE EDGE
+        if (video.seekable.length) {
             video.currentTime = video.seekable.end(0);
         }
 
-        if(stream.poster){
+        // POSTER
+        if (stream.poster) {
             video.poster = stream.poster;
         }
 
-    }catch(e){
+    } catch (e) {
 
         console.error(e);
 
@@ -598,36 +633,54 @@ async function initPlayer(){
 }
 
 function revealPlayer() {
-  document.getElementById("loading-screen").style.display = "none";
-  document.getElementById("player-container").style.display = "flex";
+
+    document.getElementById("loading-screen").style.display = "none";
+
+    const pc = document.getElementById("player-container");
+
+    pc.style.display = "flex";
 }
 
 function showPopup() {
-  document.getElementById("overlay").classList.add("show");
+
+    document.getElementById("overlay").classList.add("show");
 }
 
 function closePopup() {
-  document.getElementById("overlay").classList.remove("show");
+
+    document.getElementById("overlay").classList.remove("show");
 }
 
 function goTelegram() {
-  window.open("https://t.me/+Df6wIAetEzYyMzhl", "_blank");
-  closePopup();
+
+    window.open(
+      "https://t.me/+Df6wIAetEzYyMzhl",
+      "_blank"
+    );
+
+    closePopup();
 }
 
 function showError(msg) {
-  document.getElementById("loading-screen").style.display = "none";
-  const es = document.getElementById("error-screen");
-  es.style.display = "flex";
-  es.querySelector("p").innerText = msg;
+
+    document.getElementById("loading-screen").style.display = "none";
+
+    const es = document.getElementById("error-screen");
+
+    es.style.display = "flex";
+
+    es.querySelector("p").innerText = msg;
 }
 
-if('wakeLock' in navigator){
-    navigator.wakeLock.request('screen').catch(()=>{});
+// WAKE LOCK
+if ('wakeLock' in navigator) {
+
+    navigator.wakeLock.request('screen').catch(() => {});
 }
 
 </script>
 
+<!-- ANTI DEBUG -->
 <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
 <script>
