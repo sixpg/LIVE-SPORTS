@@ -53,6 +53,7 @@
 <body>
 
     <div class="shaka-video-container" id="player-container">
+        <!-- FIXED: Removed the 'muted' attribute from the video element below -->
         <video id="video" autoplay playsinline preload="metadata"></video>
         <div class="custom-watermark"></div>
     </div>
@@ -249,15 +250,8 @@
                 if (streamUrl) { 
                     await player.load(streamUrl); 
                     retryCount = 0; 
-
-                    video.muted = false;
-                    video.volume = 1.0;
-
-                    try {
-                        await video.play();
-                    } catch (e) {
-                        console.log("Autoplay prevented:", e);
-                    } 
+                    video.play().catch(e => console.log("Autoplay prevented:", e)); 
+                    setTimeout(() => { if (video) video.muted = false; }, 500); 
                 } else { 
                     throw new Error("No stream URL available"); 
                 } 
@@ -275,8 +269,7 @@
             const videoElem = document.getElementById("video"); 
             if (videoElem) { 
                 videoElem.addEventListener("play", () => { 
-                    videoElem.muted = false;
-                    videoElem.volume = 1.0;
+                    if (videoElem.muted) videoElem.muted = false; 
                 }); 
             } 
         });
@@ -291,3 +284,4 @@
     </script>
 </body>
 </html>
+
