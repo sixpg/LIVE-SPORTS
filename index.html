@@ -149,13 +149,12 @@
                 
                 const channels = await response.json(); 
                 
-                // FIXED: Catch API rejections labeled as success:false or error payload
-                if (channels && channels.success === false) {
-                    console.warn("API returned access denied error payload.");
+                // FIXED: Filters out access denied payloads and forces immediate local fallback execution
+                if (!channels || channels.success === false || !Array.isArray(channels)) {
                     return null;
                 }
 
-                const channel = Array.isArray(channels) ? channels.find(ch => ch.channel_id === channelId) : null; 
+                const channel = channels.find(ch => ch.channel_id === channelId); 
                 if (!channel) return null; 
 
                 return { 
@@ -166,7 +165,6 @@
                     channelName: channel.channel_name 
                 }; 
             } catch (error) { 
-                console.warn("Failed to fetch config from API, using fallback:", error); 
                 return null; 
             } 
         } 
@@ -175,8 +173,6 @@
             const video = document.getElementById("video"); 
             const container = document.getElementById("player-container"); 
             if (!video || !container) return; 
-
-            const configPromise = fetchChannelConfig();
 
             if (typeof shaka === 'undefined') {
                 console.error("Shaka Player library is missing or failed to load.");
@@ -205,20 +201,26 @@
                 seekBarColors: { base: "white", buffered: "red", played: "green" } 
             }); 
 
-            const remoteConfig = await configPromise; 
+            // Initialize default local fallbacks immediately 
             let streamUrl = CONFIG.streamUrl; 
             let keyId = CONFIG.keyId; 
             let key = CONFIG.key; 
 
-            if (remoteConfig) { 
-                if (remoteConfig.streamUrl) streamUrl = remoteConfig.streamUrl; 
-                if (remoteConfig.keyId && remoteConfig.key) { 
-                    keyId = remoteConfig.keyId; 
-                    key = remoteConfig.key; 
+            // FIXED: Isolated async fetch sequence to protect configuration timing flow
+            try { 
+                const remoteConfig = await fetchChannelConfig(); 
+                if (remoteConfig) { 
+                    if (remoteConfig.streamUrl) streamUrl = remoteConfig.streamUrl; 
+                    if (remoteConfig.keyId && remoteConfig.key) { 
+                        keyId = remoteConfig.keyId; 
+                        key = remoteConfig.key; 
+                    } 
+                    currentCookieHeader = remoteConfig.cookieValue; 
+                    if (remoteConfig.channelName) document.title = remoteConfig.channelName; 
                 } 
-                currentCookieHeader = remoteConfig.cookieValue; 
-                if (remoteConfig.channelName) document.title = remoteConfig.channelName; 
-            } 
+            } catch (e) {
+                console.warn("API handling suspended. Utilizing internal configuration settings.");
+            }
 
             player.configure({ 
                 drm: { clearKeys: { [keyId]: key } }, 
