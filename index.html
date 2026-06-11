@@ -53,7 +53,6 @@
 <body>
 
     <div class="shaka-video-container" id="player-container">
-        <!-- FIXED: Removed the 'muted' attribute from the video element below -->
         <video id="video" autoplay playsinline preload="metadata"></video>
         <div class="custom-watermark"></div>
     </div>
@@ -147,8 +146,16 @@
             try { 
                 const response = await fetch(CONFIG_API_URL, { cache: "no-store" }); 
                 if (!response.ok) throw new Error("HTTP " + response.status); 
+                
                 const channels = await response.json(); 
-                const channel = channels.find(ch => ch.channel_id === channelId); 
+                
+                // FIXED: Catch API rejections labeled as success:false or error payload
+                if (channels && channels.success === false) {
+                    console.warn("API returned access denied error payload.");
+                    return null;
+                }
+
+                const channel = Array.isArray(channels) ? channels.find(ch => ch.channel_id === channelId) : null; 
                 if (!channel) return null; 
 
                 return { 
@@ -169,10 +176,8 @@
             const container = document.getElementById("player-container"); 
             if (!video || !container) return; 
 
-            // Fire configuration request immediately
             const configPromise = fetchChannelConfig();
 
-            // Safely check if Shaka is loaded
             if (typeof shaka === 'undefined') {
                 console.error("Shaka Player library is missing or failed to load.");
                 return;
@@ -200,7 +205,6 @@
                 seekBarColors: { base: "white", buffered: "red", played: "green" } 
             }); 
 
-            // Read API configuration data right before setting DRM and URLs
             const remoteConfig = await configPromise; 
             let streamUrl = CONFIG.streamUrl; 
             let keyId = CONFIG.keyId; 
@@ -263,7 +267,6 @@
             } 
         } 
 
-        // Run setup safely once the window finishes rendering elements
         window.addEventListener("DOMContentLoaded", () => {
             initPlayer(); 
             const videoElem = document.getElementById("video"); 
