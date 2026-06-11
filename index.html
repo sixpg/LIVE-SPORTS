@@ -247,10 +247,56 @@
 
             try { 
                 if (streamUrl) { 
-                    await player.load(streamUrl); 
-                    retryCount = 0; 
-                    video.play().catch(e => console.log("Autoplay prevented:", e)); 
-                    setTimeout(() => { if (video) video.muted = false; }, 500); 
+                    await player.load(streamUrl);
+retryCount = 0;
+
+video.muted = false;
+video.defaultMuted = false;
+video.volume = 1.0;
+
+try {
+    await video.play();
+} catch (e) {
+    console.log("Autoplay prevented:", e);
+}
+
+try {
+    const langs = player.getAudioLanguages();
+    if (langs && langs.length) {
+        await player.selectAudioLanguage(langs[0]);
+    }
+} catch(e) {
+    console.log("Audio track selection failed:", e);
+}
+
+document.addEventListener("click", async () => {
+    try {
+        video.muted = false;
+        video.defaultMuted = false;
+        video.volume = 1.0;
+        await video.play();
+
+        const langs = player.getAudioLanguages();
+        if (langs && langs.length) {
+            await player.selectAudioLanguage(langs[0]);
+        }
+    } catch(e) {}
+}, { once: true });
+
+document.addEventListener("touchstart", async () => {
+    try {
+        video.muted = false;
+        video.defaultMuted = false;
+        video.volume = 1.0;
+        await video.play();
+
+        const langs = player.getAudioLanguages();
+        if (langs && langs.length) {
+            await player.selectAudioLanguage(langs[0]);
+        }
+    } catch(e) {}
+}, { once: true });
+
                 } else { 
                     throw new Error("No stream URL available"); 
                 } 
