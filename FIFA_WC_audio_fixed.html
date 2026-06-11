@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FIFA WC</title>
+    <meta name="referrer" content="no-referrer">
+    
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.16.2/dist/shaka-player.ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shaka-player@4.16.2/dist/controls.css"/>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMP9REY96D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMP9REY96D');
+    </script>
+    
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+        .shaka-video-container{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;}
+        video{width:100%;height:100%;object-fit:contain;background:#000;}
+        .custom-watermark{display:none;}
+        .block-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);text-align:center;}
+        .block-box{padding:40px;max-width:500px;width:90%;background:rgba(20,20,20,0.95);border-radius:16px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 20px 50px rgba(0,0,0,0.5);animation: fadeInUp 0.6s ease-out;}
+        @keyframes fadeInUp {from { opacity: 0; transform: translateY(30px); }to { opacity: 1; transform: translateY(0); }}
+        .block-title{font-size:42px;font-weight:800;color:#ffffff;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;text-shadow:0 0 10px rgba(255,0,0,0.3);}
+        .block-sub{font-size:14px;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.6;}
+        .block-icon, .block-note, #errorBanner{ display: none; }
+        #errorBanner{ position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; background:rgba(255,0,0,.7); padding:20px; border-radius:10px; text-align:center; z-index:10000;}
+        @media(max-width:700px){.custom-watermark{font-size:9px;top:60%;left:16%}.block-title{font-size:28px}.block-box{padding:25px}.block-sub{font-size:12px}}
+        
+        /* Modal Styles */
+        .modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; backdrop-filter: blur(6px); background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center; z-index: 9999; animation: fadeIn .5s ease;}
+        .modal.hidden { display: none !important; }
+        .modal-content { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 30px 25px; width: 90%; max-width: 400px; text-align: center; color: #f3f4f6; box-shadow: 0 8px 32px rgba(0,0,0,0.4); backdrop-filter: blur(12px); transform: scale(.95); animation: scaleIn .4s ease forwards;}
+        .modal-content h2 { font-size: 24px; font-weight: 700; color: #facc15; margin-bottom: 16px;}
+        .modal-content p { font-size: 16px; color: #d1d5db; margin-bottom: 24px; line-height: 1.5;}
+        .modal-content strong { color: #fff; }
+        .modal-content .btn { width: 100%; padding: 12px; font-size: 16px; border: none; border-radius: 12px; margin-bottom: 12px; cursor: pointer; transition: .3s;}
+        #joinButton { background: linear-gradient(to right,#3b82f6,#06b6d4); color: #fff; font-weight: 500;}
+        #joinButton:hover { background: linear-gradient(to right,#2563eb,#0891b2); transform: scale(1.02);}
+        #closeButton { background: rgba(255,255,255,0.1); color: #f3f4f6;}
+        #closeButton:hover { background: rgba(255,255,255,0.15); transform: scale(1.02);}
+        @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 }}
+        @keyframes scaleIn { to { transform: scale(1); opacity: 1 }}
+    </style>
+</head>
+<body>
+
+    <div class="shaka-video-container" id="player-container">
+        <video id="video" autoplay playsinline preload="metadata"></video>
+        <div class="custom-watermark"></div>
+    </div>
+
+    <div id="errorBanner">Failed to load stream. Retrying...</div>
+
+    <div id="telegramModal" class="modal"> 
+        <div class="modal-content"> 
+            <h2>Join Our Telegram</h2> 
+            <p>Stay Updated With The Latest <strong>Live Match Links</strong> and updates. Click Below To Join Our Official Telegram channel.</p> 
+            <a href="https://t.me/+l-BV45YWZoM3ZmE9" target="_blank" style="text-decoration:none;"> 
+                <button id="joinButton" class="btn">Join Telegram</button> 
+            </a> 
+            <button id="closeButton" class="btn">Maybe Later</button> 
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("closeButton").onclick = function() { 
+            document.getElementById("telegramModal").classList.add("hidden");
+        };
+    </script>
+
+    <script>
+    (function(){ 
+        const CONFIG_API_URL = "https://jiotv.playsportsapi.workers.dev/"; 
+        
+        let CONFIG = { 
+            streamUrl: "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Telugu_HD_BTS/output/index.mpd", 
+            keyId: "49e84b9edfd85379b90c81b7d2d3d2bf", 
+            key: "19c82d3ff094fa06af95820a1572ecb5", 
+            cookie: "" 
+        }; 
+
+        let playerInstance = null; 
+        let uiInstance = null; 
+        let retryCount = 0; 
+        const MAX_RETRIES = 2; 
+        let currentCookieHeader = ""; 
+
+        function getChannelIdFromURL() { 
+            const urlParams = new URLSearchParams(window.location.search); 
+            return urlParams.get('id'); 
+        } 
+
+        function isSandboxedEnv(){ 
+            try { 
+                if (window.self === window.top) return false; 
+                if (window.frameElement && window.frameElement.hasAttribute("sandbox")) return true; 
+                try { 
+                    document.domain = document.domain; 
+                    if (window.frameElement && !window.frameElement.getAttribute("sandbox")) return false; 
+                } catch (e) { return true; } 
+                return false; 
+            } catch(e) { return true; } 
+        } 
+
+        function triggerBlockScreen(title, message){ 
+            const container = document.getElementById("player-container"); 
+            const video = document.getElementById("video"); 
+            try { video.pause(); video.removeAttribute('src'); video.load(); } catch(e){} 
+            const overlay = document.createElement("div"); 
+            overlay.className = "block-overlay"; 
+            overlay.id = "sandbox-block-display"; 
+            overlay.innerHTML = `<div class="block-box"><div class="block-title">${title}</div><div class="block-sub">${message}</div></div>`; 
+            document.body.appendChild(overlay); 
+            container.style.display = 'none'; 
+        } 
+
+        if(isSandboxedEnv()){ 
+            triggerBlockScreen('Disable Sandbox', 'Opening Chrome Browser Only & Disable Ad blocker'); 
+            return; 
+        } 
+
+        function showErrorBanner(message, isRetry = false) { 
+            const errorDiv = document.getElementById("errorBanner"); 
+            if (!errorDiv) return; 
+            errorDiv.textContent = message || "Failed to load stream. Retrying..."; 
+            errorDiv.style.display = "block"; 
+            setTimeout(() => { if (errorDiv) errorDiv.style.display = "none"; }, 4000); 
+        } 
+
+        function getBaseMPDUrl(fullUrl) { 
+            if (!fullUrl) return fullUrl; 
+            return fullUrl.split('?__hdnea__=')[0]; 
+        } 
+
+        async function fetchChannelConfig() { 
+            const channelId = getChannelIdFromURL(); 
+            if (!channelId) return null; 
+            try { 
+                const response = await fetch(CONFIG_API_URL, { cache: "no-store" }); 
+                if (!response.ok) throw new Error("HTTP " + response.status); 
+                const channels = await response.json(); 
+                const channel = channels.find(ch => ch.channel_id === channelId); 
+                if (!channel) return null; 
+
+                return { 
+                    streamUrl: getBaseMPDUrl(channel.channel_url), 
+                    keyId: channel.keyId, 
+                    key: channel.key, 
+                    cookieValue: channel.cookie || "", 
+                    channelName: channel.channel_name 
+                }; 
+            } catch (error) { 
+                console.warn("Failed to fetch config from API, using fallback:", error); 
+                return null; 
+            } 
+        } 
+
+        async function initPlayer() { 
+            const video = document.getElementById("video"); 
+            const container = document.getElementById("player-container"); 
+            if (!video || !container) return; 
+
+            // Fire configuration request immediately
+            const configPromise = fetchChannelConfig();
+
+            // Safely check if Shaka is loaded
+            if (typeof shaka === 'undefined') {
+                console.error("Shaka Player library is missing or failed to load.");
+                return;
+            }
+
+            shaka.polyfill.installAll(); 
+            if (!shaka.Player.isBrowserSupported()) { 
+                showErrorBanner("Your browser does not support video streaming.", false); 
+                return; 
+            } 
+
+            if (playerInstance) { 
+                try { await playerInstance.destroy(); } catch(e) {} 
+            } 
+
+            const player = new shaka.Player(); 
+            await player.attach(video); 
+            playerInstance = player; 
+
+            const ui = new shaka.ui.Overlay(player, container, video); 
+            uiInstance = ui; 
+            ui.configure({ 
+                addBigPlayButton: true, 
+                controlPanelElements: ["mute", "play_pause", "time_and_duration", "spacer", "quality", "picture_in_picture", "fullscreen"], 
+                seekBarColors: { base: "white", buffered: "red", played: "green" } 
+            }); 
+
+            // Read API configuration data right before setting DRM and URLs
+            const remoteConfig = await configPromise; 
+            let streamUrl = CONFIG.streamUrl; 
+            let keyId = CONFIG.keyId; 
+            let key = CONFIG.key; 
+
+            if (remoteConfig) { 
+                if (remoteConfig.streamUrl) streamUrl = remoteConfig.streamUrl; 
+                if (remoteConfig.keyId && remoteConfig.key) { 
+                    keyId = remoteConfig.keyId; 
+                    key = remoteConfig.key; 
+                } 
+                currentCookieHeader = remoteConfig.cookieValue; 
+                if (remoteConfig.channelName) document.title = remoteConfig.channelName; 
+            } 
+
+            player.configure({ 
+                drm: { clearKeys: { [keyId]: key } }, 
+                manifest: { defaultPresentationDelay: 5 }, 
+                streaming: { lowLatencyMode: true, bufferingGoal: 10, rebufferingGoal: 2, safeSeekOffset: 5 } 
+            }); 
+
+            if (player.getNetworkingEngine()) { 
+                player.getNetworkingEngine().registerRequestFilter((type, request) => { 
+                    request.headers["Referer"] = "https://www.jiotv.com/"; 
+                    request.headers["User-Agent"] = "plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6"; 
+                    if (currentCookieHeader) request.headers["Cookie"] = currentCookieHeader; 
+                    
+                    if ((type === shaka.net.NetworkingEngine.RequestType.MANIFEST || type === shaka.net.NetworkingEngine.RequestType.SEGMENT) && request.uris[0] && currentCookieHeader && !request.uris[0].includes("__hdnea__")) { 
+                        let cookieParam = currentCookieHeader.startsWith("__hdnea__=") ? currentCookieHeader.substring(10) : currentCookieHeader; 
+                        const sep = request.uris[0].includes("?") ? "&" : "?"; 
+                        request.uris[0] += sep + "__hdnea__=" + cookieParam; 
+                    } 
+                }); 
+            } 
+
+            player.addEventListener('error', (event) => { 
+                if (retryCount < MAX_RETRIES) { 
+                    retryCount++; 
+                    showErrorBanner(`Stream error. Retrying (${retryCount}/${MAX_RETRIES})...`, true); 
+                    setTimeout(() => initPlayer(), 3000); 
+                } else { 
+                    showErrorBanner("Unable to load stream. Please refresh the page.", false); 
+                } 
+            }); 
+
+            try { 
+                if (streamUrl) { 
+                    await player.load(streamUrl); 
+                    retryCount = 0; 
+
+                    video.muted = false;
+                    video.volume = 1.0;
+
+                    try {
+                        await video.play();
+                    } catch (e) {
+                        console.log("Autoplay prevented:", e);
+                    } 
+                } else { 
+                    throw new Error("No stream URL available"); 
+                } 
+            } catch(e) { 
+                if (retryCount < MAX_RETRIES) { 
+                    retryCount++; 
+                    setTimeout(() => initPlayer(), 3000); 
+                } 
+            } 
+        } 
+
+        // Run setup safely once the window finishes rendering elements
+        window.addEventListener("DOMContentLoaded", () => {
+            initPlayer(); 
+            const videoElem = document.getElementById("video"); 
+            if (videoElem) { 
+                videoElem.addEventListener("play", () => { 
+                    videoElem.muted = false;
+                    videoElem.volume = 1.0;
+                }); 
+            } 
+        });
+
+        window.addEventListener("online", () => { 
+            if (playerInstance && retryCount >= MAX_RETRIES) { 
+                retryCount = 0; 
+                initPlayer(); 
+            } 
+        }); 
+    })();
+    </script>
+</body>
+</html>
