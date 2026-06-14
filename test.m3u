@@ -1,4 +1,8 @@
 #EXTM3U
 #EXTINF:-1 tvg-name="Star Sports 2 Hindi HD" group-title="Sports",Star Sports 2 Hindi HD
-#EXT-X-KEY:METHOD=SAMPLE-AES,URI="data:text/plain;4e8d19d38e345288876269a619e884d0:ecbc89fe13b7982ca395b23d6d0ae286",KEYFORMAT="clearkey"
-https://jiotvpllive.cdn.jio.com/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/index.mpd?__hdnea__=st=1781418604~exp=1781440204~acl=/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/*~hmac=b0e5c561c2ffca0bba7aeb8933c2cfd4007aad8ceb031f83e1b2f4c2b1cbe000|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0&referer=https://www.jiotv.com&origin=https://www.jiotv.com
+#EXTMYPROP:drm_license_type=clearkey
+#EXTMYPROP:drm_license_key=4e8d19d38e345288876269a619e884d0:ecbc89fe13b7982ca395b23d6d0ae286
+#EXTMYPROP:http_user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0
+#EXTMYPROP:http_referrer=https://www.jiotv.com
+#EXTMYPROP:http_origin=https://www.jiotv.com
+https://jiotvpllive.cdn.jio.com/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/index.mpd?__hdnea__=st=1781418604~exp=1781440204~acl=/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/*~hmac=b0e5c561c2ffca0bba7aeb8933c2cfd4007aad8ceb031f83e1b2f4c2b1cbe000
