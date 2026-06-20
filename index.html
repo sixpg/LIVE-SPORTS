@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>M3U8 Player</title>
@@ -210,6 +210,9 @@ const params = new URLSearchParams(window.location.search);
 const streamId  = params.get("id");
 const directUrl = params.get("url");
 
+// Global variable to keep track of the stream configurations (headers)
+let activeStreamItem = null;
+
 async function startPlayer(){
 
     try{
@@ -225,10 +228,10 @@ async function startPlayer(){
             const data = await response.json();
 
             // Find the item inside the JSON array matching the URL query ID
-            const streamItem = data.find(item => item.id === streamId);
+            activeStreamItem = data.find(item => item.id === streamId);
 
-            if(streamItem && streamItem.url){
-                stream = streamItem.url;
+            if(activeStreamItem && activeStreamItem.url){
+                stream = activeStreamItem.url;
             }else{
                 alert("Invalid Stream ID");
                 return;
@@ -256,7 +259,21 @@ async function startPlayer(){
 
             controls: true,
 
-            primary: "html5"
+            primary: "html5",
+
+            // Passes the custom headers using the hls.js config engine
+            hlsjsConfig: {
+                xhrSetup: function (xhr, url) {
+                    if (activeStreamItem && activeStreamItem.headers) {
+                        if (activeStreamItem.headers.Referer) {
+                            xhr.setRequestHeader("X-Forwarded-Referer", activeStreamItem.headers.Referer);
+                        }
+                        if (activeStreamItem.headers.Origin) {
+                            xhr.setRequestHeader("X-Forwarded-Origin", activeStreamItem.headers.Origin);
+                        }
+                    }
+                }
+            }
 
         });
     }catch(error){
