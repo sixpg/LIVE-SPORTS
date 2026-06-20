@@ -6,9 +6,12 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>M3U8 Player</title>
+<title>HLS Player</title>
 
-<script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.0/dist/hls.min.js"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
 <style>
 
@@ -21,14 +24,25 @@ body{
     font-family:sans-serif;
 }
 
-.jwplayer{
-    position:absolute!important;
-    inset:0;
+.video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
 }
 
-.jwplayer.jw-flag-aspect-mode{
-    min-height:100%;
-    max-height:100%;
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.plyr {
+    width: 100% !important;
+    height: 100% !important;
+    background: #000;
 }
 
 /* ===== WATERMARK ===== */
@@ -202,39 +216,50 @@ id="wm">
 
 </div>
 
-<div id="jwplayerDiv"></div>
+<div class="video-container">
+    <video id="player" controls crossorigin playsinline></video>
+</div>
 
 <script>
 
 function startPlayer(){
-    try {
-        const targetStream = "https://fgg-4le.pages.dev/fifawc-fox.m3u8";
-        
-        // Formulates a strict headers bypass string via the public proxy layout
-        const targetProxy = "https://corsproxy.io/?url=" + encodeURIComponent(targetStream);
+    const video = document.getElementById('player');
+    const targetStream = "https://fgg-4le.pages.dev/fifawc-fox.m3u8";
+    
+    // Builds a proxied request string that appends real Referer/Origin headers on the server side
+    function getProxiedUrl(rawUrl) {
+        return "https://api.allorigins.win/raw?url=" + encodeURIComponent(rawUrl) + 
+               "&referer=" + encodeURIComponent("https://cxfoot.pages.dev/") +
+               "&origin=" + encodeURIComponent("https://cxfoot.pages.dev");
+    }
 
-        // JW PLAYER SETUP
-        const player = jwplayer("jwplayerDiv");
-        player.setup({
-            file: targetProxy,
-            type: "hls",
-            width: "100%",
-            height: "100%",
-            autostart: true,
-            stretching: "uniform",
-            controls: true,
-            primary: "html5",
-            hlsjsConfig: {
-                // Dynamically intercept internal stream segment network requests to inject the required origin
-                xhrSetup: function (xhr, url) {
-                    xhr.open('GET', url, true);
-                    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    // Instantiates Plyr Interface
+    const player = new Plyr(video, {
+        controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
+        autoplay: true
+    });
+
+    if (Hls.isSupported()) {
+        const hls = new Hls({
+            // Updates internal .ts slice URLs dynamically so the chunks also process through the proxy server
+            xhrSetup: function (xhr, url) {
+                if (!url.includes('api.allorigins.win')) {
+                    const modifiedUrl = getProxiedUrl(url);
+                    xhr.open('GET', modifiedUrl, true);
                 }
             }
         });
-    } catch(error) {
-        console.error(error);
-        alert("Failed To Load Stream");
+
+        hls.loadSource(getProxiedUrl(targetStream));
+        hls.attachMedia(video);
+        
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play().catch(e => console.log("Autoplay paused. User click required."));
+        });
+    } 
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = getProxiedUrl(targetStream);
+        video.play().catch(e => console.log("Autoplay paused. User click required."));
     }
 }
 
