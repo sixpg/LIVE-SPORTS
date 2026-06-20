@@ -206,77 +206,40 @@ id="wm">
 
 <script>
 
-const params = new URLSearchParams(window.location.search);
-const streamId  = params.get("id");
-const directUrl = params.get("url");
+function startPlayer(){
+    try {
+        // Hardcoded stream data configuration
+        const streamUrl = "https://fgg-4le.pages.dev/fifawc-fox.m3u8";
+        const headers = {
+            "Referer": "https://cxfoot.pages.dev/",
+            "Origin": "https://cxfoot.pages.dev"
+        };
 
-// Global variable to keep track of the stream configurations (headers)
-let activeStreamItem = null;
-
-async function startPlayer(){
-
-    try{
-
-        let stream = directUrl;
-
-        // Load from ?id=
-        if(streamId){
-
-            const response = await fetch(
-                "https://shrey7nsh-fb.pages.dev/m3u8.json"
-            );
-            const data = await response.json();
-
-            // Find the item inside the JSON array matching the URL query ID
-            activeStreamItem = data.find(item => item.id === streamId);
-
-            if(activeStreamItem && activeStreamItem.url){
-                stream = activeStreamItem.url;
-            }else{
-                alert("Invalid Stream ID");
-                return;
-            }
-        }
-
-        // Default fallback
-        if(!stream){
-            stream = "https://rumble.com/live-hls-dvr/6z66p4/playlist.m3u8";
-        }
-
-        // JW PLAYER
+        // JW PLAYER SETUP
         const player = jwplayer("jwplayerDiv");
         player.setup({
-
-            file: stream,
+            file: streamUrl,
             type: "hls",
-
             width: "100%",
             height: "100%",
-
             autostart: true,
-
             stretching: "uniform",
-
             controls: true,
-
             primary: "html5",
-
-            // Passes the custom headers using the hls.js config engine
+            
+            // Appends the required Origin and Referer tracking details via the hls engine
             hlsjsConfig: {
                 xhrSetup: function (xhr, url) {
-                    if (activeStreamItem && activeStreamItem.headers) {
-                        if (activeStreamItem.headers.Referer) {
-                            xhr.setRequestHeader("X-Forwarded-Referer", activeStreamItem.headers.Referer);
-                        }
-                        if (activeStreamItem.headers.Origin) {
-                            xhr.setRequestHeader("X-Forwarded-Origin", activeStreamItem.headers.Origin);
-                        }
+                    if (headers.Referer) {
+                        xhr.setRequestHeader("X-Forwarded-Referer", headers.Referer);
+                    }
+                    if (headers.Origin) {
+                        xhr.setRequestHeader("X-Forwarded-Origin", headers.Origin);
                     }
                 }
             }
-
         });
-    }catch(error){
+    } catch(error) {
         console.error(error);
         alert("Failed To Load Stream");
     }
@@ -288,11 +251,9 @@ startPlayer();
 window.addEventListener(
     "DOMContentLoaded",
     function(){
-
         document
         .getElementById("closeButton")
         .onclick = function(){
-
             document
             .getElementById("telegramModal")
             .classList.add("hidden");
