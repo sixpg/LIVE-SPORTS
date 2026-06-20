@@ -3,11 +3,13 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="referrer" content="no-referrer-when-downgrade">
+<!-- Forces the browser to send the full, real page URL as the referrer -->
+<meta name="referrer" content="unsafe-url">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>M3U8 Player</title>
 
+<!-- JW Player -->
 <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
 
 <style>
@@ -159,6 +161,8 @@ body{
 
 <body>
 
+<!-- WATERMARK -->
+
 <a href="https://t.me/+l-BV45YWZoM3ZmE9"
 target="_blank"
 id="wm">
@@ -166,6 +170,8 @@ id="wm">
 @Shrey7nsh FB
 
 </a>
+
+<!-- TELEGRAM POPUP -->
 
 <div id="telegramModal" class="modal">
 
@@ -208,12 +214,7 @@ id="wm">
 
 function startPlayer(){
     try {
-        // Hardcoded stream data configuration
         const streamUrl = "https://fgg-4le.pages.dev/fifawc-fox.m3u8";
-        const headers = {
-            "Referer": "https://cxfoot.pages.dev/",
-            "Origin": "https://cxfoot.pages.dev"
-        };
 
         // JW PLAYER SETUP
         const player = jwplayer("jwplayerDiv");
@@ -225,19 +226,7 @@ function startPlayer(){
             autostart: true,
             stretching: "uniform",
             controls: true,
-            primary: "html5",
-            
-            // Appends the required Origin and Referer tracking details via the hls engine
-            hlsjsConfig: {
-                xhrSetup: function (xhr, url) {
-                    if (headers.Referer) {
-                        xhr.setRequestHeader("X-Forwarded-Referer", headers.Referer);
-                    }
-                    if (headers.Origin) {
-                        xhr.setRequestHeader("X-Forwarded-Origin", headers.Origin);
-                    }
-                }
-            }
+            primary: "html5"
         });
     } catch(error) {
         console.error(error);
