@@ -226,31 +226,35 @@ async function startPlayer(){
         if(streamId){
 
             const response = await fetch(
-                "https://lchdxfootball.pages.dev/premium.js"
-            );
+    "https://shrey7nsh-fb.pages.dev/m3u8.json"
+);
 
-            const jsText = await response.text();
+const data = await response.json();
 
-            const objectText = jsText
-                .replace("const streamMap =", "")
-                .trim()
-                .replace(/;$/, "");
+if(Array.isArray(data)){
 
-            const data = eval("(" + objectText + ")");
+    const item = data.find(
+        s => s.id === streamId
+    );
 
-            if(
-                data[streamId] &&
-                data[streamId].url
-            ){
+    if(
+        item &&
+        item.url
+    ){
 
-                stream = data[streamId].url;
+        stream = item.url;
 
-            }else{
+    }else{
 
-                alert("Invalid Stream ID");
-                return;
-            }
-        }
+        alert("Invalid Stream ID");
+        return;
+    }
+
+}else{
+
+    alert("Invalid JSON Format");
+    return;
+}
 
         // Default fallback
         if(!stream){
