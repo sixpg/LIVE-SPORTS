@@ -225,13 +225,6 @@ id="wm">
 function startPlayer(){
     const video = document.getElementById('player');
     const targetStream = "https://fgg-4le.pages.dev/fifawc-fox.m3u8";
-    
-    // Builds a proxied request string that appends real Referer/Origin headers on the server side
-    function getProxiedUrl(rawUrl) {
-        return "https://api.allorigins.win/raw?url=" + encodeURIComponent(rawUrl) + 
-               "&referer=" + encodeURIComponent("https://cxfoot.pages.dev/") +
-               "&origin=" + encodeURIComponent("https://cxfoot.pages.dev");
-    }
 
     // Instantiates Plyr Interface
     const player = new Plyr(video, {
@@ -240,17 +233,9 @@ function startPlayer(){
     });
 
     if (Hls.isSupported()) {
-        const hls = new Hls({
-            // Updates internal .ts slice URLs dynamically so the chunks also process through the proxy server
-            xhrSetup: function (xhr, url) {
-                if (!url.includes('api.allorigins.win')) {
-                    const modifiedUrl = getProxiedUrl(url);
-                    xhr.open('GET', modifiedUrl, true);
-                }
-            }
-        });
+        const hls = new Hls();
 
-        hls.loadSource(getProxiedUrl(targetStream));
+        hls.loadSource(targetStream);
         hls.attachMedia(video);
         
         hls.on(Hls.Events.MANIFEST_PARSED, function() {
@@ -258,7 +243,7 @@ function startPlayer(){
         });
     } 
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = getProxiedUrl(targetStream);
+        video.src = targetStream;
         video.play().catch(e => console.log("Autoplay paused. User click required."));
     }
 }
