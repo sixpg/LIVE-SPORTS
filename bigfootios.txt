@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>M3U8 Player</title>
+
+<!-- JW Player -->
+<script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+
+<style>
+
+html,
+body{
+    margin:0;
+    height:100%;
+    background:#000;
+    overflow:hidden;
+    font-family:sans-serif;
+}
+
+.jwplayer{
+    position:absolute!important;
+    inset:0;
+}
+
+.jwplayer.jw-flag-aspect-mode{
+    min-height:100%;
+    max-height:100%;
+}
+
+/* ===== WATERMARK ===== */
+
+#wm{
+    position:fixed;
+    top:12px;
+    left:1px;
+    z-index:900;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(0,136,204,.18);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(0,136,204,.28);
+    padding:6px 11px;
+    border-radius:7px;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+/* ===== POPUP ===== */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .5s ease;
+}
+
+.modal.hidden{
+    display:none!important;
+}
+
+.modal-content{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:30px 25px;
+    width:90%;
+    max-width:400px;
+    text-align:center;
+    color:#f3f4f6;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+    backdrop-filter:blur(12px);
+    transform:scale(.95);
+    animation:scaleIn .4s ease forwards;
+}
+
+.modal-content h2{
+    font-size:24px;
+    font-weight:700;
+    color:#facc15;
+    margin-bottom:16px;
+}
+
+.modal-content p{
+    font-size:16px;
+    color:#d1d5db;
+    margin-bottom:24px;
+    line-height:1.5;
+}
+
+.modal-content strong{
+    color:#fff;
+}
+
+.modal-content .btn{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    margin-bottom:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#joinButton{
+    background:linear-gradient(to right,#3b82f6,#06b6d4);
+    color:#fff;
+    font-weight:500;
+}
+
+#joinButton:hover{
+    background:linear-gradient(to right,#2563eb,#0891b2);
+    transform:scale(1.02);
+}
+
+#closeButton{
+    background:rgba(255,255,255,0.1);
+    color:#f3f4f6;
+}
+
+#closeButton:hover{
+    background:rgba(255,255,255,0.15);
+    transform:scale(1.02);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0
+    }
+    to{
+        opacity:1
+    }
+}
+
+@keyframes scaleIn{
+    to{
+        transform:scale(1);
+        opacity:1
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- WATERMARK -->
+
+<a href="https://t.me/+l-BV45YWZoM3ZmE9"
+target="_blank"
+id="wm">
+
+@Shrey7nsh FB
+
+</a>
+
+<!-- TELEGRAM POPUP -->
+
+<div id="telegramModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Join Our Telegram</h2>
+
+        <p>
+            Stay updated with the latest
+            <strong>Live Match Links</strong>
+            and updates. Click below to join our official Telegram channel.
+        </p>
+
+        <a href="https://t.me/+l-BV45YWZoM3ZmE9"
+        target="_blank"
+        style="text-decoration:none;">
+
+            <button id="joinButton" class="btn">
+
+                Join Telegram
+
+            </button>
+
+        </a>
+
+        <button id="closeButton" class="btn">
+
+            Maybe Later
+
+        </button>
+
+    </div>
+
+</div>
+
+<div id="jwplayerDiv"></div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const streamId  = params.get("id");
+const directUrl = params.get("url");
+
+async function startPlayer(){
+
+    try{
+
+        let stream = directUrl;
+
+        // Load from ?id=
+        if(streamId){
+
+            const response = await fetch(
+                "https://lchdxfootball.pages.dev/premium.js"
+            );
+
+            const jsText = await response.text();
+
+            const objectText = jsText
+                .replace("const streamMap =", "")
+                .trim()
+                .replace(/;$/, "");
+
+            const data = eval("(" + objectText + ")");
+
+            if(
+                data[streamId] &&
+                data[streamId].url
+            ){
+
+                stream = data[streamId].url;
+
+            }else{
+
+                alert("Invalid Stream ID");
+                return;
+            }
+        }
+
+        // Default fallback
+        if(!stream){
+
+            stream =
+            "https://rumble.com/live-hls-dvr/6z66p4/playlist.m3u8";
+        }
+
+        // JW PLAYER
+        const player = jwplayer("jwplayerDiv");
+
+        player.setup({
+
+            file: stream,
+            type: "hls",
+
+            width: "100%",
+            height: "100%",
+
+            autostart: true,
+
+            stretching: "uniform",
+
+            controls: true,
+
+            primary: "html5"
+
+        });
+
+    }catch(error){
+
+        console.error(error);
+
+        alert("Failed To Load Stream");
+    }
+}
+
+startPlayer();
+
+// CLOSE POPUP
+
+window.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        document
+        .getElementById("closeButton")
+        .onclick = function(){
+
+            document
+            .getElementById("telegramModal")
+            .classList.add("hidden");
+        };
+    }
+);
+
+</script>
+
+</body>
+</html>
