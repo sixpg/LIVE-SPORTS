@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HLS Live Stream Player</title>
-    
-    <!-- Plyr CSS CDN -->
+    <title>Forced HLS.js Plyr</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    
     <style>
         body {
             background-color: #0f172a;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,13 +24,10 @@
 <body>
 
 <div class="container">
-    <!-- Video Element -->
     <video id="player" controls crossorigin playsinline></video>
 </div>
 
-<!-- hls.js CDN (Handles the stream decoding) -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<!-- Plyr JS CDN (Handles the beautiful UI) -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.0"></script>
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
 <script>
@@ -42,31 +35,45 @@
         const source = 'http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8';
         const video = document.getElementById('player');
         
-        // Configuration options for Plyr UI
         const defaultOptions = {
-            controls: [
-                'play-large', 'play', 'mute', 'volume', 
-                'current-time', 'settings', 'pip', 'airplay', 'fullscreen'
-            ],
-            settings: ['quality', 'speed', 'loop']
+            controls: ['play-large', 'play', 'mute', 'volume', 'current-time', 'settings', 'pip', 'fullscreen'],
+            settings: ['quality', 'speed']
         };
 
-        if (!Hls.isSupported()) {
-            // Fallback for Safari/iOS which support HLS natively
-            video.src = source;
-            const player = new Plyr(video, defaultOptions);
-        } else {
-            // For Chrome, Firefox, Edge, etc. -> use hls.js
-            const hls = new Hls();
+        if (Hls.isSupported()) {
+            const hls = new Hls({
+                maxMaxBufferLength: 10, // Optimizes buffer for live streams
+                liveSyncDurationCount: 3
+            });
+            
             hls.loadSource(source);
             hls.attachMedia(video);
             
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                // Initialize Plyr once the HLS manifest is loaded
-                const player = new Plyr(video, defaultOptions);
+            // Forces Plyr to read quality levels provided directly by HLS.js
+            hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                const availableQualities = hls.levels.map((l) => l.height);
+                defaultOptions.quality = {
+                    default: availableQualities[0],
+                    options: availableQualities,
+                    forced: true,
+                    onChange: (e) => updateQuality(e),
+                };
+                new Plyr(video, defaultOptions);
             });
+
+            function updateQuality(newQuality) {
+                hls.levels.forEach((level, levelIndex) => {
+                    if (level.height === newQuality) {
+                        hls.currentLevel = levelIndex;
+                    }
+                });
+            }
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            // Strict absolute fallback ONLY for iOS/Safari where hls.js cannot physically run
+            video.src = source;
+            new Plyr(video, defaultOptions);
         }
-    </script>
+    });
+</script>
 </body>
 </html>
-
