@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Open in NS Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NS Player</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111827;
+    font-family:Arial,sans-serif;
+}
+button{
+    background:#ff512f;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:18px 35px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+button:active{
+    transform:scale(.97);
+}
+</style>
 </head>
 <body>
 
-<button id="nsBtn">Open in NS Player</button>
+<button id="nsBtn">▶ Open in NS Player</button>
 
 <script>
-const stream = "http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8";
+const STREAM = "http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8";
+
+function vibrate(){
+    if(navigator.vibrate) navigator.vibrate(30);
+}
 
 document.getElementById("nsBtn").onclick = () => {
-    window.location.href =
-        "intent:" + stream +
+    vibrate();
+
+    const intent =
+        "intent://" +
+        STREAM.replace(/^https?:\/\//, "") +
         "#Intent;" +
+        "scheme=http;" +
         "action=android.intent.action.VIEW;" +
+        "category=android.intent.category.DEFAULT;" +
         "type=application/x-mpegURL;" +
         "package=com.genuine.leone;" +
+        "S.browser_fallback_url=" + encodeURIComponent(STREAM) + ";" +
         "end";
+
+    window.location.href = intent;
 };
 </script>
 
