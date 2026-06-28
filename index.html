@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Stream</title>
-
-<style>
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#111;
-    font-family:Arial,sans-serif;
-}
-button{
-    padding:18px 35px;
-    font-size:20px;
-    border:none;
-    border-radius:12px;
-    background:#00c853;
-    color:#fff;
-    cursor:pointer;
-}
-button:hover{
-    background:#00a844;
-}
-</style>
+<title>Open in NS Player</title>
 </head>
 <body>
 
-<button onclick="openStream()">▶ Open Stream in NS Player</button>
+<button id="nsBtn">Open in NS Player</button>
 
 <script>
-function openStream() {
-    const url = "http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8";
-    window.location.href = url;
-}
+const stream = "http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8";
+
+document.getElementById("nsBtn").onclick = () => {
+    window.location.href =
+        "intent:" + stream +
+        "#Intent;" +
+        "action=android.intent.action.VIEW;" +
+        "type=application/x-mpegURL;" +
+        "package=com.genuine.leone;" +
+        "end";
+};
 </script>
 
 </body>
