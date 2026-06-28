@@ -1,146 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate HLS Live Stream Player</title>
-    
-    <!-- Latest stable Plyr UI CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    
-    <style>
-        body {
-            background-color: #0b0f19;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .player-wrapper {
-            width: 100%;
-            max-width: 900px;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-        /* Custom tweaks to match modern streaming UI */
-        .plyr {
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-        /* Keep the live indicator or buffer wheel visible clearly */
-        .plyr--loading .plyr__controls {
-            opacity: 0.5;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Stream</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111;
+    font-family:Arial,sans-serif;
+}
+button{
+    padding:18px 35px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    background:#00c853;
+    color:#fff;
+    cursor:pointer;
+}
+button:hover{
+    background:#00a844;
+}
+</style>
 </head>
 <body>
 
-<div class="player-wrapper">
-    <video id="live-player" controls crossorigin="anonymous" playsinline></video>
-</div>
-
-<!-- Modern stable dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.8"></script>
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<button onclick="openStream()">▶ Open Stream in NS Player</button>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const videoElement = document.getElementById('live-player');
-    
-    // Core Stream configuration
-    const rawStreamUrl = 'http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8';
-    
-    // We utilize an aggressive, open reverse-proxy to strip away CORS headers entirely 
-    // This solves the infinite buffering issue caused by browser security blocks.
-    const bypassProxy = 'https://api.allorigins.win/raw?url=';
-    const finalStreamSource = bypassProxy + encodeURIComponent(rawStreamUrl);
-
-    // Modernized UI Configuration for Live Playback
-    const plyrConfig = {
-        controls: [
-            'play-large', 'play', 'mute', 'volume', 
-            'settings', 'pip', 'fullscreen'
-        ],
-        settings: ['quality'],
-        keyboard: { focused: true, global: true },
-        tooltips: { controls: true, seek: false } // Disabled seeking tooltips since it's a live IPTV feed
-    };
-
-    if (Hls.isSupported()) {
-        // Advanced HLS.js configuration optimized for difficult/IPTV streams
-        const hlsEngine = new Hls({
-            enableWorker: true,
-            lowLatencyMode: false,
-            backBufferLength: 30,
-            maxBufferLength: 15,          // Reduced to prevent massive packet stall build-up
-            maxMaxBufferLength: 20,       // Tight cap for immediate live alignment
-            liveSyncDurationCount: 3,     // Starts playing immediately after 3 chunks load
-            fragLoadingMaxRetry: 5,        // Aggressively attempt recovery if chunks drop
-            manifestLoadingMaxRetry: 5
-        });
-
-        hlsEngine.loadSource(finalStreamSource);
-        hlsEngine.attachMedia(videoElement);
-
-        hlsEngine.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
-            // Extract resolutions safely for the quality toggle menu
-            const streamQualities = hlsEngine.levels.map((level) => level.height).filter(Boolean);
-            
-            if (streamQualities.length > 0) {
-                plyrConfig.quality = {
-                    default: streamQualities[0],
-                    options: streamQualities,
-                    forced: true,
-                    onChange: (selectedQuality) => {
-                        hlsEngine.levels.forEach((level, idx) => {
-                            if (level.height === selectedQuality) {
-                                hlsEngine.currentLevel = idx;
-                            }
-                        });
-                    }
-                };
-            }
-            
-            // Instantiating UI
-            const playerUI = new Plyr(videoElement, plyrConfig);
-            
-            // Auto-play trigger rules
-            videoElement.play().catch(() => {
-                console.log("Autoplay blocked by browser. User interaction needed to trigger audio.");
-            });
-        });
-
-        // Fail-safe handler: Force unfreezes the video if the network buffers or drops frames
-        hlsEngine.on(Hls.Events.ERROR, (event, data) => {
-            if (data.fatal) {
-                switch (data.type) {
-                    case Hls.ErrorTypes.NETWORK_ERROR:
-                        console.log("Network disturbance detected. Attempting stream recovery...");
-                        hlsEngine.startLoad();
-                        break;
-                    case Hls.ErrorTypes.MEDIA_ERROR:
-                        console.log("Media stall detected. Blasting past buffer blocks...");
-                        hlsEngine.recoverMediaError();
-                        break;
-                    default:
-                        console.error("Fatal unrecoverable error. Reinitializing pipeline...");
-                        hlsEngine.loadSource(finalStreamSource);
-                        break;
-                }
-            }
-        });
-
-    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Native fallback wrapper for Safari macOS/iOS engines where hls.js is forbidden
-        videoElement.src = finalStreamSource;
-        new Plyr(videoElement, plyrConfig);
-    } else {
-        alert("This browser is outdated and completely lacks HLS decoding support.");
-    }
-});
+function openStream() {
+    const url = "http://filex.me:8080/live/amin007007/nxKYVmQsTZ/1369002.m3u8";
+    window.location.href = url;
+}
 </script>
+
 </body>
 </html>
