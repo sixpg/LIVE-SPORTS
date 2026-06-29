@@ -1,14 +1,10 @@
 import os
-import requests
+import urllib.request
 
 SOURCE = os.environ["SOURCE_URL"]
 
-r = requests.get(SOURCE, timeout=20)
-r.raise_for_status()
+with urllib.request.urlopen(SOURCE) as response:
+    playlist = response.read().decode("utf-8")
 
-playlist = r.text
-
-# If desired, rewrite URLs here for streams you are authorized to proxy.
-
-with open("playlist.m3u8", "w", encoding="utf-8", newline="\n") as f:
+with open("playlist.m3u8", "w", encoding="utf-8") as f:
     f.write(playlist)
