@@ -139,6 +139,38 @@ https://edgestream1.pro/hls/eJmauBDCIf.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.190/hls/TMMMAAAAA.m3u8?
 
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | MU TV - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | MU TV - AQ
+https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-hls.m3u8
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | SportyNET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | SportyNET HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sportynet/index.m3u8?
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | MU TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | MU TV HD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-dash.mpd
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | beiN SPORTS ES" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | beiN SPORTS ES
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54664/load-playlist?
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream1.pro/hls/b0h5fNwDKH.m3u8
+
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.192/hls/dtttE.m3u8?
+
 #EXTINF:-1 tvg-id="11473" tvg-name="Singapore vs Thailand | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Singapore vs Thailand",Singapore vs Thailand | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/sd-1-4612548.m3u8?txSecret=d5f3bc92c67e3df919823da116f5d0ec&txTime=6A807390
@@ -146,6 +178,14 @@ https://live.vivo200.com/live/sd-1-4612548.m3u8?txSecret=d5f3bc92c67e3df919823da
 #EXTINF:-1 tvg-id="11473" tvg-name="Singapore vs Thailand | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Singapore vs Thailand",Singapore vs Thailand | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.190/hls/NNNFAAAA.m3u8?
+
+#EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.190/hls/riiiaAAAAa.m3u8?
 
 #EXTINF:-1 tvg-id="11490" tvg-name="Middlesbrough vs Lincoln City | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Middlesbrough vs Lincoln City",Middlesbrough vs Lincoln City | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -416,9 +456,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4248288_english_hls_f302461a2f66250_1ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
 #EXTINF:-1 tvg-id="11459" tvg-name="Fulham vs VfB Stuttgart |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Fulham vs VfB Stuttgart",Fulham vs VfB Stuttgart |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -511,9 +548,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11472" tvg-name="Morocco vs Algeria |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9558/image/dark" group-title="Morocco vs Algeria",Morocco vs Algeria |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11474" tvg-name="Willem II Tilburg vs NEC Nijmegen |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Willem II Tilburg vs NEC Nijmegen",Willem II Tilburg vs NEC Nijmegen |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
 #EXTINF:-1 tvg-id="11475" tvg-name="FC Utrecht vs AZ Alkmaar |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Utrecht vs AZ Alkmaar",FC Utrecht vs AZ Alkmaar |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -522,10 +556,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11477" tvg-name="Fortuna Sittard vs SC Cambuur |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Fortuna Sittard vs SC Cambuur",Fortuna Sittard vs SC Cambuur |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
 
 #EXTINF:-1 tvg-id="11479" tvg-name="Academico Viseu FC vs Santa Clara |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Academico Viseu FC vs Santa Clara",Academico Viseu FC vs Santa Clara |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
