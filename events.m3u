@@ -110,14 +110,6 @@ https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.40/hls/HHHHZAA.m3u8?
 
-#EXTINF:-1 tvg-id="11475" tvg-name="FC Utrecht vs AZ Alkmaar | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Utrecht vs AZ Alkmaar",FC Utrecht vs AZ Alkmaar | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4552158.m3u8?txSecret=96f78cfecfc50babe6e6350b1665d163&txTime=6A80A906
-
-#EXTINF:-1 tvg-id="11475" tvg-name="FC Utrecht vs AZ Alkmaar | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Utrecht vs AZ Alkmaar",FC Utrecht vs AZ Alkmaar | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.57/hls/DHHHAA.m3u8?
-
 #EXTINF:-1 tvg-id="11476" tvg-name="Excelsior vs PSV Eindhoven | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Excelsior vs PSV Eindhoven",Excelsior vs PSV Eindhoven | SportDigital Fussball
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -138,16 +130,6 @@ https://hls.live123.fans/live/4552159.m3u8
 #EXTINF:-1 tvg-id="11476" tvg-name="Excelsior vs PSV Eindhoven | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Excelsior vs PSV Eindhoven",Excelsior vs PSV Eindhoven | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.191/hls/PAPAPAPAAAAAAAA.m3u8?
-
-#EXTINF:-1 tvg-id="11483" tvg-name="Real Oviedo vs Granada | LaLiga Hypermotion Es" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Real Oviedo vs Granada",Real Oviedo vs Granada | LaLiga Hypermotion Es
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
-https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
-
-#EXTINF:-1 tvg-id="11483" tvg-name="Real Oviedo vs Granada | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Real Oviedo vs Granada",Real Oviedo vs Granada | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4567221.m3u8?txSecret=7a8fdef496ecc6a8939ff0234fe44405&txTime=6A80AA3B
 
 #EXTINF:-1 tvg-id="11497" tvg-name="Buffalo Bills vs Carolina Panthers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Buffalo Bills vs Carolina Panthers",Buffalo Bills vs Carolina Panthers | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -204,6 +186,14 @@ https://edgestream2.pro/hls/16yuitzaerghbhc16.m3u8
 #EXTINF:-1 tvg-id="11505" tvg-name="Chicago Cubs vs St. Louis Cardinals | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | LOW QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.193/hls/TYTYTYAAA.m3u8
+
+#EXTINF:-1 tvg-id="11506" tvg-name="Toronto Blue Jays vs New York Yankees | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs New York Yankees",Toronto Blue Jays vs New York Yankees | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54691/load-playlist?
+
+#EXTINF:-1 tvg-id="11506" tvg-name="Toronto Blue Jays vs New York Yankees | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs New York Yankees",Toronto Blue Jays vs New York Yankees | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/ihfazugfyjcazich17.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -498,6 +488,16 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
 
+#EXTINF:-1 tvg-id="11471" tvg-name="Torino vs Carrarese | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Torino vs Carrarese",Torino vs Carrarese | CRICFy LIVE
+https://pul-tenm.gkykp.com/live/sd-1-4564319.m3u8?txSecret=570b15e07e771fccda4ada23ff7ed2c1&txTime=6A820131
+
+#EXTINF:-1 tvg-id="11471" tvg-name="Torino vs Carrarese | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Torino vs Carrarese",Torino vs Carrarese | HD SERVER
+https://hls.live123.fans/live/4564319.m3u8
+
+#EXTINF:-1 tvg-id="11471" tvg-name="Torino vs Carrarese | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Torino vs Carrarese",Torino vs Carrarese | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.190/hls/DIIIAAA.m3u8?
+
 #EXTINF:-1 tvg-id="11480" tvg-name="Rio Ave vs FC Porto | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Rio Ave vs FC Porto",Rio Ave vs FC Porto | SPORT TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
@@ -561,14 +561,6 @@ https://edgestream2.pro/hls/jnknjfzbk35.m3u8
 #EXTINF:-1 tvg-id="11503" tvg-name="Seattle Seahawks vs Dallas Cowboys | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Seattle Seahawks vs Dallas Cowboys",Seattle Seahawks vs Dallas Cowboys | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/jkhazabcka36.m3u8
-
-#EXTINF:-1 tvg-id="11506" tvg-name="Toronto Blue Jays vs New York Yankees | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs New York Yankees",Toronto Blue Jays vs New York Yankees | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54691/load-playlist?
-
-#EXTINF:-1 tvg-id="11506" tvg-name="Toronto Blue Jays vs New York Yankees | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs New York Yankees",Toronto Blue Jays vs New York Yankees | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/ihfazugfyjcazich17.m3u8
 
 #EXTINF:-1 tvg-id="11507" tvg-name="San Francisco Giants vs Colorado Rockies | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Francisco Giants vs Colorado Rockies",San Francisco Giants vs Colorado Rockies | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
