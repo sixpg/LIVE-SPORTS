@@ -1,4 +1,4 @@
-name: JSON to M3U
+name: Update M3U
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
 
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -23,21 +23,29 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Install requests
         run: |
           pip install requests
 
-      - name: Convert JSON to M3U
+      - name: Run JSON to M3U converter
+        env:
+          SOURCE_URL: ${{ secrets.SOURCE_URL }}
         run: |
           python source.py
 
-      - name: Commit M3U
+      - name: Commit updated M3U
         run: |
+
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add events.m3u
 
-          git diff --cached --quiet || git commit -m "Update M3U playlist"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update M3U playlist"
+            git push
+          fi
