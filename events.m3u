@@ -18,41 +18,6 @@ https://d3bq19vx8xhpwy.cloudfront.net/live/myStream/playlist.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4248051_english_hls_4a1fa82f9512172_1ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-id="11446" tvg-name="Chelsea vs Real Sociedad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Chelsea vs Real Sociedad",Chelsea vs Real Sociedad | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54661/load-playlist?&.m3u8
-
-#EXTINF:-1 tvg-id="11446" tvg-name="Chelsea vs Real Sociedad | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Chelsea vs Real Sociedad",Chelsea vs Real Sociedad | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream1.pro/hls/24SDAZFcsqnj24.m3u8
-
-#EXTINF:-1 tvg-id="11446" tvg-name="Chelsea vs Real Sociedad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Chelsea vs Real Sociedad",Chelsea vs Real Sociedad | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.191/hls/UMMMA.m3u8?
-
-#EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | FUBO SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=fa5e8db5359fc7d1f15207d5de2a3ac4:78a6c0a41972dfdba2145ae0ad4bd681
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/y3mtc7phj2/out/v1/a48ab8dfd51c4d1f9a08774b3cd4c49e/cenc.mpd
-
-#EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | beiN SPORTS XTRA" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | beiN SPORTS XTRA
-https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
-
-#EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54654/load-playlist?
-
-#EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | FUBO SPORTS - LQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | FUBO SPORTS - LQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b427e6e286108e53b7e3a016f22fde8d:13710fa5489e1a6ca946adb44f158cf5
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash-sd/enc/r6xfuh6cco/out/v1/d861be5c8987450b848a14be98e1c3c6/cenc-sd.mpd
-
-#EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.190/hls/TMMM.m3u8?
-
 #EXTINF:-1 tvg-id="11451" tvg-name="Brentford vs Eintracht Frankfurt | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Brentford vs Eintracht Frankfurt",Brentford vs Eintracht Frankfurt | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/sd-1-4594040.m3u8?txSecret=f5c1f06b71e8b382f9aa7fd7c51e19c9&txTime=6A8080C8
@@ -157,17 +122,30 @@ https://rdcstream.life/live/sportynet/index.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream1.pro/hls/b0h5fNwDKH.m3u8
 
+#EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | SD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | SD SERVER
+https://live2.jxa76.com/live/sd-6Mwe5HawziBaFK5QdZ_540p.m3u8?txSecret=ef52368c4831a35f1b19a4d27a4fbff9&txTime=1A0072B9AD2
+
 #EXTINF:-1 tvg-id="11458" tvg-name="AC Milan vs Manchester United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="AC Milan vs Manchester United",AC Milan vs Manchester United | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.192/hls/dtttE.m3u8?
 
-#EXTINF:-1 tvg-id="11473" tvg-name="Singapore vs Thailand | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Singapore vs Thailand",Singapore vs Thailand | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4612548.m3u8?txSecret=d5f3bc92c67e3df919823da116f5d0ec&txTime=6A807390
+#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | FOX DEPORTES - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | FOX DEPORTES - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
 
-#EXTINF:-1 tvg-id="11473" tvg-name="Singapore vs Thailand | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Singapore vs Thailand",Singapore vs Thailand | LOW SERVER
+#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | DAZN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | DAZN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream1.pro/hls/sqdahach1ax.m3u8
+
+#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54660/load-playlist?
+
+#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.190/hls/NNNFAAAA.m3u8?
+http://193.47.62.43/hls/GGGGAAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | SPORT TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
@@ -232,14 +210,6 @@ https://live.vivo200.com/live/sd-1-4563506.m3u8?txSecret=c16651eb3d23688d6189d12
 #EXTINF:-1 tvg-id="11495" tvg-name="Bristol City vs Millwall | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Bristol City vs Millwall",Bristol City vs Millwall | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.193/hls/AUUUUAA.m3u8?
-
-#EXTINF:-1 tvg-id="11521" tvg-name="FC Bayern Munchen vs RB Leipzig | CRICFy LIVE" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/889/image" group-title="FC Bayern Munchen vs RB Leipzig",FC Bayern Munchen vs RB Leipzig | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4561579.m3u8?txSecret=f100075f647d80d7aa54f9bf2637241a&txTime=6A807BB8
-
-#EXTINF:-1 tvg-id="11521" tvg-name="FC Bayern Munchen vs RB Leipzig | LOW SERVER" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/889/image" group-title="FC Bayern Munchen vs RB Leipzig",FC Bayern Munchen vs RB Leipzig | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.190/hls/TMMM.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -456,22 +426,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4248288_english_hls_f302461a2f66250_1ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | FOX DEPORTES - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | FOX DEPORTES - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
-
-#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | CRICFy LIVE
-https://tmaxapp.site/8wirwjs76erftg/skysportsnews.m3u8
-
-#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | HD SERVER
-https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/index_1080-30.m3u8
-
-#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | CRICFy HD
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream1.pro/hls/sqdahach1ax.m3u8
-
 #EXTINF:-1 tvg-id="11461" tvg-name="Inter vs Real Betis |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Inter vs Real Betis",Inter vs Real Betis |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -543,8 +497,11 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11467" tvg-name="Al-Nassr vs Al-Fateh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Fateh",Al-Nassr vs Al-Fateh |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11468" tvg-name="Catanzaro vs Sudtirol |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Catanzaro vs Sudtirol",Catanzaro vs Sudtirol |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11468" tvg-name="Catanzaro vs Sudtirol | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Catanzaro vs Sudtirol",Catanzaro vs Sudtirol | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
 
 #EXTINF:-1 tvg-id="11469" tvg-name="Udinese vs Padova |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Udinese vs Padova",Udinese vs Padova |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
