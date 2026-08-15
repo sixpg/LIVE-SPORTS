@@ -30,10 +30,6 @@ https://edgestream1.pro/hls/24SDAZFcsqnj24.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.191/hls/UMMMA.m3u8?
 
-#EXTINF:-1 tvg-id="11447" tvg-name="Leeds United vs FC Augsburg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Leeds United vs FC Augsburg",Leeds United vs FC Augsburg | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.191/hls/FOOOOAA.m3u8?
-
 #EXTINF:-1 tvg-id="11448" tvg-name="Borussia Mgladbach vs Aston Villa | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Mgladbach vs Aston Villa",Borussia Mgladbach vs Aston Villa | FUBO SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -110,13 +106,13 @@ https://rdcstream.life/live/espn/index.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/sd-1-4594043.m3u8?txSecret=de2b5ed967741474900bda674e1a624b&txTime=6A807DA2
 
+#EXTINF:-1 tvg-id="11455" tvg-name="Newcastle United vs Bayer 04 Leverkusen | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Newcastle United vs Bayer 04 Leverkusen",Newcastle United vs Bayer 04 Leverkusen | CRICFy HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54663/load-playlist?
+
 #EXTINF:-1 tvg-id="11455" tvg-name="Newcastle United vs Bayer 04 Leverkusen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Newcastle United vs Bayer 04 Leverkusen",Newcastle United vs Bayer 04 Leverkusen | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.191/hls/FOOOO.m3u8?
-
-#EXTINF:-1 tvg-id="11456" tvg-name="Sunderland vs Stade Rennais | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Sunderland vs Stade Rennais",Sunderland vs Stade Rennais | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.190/hls/TMMMAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11457" tvg-name="Tottenham Hotspur vs TSG Hoffenheim | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Tottenham Hotspur vs TSG Hoffenheim",Tottenham Hotspur vs TSG Hoffenheim | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -527,8 +523,9 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11477" tvg-name="Fortuna Sittard vs SC Cambuur |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Fortuna Sittard vs SC Cambuur",Fortuna Sittard vs SC Cambuur |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
 
 #EXTINF:-1 tvg-id="11479" tvg-name="Academico Viseu FC vs Santa Clara |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Academico Viseu FC vs Santa Clara",Academico Viseu FC vs Santa Clara |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
