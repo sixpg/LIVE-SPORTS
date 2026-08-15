@@ -135,6 +135,13 @@ http://193.47.62.192/hls/dtttE.m3u8?
 #KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
 
+#EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
 #EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | DAZN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | DAZN SPORTS HD
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream1.pro/hls/sqdahach1ax.m3u8
@@ -146,6 +153,16 @@ https://chatgpt.hereisman.net/playlist/54660/load-playlist?
 #EXTINF:-1 tvg-id="11460" tvg-name="Borussia Dortmund vs AS Roma | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Borussia Dortmund vs AS Roma",Borussia Dortmund vs AS Roma | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.43/hls/GGGGAAAAA.m3u8?
+
+#EXTINF:-1 tvg-id="11468" tvg-name="Catanzaro vs Sudtirol | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Catanzaro vs Sudtirol",Catanzaro vs Sudtirol | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="11468" tvg-name="Catanzaro vs Sudtirol | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Catanzaro vs Sudtirol",Catanzaro vs Sudtirol | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.57/hls/SAAAAQQQQQ.m3u8?
 
 #EXTINF:-1 tvg-id="11478" tvg-name="FC Alverca vs CF Estrela Amadora | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="FC Alverca vs CF Estrela Amadora",FC Alverca vs CF Estrela Amadora | SPORT TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
@@ -496,12 +513,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11467" tvg-name="Al-Nassr vs Al-Fateh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Fateh",Al-Nassr vs Al-Fateh |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11468" tvg-name="Catanzaro vs Sudtirol | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Catanzaro vs Sudtirol",Catanzaro vs Sudtirol | D SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
 
 #EXTINF:-1 tvg-id="11469" tvg-name="Udinese vs Padova |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Udinese vs Padova",Udinese vs Padova |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
