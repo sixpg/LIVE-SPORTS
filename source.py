@@ -1,131 +1,83 @@
 import json
+import os
 import requests
-from urllib.parse import urlparse
 
-# ============================================================
-# CONFIG
-# ============================================================
-
-INPUT_JSON = "events.json"
 OUTPUT_M3U = "events.m3u"
+
+SOURCE_URL = os.environ["SOURCE_URL"]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) "
-                  "Chrome/149.0.0.0 Safari/537.36"
+                  "Chrome/149.0.0.0 Safari/537.36",
+    "Accept": "application/json,text/plain,*/*"
 }
 
-TIMEOUT = 20
+TIMEOUT = 30
 
-
-# ============================================================
-# HELPERS
-# ============================================================
 
 def fetch_json(url):
-    """Fetch JSON from URL."""
-
     try:
-        response = requests.get(
+        print(f"[FETCH] {url}")
+
+        r = requests.get(
             url,
             headers=HEADERS,
             timeout=TIMEOUT
         )
 
-        response.raise_for_status()
-        return response.json()
+        r.raise_for_status()
+
+        return r.json()
 
     except Exception as e:
-        print(f"[ERROR] Failed to fetch: {url}")
+        print(f"[ERROR] {url}")
         print(f"        {e}")
         return None
 
 
-def escape_m3u(value):
-    """Make text safe for M3U attributes."""
-
-    if value is None:
-        return ""
-
-    return str(value).replace('"', "'").strip()
-
-
-def parse_stream_link(link):
+def parse_link(link):
     """
-    Converts:
+    Example:
 
-    URL|Referer=https://example.com&Origin=https://example.com
+    https://example.com/live.m3u8|Referer=https://example.com&Origin=https://example.com
 
-    into:
+    Returns:
 
     URL
-    headers = {
-        "Referer": "...",
-        "Origin": "..."
-    }
+    headers
     """
-
-    if not link:
-        return "", {}
 
     parts = link.split("|", 1)
 
-    stream_url = parts[0].strip()
-
-    if len(parts) == 1:
-        return stream_url, {}
-
-    header_string = parts[1]
+    url = parts[0].strip()
 
     headers = {}
 
-    # Supports both & and multiple header separators
-    for item in header_string.split("&"):
+    if len(parts) > 1:
 
-        if "=" not in item:
-            continue
+        for item in parts[1].split("&"):
 
-        key, value = item.split("=", 1)
+            if "=" in item:
 
-        key = key.strip()
-        value = value.strip()
+                key, value = item.split("=", 1)
 
-        if key:
-            headers[key] = value
+                headers[key.strip()] = value.strip()
 
-    return stream_url, headers
+    return url, headers
 
 
-def headers_to_m3u(headers):
-    """
-    Convert headers into Kodi inputstream header format.
-
-    Example:
-
-    User-Agent=...
-    Referer=https://...
-    Origin=https://...
-
-    becomes:
-
-    User-Agent=...&Referer=https://...&Origin=https://...
-    """
-
-    if not headers:
-        return ""
+def make_header_string(headers):
 
     return "&".join(
-        f"{key}={value}"
-        for key, value in headers.items()
+        f"{k}={v}"
+        for k, v in headers.items()
     )
 
 
-def detect_stream_type(stream_url, stream_type):
-    """
-    Returns HLS or DASH.
-    """
+def stream_type(url, typ):
 
-    url_lower = stream_url.lower()
+    url_lower = url.lower()
 
     if ".mpd" in url_lower:
         return "DASH"
@@ -133,230 +85,264 @@ def detect_stream_type(stream_url, stream_type):
     if ".m3u8" in url_lower:
         return "HLS"
 
-    if str(stream_type) == "7":
+    if str(typ) == "7":
         return "DASH"
 
     return "HLS"
 
 
-# ============================================================
-# M3U GENERATION
-# ============================================================
+def main():
 
-def create_m3u(events):
-    output = []
+    print("========================================")
+    print(" JSON → M3U CONVERTER")
+    print("========================================")
 
-    output.append("#EXTM3U")
+    # ------------------------------------
+    # FETCH MAIN JSON
+    # ------------------------------------
+
+    data = fetch_json(SOURCE_URL)
+
+    if data is None:
+        raise SystemExit("Failed to fetch source JSON")
+
+    # ------------------------------------
+    # SUPPORT COMMON JSON STRUCTURES
+    # ------------------------------------
+
+    if isinstance(data, list):
+
+        events = data
+
+    elif isinstance(data, dict):
+
+        if isinstance(data.get("events"), list):
+            events = data["events"]
+
+        elif isinstance(data.get("data"), list):
+            events = data["data"]
+
+        else:
+            raise SystemExit(
+                "Could not find event list in JSON"
+            )
+
+    else:
+
+        raise SystemExit(
+            "Invalid JSON structure"
+        )
+
+    print(f"[INFO] Events found: {len(events)}")
+
+    m3u = [
+        "#EXTM3U"
+    ]
 
     total_events = 0
     total_streams = 0
 
+    # ------------------------------------
+    # PROCESS EVENTS
+    # ------------------------------------
+
     for event in events:
 
-        if not isinstance(event, dict):
-            continue
+        event_id = str(
+            event.get("id", "")
+        )
 
-        event_id = event.get("id", "")
-        event_title = event.get("title", "Unknown Event")
-        event_image = event.get("image", "")
-        category = event.get("cat", "Live Events")
+        event_title = event.get(
+            "title",
+            "Unknown Event"
+        )
 
-        event_info = event.get("eventInfo") or {}
+        category = event.get(
+            "cat",
+            "Live Events"
+        )
 
-        event_logo = event_info.get("eventLogo", "")
+        event_info = event.get(
+            "eventInfo"
+        ) or {}
 
-        # Prefer eventLogo
-        logo = event_logo or event_image
+        logo = event_info.get(
+            "eventLogo",
+            ""
+        )
 
-        # Ignore literal null strings
-        if logo in ("null", "nulln", "None"):
+        if logo in [
+            "null",
+            "nulln",
+            "None",
+            None
+        ]:
             logo = ""
 
-        channel_url = event.get("channelUrl")
+        channel_url = event.get(
+            "channelUrl"
+        )
 
         if not channel_url:
+
             print(
-                f"[SKIP] {event_title} "
-                f"(no channelUrl)"
+                f"[SKIP] {event_title}: "
+                "no channelUrl"
             )
+
             continue
 
-        # ----------------------------------------------------
-        # Fetch stream JSON
-        # ----------------------------------------------------
+        # --------------------------------
+        # FETCH CHANNEL JSON
+        # --------------------------------
 
-        channel_data = fetch_json(channel_url)
+        channel_data = fetch_json(
+            channel_url
+        )
 
         if not channel_data:
             continue
 
-        stream_urls = channel_data.get("streamUrls", [])
+        streams = channel_data.get(
+            "streamUrls",
+            []
+        )
 
-        if not isinstance(stream_urls, list):
+        if not isinstance(streams, list):
+
             print(
                 f"[SKIP] {event_title}: "
-                f"streamUrls is not a list"
+                "invalid streamUrls"
             )
+
             continue
 
         total_events += 1
 
-        # ----------------------------------------------------
-        # Process streams
-        # ----------------------------------------------------
+        print(
+            f"[EVENT] {event_title} "
+            f"({len(streams)} streams)"
+        )
 
-        for stream in stream_urls:
+        # --------------------------------
+        # PROCESS STREAMS
+        # --------------------------------
 
-            if not isinstance(stream, dict):
-                continue
+        for stream in streams:
 
-            stream_title = stream.get(
+            title = stream.get(
                 "title",
                 "Stream"
             ).strip()
 
-            link = stream.get("link", "").strip()
+            link = stream.get(
+                "link",
+                ""
+            ).strip()
 
-            api = stream.get("api", "").strip()
+            api = stream.get(
+                "api",
+                ""
+            ).strip()
 
-            stream_type = stream.get("type", "0")
+            typ = stream.get(
+                "type",
+                "0"
+            )
 
             if not link:
+
                 print(
-                    f"[SKIP] {event_title} / "
-                    f"{stream_title}: no link"
+                    f"  [SKIP] {title}: "
+                    "no link"
                 )
+
                 continue
 
-            stream_url, headers = parse_stream_link(link)
+            url, headers = parse_link(
+                link
+            )
 
-            if not stream_url:
+            if not url:
                 continue
 
-            detected_type = detect_stream_type(
-                stream_url,
-                stream_type
+            detected = stream_type(
+                url,
+                typ
             )
 
-            # ------------------------------------------------
-            # M3U attributes
-            # ------------------------------------------------
-
-            group = escape_m3u(category)
-            name = escape_m3u(
-                f"{event_title} | {stream_title}"
+            name = (
+                f"{event_title} | {title}"
             )
-            logo_safe = escape_m3u(logo)
 
-            output.append(
-                f'#EXTINF:-1 tvg-id="{escape_m3u(event_id)}" '
+            # --------------------------------
+            # EXTINF
+            # --------------------------------
+
+            m3u.append(
+                f'#EXTINF:-1 '
+                f'tvg-id="{event_id}" '
                 f'tvg-name="{name}" '
-                f'tvg-logo="{logo_safe}" '
-                f'group-title="{group}",'
+                f'tvg-logo="{logo}" '
+                f'group-title="{category}",'
                 f'{name}'
             )
 
-            # ------------------------------------------------
-            # DASH / ClearKey
-            # ------------------------------------------------
+            # --------------------------------
+            # DASH
+            # --------------------------------
 
-            if detected_type == "DASH":
+            if detected == "DASH":
 
-                output.append(
-                    '#KODIPROP:inputstream.adaptive.manifest_type=mpd'
+                m3u.append(
+                    "#KODIPROP:"
+                    "inputstream.adaptive."
+                    "manifest_type=mpd"
                 )
-
-                # api is already:
-                # KID:KEY
 
                 if api:
 
-                    output.append(
-                        '#KODIPROP:inputstream.adaptive.license_type=clearkey'
+                    m3u.append(
+                        "#KODIPROP:"
+                        "inputstream.adaptive."
+                        "license_type=clearkey"
                     )
 
-                    output.append(
-                        f'#KODIPROP:inputstream.adaptive.license_key={api}'
+                    m3u.append(
+                        "#KODIPROP:"
+                        "inputstream.adaptive."
+                        f"license_key={api}"
                     )
 
-            # ------------------------------------------------
-            # Headers
-            # ------------------------------------------------
+            # --------------------------------
+            # HEADERS
+            # --------------------------------
 
             if headers:
 
-                header_string = headers_to_m3u(headers)
-
-                output.append(
-                    f'#KODIPROP:inputstream.adaptive.stream_headers={header_string}'
+                header_string = (
+                    make_header_string(headers)
                 )
 
-            # ------------------------------------------------
-            # Stream URL
-            # ------------------------------------------------
+                m3u.append(
+                    "#KODIPROP:"
+                    "inputstream.adaptive."
+                    f"stream_headers={header_string}"
+                )
 
-            output.append(stream_url)
+            # --------------------------------
+            # URL
+            # --------------------------------
 
-            output.append("")
+            m3u.append(url)
+
+            m3u.append("")
 
             total_streams += 1
 
-    print()
-    print("=" * 60)
-    print(f"Events processed : {total_events}")
-    print(f"Streams created  : {total_streams}")
-    print("=" * 60)
-
-    return "\n".join(output)
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
-def main():
-
-    print("[INFO] Loading events JSON...")
-
-    try:
-        with open(
-            INPUT_JSON,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            events = json.load(f)
-
-    except Exception as e:
-
-        print(
-            f"[ERROR] Could not read {INPUT_JSON}: {e}"
-        )
-
-        return
-
-    # Some APIs return {"events": [...]}
-    if isinstance(events, dict):
-
-        if "events" in events:
-            events = events["events"]
-
-        elif "data" in events:
-            events = events["data"]
-
-    if not isinstance(events, list):
-
-        print(
-            "[ERROR] Expected a JSON array of events."
-        )
-
-        return
-
-    print(
-        f"[INFO] Found {len(events)} events"
-    )
-
-    m3u = create_m3u(events)
+    # ------------------------------------
+    # WRITE M3U
+    # ------------------------------------
 
     with open(
         OUTPUT_M3U,
@@ -364,11 +350,18 @@ def main():
         encoding="utf-8"
     ) as f:
 
-        f.write(m3u)
+        f.write(
+            "\n".join(m3u)
+        )
 
-    print(
-        f"[SUCCESS] Created {OUTPUT_M3U}"
-    )
+    print()
+    print("========================================")
+    print(" CONVERSION COMPLETE")
+    print("========================================")
+    print(f"Events  : {total_events}")
+    print(f"Streams : {total_streams}")
+    print(f"Output  : {OUTPUT_M3U}")
+    print("========================================")
 
 
 if __name__ == "__main__":
