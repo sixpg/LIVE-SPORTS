@@ -44,16 +44,6 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1
 #KODIPROP:inputstream.adaptive.license_key=d695093ea3e66d75a4d213a3e2cbf360:01be3f645e89a067d2786c295f68dde4
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/ntkdl68eob/out/v1/bd5dfb7676994383881bc6e71877d29d/cenc.mpd
 
-#EXTINF:-1 tvg-id="11522" tvg-name="Real Racing Club vs Villarreal | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Racing Club vs Villarreal",Real Racing Club vs Villarreal | FANCODE - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
-
-#EXTINF:-1 tvg-id="11522" tvg-name="Real Racing Club vs Villarreal | PREMIER SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Racing Club vs Villarreal",Real Racing Club vs Villarreal | PREMIER SPORTS HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54749/load-playlist?
-
 #EXTINF:-1 tvg-id="11522" tvg-name="Real Racing Club vs Villarreal | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Racing Club vs Villarreal",Real Racing Club vs Villarreal | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/hd-en-1-4565322.m3u8?txSecret=f666c1d65486625adba2e1647a20d9b3&txTime=6A81DB11
@@ -102,6 +92,9 @@ http://193.47.62.42/hls/epppaaaaaa.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
 https://edgestream6.pro/hls/b0h5fNwDKH.m3u8?
 
+#EXTINF:-1 tvg-id="11543" tvg-name="Basel vs FC Barcelona | BLUE SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Basel vs FC Barcelona",Basel vs FC Barcelona | BLUE SPORTS HD
+https://hls.streamhub.media/hls/thesport-api-b73429dd06eabd459b59/master.m3u8
+
 #EXTINF:-1 tvg-id="11543" tvg-name="Basel vs FC Barcelona | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Basel vs FC Barcelona",Basel vs FC Barcelona | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/sd-1-4611941.m3u8?txSecret=f3a5cbe77cfd2f2c6909080035b1d941&txTime=6A81D9FE
@@ -143,12 +136,25 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
 
+#EXTINF:-1 tvg-id="11545" tvg-name="FC Schalke 04 vs Real Madrid | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Schalke 04 vs Real Madrid",FC Schalke 04 vs Real Madrid | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
 #EXTINF:-1 tvg-id="11545" tvg-name="FC Schalke 04 vs Real Madrid | TVE LA - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Schalke 04 vs Real Madrid",FC Schalke 04 vs Real Madrid | TVE LA - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=745cd6ec34a58f2f7ac2af35dc3da6d2:ae008f1e47e6567fe4201a6ff8f1ae54
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/c7di7zkdor/out/v1/f7d5b356e048494a8325563e8916d50b/cenc.mpd
+
+#EXTINF:-1 tvg-id="11545" tvg-name="FC Schalke 04 vs Real Madrid | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Schalke 04 vs Real Madrid",FC Schalke 04 vs Real Madrid | FANCODE - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
 
 #EXTINF:-1 tvg-id="11545" tvg-name="FC Schalke 04 vs Real Madrid | SportyNET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Schalke 04 vs Real Madrid",FC Schalke 04 vs Real Madrid | SportyNET HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
@@ -455,8 +461,14 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11532" tvg-name="Al Wehda vs Al-Shabab |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Wehda vs Al-Shabab",Al Wehda vs Al-Shabab |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia | LOW SERVER
+http://162.251.160.53:8089/78/index.m3u8
 
 #EXTINF:-1 tvg-id="11534" tvg-name="Genoa vs Ascoli |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Genoa vs Ascoli",Genoa vs Ascoli |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -491,8 +503,13 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11561" tvg-name="Tampa Bay Rays vs Baltimore Orioles |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Baltimore Orioles",Tampa Bay Rays vs Baltimore Orioles |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11561" tvg-name="Tampa Bay Rays vs Baltimore Orioles | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Baltimore Orioles",Tampa Bay Rays vs Baltimore Orioles | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54753/load-playlist?
+
+#EXTINF:-1 tvg-id="11561" tvg-name="Tampa Bay Rays vs Baltimore Orioles | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Baltimore Orioles",Tampa Bay Rays vs Baltimore Orioles | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/dazhfiach15.m3u8
 
 #EXTINF:-1 tvg-id="11562" tvg-name="Pittsburgh Pirates vs Boston Red Sox |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Pittsburgh Pirates vs Boston Red Sox",Pittsburgh Pirates vs Boston Red Sox |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -537,9 +554,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="11576" tvg-name="Cameroon vs Malawi |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9558/image/dark" group-title="Cameroon vs Malawi",Cameroon vs Malawi |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11577" tvg-name="Basaksehir FK vs Kocaelispor |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Basaksehir FK vs Kocaelispor",Basaksehir FK vs Kocaelispor |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="11578" tvg-name="Besiktas JK vs Eyupspor |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Besiktas JK vs Eyupspor",Besiktas JK vs Eyupspor |
