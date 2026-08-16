@@ -34,21 +34,72 @@ https://chatgpt.hereisman.net/playlist/54703/load-playlist?&.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.193/hls/uaaa.m3u8?
 
-#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | SportDigital Fussball
+#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=1b103b7869788ae6748155df33f7b233:8b2e85a7f1e48f2f6263a3d337c655bc
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/x3hwxiq65g/out/v1/548c2dbc4dec4a6594c6a244e9643d14/cenc.mpd
 
-#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | CRICFy LIVE
-https://stream.sports3.win/iptv/live/signal-4465846-37850.m3u8
+#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | WILLOW - ALT
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1b103b7869788ae6748155df33f7b233:8b2e85a7f1e48f2f6263a3d337c655bc
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/x3hwxiq65g/out/v1/548c2dbc4dec4a6594c6a244e9643d14/cenc.mpd
 
-#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | HD SERVER
-https://hls.live123.fans/live/4465846.m3u8
+#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | SKY SPORTS NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | SKY SPORTS NZ
+https://latestmovies.net/api/live/playlist/592?.m3u8
+
+#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.192/hls/NNNND.m3u8?
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b314d10a2f70eee1c346b60a2f49fb8e:f42ce2e9eed095d4d4ffd004ad3e5c21
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/zjd0d5jui0/out/v1/dba286ff141e4e5995785fd751bfd7cd/cenc.mpd
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
+https://saseries.akamaized.net/hls/live/2110097/56408643-tapMad/master.m3u8
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+
+#EXTINF:-1 tvg-id="11487" tvg-name="Sao Paulo vs Coritiba | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Sao Paulo vs Coritiba",Sao Paulo vs Coritiba | PREMIERE BR - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
+
+#EXTINF:-1 tvg-id="11487" tvg-name="Sao Paulo vs Coritiba | SPORT TV - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Sao Paulo vs Coritiba",Sao Paulo vs Coritiba | SPORT TV - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4b
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
+
+#EXTINF:-1 tvg-id="11488" tvg-name="Nashville SC vs Inter Miami CF | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/242/image/dark" group-title="Nashville SC vs Inter Miami CF",Nashville SC vs Inter Miami CF | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54730/load-playlist?
+
+#EXTINF:-1 tvg-id="11488" tvg-name="Nashville SC vs Inter Miami CF | SD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/242/image/dark" group-title="Nashville SC vs Inter Miami CF",Nashville SC vs Inter Miami CF | SD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.190/hls/JTTTDDDD.m3u8?
 
 #EXTINF:-1 tvg-id="11502" tvg-name="Baltimore Ravens vs Philadelphia Eagles | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Baltimore Ravens vs Philadelphia Eagles",Baltimore Ravens vs Philadelphia Eagles | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/jnknjfzbk35.m3u8
+
+#EXTINF:-1 tvg-id="11503" tvg-name="Seattle Seahawks vs Dallas Cowboys | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Seattle Seahawks vs Dallas Cowboys",Seattle Seahawks vs Dallas Cowboys | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jkhazabcka36.m3u8
 
 #EXTINF:-1 tvg-id="11509" tvg-name="Tampa Bay Rays vs Baltimore Orioles | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Baltimore Orioles",Tampa Bay Rays vs Baltimore Orioles | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
@@ -207,59 +258,6 @@ https://sonyeventsglobal.akamaized.net/hls/live/2022321/DAI17-HWOM/master.m3u8?h
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.193/hls/AFFFFAAAAA.m3u8?
 
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f0150a56b1be7ec9071169fd5bffc237:3f949ad399e6a732e57d9100cc79317e
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ze0xmkhfw8/out/v1/a36a54f3b43149f7885048f3465ea115/cenc.mpd
-
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
-https://saseries.akamaized.net/hls/live/2110097/56408643-tapMad/master.m3u8
-
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | WILLOW - ALT
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f0150a56b1be7ec9071169fd5bffc237:3f949ad399e6a732e57d9100cc79317e
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/ze0xmkhfw8/out/v1/a36a54f3b43149f7885048f3465ea115/cenc.mpd
-
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | SKY SPORTS NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | SKY SPORTS NZ
-https://latestmovies.net/api/live/playlist/592?.m3u8
-
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11109" tvg-name="Australia vs Bangladesh | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Australia vs Bangladesh",Australia vs Bangladesh | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.192/hls/NNNND.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=33ce9afd805f457505a17f55f9ca05d7:de955182ae936058856b9b5d6c6a1bf8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/o3tljkfiq3/out/v1/422a03cdae134adf9b91a664b2bca2bb/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
-https://saseries.akamaized.net/hls/live/2110097/D2PAKvsWI-TesT-tapmad/master.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FANCODE - IN" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/mumbai/4248288_english_hls_f302461a2f66250_1ta-di_h264/index.m3u8
-
 #EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -312,26 +310,6 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000380/cricodi1508/KAN/master.
 #EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.190/hls/KKKK.m3u8?
-
-#EXTINF:-1 tvg-id="11487" tvg-name="Sao Paulo vs Coritiba | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Sao Paulo vs Coritiba",Sao Paulo vs Coritiba | PREMIERE BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
-
-#EXTINF:-1 tvg-id="11487" tvg-name="Sao Paulo vs Coritiba | SPORT TV - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Sao Paulo vs Coritiba",Sao Paulo vs Coritiba | SPORT TV - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4b
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
-
-#EXTINF:-1 tvg-id="11488" tvg-name="Nashville SC vs Inter Miami CF |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/242/image/dark" group-title="Nashville SC vs Inter Miami CF",Nashville SC vs Inter Miami CF |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11503" tvg-name="Seattle Seahawks vs Dallas Cowboys | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Seattle Seahawks vs Dallas Cowboys",Seattle Seahawks vs Dallas Cowboys | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jkhazabcka36.m3u8
 
 #EXTINF:-1 tvg-id="11517" tvg-name="Athletics vs Texas Rangers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Athletics vs Texas Rangers",Athletics vs Texas Rangers | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
@@ -452,6 +430,18 @@ https://hls.live123.fans/live/4465871.m3u8
 #EXTINF:-1 tvg-id="11485" tvg-name="Fluminense vs Palmeiras | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Fluminense vs Palmeiras",Fluminense vs Palmeiras | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/YTYTYTA.m3u8?
+
+#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | CRICFy LIVE
+https://stream.sports3.win/iptv/live/signal-4465846-37850.m3u8
+
+#EXTINF:-1 tvg-id="11486" tvg-name="Athletico vs Red Bull Bragantino | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Athletico vs Red Bull Bragantino",Athletico vs Red Bull Bragantino | HD SERVER
+https://hls.live123.fans/live/4465846.m3u8
 
 #EXTINF:-1 tvg-id="11497" tvg-name="Buffalo Bills vs Carolina Panthers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Buffalo Bills vs Carolina Panthers",Buffalo Bills vs Carolina Panthers | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
