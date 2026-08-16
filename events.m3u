@@ -263,8 +263,29 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11536" tvg-name="Lazio vs Mantova |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Lazio vs Mantova",Lazio vs Mantova |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
+
+#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/espn4/index.m3u8?
+
+#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton | HD SERVER
+http://162.251.160.53:8089/9/index.m3u8
+
+#EXTINF:-1 tvg-id="11537" tvg-name="Watford vs Southampton | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Watford vs Southampton",Watford vs Southampton | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.47/hls/MMMMAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11538" tvg-name="Burnley vs West Ham United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Burnley vs West Ham United",Burnley vs West Ham United |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -284,11 +305,22 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11545" tvg-name="FC Schalke 04 vs Real Madrid |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Schalke 04 vs Real Madrid",FC Schalke 04 vs Real Madrid |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11547" tvg-name="Feyenoord vs Go Ahead Eagles |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Feyenoord vs Go Ahead Eagles",Feyenoord vs Go Ahead Eagles |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11547" tvg-name="Feyenoord vs Go Ahead Eagles | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Feyenoord vs Go Ahead Eagles",Feyenoord vs Go Ahead Eagles | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
 
-#EXTINF:-1 tvg-id="11548" tvg-name="FC Twente vs PEC Zwolle |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Twente vs PEC Zwolle",FC Twente vs PEC Zwolle |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11547" tvg-name="Feyenoord vs Go Ahead Eagles | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Feyenoord vs Go Ahead Eagles",Feyenoord vs Go Ahead Eagles | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.190/hls/oeeeaa.m3u8?
+
+#EXTINF:-1 tvg-id="11548" tvg-name="FC Twente vs PEC Zwolle | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Twente vs PEC Zwolle",FC Twente vs PEC Zwolle | HD SERVER
+http://162.251.160.53:8089/121/index.m3u8
+
+#EXTINF:-1 tvg-id="11548" tvg-name="FC Twente vs PEC Zwolle | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="FC Twente vs PEC Zwolle",FC Twente vs PEC Zwolle | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.190/hls/oeeeaaa.m3u8?
 
 #EXTINF:-1 tvg-id="11549" tvg-name="AFC Ajax vs SC Heerenveen |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="AFC Ajax vs SC Heerenveen",AFC Ajax vs SC Heerenveen |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
