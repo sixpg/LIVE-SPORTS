@@ -27,19 +27,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
 
-#EXTINF:-1 tvg-id="11550" tvg-name="Famalicao vs CS Maritimo | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Famalicao vs CS Maritimo",Famalicao vs CS Maritimo | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11550" tvg-name="Famalicao vs CS Maritimo | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Famalicao vs CS Maritimo",Famalicao vs CS Maritimo | LOW SERVER
-http://162.251.160.53:8089/46/index.m3u8
-
-#EXTINF:-1 tvg-id="11557" tvg-name="UD Las Palmas vs Albacete Balompie | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="UD Las Palmas vs Albacete Balompie",UD Las Palmas vs Albacete Balompie | LaLiga Hypermotion
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
-https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
-
 #EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54767/load-playlist?
@@ -425,6 +412,19 @@ http://193.47.62.44/hls/G666AAAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11541" tvg-name="Tottenham Hotspur vs TSG Hoffenheim |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Tottenham Hotspur vs TSG Hoffenheim",Tottenham Hotspur vs TSG Hoffenheim |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11550" tvg-name="Famalicao vs CS Maritimo | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Famalicao vs CS Maritimo",Famalicao vs CS Maritimo | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11550" tvg-name="Famalicao vs CS Maritimo | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Famalicao vs CS Maritimo",Famalicao vs CS Maritimo | LOW SERVER
+http://162.251.160.53:8089/46/index.m3u8
+
+#EXTINF:-1 tvg-id="11557" tvg-name="UD Las Palmas vs Albacete Balompie | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="UD Las Palmas vs Albacete Balompie",UD Las Palmas vs Albacete Balompie | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
 
 #EXTINF:-1 tvg-id="11559" tvg-name="RC Lens vs Paris Saint-Germain | ITV SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/339/image/dark" group-title="RC Lens vs Paris Saint-Germain",RC Lens vs Paris Saint-Germain | ITV SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
