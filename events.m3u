@@ -60,20 +60,6 @@ http://193.47.62.54/hls/TAAAAQQQQQQ.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.49/hls/ekkka.m3u8?
 
-#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia | D SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
-
-#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/hd-en-1-4564320.m3u8?txSecret=04091c15b70505328d2a77079a814c09&txTime=6A81F28E
-
-#EXTINF:-1 tvg-id="11533" tvg-name="Frosinone vs Juve Stabia | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Frosinone vs Juve Stabia",Frosinone vs Juve Stabia | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.49/hls/djjj.m3u8?
-
 #EXTINF:-1 tvg-id="11534" tvg-name="Genoa vs Ascoli | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Genoa vs Ascoli",Genoa vs Ascoli | D SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -195,6 +181,14 @@ https://chatgpt.hereisman.net/playlist/54758/load-playlist?
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/ojzkajnach21.m3u8
 
+#EXTINF:-1 tvg-id="11569" tvg-name="Minnesota Twins vs Philadelphia Phillies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Philadelphia Phillies",Minnesota Twins vs Philadelphia Phillies | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54765/load-playlist?
+
+#EXTINF:-1 tvg-id="11569" tvg-name="Minnesota Twins vs Philadelphia Phillies | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Philadelphia Phillies",Minnesota Twins vs Philadelphia Phillies | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jnzkdzjfanch23.m3u8
+
 #EXTINF:-1 tvg-id="11579" tvg-name="Liverpool FC vs Como | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Liverpool FC vs Como",Liverpool FC vs Como | CBS SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -218,6 +212,9 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1
 #EXTINF:-1 tvg-id="11579" tvg-name="Liverpool FC vs Como | SportyNET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Liverpool FC vs Como",Liverpool FC vs Como | SportyNET HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/sportynet/index.m3u8?
+
+#EXTINF:-1 tvg-id="11579" tvg-name="Liverpool FC vs Como | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Liverpool FC vs Como",Liverpool FC vs Como | CRICFy LIVE
+https://live2.jxa76.com/live/sd-6MxiKkjzH1SaiEnKLw_540p.m3u8?txSecret=4929fe428803dcb511d4cd6282c22ad7&txTime=1A00CD42F5E
 
 #EXTINF:-1 tvg-id="11579" tvg-name="Liverpool FC vs Como | LFC TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="Liverpool FC vs Como",Liverpool FC vs Como | LFC TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
@@ -466,10 +463,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/corinthians-x-cruzeiro/index.m3u8?
 
-#EXTINF:-1 tvg-id="11532" tvg-name="Al Wehda vs Al-Shabab | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Wehda vs Al-Shabab",Al Wehda vs Al-Shabab | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.57/hls/YKKKA.m3u8?
-
 #EXTINF:-1 tvg-id="11535" tvg-name="Hellas Verona vs Virtus Entella | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Hellas Verona vs Virtus Entella",Hellas Verona vs Virtus Entella | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -529,19 +522,19 @@ http://162.251.160.53:8089/22/index.m3u8
 #KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
 https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
 
-#EXTINF:-1 tvg-id="11559" tvg-name="RC Lens vs Paris Saint-Germain |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/339/image/dark" group-title="RC Lens vs Paris Saint-Germain",RC Lens vs Paris Saint-Germain |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11559" tvg-name="RC Lens vs Paris Saint-Germain | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/339/image/dark" group-title="RC Lens vs Paris Saint-Germain",RC Lens vs Paris Saint-Germain | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-3-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11559" tvg-name="RC Lens vs Paris Saint-Germain | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/339/image/dark" group-title="RC Lens vs Paris Saint-Germain",RC Lens vs Paris Saint-Germain | beiN SPORTS HD
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:-1 tvg-id="11559" tvg-name="RC Lens vs Paris Saint-Germain | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/339/image/dark" group-title="RC Lens vs Paris Saint-Germain",RC Lens vs Paris Saint-Germain | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.51/hls/T5555.m3u8?
 
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11569" tvg-name="Minnesota Twins vs Philadelphia Phillies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Philadelphia Phillies",Minnesota Twins vs Philadelphia Phillies | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54765/load-playlist?
-
-#EXTINF:-1 tvg-id="11569" tvg-name="Minnesota Twins vs Philadelphia Phillies | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Philadelphia Phillies",Minnesota Twins vs Philadelphia Phillies | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jnzkdzjfanch23.m3u8
 
 #EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
