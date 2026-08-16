@@ -27,13 +27,9 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
 
-#EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54767/load-playlist?
-
-#EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/fskjanach24.m3u8
+#EXTINF:-1 tvg-id="11529" tvg-name="Corinthians vs Cruzeiro | PRIME VIDEO HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Corinthians vs Cruzeiro",Corinthians vs Cruzeiro | PRIME VIDEO HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/corinthians-x-cruzeiro/index.m3u8?
 
 #EXTINF:-1 tvg-id="11571" tvg-name="Athletics vs Texas Rangers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Athletics vs Texas Rangers",Athletics vs Texas Rangers | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
@@ -236,10 +232,6 @@ https://dai.google.com/ssai/event/AtRHWIT_QL6RJoXT7boKsQ/master.m3u8
 #EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.190/hls/NNNE.m3u8?
-
-#EXTINF:-1 tvg-id="11529" tvg-name="Corinthians vs Cruzeiro | PRIME VIDEO HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Corinthians vs Cruzeiro",Corinthians vs Cruzeiro | PRIME VIDEO HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/corinthians-x-cruzeiro/index.m3u8?
 
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -511,6 +503,14 @@ https://chatgpt.hereisman.net/playlist/54765/load-playlist?
 #EXTINF:-1 tvg-id="11569" tvg-name="Minnesota Twins vs Philadelphia Phillies | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Philadelphia Phillies",Minnesota Twins vs Philadelphia Phillies | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/jnzkdzjfanch23.m3u8
+
+#EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54767/load-playlist?
+
+#EXTINF:-1 tvg-id="11570" tvg-name="Chicago Cubs vs St. Louis Cardinals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs St. Louis Cardinals",Chicago Cubs vs St. Louis Cardinals | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/fskjanach24.m3u8
 
 #EXTINF:-1 tvg-id="11576" tvg-name="Cameroon vs Malawi | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9558/image/dark" group-title="Cameroon vs Malawi",Cameroon vs Malawi | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
