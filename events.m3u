@@ -184,11 +184,38 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tll6uwepxa/out/v1
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11580" tvg-name="Deportivo de A Coruna vs Elche |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Deportivo de A Coruna vs Elche",Deportivo de A Coruna vs Elche |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11580" tvg-name="Deportivo de A Coruna vs Elche | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Deportivo de A Coruna vs Elche",Deportivo de A Coruna vs Elche | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
 
-#EXTINF:-1 tvg-id="11581" tvg-name="Internacional vs Remo |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Internacional vs Remo",Internacional vs Remo |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11580" tvg-name="Deportivo de A Coruna vs Elche | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Deportivo de A Coruna vs Elche",Deportivo de A Coruna vs Elche | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="11580" tvg-name="Deportivo de A Coruna vs Elche | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Deportivo de A Coruna vs Elche",Deportivo de A Coruna vs Elche | FANCODE - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-id="11581" tvg-name="Internacional vs Remo | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Internacional vs Remo",Internacional vs Remo | PREMIERE BR - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
+
+#EXTINF:-1 tvg-id="11581" tvg-name="Internacional vs Remo | SporTV BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Internacional vs Remo",Internacional vs Remo | SporTV BR - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4b
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
 
 #EXTINF:-1 tvg-id="11582" tvg-name="Al Anwar vs Al-Ahli |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Anwar vs Al-Ahli",Al Anwar vs Al-Ahli |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -205,31 +232,163 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11586" tvg-name="Al Raed vs Al-Hilal |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Raed vs Al-Hilal",Al Raed vs Al-Hilal |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11587" tvg-name="Pisa vs Empoli |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Pisa vs Empoli",Pisa vs Empoli |
+#EXTINF:-1 tvg-id="11587" tvg-name="Pisa vs Empoli | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Pisa vs Empoli",Pisa vs Empoli | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
+
+#EXTINF:-1 tvg-id="11587" tvg-name="Pisa vs Empoli | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Pisa vs Empoli",Pisa vs Empoli | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | ITALIA 1 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
+https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce | ITALIA 1 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
+https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
+
+#EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11590" tvg-name="Cremonese vs Sampdoria | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Cremonese vs Sampdoria",Cremonese vs Sampdoria | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
+
+#EXTINF:-1 tvg-id="11590" tvg-name="Cremonese vs Sampdoria | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Cremonese vs Sampdoria",Cremonese vs Sampdoria | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
+
+#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/espn/index.m3u8?
+
+#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica | beiN SPORTS HD
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:-1 tvg-id="11592" tvg-name="Almeria vs CD Eldense | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Almeria vs CD Eldense",Almeria vs CD Eldense | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
+
+#EXTINF:-1 tvg-id="11593" tvg-name="Sporting Gijon vs CE Sabadell | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Sporting Gijon vs CE Sabadell",Sporting Gijon vs CE Sabadell | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
+
+#EXTINF:-1 tvg-id="11594" tvg-name="Samsunspor vs Goztepe | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Samsunspor vs Goztepe",Samsunspor vs Goztepe | beiN SPORTS HD
+https://tmaxapp.site/8wirwjs76erftg/beinsports1tr.m3u8
+
+#EXTINF:-1 tvg-id="11595" tvg-name="Cardiff City vs Wrexham | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Cardiff City vs Wrexham",Cardiff City vs Wrexham | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11595" tvg-name="Cardiff City vs Wrexham | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Cardiff City vs Wrexham",Cardiff City vs Wrexham | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/espn4/index.m3u8?
+
+#EXTINF:-1 tvg-id="11596" tvg-name="Cincinnati Reds vs St. Louis Cardinals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena |
+#EXTINF:-1 tvg-id="11597" tvg-name="Tampa Bay Rays vs Baltimore Orioles |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Baltimore Orioles",Tampa Bay Rays vs Baltimore Orioles |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce |
+#EXTINF:-1 tvg-id="11598" tvg-name="Philadelphia Phillies vs Miami Marlins |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Philadelphia Phillies vs Miami Marlins",Philadelphia Phillies vs Miami Marlins |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11590" tvg-name="Cremonese vs Sampdoria |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Cremonese vs Sampdoria",Cremonese vs Sampdoria |
+#EXTINF:-1 tvg-id="11599" tvg-name="Cincinnati Reds vs St. Louis Cardinals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11591" tvg-name="Casa Pia vs Benfica |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Casa Pia vs Benfica",Casa Pia vs Benfica |
+#EXTINF:-1 tvg-id="11600" tvg-name="Pittsburgh Pirates vs Detroit Tigers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Pittsburgh Pirates vs Detroit Tigers",Pittsburgh Pirates vs Detroit Tigers |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11592" tvg-name="Almeria vs CD Eldense |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Almeria vs CD Eldense",Almeria vs CD Eldense |
+#EXTINF:-1 tvg-id="11601" tvg-name="Boston Red Sox vs Arizona Diamondbacks |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Boston Red Sox vs Arizona Diamondbacks",Boston Red Sox vs Arizona Diamondbacks |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11593" tvg-name="Sporting Gijon vs CE Sabadell |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Sporting Gijon vs CE Sabadell",Sporting Gijon vs CE Sabadell |
+#EXTINF:-1 tvg-id="11602" tvg-name="New York Mets vs San Diego Padres |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Mets vs San Diego Padres",New York Mets vs San Diego Padres |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11594" tvg-name="Samsunspor vs Goztepe |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Samsunspor vs Goztepe",Samsunspor vs Goztepe |
+#EXTINF:-1 tvg-id="11603" tvg-name="Minnesota Twins vs Atlanta Braves |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs Atlanta Braves",Minnesota Twins vs Atlanta Braves |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11595" tvg-name="Cardiff City vs Wrexham |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Cardiff City vs Wrexham",Cardiff City vs Wrexham |
+#EXTINF:-1 tvg-id="11604" tvg-name="Kansas City Royals vs Athletics |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Athletics",Kansas City Royals vs Athletics |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11605" tvg-name="Chicago Cubs vs Chicago White Sox |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs Chicago White Sox",Chicago Cubs vs Chicago White Sox |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11606" tvg-name="Colorado Rockies vs Los Angeles Dodgers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Colorado Rockies vs Los Angeles Dodgers",Colorado Rockies vs Los Angeles Dodgers |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="11524" tvg-name="Chapecoense vs Bahia | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Chapecoense vs Bahia",Chapecoense vs Bahia | PREMIERE BR - AQ
