@@ -1,11 +1,29 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="11582" tvg-name="Al Anwar vs Al-Ahli | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Anwar vs Al-Ahli",Al Anwar vs Al-Ahli | CRICFy LIVE
+https://hls.live123.fans/live/4570053.m3u8
+
+#EXTINF:-1 tvg-id="11582" tvg-name="Al Anwar vs Al-Ahli | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Anwar vs Al-Ahli",Al Anwar vs Al-Ahli | HD SERVER
+https://stream.sports3.win/iptv/live/signal-4570053-40080.m3u8
+
 #EXTINF:-1 tvg-id="11582" tvg-name="Al Anwar vs Al-Ahli | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Anwar vs Al-Ahli",Al Anwar vs Al-Ahli | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/aaaab.m3u8?
 
+#EXTINF:-1 tvg-id="11583" tvg-name="Al Tai vs Al-Qadsiah | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Tai vs Al-Qadsiah",Al Tai vs Al-Qadsiah | CRICFy LIVE
+https://hls.live123.fans/live/4570037.m3u8
+
+#EXTINF:-1 tvg-id="11583" tvg-name="Al Tai vs Al-Qadsiah | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Tai vs Al-Qadsiah",Al Tai vs Al-Qadsiah | HD SERVER
+https://stream.sports3.win/iptv/live/signal-4570037-40081.m3u8
+
 #EXTINF:-1 tvg-id="11583" tvg-name="Al Tai vs Al-Qadsiah | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Tai vs Al-Qadsiah",Al Tai vs Al-Qadsiah | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/aaaabb.m3u8?
+
+#EXTINF:-1 tvg-id="11584" tvg-name="Al Zulfi vs Al-Riyadh | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Zulfi vs Al-Riyadh",Al Zulfi vs Al-Riyadh | CRICFy LIVE
+https://hls.live123.fans/live/4570060.m3u8
+
+#EXTINF:-1 tvg-id="11584" tvg-name="Al Zulfi vs Al-Riyadh | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Zulfi vs Al-Riyadh",Al Zulfi vs Al-Riyadh | HD SERVER
+https://stream.sports3.win/iptv/live/signal-4570060-40083.m3u8
 
 #EXTINF:-1 tvg-id="11584" tvg-name="Al Zulfi vs Al-Riyadh | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Zulfi vs Al-Riyadh",Al Zulfi vs Al-Riyadh | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
@@ -32,6 +50,33 @@ https://chatgpt.hereisman.net/playlist/54783/load-playlist?
 #EXTINF:-1 tvg-id="11587" tvg-name="Pisa vs Empoli | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Pisa vs Empoli",Pisa vs Empoli | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/ylllaaaaa.m3u8?
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | ITALIA 1 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
+https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | PREMIER SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | PREMIER SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54785/load-playlist?
+
+#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/aaaabbbb.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -256,38 +301,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11586" tvg-name="Al Raed vs Al-Hilal |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Raed vs Al-Hilal",Al Raed vs Al-Hilal |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | ITALIA 1 - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
-https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | D SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54785/load-playlist?
-
-#EXTINF:-1 tvg-id="11588" tvg-name="Sassuolo vs Cesena | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Cesena",Sassuolo vs Cesena | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/aaaabbbb.m3u8?
 
 #EXTINF:-1 tvg-id="11589" tvg-name="Palermo vs Lecce | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Palermo vs Lecce",Palermo vs Lecce | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
