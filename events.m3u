@@ -78,6 +78,16 @@ https://chatgpt.hereisman.net/playlist/54785/load-playlist?
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/aaaabbbb.m3u8?
 
+#EXTINF:-1 tvg-id="11593" tvg-name="Sporting Gijon vs CE Sabadell | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Sporting Gijon vs CE Sabadell",Sporting Gijon vs CE Sabadell | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
+
+#EXTINF:-1 tvg-id="11593" tvg-name="Sporting Gijon vs CE Sabadell | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Sporting Gijon vs CE Sabadell",Sporting Gijon vs CE Sabadell | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/DEDEDEAAAA.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -365,12 +375,6 @@ https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
 https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
 
 #EXTINF:-1 tvg-id="11592" tvg-name="Almeria vs CD Eldense | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Almeria vs CD Eldense",Almeria vs CD Eldense | LaLiga Hypermotion
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
-https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
-
-#EXTINF:-1 tvg-id="11593" tvg-name="Sporting Gijon vs CE Sabadell | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Sporting Gijon vs CE Sabadell",Sporting Gijon vs CE Sabadell | LaLiga Hypermotion
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
