@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11529" tvg-name="Corinthians vs Cruzeiro | PRIME VIDEO HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Corinthians vs Cruzeiro",Corinthians vs Cruzeiro | PRIME VIDEO HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/corinthians-x-cruzeiro/index.m3u8?
-
 #EXTINF:-1 tvg-id="11575" tvg-name="Houston Astros vs Seattle Mariners | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Seattle Mariners",Houston Astros vs Seattle Mariners | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/hfzljfahzcax29.m3u8
@@ -344,6 +340,10 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1
 #KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4b
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
+
+#EXTINF:-1 tvg-id="11529" tvg-name="Corinthians vs Cruzeiro | PRIME VIDEO HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Corinthians vs Cruzeiro",Corinthians vs Cruzeiro | PRIME VIDEO HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/corinthians-x-cruzeiro/index.m3u8?
 
 #EXTINF:-1 tvg-id="11535" tvg-name="Hellas Verona vs Virtus Entella | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Hellas Verona vs Virtus Entella",Hellas Verona vs Virtus Entella | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
