@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11575" tvg-name="Houston Astros vs Seattle Mariners | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Seattle Mariners",Houston Astros vs Seattle Mariners | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/hfzljfahzcax29.m3u8
-
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -511,6 +507,10 @@ https://edgestream2.pro/hls/hefbafbakx28.m3u8
 #EXTINF:-1 tvg-id="11574" tvg-name="Los Angeles Angels vs Kansas City Royals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Angels vs Kansas City Royals",Los Angeles Angels vs Kansas City Royals | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/jzabfazkbf27.m3u8
+
+#EXTINF:-1 tvg-id="11575" tvg-name="Houston Astros vs Seattle Mariners | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Seattle Mariners",Houston Astros vs Seattle Mariners | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/hfzljfahzcax29.m3u8
 
 #EXTINF:-1 tvg-id="11576" tvg-name="Cameroon vs Malawi | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9558/image/dark" group-title="Cameroon vs Malawi",Cameroon vs Malawi | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
