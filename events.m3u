@@ -27,6 +27,26 @@ https://stream.sports3.win/iptv/live/signal-4570039-40440.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.57/hls/CACACAAAAA.m3u8?
 
+#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54812/load-playlist?
+
+#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-5-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | ARABIC HD
+https://spxt.hamrimullahchy.workers.dev/1201183/index.json?&e=.m3u8
+
+#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | HD SERVER
+https://hls.live123.fans/live/4608842.m3u8
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -273,26 +293,6 @@ https://rdcstream.life/live/espn4/index.m3u8?
 #EXTINF:-1 tvg-id="11623" tvg-name="Universidad Catolica vs Estudiantes de La Plata | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Universidad Catolica vs Estudiantes de La Plata",Universidad Catolica vs Estudiantes de La Plata | SPORT TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | CBS SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
-
-#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54812/load-playlist?
-
-#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-5-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | ARABIC HD
-https://spxt.hamrimullahchy.workers.dev/1201183/index.json?&e=.m3u8
-
-#EXTINF:-1 tvg-id="11624" tvg-name="Fenerbahce vs Olympique Lyonnais | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="Fenerbahce vs Olympique Lyonnais",Fenerbahce vs Olympique Lyonnais | HD SERVER
-https://hls.live123.fans/live/4608842.m3u8
 
 #EXTINF:-1 tvg-id="11625" tvg-name="Baltimore Orioles vs New York Yankees | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs New York Yankees",Baltimore Orioles vs New York Yankees | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
