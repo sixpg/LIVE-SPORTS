@@ -1,4 +1,44 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="11607" tvg-name="Al-Okhdood vs Al-Khaleej | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Okhdood vs Al-Khaleej",Al-Okhdood vs Al-Khaleej | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4570041.m3u8?txSecret=bd777e26f988c37d821ec3ed403d5455&txTime=6A84979C
+
+#EXTINF:-1 tvg-id="11607" tvg-name="Al-Okhdood vs Al-Khaleej | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Okhdood vs Al-Khaleej",Al-Okhdood vs Al-Khaleej | HD SERVER
+https://hls.live123.fans/live/4570041.m3u8
+
+#EXTINF:-1 tvg-id="11608" tvg-name="Al Jabalin vs Al-Ettifaq | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Jabalin vs Al-Ettifaq",Al Jabalin vs Al-Ettifaq | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4570055.m3u8?txSecret=fc437f743b0fe1de2d24a1948439a534&txTime=6A8497B6
+
+#EXTINF:-1 tvg-id="11608" tvg-name="Al Jabalin vs Al-Ettifaq | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Jabalin vs Al-Ettifaq",Al Jabalin vs Al-Ettifaq | HD SERVER
+https://hls.live123.fans/live/4570055.m3u8
+
+#EXTINF:-1 tvg-id="11608" tvg-name="Al Jabalin vs Al-Ettifaq | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Jabalin vs Al-Ettifaq",Al Jabalin vs Al-Ettifaq | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/TPPP.m3u8?
+
+#EXTINF:-1 tvg-id="11609" tvg-name="Al-Najma SC vs Al-Ittihad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Najma SC vs Al-Ittihad",Al-Najma SC vs Al-Ittihad | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4570046.m3u8?txSecret=53670a85fcab5ef070e91b0f6610c722&txTime=6A8497D2
+
+#EXTINF:-1 tvg-id="11609" tvg-name="Al-Najma SC vs Al-Ittihad | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Najma SC vs Al-Ittihad",Al-Najma SC vs Al-Ittihad | HD SERVER
+https://hls.live123.fans/live/4570046.m3u8
+
+#EXTINF:-1 tvg-id="11609" tvg-name="Al-Najma SC vs Al-Ittihad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Najma SC vs Al-Ittihad",Al-Najma SC vs Al-Ittihad | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/TPPPA.m3u8?
+
+#EXTINF:-1 tvg-id="11612" tvg-name="1. FC Heidenheim vs FC Bayern Munchen | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="1. FC Heidenheim vs FC Bayern Munchen",1. FC Heidenheim vs FC Bayern Munchen | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4610650.m3u8?txSecret=9e3d2d3c50de5f9644cc1c35e66fa0ce&txTime=6A848FE8
+
+#EXTINF:-1 tvg-id="11612" tvg-name="1. FC Heidenheim vs FC Bayern Munchen | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="1. FC Heidenheim vs FC Bayern Munchen",1. FC Heidenheim vs FC Bayern Munchen | HD SERVER
+https://hls.live123.fans/live/4610650.m3u8
+
+#EXTINF:-1 tvg-id="11612" tvg-name="1. FC Heidenheim vs FC Bayern Munchen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="1. FC Heidenheim vs FC Bayern Munchen",1. FC Heidenheim vs FC Bayern Munchen | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/AIII.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -199,35 +239,11 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000383/cricodi1808/KAN/master.
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11607" tvg-name="Al-Okhdood vs Al-Khaleej | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Okhdood vs Al-Khaleej",Al-Okhdood vs Al-Khaleej | CRICFy LIVE
-https://hls.live123.fans/live/4570041.m3u8
-
-#EXTINF:-1 tvg-id="11608" tvg-name="Al Jabalin vs Al-Ettifaq | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Jabalin vs Al-Ettifaq",Al Jabalin vs Al-Ettifaq | CRICFy LIVE
-https://hls.live123.fans/live/4570055.m3u8
-
-#EXTINF:-1 tvg-id="11608" tvg-name="Al Jabalin vs Al-Ettifaq | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Jabalin vs Al-Ettifaq",Al Jabalin vs Al-Ettifaq | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/TPPP.m3u8?
-
-#EXTINF:-1 tvg-id="11609" tvg-name="Al-Najma SC vs Al-Ittihad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Najma SC vs Al-Ittihad",Al-Najma SC vs Al-Ittihad | CRICFy LIVE
-https://hls.live123.fans/live/4570046.m3u8
-
-#EXTINF:-1 tvg-id="11609" tvg-name="Al-Najma SC vs Al-Ittihad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al-Najma SC vs Al-Ittihad",Al-Najma SC vs Al-Ittihad | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/TPPPA.m3u8?
-
 #EXTINF:-1 tvg-id="11610" tvg-name="Al Faisaly vs Neom SC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Faisaly vs Neom SC",Al Faisaly vs Neom SC |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="11611" tvg-name="Al Diriyah vs Al-Nassr |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Diriyah vs Al-Nassr",Al Diriyah vs Al-Nassr |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11612" tvg-name="1. FC Heidenheim vs FC Bayern Munchen | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="1. FC Heidenheim vs FC Bayern Munchen",1. FC Heidenheim vs FC Bayern Munchen | CRICFy LIVE
-https://hls.live123.fans/live/4610650.m3u8
-
-#EXTINF:-1 tvg-id="11612" tvg-name="1. FC Heidenheim vs FC Bayern Munchen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="1. FC Heidenheim vs FC Bayern Munchen",1. FC Heidenheim vs FC Bayern Munchen | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/AIII.m3u8?
 
 #EXTINF:-1 tvg-id="11614" tvg-name="Leyton Orient vs AFC Wimbledon |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/334/image/dark" group-title="Leyton Orient vs AFC Wimbledon",Leyton Orient vs AFC Wimbledon |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
