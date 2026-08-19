@@ -15,6 +15,13 @@ https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=ui
 #KODIPROP:inputstream.adaptive.license_key=bbbbf36eb1942bfa4154a54252dad7b5:f6d1b5529c367871a43d846a7d23f5cb
 https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/3amgoohuyk/out/v1/2593db7b5e144e73862c1a6f7460abaa/cenc.mpd
 
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36&Referer=https://www.tapmad.com/
+https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAMASHA - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAMASHA - AQ
+https://cdn06khi-n.tamashaweb.com:8087/jazzauth/PAKvsEng-Test-SVOD-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC8xOS8yMDI2IDk6NDQ6NDcgQU0maGFzaF92YWx1ZT1VVmp4c1lmVFhEQ3hPNklqNDRUalV3PT0mdmFsaWRtaW51dGVzPTYw
+
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SKY SPORT NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SKY SPORT NZ
 https://tmaxapp.site/8wirwjs76erftg/skysport1nz15866.m3u8
 
