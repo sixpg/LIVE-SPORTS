@@ -45,6 +45,14 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000376/criclive1908/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=referer=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8
 
+#EXTINF:-1 tvg-id="11640" tvg-name="Damac FC vs Al-Taawoun | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Damac FC vs Al-Taawoun",Damac FC vs Al-Taawoun | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4570042.m3u8?txSecret=8261b28ef5cf7c6c990301d6e1ca3747&txTime=6A85DF8C
+
+#EXTINF:-1 tvg-id="11640" tvg-name="Damac FC vs Al-Taawoun | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Damac FC vs Al-Taawoun",Damac FC vs Al-Taawoun | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/OKKKAAA.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -232,35 +240,114 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000379/cricodi1908/KAN/master.
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.40/hls/ORRR.m3u8?
 
-#EXTINF:-1 tvg-id="11640" tvg-name="Damac FC vs Al-Taawoun |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Damac FC vs Al-Taawoun",Damac FC vs Al-Taawoun |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11641" tvg-name="Jeddah vs Al-Kholood | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Jeddah vs Al-Kholood",Jeddah vs Al-Kholood | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4570044.m3u8?txSecret=bfc1051166b3529810fd619dd0cb4223&txTime=6A85DFAD
 
-#EXTINF:-1 tvg-id="11641" tvg-name="Jeddah vs Al-Kholood |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Jeddah vs Al-Kholood",Jeddah vs Al-Kholood |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11641" tvg-name="Jeddah vs Al-Kholood | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Jeddah vs Al-Kholood",Jeddah vs Al-Kholood | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/OKKKAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11642" tvg-name="Al Ula vs Al-Fateh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark" group-title="Al Ula vs Al-Fateh",Al Ula vs Al-Fateh |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
+
+#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF | FANCODE - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-id="11644" tvg-name="Atletico Madrid vs Malaga CF | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Atletico Madrid vs Malaga CF",Atletico Madrid vs Malaga CF | ARABIC HD
+https://spxt.hamrimullahchy.workers.dev/1201181/index.json?&e=.m3u8
 
 #EXTINF:-1 tvg-id="11645" tvg-name="FC Barcelona vs Al Ahly FC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/853/image/dark" group-title="FC Barcelona vs Al Ahly FC",FC Barcelona vs Al Ahly FC |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11646" tvg-name="Atletico Mineiro vs Red Bull Bragantino |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Red Bull Bragantino",Atletico Mineiro vs Red Bull Bragantino |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11646" tvg-name="Atletico Mineiro vs Red Bull Bragantino | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Red Bull Bragantino",Atletico Mineiro vs Red Bull Bragantino | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/atletico-mg-x-red-bull-bragantino/index.m3u8?
 
-#EXTINF:-1 tvg-id="11647" tvg-name="Montevideo City Torque vs Tigre |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Montevideo City Torque vs Tigre",Montevideo City Torque vs Tigre |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11647" tvg-name="Montevideo City Torque vs Tigre | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Montevideo City Torque vs Tigre",Montevideo City Torque vs Tigre | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
 
-#EXTINF:-1 tvg-id="11648" tvg-name="Independiente Santa Fe vs River Plate |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Independiente Santa Fe vs River Plate",Independiente Santa Fe vs River Plate |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11647" tvg-name="Montevideo City Torque vs Tigre | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Montevideo City Torque vs Tigre",Montevideo City Torque vs Tigre | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/montevideo-city-torque-x-tigre/index.m3u8?
 
-#EXTINF:-1 tvg-id="11649" tvg-name="Flamengo vs Cruzeiro |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Cruzeiro",Flamengo vs Cruzeiro |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11648" tvg-name="Independiente Santa Fe vs River Plate | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Independiente Santa Fe vs River Plate",Independiente Santa Fe vs River Plate | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/independiente-santa-fe-x-river-plate/index.m3u8?
 
-#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11648" tvg-name="Independiente Santa Fe vs River Plate | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Independiente Santa Fe vs River Plate",Independiente Santa Fe vs River Plate | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11648" tvg-name="Independiente Santa Fe vs River Plate | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Independiente Santa Fe vs River Plate",Independiente Santa Fe vs River Plate | ARABIC HD
+https://spxt.hamrimullahchy.workers.dev/1201182/index.json?&e=.m3u8
+
+#EXTINF:-1 tvg-id="11649" tvg-name="Flamengo vs Cruzeiro | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Cruzeiro",Flamengo vs Cruzeiro | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11649" tvg-name="Flamengo vs Cruzeiro | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Cruzeiro",Flamengo vs Cruzeiro | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/flamengo-x-cruzeiro/index.m3u8?
+
+#EXTINF:-1 tvg-id="11649" tvg-name="Flamengo vs Cruzeiro | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Cruzeiro",Flamengo vs Cruzeiro | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11649" tvg-name="Flamengo vs Cruzeiro | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Cruzeiro",Flamengo vs Cruzeiro | ARABIC HD
+https://spxt.hamrimullahchy.workers.dev/1201183/index.json?&e=.m3u8
+
+#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/cerro-porteno-x-palmeiras/index.m3u8?
+
+#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras | beiN SPORTS XTRA" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras | beiN SPORTS XTRA
+https://amg01334-beinsportsllc-beinxtra-localnow-kcy6r.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="11650" tvg-name="Cerro Porteno vs Palmeiras | ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Cerro Porteno vs Palmeiras",Cerro Porteno vs Palmeiras | ARABIC HD
+https://spxt.hamrimullahchy.workers.dev/1201182/index.json?&e=.m3u8
 
 #EXTINF:-1 tvg-id="11651" tvg-name="Coquimbo Unido vs Club Atletico Platense |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Coquimbo Unido vs Club Atletico Platense",Coquimbo Unido vs Club Atletico Platense |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -312,21 +399,3 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11667" tvg-name="Colorado Rockies vs Los Angeles Dodgers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Colorado Rockies vs Los Angeles Dodgers",Colorado Rockies vs Los Angeles Dodgers |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | HD SERVER
-https://hls.live123.fans/live/4612553.m3u8
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy FAST
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy HD
-https://live1.kinxie.com/live/73550272_c8bb67f2f83005897935f76d6d400057.m3u8
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/UGGGGQQ.m3u8?
