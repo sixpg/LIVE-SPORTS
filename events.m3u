@@ -45,24 +45,6 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000376/criclive1908/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=referer=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8
 
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | HD SERVER
-https://hls.live123.fans/live/4612553.m3u8
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy FAST
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy HD
-https://live1.kinxie.com/live/73550272_c8bb67f2f83005897935f76d6d400057.m3u8
-
-#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/UGGGGQQ.m3u8?
-
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -330,3 +312,21 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11667" tvg-name="Colorado Rockies vs Los Angeles Dodgers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Colorado Rockies vs Los Angeles Dodgers",Colorado Rockies vs Los Angeles Dodgers |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
+
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | HD SERVER
+https://hls.live123.fans/live/4612553.m3u8
+
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy FAST
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
+
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy HD
+https://live1.kinxie.com/live/73550272_c8bb67f2f83005897935f76d6d400057.m3u8
+
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/UGGGGQQ.m3u8?
