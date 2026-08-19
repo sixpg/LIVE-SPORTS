@@ -52,6 +52,10 @@ https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2
 #EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | HD SERVER
 https://hls.live123.fans/live/4612553.m3u8
 
+#EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy FAST
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4612553.m3u8?txSecret=f8c06a8e326186bf99bcee2ba50a439b&txTime=6A85BEA5
+
 #EXTINF:-1 tvg-id="11643" tvg-name="Vietnam vs Malaysia | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Malaysia",Vietnam vs Malaysia | CRICFy HD
 https://live1.kinxie.com/live/73550272_c8bb67f2f83005897935f76d6d400057.m3u8
 
