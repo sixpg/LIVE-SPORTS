@@ -1,4 +1,36 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
+
+#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11672" tvg-name="Olimpia vs Vasco da Gama | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Olimpia vs Vasco da Gama",Olimpia vs Vasco da Gama | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
+
+#EXTINF:-1 tvg-id="11675" tvg-name="LDU vs Mirassol | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Mirassol",LDU vs Mirassol | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11675" tvg-name="LDU vs Mirassol | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Mirassol",LDU vs Mirassol | ESPN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
+https://rdcstream.life/live/espn4/index.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -242,27 +274,6 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000291/England_2008/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8?
 
-#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
-
-#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | SportDigital Fussball
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
-
-#EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11672" tvg-name="Olimpia vs Vasco da Gama | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Olimpia vs Vasco da Gama",Olimpia vs Vasco da Gama | SPORT TV HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/sport-tv-2-pt/index.m3u8?
-
 #EXTINF:-1 tvg-id="11673" tvg-name="Botafogo vs Cienciano | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Botafogo vs Cienciano",Botafogo vs Cienciano | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -302,17 +313,6 @@ https://rdcstream.life/live/espn1/index.m3u8?
 #EXTINF:-1 tvg-id="11674" tvg-name="Corinthians vs Rosario Central | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Corinthians vs Rosario Central",Corinthians vs Rosario Central | SPORT TV HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/sport-tv-1-pt/index.m3u8?
-
-#EXTINF:-1 tvg-id="11675" tvg-name="LDU vs Mirassol | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Mirassol",LDU vs Mirassol | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="11675" tvg-name="LDU vs Mirassol | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Mirassol",LDU vs Mirassol | ESPN SPORTS HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
-https://rdcstream.life/live/espn4/index.m3u8?
 
 #EXTINF:-1 tvg-id="11676" tvg-name="Houston Texans vs Las Vegas Raiders | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Houston Texans vs Las Vegas Raiders",Houston Texans vs Las Vegas Raiders | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
