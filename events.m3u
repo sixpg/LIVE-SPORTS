@@ -373,8 +373,13 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11677" tvg-name="Los Angeles Chargers vs San Francisco 49ers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Los Angeles Chargers vs San Francisco 49ers",Los Angeles Chargers vs San Francisco 49ers |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11678" tvg-name="Cincinnati Reds vs St. Louis Cardinals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11678" tvg-name="Cincinnati Reds vs St. Louis Cardinals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54912/load-playlist?
+
+#EXTINF:-1 tvg-id="11678" tvg-name="Cincinnati Reds vs St. Louis Cardinals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/dazhfiach15.m3u8
 
 #EXTINF:-1 tvg-id="11679" tvg-name="Tampa Bay Rays vs Toronto Blue Jays |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Toronto Blue Jays",Tampa Bay Rays vs Toronto Blue Jays |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
