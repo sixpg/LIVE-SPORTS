@@ -45,6 +45,28 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000291/England_2008/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8?
 
+#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | FOX DEPORTES - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | FOX DEPORTES - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
+
+#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
+
+#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | FOX SOCCER+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | FOX SOCCER+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54911/load-playlist?
+
+#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/ETTTAAA.m3u8?
+
 #EXTINF:-1 tvg-id="11678" tvg-name="Cincinnati Reds vs St. Louis Cardinals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs St. Louis Cardinals",Cincinnati Reds vs St. Louis Cardinals | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54912/load-playlist?
@@ -80,6 +102,30 @@ https://edgestream2.pro/hls/16yuitzaerghbhc16.m3u8
 #EXTINF:-1 tvg-id="11680" tvg-name="Cleveland Guardians vs San Francisco Giants | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cleveland Guardians vs San Francisco Giants",Cleveland Guardians vs San Francisco Giants | LOW QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/ETTT.m3u8
+
+#EXTINF:-1 tvg-id="11681" tvg-name="Milwaukee Brewers vs Seattle Mariners | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Milwaukee Brewers vs Seattle Mariners",Milwaukee Brewers vs Seattle Mariners | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54918/load-playlist?
+
+#EXTINF:-1 tvg-id="11681" tvg-name="Milwaukee Brewers vs Seattle Mariners | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Milwaukee Brewers vs Seattle Mariners",Milwaukee Brewers vs Seattle Mariners | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/bzagLHzach19.m3u8
+
+#EXTINF:-1 tvg-id="11682" tvg-name="Chicago White Sox vs Atlanta Braves | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Atlanta Braves",Chicago White Sox vs Atlanta Braves | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54917/load-playlist?
+
+#EXTINF:-1 tvg-id="11682" tvg-name="Chicago White Sox vs Atlanta Braves | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Atlanta Braves",Chicago White Sox vs Atlanta Braves | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jkzahzadach20.m3u8
+
+#EXTINF:-1 tvg-id="11683" tvg-name="Kansas City Royals vs Athletics | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Athletics",Kansas City Royals vs Athletics | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54916/load-playlist?
+
+#EXTINF:-1 tvg-id="11683" tvg-name="Kansas City Royals vs Athletics | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Athletics",Kansas City Royals vs Athletics | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/Czajafjihafch18.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | Sky via Apple TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | Sky via Apple TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -299,23 +345,13 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
 
+#EXTINF:-1 tvg-id="11668" tvg-name="Rayo Vallecano vs Deportivo Alaves | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Rayo Vallecano vs Deportivo Alaves",Rayo Vallecano vs Deportivo Alaves | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54920/load-playlist?
+
 #EXTINF:-1 tvg-id="11668" tvg-name="Rayo Vallecano vs Deportivo Alaves | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Rayo Vallecano vs Deportivo Alaves",Rayo Vallecano vs Deportivo Alaves | HD SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
 https://edgestream4.pro/hls/377qj1h2727.m3u8?
-
-#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | FOX DEPORTES - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | FOX DEPORTES - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
-
-#EXTINF:-1 tvg-id="11669" tvg-name="Al-Fayha vs Al-Hilal | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Al-Hilal",Al-Fayha vs Al-Hilal | SportDigital Fussball
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
 
 #EXTINF:-1 tvg-id="11670" tvg-name="Sheffield Wednesday vs Bradford City | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/24/image/dark" group-title="Sheffield Wednesday vs Bradford City",Sheffield Wednesday vs Bradford City | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -330,6 +366,10 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1
 #KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
 #KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11670" tvg-name="Sheffield Wednesday vs Bradford City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/24/image/dark" group-title="Sheffield Wednesday vs Bradford City",Sheffield Wednesday vs Bradford City | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54921/load-playlist?
 
 #EXTINF:-1 tvg-id="11671" tvg-name="Macara vs Santos | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Macara vs Santos",Macara vs Santos | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -403,29 +443,25 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://bolodechocolate.fit/
 https://rdcstream.life/live/espn4/index.m3u8?
 
-#EXTINF:-1 tvg-id="11676" tvg-name="Houston Texans vs Las Vegas Raiders |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Houston Texans vs Las Vegas Raiders",Houston Texans vs Las Vegas Raiders |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11676" tvg-name="Houston Texans vs Las Vegas Raiders | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Houston Texans vs Las Vegas Raiders",Houston Texans vs Las Vegas Raiders | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
 
-#EXTINF:-1 tvg-id="11677" tvg-name="Los Angeles Chargers vs San Francisco 49ers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Los Angeles Chargers vs San Francisco 49ers",Los Angeles Chargers vs San Francisco 49ers |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11677" tvg-name="Los Angeles Chargers vs San Francisco 49ers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Los Angeles Chargers vs San Francisco 49ers",Los Angeles Chargers vs San Francisco 49ers | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/sfjnzabacah31.m3u8
 
-#EXTINF:-1 tvg-id="11681" tvg-name="Milwaukee Brewers vs Seattle Mariners |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Milwaukee Brewers vs Seattle Mariners",Milwaukee Brewers vs Seattle Mariners |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11684" tvg-name="Texas Rangers vs Washington Nationals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Texas Rangers vs Washington Nationals",Texas Rangers vs Washington Nationals | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/ijfnakfidch22.m3u8
 
-#EXTINF:-1 tvg-id="11682" tvg-name="Chicago White Sox vs Atlanta Braves |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Atlanta Braves",Chicago White Sox vs Atlanta Braves |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11685" tvg-name="Baltimore Orioles vs New York Yankees | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs New York Yankees",Baltimore Orioles vs New York Yankees | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/ojzkajnach21.m3u8
 
-#EXTINF:-1 tvg-id="11683" tvg-name="Kansas City Royals vs Athletics |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Athletics",Kansas City Royals vs Athletics |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11684" tvg-name="Texas Rangers vs Washington Nationals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Texas Rangers vs Washington Nationals",Texas Rangers vs Washington Nationals |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11685" tvg-name="Baltimore Orioles vs New York Yankees |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs New York Yankees",Baltimore Orioles vs New York Yankees |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11686" tvg-name="Houston Astros vs Los Angeles Angels |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Los Angeles Angels",Houston Astros vs Los Angeles Angels |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11686" tvg-name="Houston Astros vs Los Angeles Angels | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Los Angeles Angels",Houston Astros vs Los Angeles Angels | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jnzkdzjfanch23.m3u8
 
 #EXTINF:-1 tvg-id="11652" tvg-name="Philadelphia Union vs Inter Miami CF | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/242/image/dark" group-title="Philadelphia Union vs Inter Miami CF",Philadelphia Union vs Inter Miami CF | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
