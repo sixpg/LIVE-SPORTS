@@ -1,11 +1,41 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11689" tvg-name="Al-Hazem vs Al Diriyah | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Hazem vs Al Diriyah",Al-Hazem vs Al Diriyah | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4599551.m3u8?txSecret=b57a312c7df880422ba3ffed367a9951&txTime=6A88862A
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
 
-#EXTINF:-1 tvg-id="11689" tvg-name="Al-Hazem vs Al Diriyah | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Hazem vs Al Diriyah",Al-Hazem vs Al Diriyah | LOW SERVER
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | FANCODE - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | D SPORTS FHD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | D SPORTS FHD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | ESPN DEPORTES HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | ESPN DEPORTES HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54954/load-playlist?
+
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.59/hls/KEEEAAAAA.m3u8?
+https://live.666666.zip/live/4565329.m3u8?
+
+#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/paaaaQQQ.m3u8?
 
 #EXTINF:-1 tvg-id="11690" tvg-name="Al Faisaly vs Neom SC | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al Faisaly vs Neom SC",Al Faisaly vs Neom SC | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
@@ -49,6 +79,101 @@ https://live.666666.zip/live/4599553.m3u8?
 #EXTINF:-1 tvg-id="11691" tvg-name="Al-Qadsiah vs Al-Ittihad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Qadsiah vs Al-Ittihad",Al-Qadsiah vs Al-Ittihad | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/eoooaaa.m3u8?
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | FUBO SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | HUB PREMIER - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | HUB PREMIER - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9df2aa9c4974ed3bbf0730defad68fe:0cac792b5d5ef9ffb24e324a52c3da0b
+https://mh-bks400-04.starhubgo.com/bpk-token/2ac@ihpq3nl02bwx34atzt5ru4a1140zdmp1ihzj33da/bpk-tv/HubPremier1/output/manifest.mpd?bkm-query
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | USA NETWORK HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | USA NETWORK HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54955/load-playlist?
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | SPORTSCAST HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | SPORTSCAST HD
+https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/0d658aef-79ab-4317-80e0-e44b15baf11a/master.m3u8
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/24SDAZFcsqnj24.m3u8
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | beiN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | beiN ARABIC HD
+https://crimson-cloud-807f.kamrukhanchy.workers.dev/1201183/index.json?&e=.m3u8
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy FAST
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/hd-en-1-4558449.m3u8?txSecret=10621dbd268d903a88f415c7a8472481&txTime=6A88B259
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+https://live.666666.zip/live/4558449.m3u8?
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GAGAGA.m3u8?
+
+#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | LIGUE1+ - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | LIGUE1+ - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=62dbac124bbef865507610070019f875:3dca8ca0a86cca296de7f91583d88939
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/78yadthwhn/out/v1/7ce475ea35b74693abdf651e2ee2fef3/cenc.mpd
+
+#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+https://live.666666.zip/live/4550846.m3u8?
+
+#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/hd-en-1-4550846.m3u8?txSecret=df4d6fbbae74cbc320e757a27b1efa1c&txTime=6A88AB9B
+
+#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/prrraa.m3u8?
+
+#EXTINF:-1 tvg-id="11701" tvg-name="FC Hansa Rostock vs VfB Stuttgart | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Hansa Rostock vs VfB Stuttgart",FC Hansa Rostock vs VfB Stuttgart | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+https://live.666666.zip/live/4550502.m3u8?
+
+#EXTINF:-1 tvg-id="11701" tvg-name="FC Hansa Rostock vs VfB Stuttgart | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Hansa Rostock vs VfB Stuttgart",FC Hansa Rostock vs VfB Stuttgart | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4550502.m3u8?txSecret=36a98dd1031ad09f7d9d677cd906cb2f&txTime=6A88ABEE
+
+#EXTINF:-1 tvg-id="11701" tvg-name="FC Hansa Rostock vs VfB Stuttgart | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Hansa Rostock vs VfB Stuttgart",FC Hansa Rostock vs VfB Stuttgart | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/prrra.m3u8?
+
+#EXTINF:-1 tvg-id="11714" tvg-name="Cordoba vs Girona FC | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Cordoba vs Girona FC",Cordoba vs Girona FC | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
+
+#EXTINF:-1 tvg-id="11714" tvg-name="Cordoba vs Girona FC | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Cordoba vs Girona FC",Cordoba vs Girona FC | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/paaaaQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4581280.m3u8?txSecret=05319c3860f66941332a8b52c893b526&txTime=6A88AAE7
+
+#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | beiN SPORTS TR" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | beiN SPORTS TR
+https://tmaxapp.site/8wirwjs76erftg/beinsports1tr.m3u8
+
+#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+https://live.666666.zip/live/4581280.m3u8?
+
+#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/fvvvaaaa.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | TSN SPORTS - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | TSN SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -255,76 +380,6 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000296/England_2108/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8?
 
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
-
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | FANCODE - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
-
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | D SPORTS FHD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | D SPORTS FHD
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
-
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://live.666666.zip/live/4565329.m3u8?
-
-#EXTINF:-1 tvg-id="11687" tvg-name="Real Betis vs Real Sociedad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Betis vs Real Sociedad",Real Betis vs Real Sociedad | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/paaaaQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | FUBO SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | SKY SPORT NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | SKY SPORT NZ
-https://tmaxapp.site/8wirwjs76erftg/skysport8nz74xda.m3u8
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | ESPN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | ESPN SPORTS HD
-https://crimson-cloud-807f.kamrukhanchy.workers.dev/439230/index.json?&e=.m3u8
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy LIVE
-https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/0d658aef-79ab-4317-80e0-e44b15baf11a/master.m3u8
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/24SDAZFcsqnj24.m3u8
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://live.666666.zip/live/4558449.m3u8?
-
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.50/hls/GAGAGA.m3u8?
-
-#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://live.666666.zip/live/4550846.m3u8?
-
-#EXTINF:-1 tvg-id="11693" tvg-name="Olympique de Marseille vs RC Strasbourg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Olympique de Marseille vs RC Strasbourg",Olympique de Marseille vs RC Strasbourg | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/prrraa.m3u8?
-
 #EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -343,14 +398,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11697" tvg-name="Sri Lanka Women vs United Arab Emirates Women |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Sri Lanka Women vs United Arab Emirates Women",Sri Lanka Women vs United Arab Emirates Women |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11701" tvg-name="FC Hansa Rostock vs VfB Stuttgart | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Hansa Rostock vs VfB Stuttgart",FC Hansa Rostock vs VfB Stuttgart | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://live.666666.zip/live/4550502.m3u8?
-
-#EXTINF:-1 tvg-id="11701" tvg-name="FC Hansa Rostock vs VfB Stuttgart | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Hansa Rostock vs VfB Stuttgart",FC Hansa Rostock vs VfB Stuttgart | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/prrra.m3u8?
 
 #EXTINF:-1 tvg-id="11702" tvg-name="Birmingham City vs Bristol City |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Birmingham City vs Bristol City",Birmingham City vs Bristol City |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -387,24 +434,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11713" tvg-name="West Bromwich Albion vs Burnley |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="West Bromwich Albion vs Burnley",West Bromwich Albion vs Burnley |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11714" tvg-name="Cordoba vs Girona FC | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Cordoba vs Girona FC",Cordoba vs Girona FC | LaLiga Hypermotion
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
-https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
-
-#EXTINF:-1 tvg-id="11714" tvg-name="Cordoba vs Girona FC | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Cordoba vs Girona FC",Cordoba vs Girona FC | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/paaaaQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://live.666666.zip/live/4581280.m3u8?
-
-#EXTINF:-1 tvg-id="11715" tvg-name="Erzurumspor FK vs Galatasaray | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Erzurumspor FK vs Galatasaray",Erzurumspor FK vs Galatasaray | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/fvvvaaaa.m3u8?
 
 #EXTINF:-1 tvg-id="11716" tvg-name="Hull City vs Manchester United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Hull City vs Manchester United",Hull City vs Manchester United |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
