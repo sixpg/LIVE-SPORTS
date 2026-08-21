@@ -87,29 +87,23 @@ http://193.47.62.41/hls/eoooaaa.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
 
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | HUB PREMIER - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | HUB PREMIER - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d9df2aa9c4974ed3bbf0730defad68fe:0cac792b5d5ef9ffb24e324a52c3da0b
-https://mh-bks400-04.starhubgo.com/bpk-token/2ac@ihpq3nl02bwx34atzt5ru4a1140zdmp1ihzj33da/bpk-tv/HubPremier1/output/manifest.mpd?bkm-query
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | SPORTSCAST - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | SPORTSCAST - AQ
+https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/0d658aef-79ab-4317-80e0-e44b15baf11a/master.m3u8
 
 #EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | USA NETWORK HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | USA NETWORK HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54955/load-playlist?
 
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | SPORTSCAST HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | SPORTSCAST HD
-https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/0d658aef-79ab-4317-80e0-e44b15baf11a/master.m3u8
-
 #EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | HD SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/24SDAZFcsqnj24.m3u8
 
-#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | beiN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | beiN ARABIC HD
-https://crimson-cloud-807f.kamrukhanchy.workers.dev/1201183/index.json?&e=.m3u8
-
 #EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy FAST" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy FAST
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/hd-en-1-4558449.m3u8?txSecret=10621dbd268d903a88f415c7a8472481&txTime=6A88B259
+
+#EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | beiN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | beiN ARABIC HD
+https://crimson-cloud-807f.kamrukhanchy.workers.dev/1201183/index.json?&e=.m3u8
 
 #EXTINF:-1 tvg-id="11692" tvg-name="Arsenal vs Coventry City | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Arsenal vs Coventry City",Arsenal vs Coventry City | CRICFy HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
