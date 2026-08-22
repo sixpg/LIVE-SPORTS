@@ -71,6 +71,22 @@ https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4248432_english_hls_6dff0812ea23371_1ta-di_h264/index.m3u8
 
+#EXTINF:-1 tvg-id="11769" tvg-name="Energie Cottbus vs FC Augsburg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="Energie Cottbus vs FC Augsburg",Energie Cottbus vs FC Augsburg | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4550514.m3u8?txSecret=79b79de0cb4a6833546708ef2a0f7efb&txTime=6A899548
+
+#EXTINF:-1 tvg-id="11769" tvg-name="Energie Cottbus vs FC Augsburg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="Energie Cottbus vs FC Augsburg",Energie Cottbus vs FC Augsburg | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/ATTTAAA.m3u8?
+
+#EXTINF:-1 tvg-id="11770" tvg-name="SV Wehen Wiesbaden vs Bayer 04 Leverkusen | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="SV Wehen Wiesbaden vs Bayer 04 Leverkusen",SV Wehen Wiesbaden vs Bayer 04 Leverkusen | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4550504.m3u8?txSecret=c0ed1e85f64a3796e29a7ca205b6210c&txTime=6A899575
+
+#EXTINF:-1 tvg-id="11770" tvg-name="SV Wehen Wiesbaden vs Bayer 04 Leverkusen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="SV Wehen Wiesbaden vs Bayer 04 Leverkusen",SV Wehen Wiesbaden vs Bayer 04 Leverkusen | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/ATTTAAAA.m3u8?
+
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54963/load-playlist?
@@ -506,14 +522,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="11768" tvg-name="Fenerbahce vs Konyaspor |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Fenerbahce vs Konyaspor",Fenerbahce vs Konyaspor |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11769" tvg-name="Energie Cottbus vs FC Augsburg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="Energie Cottbus vs FC Augsburg",Energie Cottbus vs FC Augsburg | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/ATTTAAA.m3u8?
-
-#EXTINF:-1 tvg-id="11770" tvg-name="SV Wehen Wiesbaden vs Bayer 04 Leverkusen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="SV Wehen Wiesbaden vs Bayer 04 Leverkusen",SV Wehen Wiesbaden vs Bayer 04 Leverkusen | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/ATTTAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11771" tvg-name="Erzgebirge Aue vs TSG Hoffenheim |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="Erzgebirge Aue vs TSG Hoffenheim",Erzgebirge Aue vs TSG Hoffenheim |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
