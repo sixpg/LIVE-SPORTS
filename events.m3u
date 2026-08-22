@@ -254,6 +254,22 @@ https://hls.live123.fans/live/4565327.m3u8?
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/FIIIAA.m3u8?
 
+#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | beiN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream5.pro/hls/dza5z8f69.m3u8?
+
+#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4550845.m3u8?txSecret=3ddcc252a80dc60fd40632372ed3caba&txTime=6A89C5C4
+
+#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+https://hls.live123.fans/live/4550845.m3u8?
+
+#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/FIIIAAA.m3u8?
+
 #EXTINF:-1 tvg-id="11758" tvg-name="Fortuna Sittard vs AZ Alkmaar | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Fortuna Sittard vs AZ Alkmaar",Fortuna Sittard vs AZ Alkmaar | SportDigital Fussball
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -278,30 +294,6 @@ https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mp
 #EXTINF:-1 tvg-id="11762" tvg-name="Real Oviedo vs Leganes | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Real Oviedo vs Leganes",Real Oviedo vs Leganes | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/FIIIA.m3u8?
-
-#EXTINF:-1 tvg-id="11771" tvg-name="Erzgebirge Aue vs TSG Hoffenheim | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="Erzgebirge Aue vs TSG Hoffenheim",Erzgebirge Aue vs TSG Hoffenheim | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOO.m3u8?
-
-#EXTINF:-1 tvg-id="11772" tvg-name="MSV Duisburg vs SV 07 Elversberg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="MSV Duisburg vs SV 07 Elversberg",MSV Duisburg vs SV 07 Elversberg | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOOA.m3u8?
-
-#EXTINF:-1 tvg-id="11773" tvg-name="LSK Hansa Luneburg vs SV Werder Bremen | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="LSK Hansa Luneburg vs SV Werder Bremen",LSK Hansa Luneburg vs SV Werder Bremen | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOOAAA.m3u8?
-
-#EXTINF:-1 tvg-id="11774" tvg-name="1. FC Saarbrucken vs Hertha BSC | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="1. FC Saarbrucken vs Hertha BSC",1. FC Saarbrucken vs Hertha BSC | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOOAAAA.m3u8?
-
-#EXTINF:-1 tvg-id="11775" tvg-name="SV Hemelingen vs Hannover 96 | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="SV Hemelingen vs Hannover 96",SV Hemelingen vs Hannover 96 | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOOAA.m3u8?
-
-#EXTINF:-1 tvg-id="11776" tvg-name="FC Viktoria Koln vs 1. FC Nurnberg | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="FC Viktoria Koln vs 1. FC Nurnberg",FC Viktoria Koln vs 1. FC Nurnberg | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GOOOAAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11785" tvg-name="Leicester City vs Burton Albion | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/24/image/dark" group-title="Leicester City vs Burton Albion",Leicester City vs Burton Albion | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
@@ -636,18 +628,6 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/rgilyeubta/
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
 
-#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4550845.m3u8?txSecret=3ddcc252a80dc60fd40632372ed3caba&txTime=6A89C5C4
-
-#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-https://hls.live123.fans/live/4550845.m3u8?
-
-#EXTINF:-1 tvg-id="11747" tvg-name="RC Lens vs Auxerre | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="RC Lens vs Auxerre",RC Lens vs Auxerre | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/FIIIAAA.m3u8?
-
 #EXTINF:-1 tvg-id="11748" tvg-name="Le Mans vs Stade Brestois |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Le Mans vs Stade Brestois",Le Mans vs Stade Brestois |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -762,8 +742,13 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11784" tvg-name="Borussia Dortmund vs FC Bayern Munchen |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/799/image/dark" group-title="Borussia Dortmund vs FC Bayern Munchen",Borussia Dortmund vs FC Bayern Munchen |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11786" tvg-name="Detroit Lions vs Washington Commanders |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Detroit Lions vs Washington Commanders",Detroit Lions vs Washington Commanders |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11786" tvg-name="Detroit Lions vs Washington Commanders | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Detroit Lions vs Washington Commanders",Detroit Lions vs Washington Commanders | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54952/load-playlist?
+
+#EXTINF:-1 tvg-id="11786" tvg-name="Detroit Lions vs Washington Commanders | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Detroit Lions vs Washington Commanders",Detroit Lions vs Washington Commanders | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
 
 #EXTINF:-1 tvg-id="11787" tvg-name="Minnesota Vikings vs Baltimore Ravens | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Minnesota Vikings vs Baltimore Ravens",Minnesota Vikings vs Baltimore Ravens | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
