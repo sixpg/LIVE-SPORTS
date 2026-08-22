@@ -34,45 +34,21 @@ http://193.47.62.192/hls/DIIID.m3u8?
 #EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e7608da17e8744974060d24c26cacf3d:45875438d2ea7261284447a7b04bbab6
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/lwcfb6qcve/out/v1/ddcfe3ed565f49ab9b60228d14dac254/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=5e82d75ac3a646f8de91831df04b2e07:af211d0b99fd3d973aaa6ac7e23a3e01
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/8cmdowyygj/out/v1/0ddc95beeadc4a738fff413339af20d4/cenc.mpd
 
 #EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - ALT" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e7608da17e8744974060d24c26cacf3d:45875438d2ea7261284447a7b04bbab6
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/lwcfb6qcve/out/v1/ddcfe3ed565f49ab9b60228d14dac254/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=5e82d75ac3a646f8de91831df04b2e07:af211d0b99fd3d973aaa6ac7e23a3e01
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/8cmdowyygj/out/v1/0ddc95beeadc4a738fff413339af20d4/cenc.mpd
 
 #EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | T SPORTS HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | T SPORTS HD
 https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/mumbai/4248435_english_hls_89abeaffb541195_1ta-di_h264/index.m3u8
-
-#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://gooz.aapmains.net/new-stream-embed/54987?ad=111&Origin=https://gooz.aapmains.net/new-stream-embed/54987?ad=111
-https://chatgpt.hereisman.net/playlist/54987/load-playlist?&.m3u8
-
-#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jzabfazkbf27.m3u8
-
-#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/YPPPAAAAAA.m3u8
-
-#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://gooz.aapmains.net/new-stream-embed/54984?ad=111&Origin=https://gooz.aapmains.net/new-stream-embed/54984?ad=111
-https://chatgpt.hereisman.net/playlist/54984/load-playlist?&.m3u8
-
-#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/dzjhkfazbka26.m3u8
-
-#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/YPPPAAAAA.m3u8
+https://dai-fancode.pages.dev/mumbai/4248437_english_hls_324318297a99597_1ta-di_h264/index.m3u8
 
 #EXTINF:-1 tvg-id="11741" tvg-name="Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Pittsburgh Pirates",Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://gooz.aapmains.net/new-stream-embed/54992?ad=111&Origin=https://gooz.aapmains.net/new-stream-embed/54992?ad=111
@@ -471,6 +447,24 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11779" tvg-name="SG Sonnenhof Groaspach vs Arminia Bielefeld |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/217/image/dark" group-title="SG Sonnenhof Groaspach vs Arminia Bielefeld",SG Sonnenhof Groaspach vs Arminia Bielefeld |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
+#EXTINF:-1 tvg-id="11780" tvg-name="Cruzeiro vs Flamengo |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Cruzeiro vs Flamengo",Cruzeiro vs Flamengo |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11781" tvg-name="Internacional vs Atletico Mineiro |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Internacional vs Atletico Mineiro",Internacional vs Atletico Mineiro |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11782" tvg-name="Fluminense vs Remo |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Fluminense vs Remo",Fluminense vs Remo |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11783" tvg-name="Inter Miami CF vs Toronto FC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/242/image/dark" group-title="Inter Miami CF vs Toronto FC",Inter Miami CF vs Toronto FC |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11784" tvg-name="Borussia Dortmund vs FC Bayern Munchen |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/799/image/dark" group-title="Borussia Dortmund vs FC Bayern Munchen",Borussia Dortmund vs FC Bayern Munchen |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11785" tvg-name="Leicester City vs Burton Albion |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/24/image/dark" group-title="Leicester City vs Burton Albion",Leicester City vs Burton Albion |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54963/load-playlist?
@@ -493,6 +487,30 @@ https://edgestream2.pro/hls/kjhfzua25.m3u8
 #EXTINF:-1 tvg-id="11738" tvg-name="Colorado Rockies vs Cleveland Guardians | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Colorado Rockies vs Cleveland Guardians",Colorado Rockies vs Cleveland Guardians | LOW QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/YPPPAA.m3u8
+
+#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://gooz.aapmains.net/new-stream-embed/54987?ad=111&Origin=https://gooz.aapmains.net/new-stream-embed/54987?ad=111
+https://chatgpt.hereisman.net/playlist/54987/load-playlist?&.m3u8
+
+#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jzabfazkbf27.m3u8
+
+#EXTINF:-1 tvg-id="11739" tvg-name="San Diego Padres vs Minnesota Twins | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/YPPPAAAAAA.m3u8
+
+#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://gooz.aapmains.net/new-stream-embed/54984?ad=111&Origin=https://gooz.aapmains.net/new-stream-embed/54984?ad=111
+https://chatgpt.hereisman.net/playlist/54984/load-playlist?&.m3u8
+
+#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/dzjhkfazbka26.m3u8
+
+#EXTINF:-1 tvg-id="11740" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/YPPPAAAAA.m3u8
 
 #EXTINF:-1 tvg-id="11745" tvg-name="Denver Broncos vs Green Bay Packers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Denver Broncos vs Green Bay Packers",Denver Broncos vs Green Bay Packers | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
