@@ -263,11 +263,19 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11697" tvg-name="Sri Lanka Women vs United Arab Emirates Women |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Sri Lanka Women vs United Arab Emirates Women",Sri Lanka Women vs United Arab Emirates Women |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11702" tvg-name="Birmingham City vs Bristol City |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Birmingham City vs Bristol City",Birmingham City vs Bristol City |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11702" tvg-name="Birmingham City vs Bristol City | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Birmingham City vs Bristol City",Birmingham City vs Bristol City | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
 
-#EXTINF:-1 tvg-id="11703" tvg-name="Lincoln City vs Portsmouth |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Lincoln City vs Portsmouth",Lincoln City vs Portsmouth |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11703" tvg-name="Lincoln City vs Portsmouth | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Lincoln City vs Portsmouth",Lincoln City vs Portsmouth | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
 
 #EXTINF:-1 tvg-id="11704" tvg-name="Millwall vs Norwich City |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Millwall vs Norwich City",Millwall vs Norwich City |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -293,14 +301,22 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11711" tvg-name="Wrexham vs Watford |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="Wrexham vs Watford",Wrexham vs Watford |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11712" tvg-name="West Ham United vs Charlton Athletic |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="West Ham United vs Charlton Athletic",West Ham United vs Charlton Athletic |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11712" tvg-name="West Ham United vs Charlton Athletic | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="West Ham United vs Charlton Athletic",West Ham United vs Charlton Athletic | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
 
 #EXTINF:-1 tvg-id="11713" tvg-name="West Bromwich Albion vs Burnley |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18/image/dark" group-title="West Bromwich Albion vs Burnley",West Bromwich Albion vs Burnley |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11716" tvg-name="Hull City vs Manchester United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Hull City vs Manchester United",Hull City vs Manchester United |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11716" tvg-name="Hull City vs Manchester United | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Hull City vs Manchester United",Hull City vs Manchester United | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
 
 #EXTINF:-1 tvg-id="11717" tvg-name="Everton vs Crystal Palace |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Everton vs Crystal Palace",Everton vs Crystal Palace |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -311,11 +327,32 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11719" tvg-name="Nottingham Forest vs Leeds United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11720" tvg-name="Brentford vs Tottenham Hotspur |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Brentford vs Tottenham Hotspur",Brentford vs Tottenham Hotspur |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11720" tvg-name="Brentford vs Tottenham Hotspur | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17/image/dark" group-title="Brentford vs Tottenham Hotspur",Brentford vs Tottenham Hotspur | FUBO SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
 
-#EXTINF:-1 tvg-id="11721" tvg-name="Inter vs Monza |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Inter vs Monza",Inter vs Monza |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11721" tvg-name="Inter vs Monza | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Inter vs Monza",Inter vs Monza | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11721" tvg-name="Inter vs Monza | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Inter vs Monza",Inter vs Monza | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11721" tvg-name="Inter vs Monza | SPORT 1 CZ - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Inter vs Monza",Inter vs Monza | SPORT 1 CZ - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
 
 #EXTINF:-1 tvg-id="11722" tvg-name="Udinese vs Como |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Udinese vs Como",Udinese vs Como |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -350,11 +387,39 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1
 #EXTINF:-1 tvg-id="11724" tvg-name="Parma vs Cagliari |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Parma vs Cagliari",Parma vs Cagliari |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11725" tvg-name="Athletic Club vs Sevilla |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Athletic Club vs Sevilla",Athletic Club vs Sevilla |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11725" tvg-name="Athletic Club vs Sevilla | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Athletic Club vs Sevilla",Athletic Club vs Sevilla | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=335dad778109954503dcbb21dc92015f:24bfd75d436cbf73168a2a2dccd40281
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd
 
-#EXTINF:-1 tvg-id="11726" tvg-name="Valencia vs Celta Vigo |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Celta Vigo",Valencia vs Celta Vigo |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11725" tvg-name="Athletic Club vs Sevilla | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Athletic Club vs Sevilla",Athletic Club vs Sevilla | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="11725" tvg-name="Athletic Club vs Sevilla | CANAL5 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Athletic Club vs Sevilla",Athletic Club vs Sevilla | CANAL5 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d695093ea3e66d75a4d213a3e2cbf360:01be3f645e89a067d2786c295f68dde4
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ntkdl68eob/out/v1/bd5dfb7676994383881bc6e71877d29d/cenc.mpd
+
+#EXTINF:-1 tvg-id="11726" tvg-name="Valencia vs Celta Vigo | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Celta Vigo",Valencia vs Celta Vigo | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11726" tvg-name="Valencia vs Celta Vigo | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Celta Vigo",Valencia vs Celta Vigo | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
 
 #EXTINF:-1 tvg-id="11727" tvg-name="Espanyol vs Real Madrid | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Espanyol vs Real Madrid",Espanyol vs Real Madrid | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -400,8 +465,12 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11757" tvg-name="Sparta Rotterdam vs FC Utrecht |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Sparta Rotterdam vs FC Utrecht",Sparta Rotterdam vs FC Utrecht |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11758" tvg-name="Fortuna Sittard vs AZ Alkmaar |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Fortuna Sittard vs AZ Alkmaar",Fortuna Sittard vs AZ Alkmaar |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11758" tvg-name="Fortuna Sittard vs AZ Alkmaar | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="Fortuna Sittard vs AZ Alkmaar",Fortuna Sittard vs AZ Alkmaar | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
 
 #EXTINF:-1 tvg-id="11759" tvg-name="SC Heerenveen vs PEC Zwolle |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37/image/dark" group-title="SC Heerenveen vs PEC Zwolle",SC Heerenveen vs PEC Zwolle |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -416,11 +485,17 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1
 #EXTINF:-1 tvg-id="11761" tvg-name="Estoril Praia vs Rio Ave |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/238/image/dark" group-title="Estoril Praia vs Rio Ave",Estoril Praia vs Rio Ave |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11762" tvg-name="Real Oviedo vs Leganes |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Real Oviedo vs Leganes",Real Oviedo vs Leganes |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11762" tvg-name="Real Oviedo vs Leganes | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Real Oviedo vs Leganes",Real Oviedo vs Leganes | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
 
-#EXTINF:-1 tvg-id="11763" tvg-name="AD Ceuta vs UD Las Palmas |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="AD Ceuta vs UD Las Palmas",AD Ceuta vs UD Las Palmas |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11763" tvg-name="AD Ceuta vs UD Las Palmas | LaLiga Hypermotion" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="AD Ceuta vs UD Las Palmas",AD Ceuta vs UD Las Palmas | LaLiga Hypermotion
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a88617e904504ee291f49f0e60a51d49:17f92d59fde3b6d2bf4ffb48e8ca720a
+https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mpd
 
 #EXTINF:-1 tvg-id="11764" tvg-name="Albacete Balompie vs Real Sociedad B |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="Albacete Balompie vs Real Sociedad B",Albacete Balompie vs Real Sociedad B |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
