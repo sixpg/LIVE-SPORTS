@@ -1,68 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | CBS SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
-#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
-
-#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv6.m3u8
-
-#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55139/load-playlist?
-
-#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream3.pro/hls/hflfkrtib42.m3u8?
-
-#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.51/hls/KVVV.m3u8?
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | FUBO SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | SPORT1 CZ - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | SPORT1 CZ - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55138/load-playlist?
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv3.m3u8
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream3.pro/hls/syaLqucEne4k.m3u8?
-
-#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.51/hls/KVVVA.m3u8?
-
 #EXTINF:-1 tvg-id="11820" tvg-name="Elche vs FC Barcelona | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Elche vs FC Barcelona",Elche vs FC Barcelona | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -103,31 +39,6 @@ https://play1.315nb.com/live/72478492_45c8d67f1af680edd82236f060d92471.m3u8?auth
 #EXTINF:-1 tvg-id="11820" tvg-name="Elche vs FC Barcelona | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Elche vs FC Barcelona",Elche vs FC Barcelona | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.49/hls/dpdpdpFFFFF.m3u8?
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | PRIME VIDEO - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | PRIME VIDEO - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=62dbac124bbef865507610070019f875:3dca8ca0a86cca296de7f91583d88939
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/78yadthwhn/out/v1/7ce475ea35b74693abdf651e2ee2fef3/cenc.mpd
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | beIN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | beIN SPORTS HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55101/load-playlist?
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | LIGUE1+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | LIGUE1+ HD
-https://tmaxapp.site/ligue6sc6/ligue1.m3u8
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv4.m3u8
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream6.pro/hls/dza5z8f69.m3u8?
-
-#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.51/hls/KVVVAA.m3u8?
 
 #EXTINF:-1 tvg-id="11825" tvg-name="Red Bull Bragantino vs Gremio | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Red Bull Bragantino vs Gremio",Red Bull Bragantino vs Gremio | PREMIERE BR - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -192,48 +103,6 @@ https://cache07.zapitv.com/live/eds_c2/HYPERMOTION1/dash_live_ez/HYPERMOTION1.mp
 #EXTINF:-1 tvg-id="11842" tvg-name="CD Tenerife vs Almeria | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/54/image/dark" group-title="CD Tenerife vs Almeria",CD Tenerife vs Almeria | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/JJJAAAqQQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/hd-en-1-4581278.m3u8?txSecret=68b158301aa857a53b6e7fc145d6f020&txTime=6A8B4AA4
-
-#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | beiN SPORTS HD
-https://tmaxapp.site/8wirwjs76erftg/beinsports1tr.m3u8
-
-#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.59/hls/R999AAAAQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11847" tvg-name="Goztepe vs Genclerbirligi | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Goztepe vs Genclerbirligi",Goztepe vs Genclerbirligi | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.59/hls/R999AAAAQQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11847" tvg-name="Goztepe vs Genclerbirligi | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Goztepe vs Genclerbirligi",Goztepe vs Genclerbirligi | beiN SPORTS HD
-https://tmaxapp.site/8wirwjs76erftg/beinsports2tr.m3u8
-
-#EXTINF:-1 tvg-id="11864" tvg-name="Chicago White Sox vs New York Mets | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs New York Mets",Chicago White Sox vs New York Mets | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55126/load-playlist?
-
-#EXTINF:-1 tvg-id="11864" tvg-name="Chicago White Sox vs New York Mets | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs New York Mets",Chicago White Sox vs New York Mets | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/ojzkajnach21.m3u8
-
-#EXTINF:-1 tvg-id="11865" tvg-name="Kansas City Royals vs Detroit Tigers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Detroit Tigers",Kansas City Royals vs Detroit Tigers | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55128/load-playlist?
-
-#EXTINF:-1 tvg-id="11865" tvg-name="Kansas City Royals vs Detroit Tigers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Detroit Tigers",Kansas City Royals vs Detroit Tigers | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jkzahzadach20.m3u8
-
-#EXTINF:-1 tvg-id="11866" tvg-name="Houston Astros vs Athletics | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Athletics",Houston Astros vs Athletics | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55125/load-playlist?
-
-#EXTINF:-1 tvg-id="11866" tvg-name="Houston Astros vs Athletics | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Athletics",Houston Astros vs Athletics | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/bzagLHzach19.m3u8
 
 #EXTINF:-1 tvg-id="11867" tvg-name="Texas Rangers vs Los Angeles Angels | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Texas Rangers vs Los Angeles Angels",Texas Rangers vs Los Angeles Angels | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -643,6 +512,70 @@ http://193.47.62.49/hls/dpdpdp.m3u8?
 #KODIPROP:inputstream.adaptive.license_key=6695688f79dc36f7a41f7db13bff5aca:22ef689af2162aefbf745cba2adb4fe9
 https://simplitv-live.mdn.ors.at/live/eds/sky_sport_f1_hd/dash/sky_sport_f1_hd.mpd
 
+#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv6.m3u8
+
+#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55139/load-playlist?
+
+#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream3.pro/hls/hflfkrtib42.m3u8?
+
+#EXTINF:-1 tvg-id="11816" tvg-name="Atalanta vs Sassuolo | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Atalanta vs Sassuolo",Atalanta vs Sassuolo | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.51/hls/KVVV.m3u8?
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | FUBO SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | FUBO SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | SPORT1 CZ - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | SPORT1 CZ - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55138/load-playlist?
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv3.m3u8
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream3.pro/hls/syaLqucEne4k.m3u8?
+
+#EXTINF:-1 tvg-id="11817" tvg-name="Torino vs AC Milan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Torino vs AC Milan",Torino vs AC Milan | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.51/hls/KVVVA.m3u8?
+
 #EXTINF:-1 tvg-id="11818" tvg-name="Getafe vs Real Racing Club | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Getafe vs Real Racing Club",Getafe vs Real Racing Club | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -662,6 +595,49 @@ https://chatgpt.hereisman.net/playlist/55117/load-playlist?
 #EXTINF:-1 tvg-id="11818" tvg-name="Getafe vs Real Racing Club | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Getafe vs Real Racing Club",Getafe vs Real Racing Club | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/ADDDAAAA.m3u8?
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | PRIME VIDEO - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | PRIME VIDEO - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=62dbac124bbef865507610070019f875:3dca8ca0a86cca296de7f91583d88939
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/78yadthwhn/out/v1/7ce475ea35b74693abdf651e2ee2fef3/cenc.mpd
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | beIN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | beIN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55101/load-playlist?
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | LIGUE1+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | LIGUE1+ HD
+https://tmaxapp.site/ligue6sc6/ligue1.m3u8
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv4.m3u8
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream6.pro/hls/dza5z8f69.m3u8?
+
+#EXTINF:-1 tvg-id="11823" tvg-name="Stade Rennais vs Paris Saint-Germain | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/34/image/dark" group-title="Stade Rennais vs Paris Saint-Germain",Stade Rennais vs Paris Saint-Germain | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.51/hls/KVVVAA.m3u8?
+
+#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/hd-en-1-4581278.m3u8?txSecret=68b158301aa857a53b6e7fc145d6f020&txTime=6A8B4AA4
+
+#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | beiN SPORTS HD
+https://tmaxapp.site/8wirwjs76erftg/beinsports1tr.m3u8
+
+#EXTINF:-1 tvg-id="11846" tvg-name="Alanyaspor vs Besiktas JK | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Alanyaspor vs Besiktas JK",Alanyaspor vs Besiktas JK | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.59/hls/R999AAAAQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11847" tvg-name="Goztepe vs Genclerbirligi | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Goztepe vs Genclerbirligi",Goztepe vs Genclerbirligi | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.59/hls/R999AAAAQQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11847" tvg-name="Goztepe vs Genclerbirligi | beiN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/52/image/dark" group-title="Goztepe vs Genclerbirligi",Goztepe vs Genclerbirligi | beiN SPORTS HD
+https://tmaxapp.site/8wirwjs76erftg/beinsports2tr.m3u8
 
 #EXTINF:-1 tvg-id="11860" tvg-name="New York Yankees vs Toronto Blue Jays | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Yankees vs Toronto Blue Jays",New York Yankees vs Toronto Blue Jays | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -694,3 +670,27 @@ https://chatgpt.hereisman.net/playlist/55122/load-playlist?
 #EXTINF:-1 tvg-id="11863" tvg-name="Miami Marlins vs Washington Nationals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Miami Marlins vs Washington Nationals",Miami Marlins vs Washington Nationals | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/Czajafjihafch18.m3u8
+
+#EXTINF:-1 tvg-id="11864" tvg-name="Chicago White Sox vs New York Mets | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs New York Mets",Chicago White Sox vs New York Mets | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55126/load-playlist?
+
+#EXTINF:-1 tvg-id="11864" tvg-name="Chicago White Sox vs New York Mets | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs New York Mets",Chicago White Sox vs New York Mets | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/ojzkajnach21.m3u8
+
+#EXTINF:-1 tvg-id="11865" tvg-name="Kansas City Royals vs Detroit Tigers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Detroit Tigers",Kansas City Royals vs Detroit Tigers | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55128/load-playlist?
+
+#EXTINF:-1 tvg-id="11865" tvg-name="Kansas City Royals vs Detroit Tigers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Kansas City Royals vs Detroit Tigers",Kansas City Royals vs Detroit Tigers | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jkzahzadach20.m3u8
+
+#EXTINF:-1 tvg-id="11866" tvg-name="Houston Astros vs Athletics | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Athletics",Houston Astros vs Athletics | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55125/load-playlist?
+
+#EXTINF:-1 tvg-id="11866" tvg-name="Houston Astros vs Athletics | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Houston Astros vs Athletics",Houston Astros vs Athletics | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/bzagLHzach19.m3u8
