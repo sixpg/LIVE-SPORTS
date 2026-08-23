@@ -1,4 +1,31 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
+https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8?
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
+http://tvsen5.aynascope.net/willowhd/index.m3u8
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | SKY SPORT NZ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | SKY SPORT NZ
+https://tmaxapp.site/8wirwjs76erftg/skysport6nz47z58f.m3u8
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TEN SPORTS HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TEN SPORTS HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FANCODE - IN" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FANCODE - IN
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
+https://dai-fancode.pages.dev/mumbai/4248291_english_hls_bfd158f3d725309_1ta-di_h264/index.m3u8
+
 #EXTINF:-1 tvg-id="11828" tvg-name="Chapecoense vs Sao Paulo | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Chapecoense vs Sao Paulo",Chapecoense vs Sao Paulo | PREMIERE BR - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -23,33 +50,13 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1
 #KODIPROP:inputstream.adaptive.license_key=d23f7433798a652a7d4f6791d9e1036c:4942eebd598b5727c5cc484cc62b52e8
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/6onrfniyry/out/v1/f23069c61dbf4e00890a40b705a84079/cenc.mpd
 
-#EXTINF:-1 tvg-id="11870" tvg-name="Seattle Mariners vs Chicago Cubs | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Seattle Mariners vs Chicago Cubs",Seattle Mariners vs Chicago Cubs | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55147/load-playlist?
-
-#EXTINF:-1 tvg-id="11870" tvg-name="Seattle Mariners vs Chicago Cubs | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Seattle Mariners vs Chicago Cubs",Seattle Mariners vs Chicago Cubs | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/kjhfzua25.m3u8
-
-#EXTINF:-1 tvg-id="11871" tvg-name="Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Pittsburgh Pirates",Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55144/load-playlist?
-
-#EXTINF:-1 tvg-id="11871" tvg-name="Los Angeles Dodgers vs Pittsburgh Pirates | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Pittsburgh Pirates",Los Angeles Dodgers vs Pittsburgh Pirates | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jzabfazkbf27.m3u8
-
-#EXTINF:-1 tvg-id="11872" tvg-name="San Diego Padres vs Minnesota Twins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55146/load-playlist?
-
-#EXTINF:-1 tvg-id="11872" tvg-name="San Diego Padres vs Minnesota Twins | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/dzjhkfazbka26.m3u8
-
 #EXTINF:-1 tvg-id="11873" tvg-name="Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Cincinnati Reds",Arizona Diamondbacks vs Cincinnati Reds | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/hefbafbakx28.m3u8
+
+#EXTINF:-1 tvg-id="11874" tvg-name="Milwaukee Brewers vs Atlanta Braves | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Milwaukee Brewers vs Atlanta Braves",Milwaukee Brewers vs Atlanta Braves | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/hfzljfahzcax29.m3u8
 
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -135,33 +142,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/9v8cttmhcw/out/v1
 #EXTINF:-1 tvg-id="8963" tvg-name="UFC LIVE | LOW SERVER" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/19906/image" group-title="UFC LIVE",UFC LIVE | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.47/hls/vivivi.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
-https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
-http://tvsen5.aynascope.net/willowhd/index.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | SKY SPORT NZ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | SKY SPORT NZ
-https://tmaxapp.site/8wirwjs76erftg/skysport6nz47z58f.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TEN SPORTS HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FANCODE - IN" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/mumbai/4248291_english_hls_bfd158f3d725309_1ta-di_h264/index.m3u8
 
 #EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -283,10 +263,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11859" tvg-name="Tennessee Titans vs Seattle Seahawks | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Tennessee Titans vs Seattle Seahawks",Tennessee Titans vs Seattle Seahawks | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
-
-#EXTINF:-1 tvg-id="11874" tvg-name="Milwaukee Brewers vs Atlanta Braves | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Milwaukee Brewers vs Atlanta Braves",Milwaukee Brewers vs Atlanta Braves | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/hfzljfahzcax29.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | APPLE TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | APPLE TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -694,3 +670,27 @@ https://chatgpt.hereisman.net/playlist/55120/load-playlist?
 #EXTINF:-1 tvg-id="11869" tvg-name="Boston Red Sox vs San Francisco Giants | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Boston Red Sox vs San Francisco Giants",Boston Red Sox vs San Francisco Giants | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
 https://edgestream2.pro/hls/fskjanach24.m3u8
+
+#EXTINF:-1 tvg-id="11870" tvg-name="Seattle Mariners vs Chicago Cubs | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Seattle Mariners vs Chicago Cubs",Seattle Mariners vs Chicago Cubs | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55147/load-playlist?
+
+#EXTINF:-1 tvg-id="11870" tvg-name="Seattle Mariners vs Chicago Cubs | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Seattle Mariners vs Chicago Cubs",Seattle Mariners vs Chicago Cubs | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/kjhfzua25.m3u8
+
+#EXTINF:-1 tvg-id="11871" tvg-name="Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Pittsburgh Pirates",Los Angeles Dodgers vs Pittsburgh Pirates | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55144/load-playlist?
+
+#EXTINF:-1 tvg-id="11871" tvg-name="Los Angeles Dodgers vs Pittsburgh Pirates | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Pittsburgh Pirates",Los Angeles Dodgers vs Pittsburgh Pirates | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jzabfazkbf27.m3u8
+
+#EXTINF:-1 tvg-id="11872" tvg-name="San Diego Padres vs Minnesota Twins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55146/load-playlist?
+
+#EXTINF:-1 tvg-id="11872" tvg-name="San Diego Padres vs Minnesota Twins | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Minnesota Twins",San Diego Padres vs Minnesota Twins | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/dzjhkfazbka26.m3u8
