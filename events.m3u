@@ -284,8 +284,9 @@ https://edgestream2.pro/hls/sqdahach1ax.m3u8
 #EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11891" tvg-name="Al-Shabab vs Al-Riyadh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Shabab vs Al-Riyadh",Al-Shabab vs Al-Riyadh |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11891" tvg-name="Al-Shabab vs Al-Riyadh | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Shabab vs Al-Riyadh",Al-Shabab vs Al-Riyadh | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/FUUUZAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11892" tvg-name="Al-Ettifaq vs Al-Nassr | FOX SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Ettifaq vs Al-Nassr",Al-Ettifaq vs Al-Nassr | FOX SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -304,6 +305,14 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="11892" tvg-name="Al-Ettifaq vs Al-Nassr | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Ettifaq vs Al-Nassr",Al-Ettifaq vs Al-Nassr | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55190/load-playlist?
+
+#EXTINF:-1 tvg-id="11892" tvg-name="Al-Ettifaq vs Al-Nassr | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Ettifaq vs Al-Nassr",Al-Ettifaq vs Al-Nassr | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/FUUUZAA.m3u8?
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League |" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League |
 ok
@@ -347,8 +356,13 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1
 #EXTINF:-1 tvg-id="11907" tvg-name="Vietnam vs Thailand |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Thailand",Vietnam vs Thailand |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11908" tvg-name="Cardiff City vs Norwich City |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cardiff City vs Norwich City",Cardiff City vs Norwich City |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="11908" tvg-name="Cardiff City vs Norwich City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cardiff City vs Norwich City",Cardiff City vs Norwich City | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55175/load-playlist?
+
+#EXTINF:-1 tvg-id="11908" tvg-name="Cardiff City vs Norwich City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cardiff City vs Norwich City",Cardiff City vs Norwich City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGA.m3u8?
 
 #EXTINF:-1 tvg-id="11909" tvg-name="Doncaster Rovers vs Middlesbrough |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Doncaster Rovers vs Middlesbrough",Doncaster Rovers vs Middlesbrough |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
