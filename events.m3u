@@ -11,6 +11,12 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1
 #KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
 
+#EXTINF:-1 tvg-id="11889" tvg-name="Abha vs Al-Khaleej | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Abha vs Al-Khaleej",Abha vs Al-Khaleej | FANCODE - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
 #EXTINF:-1 tvg-id="11889" tvg-name="Abha vs Al-Khaleej | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Abha vs Al-Khaleej",Abha vs Al-Khaleej | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
 https://live.vivo200.com/live/sd-1-4599560.m3u8?txSecret=5f3f922ce3ec4f6e9a63d7e6ea1500da&txTime=6A8DCC54
@@ -18,6 +24,17 @@ https://live.vivo200.com/live/sd-1-4599560.m3u8?txSecret=5f3f922ce3ec4f6e9a63d7e
 #EXTINF:-1 tvg-id="11889" tvg-name="Abha vs Al-Khaleej | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Abha vs Al-Khaleej",Abha vs Al-Khaleej | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/DGPPPAA.m3u8?
+
+#EXTINF:-1 tvg-id="11890" tvg-name="Al-Taawoun vs Al-Fayha | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Taawoun vs Al-Fayha",Al-Taawoun vs Al-Fayha | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4599561.m3u8?txSecret=a2bd86fa4a520e3bc34ad7f063ae8b40&txTime=6A8DCC84
+
+#EXTINF:-1 tvg-id="11890" tvg-name="Al-Taawoun vs Al-Fayha | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Taawoun vs Al-Fayha",Al-Taawoun vs Al-Fayha | HD SERVER
+https://tmaxapp.site/ligue6sc6/thmanyah2.m3u8
+
+#EXTINF:-1 tvg-id="11890" tvg-name="Al-Taawoun vs Al-Fayha | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Taawoun vs Al-Fayha",Al-Taawoun vs Al-Fayha | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/DGPPPAAA.m3u8?
 
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -266,14 +283,6 @@ https://edgestream2.pro/hls/sqdahach1ax.m3u8
 
 #EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11890" tvg-name="Al-Taawoun vs Al-Fayha | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Taawoun vs Al-Fayha",Al-Taawoun vs Al-Fayha | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4599561.m3u8?txSecret=a2bd86fa4a520e3bc34ad7f063ae8b40&txTime=6A8DCC84
-
-#EXTINF:-1 tvg-id="11890" tvg-name="Al-Taawoun vs Al-Fayha | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Taawoun vs Al-Fayha",Al-Taawoun vs Al-Fayha | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/DGPPPAAA.m3u8?
 
 #EXTINF:-1 tvg-id="11891" tvg-name="Al-Shabab vs Al-Riyadh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Shabab vs Al-Riyadh",Al-Shabab vs Al-Riyadh |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
