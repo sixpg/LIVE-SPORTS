@@ -1,4 +1,30 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | ESPN DEPORTES HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | ESPN DEPORTES HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55194/load-playlist?
+
+#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/sqdahach1ax.m3u8
+
+#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/GMMMA.m3u8?
+
 #EXTINF:-1 tvg-id="11891" tvg-name="Al-Shabab vs Al-Riyadh | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Shabab vs Al-Riyadh",Al-Shabab vs Al-Riyadh | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/FUUUZAAA.m3u8?
@@ -53,6 +79,155 @@ https://live.vivo200.com/live/sd-1-4613215.m3u8?txSecret=e59327edef49483a5a15f5d
 #EXTINF:-1 tvg-id="11908" tvg-name="Cardiff City vs Norwich City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cardiff City vs Norwich City",Cardiff City vs Norwich City | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.58/hls/GAGAGA.m3u8?
+
+#EXTINF:-1 tvg-id="11909" tvg-name="Doncaster Rovers vs Middlesbrough | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Doncaster Rovers vs Middlesbrough",Doncaster Rovers vs Middlesbrough | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGT.m3u8?
+
+#EXTINF:-1 tvg-id="11910" tvg-name="Blackburn Rovers vs Sheffield United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Blackburn Rovers vs Sheffield United",Blackburn Rovers vs Sheffield United | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGAD.m3u8?
+
+#EXTINF:-1 tvg-id="11911" tvg-name="Barnsley vs Crewe Alexandra | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Barnsley vs Crewe Alexandra",Barnsley vs Crewe Alexandra | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.54/hls/IEEEE.m3u8?
+
+#EXTINF:-1 tvg-id="11912" tvg-name="Blackpool vs Lincoln City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Blackpool vs Lincoln City",Blackpool vs Lincoln City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGTQ.m3u8?
+
+#EXTINF:-1 tvg-id="11913" tvg-name="Cambridge United vs Millwall | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cambridge United vs Millwall",Cambridge United vs Millwall | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.54/hls/IEEEEQ.m3u8?
+
+#EXTINF:-1 tvg-id="11914" tvg-name="Fleetwood Town vs Shrewsbury Town | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Fleetwood Town vs Shrewsbury Town",Fleetwood Town vs Shrewsbury Town | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGADD.m3u8?
+
+#EXTINF:-1 tvg-id="11915" tvg-name="Ipswich Town vs Leicester City | CBS SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Ipswich Town vs Leicester City",Ipswich Town vs Leicester City | CBS SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://iframe.rumsport10.live/&useragent=Mozilla%2F5.0%20(Linux%3B%20Android%2010%3B%20K)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F120.0.0.0%20Mobile%20Safari%2F537.36
+https://livecdn-tc-livestream.rumsport10.live/sla/1-6a7acf8ddc0bfe20cd4f8136-hd/chunks.m3u8?is_vip=false&token=1787769188-Kv4cPTAAP5YTi-edcb381b402a9d3b83c369dc063ab6747063ec51-30e96eaa9ab5bf2a473e0c408634f26f
+
+#EXTINF:-1 tvg-id="11915" tvg-name="Ipswich Town vs Leicester City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Ipswich Town vs Leicester City",Ipswich Town vs Leicester City | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613220.m3u8?txSecret=e9c7e9c1b6c53069e9d927b076efa072&txTime=6A8DF02A
+
+#EXTINF:-1 tvg-id="11915" tvg-name="Ipswich Town vs Leicester City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Ipswich Town vs Leicester City",Ipswich Town vs Leicester City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGTQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11916" tvg-name="Plymouth Argyle vs Coventry City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Plymouth Argyle vs Coventry City",Plymouth Argyle vs Coventry City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.54/hls/IEEEEQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://iframe.rumsport10.live/&useragent=Mozilla%2F5.0%20(Linux%3B%20Android%2010%3B%20K)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F120.0.0.0%20Mobile%20Safari%2F537.36
+https://livecdn-tc-livestream.rumsport10.live/sla/1-6a7acf8ddc0bfe20cd4f8132-hd/chunks.m3u8?is_vip=false&token=1787769186-Kv4cPTAAP5YTi-edcb381b402a9d3b83c369dc063ab6747063ec51-571f2f5928a487799213e3cdaf79c61e
+
+#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613224.m3u8?txSecret=a7795e9bfb3bf9495938bf320b869957&txTime=6A8DEFB3
+
+#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | beIN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | beIN SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55192/load-playlist?
+
+#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGADDD.m3u8?
+
+#EXTINF:-1 tvg-id="11918" tvg-name="Stevenage vs Reading | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stevenage vs Reading",Stevenage vs Reading | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.54/hls/IEEEEQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
+
+#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613225.m3u8?txSecret=c06d7ad72a129c112459e8b39d727079&txTime=6A8DEFE1
+
+#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv2.m3u8
+
+#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGTQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11920" tvg-name="Stoke City vs Hull City | ARENA SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stoke City vs Hull City",Stoke City vs Hull City | ARENA SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55179/load-playlist?
+
+#EXTINF:-1 tvg-id="11920" tvg-name="Stoke City vs Hull City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stoke City vs Hull City",Stoke City vs Hull City | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613227.m3u8?txSecret=a65ec710a621552dbc7bfb7a0c176970&txTime=6A8DF119
+
+#EXTINF:-1 tvg-id="11920" tvg-name="Stoke City vs Hull City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stoke City vs Hull City",Stoke City vs Hull City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGADDDD.m3u8?
+
+#EXTINF:-1 tvg-id="11921" tvg-name="Walsall vs Leyton Orient | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Walsall vs Leyton Orient",Walsall vs Leyton Orient | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGTQQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11922" tvg-name="Watford vs Peterborough United | CBS SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Watford vs Peterborough United",Watford vs Peterborough United | CBS SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55191/load-playlist?
+
+#EXTINF:-1 tvg-id="11922" tvg-name="Watford vs Peterborough United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Watford vs Peterborough United",Watford vs Peterborough United | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613230.m3u8?txSecret=c7d10845d6f6cb3831e478b6bfd2f121&txTime=6A8DF077
+
+#EXTINF:-1 tvg-id="11922" tvg-name="Watford vs Peterborough United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Watford vs Peterborough United",Watford vs Peterborough United | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.54/hls/IEEEEQQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11923" tvg-name="Birmingham City vs Brentford | ARENA SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Birmingham City vs Brentford",Birmingham City vs Brentford | ARENA SPORTS HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55193/load-playlist?
+
+#EXTINF:-1 tvg-id="11923" tvg-name="Birmingham City vs Brentford | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Birmingham City vs Brentford",Birmingham City vs Brentford | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613210.m3u8?txSecret=8ce27b2fefed48e581132430030af4ab&txTime=6A8DF318
+
+#EXTINF:-1 tvg-id="11923" tvg-name="Birmingham City vs Brentford | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Birmingham City vs Brentford",Birmingham City vs Brentford | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.58/hls/GAGAGADDDDD.m3u8?
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | beiN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | ITV SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | ITV SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=30089c52924f037b225b82c616fee2a5:f55dc8b66ed4fc6753d6035ae7e17144
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/0eiyyz8qzm/out/v1/dd17af8835fe4bd087d1a4e359b635d7/cenc.mpd
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | MAIN EVENT HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | MAIN EVENT HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55196/load-playlist?
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv3.m3u8
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4613222.m3u8?txSecret=0f0351c37f77d5deb9d0553d69cae194&txTime=6A8DF347
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | ITV SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | ITV SPORTS HD
+https://tmaxapp.site/8wirwjs76erftg/itv1.m3u8
+
+#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.50/hls/GTGTGTQQQQQ.m3u8?
 
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -275,30 +450,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11697" tvg-name="Sri Lanka Women vs United Arab Emirates Women |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Sri Lanka Women vs United Arab Emirates Women",Sri Lanka Women vs United Arab Emirates Women |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
-
-#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | FANCODE - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
-
-#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | D SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
-
-#EXTINF:-1 tvg-id="11887" tvg-name="Valencia vs Real Betis | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Valencia vs Real Betis",Valencia vs Real Betis | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/sqdahach1ax.m3u8
-
 #EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -343,107 +494,6 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1
 
 #EXTINF:-1 tvg-id="11907" tvg-name="Vietnam vs Thailand |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Thailand",Vietnam vs Thailand |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11909" tvg-name="Doncaster Rovers vs Middlesbrough | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Doncaster Rovers vs Middlesbrough",Doncaster Rovers vs Middlesbrough | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.50/hls/GTGTGT.m3u8?
-
-#EXTINF:-1 tvg-id="11910" tvg-name="Blackburn Rovers vs Sheffield United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Blackburn Rovers vs Sheffield United",Blackburn Rovers vs Sheffield United | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.58/hls/GAGAGAD.m3u8?
-
-#EXTINF:-1 tvg-id="11911" tvg-name="Barnsley vs Crewe Alexandra | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Barnsley vs Crewe Alexandra",Barnsley vs Crewe Alexandra | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.54/hls/IEEEE.m3u8?
-
-#EXTINF:-1 tvg-id="11912" tvg-name="Blackpool vs Lincoln City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Blackpool vs Lincoln City",Blackpool vs Lincoln City | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.50/hls/GTGTGTQ.m3u8?
-
-#EXTINF:-1 tvg-id="11913" tvg-name="Cambridge United vs Millwall | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Cambridge United vs Millwall",Cambridge United vs Millwall | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.54/hls/IEEEEQ.m3u8?
-
-#EXTINF:-1 tvg-id="11914" tvg-name="Fleetwood Town vs Shrewsbury Town | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Fleetwood Town vs Shrewsbury Town",Fleetwood Town vs Shrewsbury Town | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.58/hls/GAGAGADD.m3u8?
-
-#EXTINF:-1 tvg-id="11915" tvg-name="Ipswich Town vs Leicester City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Ipswich Town vs Leicester City",Ipswich Town vs Leicester City | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4613220.m3u8?txSecret=e9c7e9c1b6c53069e9d927b076efa072&txTime=6A8DF02A
-
-#EXTINF:-1 tvg-id="11915" tvg-name="Ipswich Town vs Leicester City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Ipswich Town vs Leicester City",Ipswich Town vs Leicester City | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.50/hls/GTGTGTQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11916" tvg-name="Plymouth Argyle vs Coventry City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Plymouth Argyle vs Coventry City",Plymouth Argyle vs Coventry City | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.54/hls/IEEEEQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | beIN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | beIN SPORTS HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/55192/load-playlist?
-
-#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4613224.m3u8?txSecret=a7795e9bfb3bf9495938bf320b869957&txTime=6A8DEFB3
-
-#EXTINF:-1 tvg-id="11917" tvg-name="Sheffield Wednesday vs Wolverhampton | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Sheffield Wednesday vs Wolverhampton",Sheffield Wednesday vs Wolverhampton | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.58/hls/GAGAGADDD.m3u8?
-
-#EXTINF:-1 tvg-id="11918" tvg-name="Stevenage vs Reading | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stevenage vs Reading",Stevenage vs Reading | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.54/hls/IEEEEQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
-
-#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
-https://live.vivo200.com/live/sd-1-4613225.m3u8?txSecret=c06d7ad72a129c112459e8b39d727079&txTime=6A8DEFE1
-
-#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv2.m3u8
-
-#EXTINF:-1 tvg-id="11919" tvg-name="Southampton vs West Ham United | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Southampton vs West Ham United",Southampton vs West Ham United | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.50/hls/GTGTGTQQQ.m3u8?
-
-#EXTINF:-1 tvg-id="11920" tvg-name="Stoke City vs Hull City |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Stoke City vs Hull City",Stoke City vs Hull City |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11921" tvg-name="Walsall vs Leyton Orient |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Walsall vs Leyton Orient",Walsall vs Leyton Orient |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11922" tvg-name="Watford vs Peterborough United |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Watford vs Peterborough United",Watford vs Peterborough United |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11923" tvg-name="Birmingham City vs Brentford |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Birmingham City vs Brentford",Birmingham City vs Brentford |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | beiN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | ITV SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | ITV SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=30089c52924f037b225b82c616fee2a5:f55dc8b66ed4fc6753d6035ae7e17144
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/0eiyyz8qzm/out/v1/dd17af8835fe4bd087d1a4e359b635d7/cenc.mpd
-
-#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv3.m3u8
-
-#EXTINF:-1 tvg-id="11924" tvg-name="Nottingham Forest vs Leeds United | ITV SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Nottingham Forest vs Leeds United",Nottingham Forest vs Leeds United | ITV SPORTS HD
-https://tmaxapp.site/8wirwjs76erftg/itv1.m3u8
 
 #EXTINF:-1 tvg-id="11925" tvg-name="Miami Marlins vs Boston Red Sox | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Miami Marlins vs Boston Red Sox",Miami Marlins vs Boston Red Sox | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
