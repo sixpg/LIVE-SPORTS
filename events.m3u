@@ -1,25 +1,56 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b3135d0a72c3ea3170425888a64bc272:e0d6515b5400358ef79a4637ac2f8671
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/i62ybobyvi/out/v1/3484fdc786484db59cb3b9c0f76e9688/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=0a50b3d757cc9e068d2cf40c4d8ac0be:84cb83e63052f5687d43cacec0d26321
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/uco516bnrm/out/v1/18af9eadf25d4479b5b3238fed0b27d4/cenc.mpd
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - ALT" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - ALT
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TNT SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b3135d0a72c3ea3170425888a64bc272:e0d6515b5400358ef79a4637ac2f8671
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/i62ybobyvi/out/v1/3484fdc786484db59cb3b9c0f76e9688/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=0a50b3d757cc9e068d2cf40c4d8ac0be:84cb83e63052f5687d43cacec0d26321
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/uco516bnrm/out/v1/18af9eadf25d4479b5b3238fed0b27d4/cenc.mpd
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/mumbai/4248440_english_hls_fddf53e1c144358_1ta-di_h264/index.m3u8
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36&Referer=https://www.tapmad.com/
+https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TEN SPORTS HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - English" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - English
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
+https://sonymtmnew.akamaized.net/hls/live/2043696/cricodi2608/ENG/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Hindi" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Hindi
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
+https://sonymtmnew.akamaized.net/hls/live/2105080/cricodi2608/HIN/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Telugu" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Telugu
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
+https://sonymtmnew.akamaized.net/hls/live/2105079/cricodi2608/TEL/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Tamil" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Tamil
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
+https://sonymtmnew.akamaized.net/hls/live/2094590/cricodi2608/TAM/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Kannada" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Kannada
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
+https://sonymtmnew.akamaized.net/hls/live/2037143/cricodi2608/KAN/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+
+#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.59/hls/IGGGAAaA.m3u8?
 
 #EXTINF:-1 tvg-id="11933" tvg-name="Los Angeles Angels vs Cleveland Guardians | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Angels vs Cleveland Guardians",Los Angeles Angels vs Cleveland Guardians | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
@@ -145,59 +176,6 @@ https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4248291_english_hls_bfd158f3d725309_1ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3448cef71b3ff74e7ccf1ceb639320cb:e096d49c986fe62f713fcb489bbf8d91
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qc3g1qukb/out/v1/0c2c7c41bdd54fcc9cc086a83b28e5f5/cenc.mpd
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - ALT
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3448cef71b3ff74e7ccf1ceb639320cb:e096d49c986fe62f713fcb489bbf8d91
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/5qc3g1qukb/out/v1/0c2c7c41bdd54fcc9cc086a83b28e5f5/cenc.mpd
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36&Referer=https://www.tapmad.com/
-https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - English" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - English
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=c237a77ee4b4fce133a23b1d7aa50165-1787627403252
-https://sonymtmnew-akamaized.pages.dev/hls/live/2105079/cricodi2508/ENG/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Hindi" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Hindi
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=c237a77ee4b4fce133a23b1d7aa50165-1787627403252
-https://sonymtmnew-akamaized.pages.dev/hls/live/2105080/cricodi2508/HIN/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Telugu" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Telugu
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=c237a77ee4b4fce133a23b1d7aa50165-1787627403252
-https://sonymtmnew-akamaized.pages.dev/hls/live/2037143/cricodi2508/TEL/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Tamil" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Tamil
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=c237a77ee4b4fce133a23b1d7aa50165-1787627403252
-https://sonymtmnew-akamaized.pages.dev/hls/live/2094590/cricodi2508/TAM/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Kannada" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Kannada
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=c237a77ee4b4fce133a23b1d7aa50165-1787627403252
-https://sonymtmnew-akamaized.pages.dev/hls/live/2043696/cricodi2508/KAN/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/ZEZEZE.m3u8?
-
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -238,6 +216,22 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000296/England_2108/ENG/master
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8?
 
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1490ba3f3331b1e7fea0dfbd1790bdd5:92acc11924510236bf2b78041dd68058
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/vbp4lxv0zh/out/v1/156797e66b2046538c4b5f2186b7d711/cenc.mpd
+
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
+https://dai-fancode.pages.dev/mumbai/4248440_english_hls_fddf53e1c144358_1ta-di_h264/index.m3u8
+
 #EXTINF:-1 tvg-id="11696" tvg-name="Thailand Women vs Hong Kong C. |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Thailand Women vs Hong Kong C.",Thailand Women vs Hong Kong C. |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -251,6 +245,36 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 ok
 
 #EXTINF:-1 tvg-id="11907" tvg-name="Vietnam vs Thailand |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Thailand",Vietnam vs Thailand |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11940" tvg-name="Al Faisaly vs Al-Fateh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al Faisaly vs Al-Fateh",Al Faisaly vs Al-Fateh |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11941" tvg-name="Al Diriyah vs Al-Kholood |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al Diriyah vs Al-Kholood",Al Diriyah vs Al-Kholood |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11942" tvg-name="Vasco da Gama vs Vitoria |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Vasco da Gama vs Vitoria",Vasco da Gama vs Vitoria |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11943" tvg-name="Palmeiras vs Santos |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Palmeiras vs Santos",Palmeiras vs Santos |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11944" tvg-name="River Plate vs Independiente Santa Fe |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="River Plate vs Independiente Santa Fe",River Plate vs Independiente Santa Fe |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11945" tvg-name="Bradford City vs Burnley |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Bradford City vs Burnley",Bradford City vs Burnley |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11946" tvg-name="Newcastle United vs West Bromwich Albion |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Newcastle United vs West Bromwich Albion",Newcastle United vs West Bromwich Albion |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11947" tvg-name="Tottenham Hotspur vs Charlton Athletic |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Tottenham Hotspur vs Charlton Athletic",Tottenham Hotspur vs Charlton Athletic |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11948" tvg-name="Preston North End vs Everton |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Preston North End vs Everton",Preston North End vs Everton |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11949" tvg-name="Al-Ahli vs Auckland FC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23674/image/dark" group-title="Al-Ahli vs Auckland FC",Al-Ahli vs Auckland FC |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy LIVE
