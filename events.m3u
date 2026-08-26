@@ -52,22 +52,6 @@ https://sonymtmnew.akamaized.net/hls/live/2037143/cricodi2608/KAN/master.m3u8?hd
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.59/hls/IGGGAAaA.m3u8?
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5e05176f9bbc9a3e05dcae9046059df1:cb913ff6959971a81e60d0438aaa6590
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tbeumofljq/out/v1/903ec09cb3a94af58e0b7d3e167d9c10/cenc.mpd
-
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
-
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://in-mc-flive.fancode.com/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787806268~_GO=Generated~acl=/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/*~Signature=ARB3KG28LEUcaZYVqxtsLOhtMAoMYPNaCHxieJnckN28ngwdIRo64nayBKdpOsZj91phb7SgW0Xim-iIUWuXtVg70BkP
-
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
 https://chatgpt.hereisman.net/playlist/54963/load-playlist?
@@ -207,6 +191,22 @@ https://sonymtmnew-akamaized.pages.dev/hls/live/20000296/England_2108/ENG/master
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.194/hls/QQQQ.m3u8?
+
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=5e05176f9bbc9a3e05dcae9046059df1:cb913ff6959971a81e60d0438aaa6590
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tbeumofljq/out/v1/903ec09cb3a94af58e0b7d3e167d9c10/cenc.mpd
+
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
+https://in-mc-flive.fancode.com/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787806268~_GO=Generated~acl=/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/*~Signature=ARB3KG28LEUcaZYVqxtsLOhtMAoMYPNaCHxieJnckN28ngwdIRo64nayBKdpOsZj91phb7SgW0Xim-iIUWuXtVg70BkP
 
 #EXTINF:-1 tvg-id="11696" tvg-name="Thailand Women vs Hong Kong C. |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Thailand Women vs Hong Kong C.",Thailand Women vs Hong Kong C. |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
