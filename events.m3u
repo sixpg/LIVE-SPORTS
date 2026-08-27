@@ -1,19 +1,146 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d71892cc919d77335b73d1e5861d1f84:9d11c1065a6b99dbcfbd981ddf4a12d1
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tp4gtrjgyz/out/v1/3dce53aae026463d9f18251a046ef2c4/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=1b3104b62743843561a440babd015d34:c4401f6ccc1d262a1fbcf5b449dbc2e1
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/4s0wwwegjd/out/v1/4bfbc194e61d4c5eb9cc29843938d018/cenc.mpd
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW HD
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SKY CRICKET - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SKY CRICKET - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla
+https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=1b3104b62743843561a440babd015d34:c4401f6ccc1d262a1fbcf5b449dbc2e1
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/4s0wwwegjd/out/v1/4bfbc194e61d4c5eb9cc29843938d018/cenc.mpd
 
-#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://in-mc-flive.fancode.com/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787806268~_GO=Generated~acl=/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/*~Signature=ARB3KG28LEUcaZYVqxtsLOhtMAoMYPNaCHxieJnckN28ngwdIRo64nayBKdpOsZj91phb7SgW0Xim-iIUWuXtVg70BkP
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
+https://fifafreeprod1-cdn.tapmad.com/v1/019f016b670f15e8f060057b6797/019f01971a6315e8f412028003fc/main.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SKY SPORT NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SKY SPORT NZ
+https://tmaxapp.site/8wirwjs76erftg/skysport1nz615866.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TEN SPORTS HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SonyLiv
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=0e6ec16b1d957465476bd8c1ff7a794c-1787824200717
+https://dai.google.com/ssai/event/crsp3JRrRlSvHEUFEn4FPA/master.m3u8?hdnea=exp=1787862284~acl=/*~id=6ce0645ec29f4196f29013307dce4e98-1787818250680~hmac=a25c849b56272b7628080066eb69b2d7c9343c43a53c968dcf3abfeebd3e8d27
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.42/hls/FTTTA.m3u8?
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fdecc745b15f34a3cef3a0933ea66997:6d2c94d90a9ce4888735f1e0f6a04d33
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/4ighkdpjsp/out/v1/f6afa868cfe24315a66405aa3f10ccde/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TNT SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - ALT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - ALT
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fdecc745b15f34a3cef3a0933ea66997:6d2c94d90a9ce4888735f1e0f6a04d33
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/4ighkdpjsp/out/v1/f6afa868cfe24315a66405aa3f10ccde/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TAPMAD - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TAPMAD - AQ
+https://d8j84o343a5m2.cloudfront.net/live/testtapmad2/master.m3u8
+
+#EXTINF:-1 tvg-id="11975" tvg-name="UEFA Champions League Draw | TNT SPORTS - AQ" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/facv1u1742998896.png" group-title="UEFA Champions League Draw",UEFA Champions League Draw | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
+
+#EXTINF:-1 tvg-id="11975" tvg-name="UEFA Champions League Draw | CBS SPORTS - AQ" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/facv1u1742998896.png" group-title="UEFA Champions League Draw",UEFA Champions League Draw | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="11975" tvg-name="UEFA Champions League Draw | UEFA TV - AQ" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/facv1u1742998896.png" group-title="UEFA Champions League Draw",UEFA Champions League Draw | UEFA TV - AQ
+https://live-uefa-com.akamaized.net/hls/live/2036934/270826_2627UCL/master.m3u8
+
+#EXTINF:-1 tvg-id="11975" tvg-name="UEFA Champions League Draw | SonyLiv" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/facv1u1742998896.png" group-title="UEFA Champions League Draw",UEFA Champions League Draw | SonyLiv
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=5c2af28b7cc95479c9f0538442d2e0cc-1787844610207
+https://dai.google.com/ssai/event/_wNibTTjRKGbTJkQbT7_mQ/master.m3u8?hdnea=exp=1787884342~acl=/*~id=1c7ffb2566e5e2fb033fa97c3a088d40-1787841132527~hmac=42b6378c8df1192c399fccd25469c3d3ace2f6638f830feff6f904a4eef58d0b
+
+#EXTINF:-1 tvg-id="11975" tvg-name="UEFA Champions League Draw | LOW SERVER" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/facv1u1742998896.png" group-title="UEFA Champions League Draw",UEFA Champions League Draw | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.51/hls/AUUU.m3u8?
+
+#EXTINF:-1 tvg-id="11993" tvg-name="FK Kauno Zalgiris vs Besiktas JK | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="FK Kauno Zalgiris vs Besiktas JK",FK Kauno Zalgiris vs Besiktas JK | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.49/hls/nnnnAA.m3u8?
+
+#EXTINF:-1 tvg-id="11994" tvg-name="AS Monaco vs Gornik Zabrze | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs Gornik Zabrze",AS Monaco vs Gornik Zabrze | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4608892.m3u8?txSecret=b48673d176aaf669822df3298136e234&txTime=6A90729F
+
+#EXTINF:-1 tvg-id="11994" tvg-name="AS Monaco vs Gornik Zabrze | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs Gornik Zabrze",AS Monaco vs Gornik Zabrze | HD SERVER
+https://live1.ftlcbx.com/live/73399176_234d06642b74d401a6d75b2537319f48_540p.m3u8?auth_key=1787863439-0-0-929c651964e19a856e739c221967ddad
+
+#EXTINF:-1 tvg-id="11994" tvg-name="AS Monaco vs Gornik Zabrze | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs Gornik Zabrze",AS Monaco vs Gornik Zabrze | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.42/hls/ygggaaaaaa.m3u8?
+
+#EXTINF:-1 tvg-id="11995" tvg-name="SC Freiburg vs Motherwell | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="SC Freiburg vs Motherwell",SC Freiburg vs Motherwell | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
+
+#EXTINF:-1 tvg-id="11995" tvg-name="SC Freiburg vs Motherwell | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="SC Freiburg vs Motherwell",SC Freiburg vs Motherwell | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4608889.m3u8?txSecret=9310e6b840a5b5f019a518c73451ce1f&txTime=6A90723D
+
+#EXTINF:-1 tvg-id="11995" tvg-name="SC Freiburg vs Motherwell | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="SC Freiburg vs Motherwell",SC Freiburg vs Motherwell | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.42/hls/ygggaaaaa.m3u8?
+
+#EXTINF:-1 tvg-id="11996" tvg-name="Qarabag FK vs FC Twente | SPORT TV - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Qarabag FK vs FC Twente",Qarabag FK vs FC Twente | SPORT TV - AQ
+https://tmaxapp.site/pt658svs/sporttv1.m3u8
+
+#EXTINF:-1 tvg-id="11996" tvg-name="Qarabag FK vs FC Twente | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Qarabag FK vs FC Twente",Qarabag FK vs FC Twente | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4608923.m3u8?txSecret=4265982e06de235834371ddc44c757b6&txTime=6A9071FF
+
+#EXTINF:-1 tvg-id="11996" tvg-name="Qarabag FK vs FC Twente | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Qarabag FK vs FC Twente",Qarabag FK vs FC Twente | HD SERVER
+https://live2.ftlcbx.com/live/73399240_e645356d9f00cc336518a7a842392efd_540p.m3u8?auth_key=1787860744-0-0-de1bdf099d18bfc8a5e44c69a50e1861
+
+#EXTINF:-1 tvg-id="11996" tvg-name="Qarabag FK vs FC Twente | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Qarabag FK vs FC Twente",Qarabag FK vs FC Twente | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.42/hls/BSSSAA.m3u8?
+
+#EXTINF:-1 tvg-id="11997" tvg-name="FK Jablonec vs Rangers | RANGERS TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Jablonec vs Rangers",FK Jablonec vs Rangers | RANGERS TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55289/load-playlist?
+
+#EXTINF:-1 tvg-id="11997" tvg-name="FK Jablonec vs Rangers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Jablonec vs Rangers",FK Jablonec vs Rangers | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online909.com/
+https://live.vivo200.com/live/sd-1-4617865.m3u8?txSecret=f0b7ef25efb96f3377c2d4d81b2bbdaa&txTime=6A9071B1
+
+#EXTINF:-1 tvg-id="11997" tvg-name="FK Jablonec vs Rangers | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Jablonec vs Rangers",FK Jablonec vs Rangers | HD SERVER
+https://live4.ftlcbx.com/live/73399220_1c23968e4c55e28a0d8098da33890b7e_540p.m3u8?auth_key=1787860562-0-0-f9c30834217f50c773d9cd2e9d60b75a
+
+#EXTINF:-1 tvg-id="11997" tvg-name="FK Jablonec vs Rangers | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Jablonec vs Rangers",FK Jablonec vs Rangers | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.45/hls/BSSS.m3u8?
 
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -25,6 +152,18 @@ https://ubuntu.fromthyheart.site/dailymotion/live/playlist/4.m3u8
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | SD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | SD SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/UIIIAAA.m3u8?
+
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54800/load-playlist?
+
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | HD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/zeuryuegn48.m3u8
+
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | SD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | SD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.49/hls/ZSZSZSX.m3u8
 
 #EXTINF:-1 tvg-id="8963" tvg-name="UFC LIVE | PARAMOUNT+ - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/19906/image" group-title="UFC LIVE",UFC LIVE | PARAMOUNT+ - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -91,122 +230,37 @@ http://193.47.62.47/hls/vivivi.m3u8?
 #EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
-https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
-http://tvsen5.aynascope.net/willowhd/index.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | SKY SPORT NZ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | SKY SPORT NZ
-https://tmaxapp.site/8wirwjs76erftg/skysport6nz47z58f.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TEN SPORTS HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FANCODE - IN" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FANCODE - IN
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/mumbai/4248291_english_hls_bfd158f3d725309_1ta-di_h264/index.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0a50b3d757cc9e068d2cf40c4d8ac0be:84cb83e63052f5687d43cacec0d26321
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/uco516bnrm/out/v1/18af9eadf25d4479b5b3238fed0b27d4/cenc.mpd
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | WILLOW - ALT
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0a50b3d757cc9e068d2cf40c4d8ac0be:84cb83e63052f5687d43cacec0d26321
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/uco516bnrm/out/v1/18af9eadf25d4479b5b3238fed0b27d4/cenc.mpd
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
+http://tvsen5.aynascope.net/willowhd/index.m3u8
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36&Referer=https://www.tapmad.com/
-https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | FOX CRICKET HD
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
+https://saseries.akamaized.net/hls/live/2110097/tapmad123321/master.m3u8
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - English" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - English
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
-https://sonymtmnew.akamaized.net/hls/live/2043696/cricodi2608/ENG/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | SKY SPORT NZ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | SKY SPORT NZ
+https://tmaxapp.site/8wirwjs76erftg/skysport1nz615866.m3u8
 
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Hindi" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Hindi
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
-https://sonymtmnew.akamaized.net/hls/live/2105080/cricodi2608/HIN/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Telugu" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Telugu
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
-https://sonymtmnew.akamaized.net/hls/live/2105079/cricodi2608/TEL/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Tamil" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Tamil
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
-https://sonymtmnew.akamaized.net/hls/live/2094590/cricodi2608/TAM/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | SonyLiv - Kannada" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | SonyLiv - Kannada
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=105ae075c0042c73d524990a9a718421-1787715250793
-https://sonymtmnew.akamaized.net/hls/live/2037143/cricodi2608/KAN/master.m3u8?hdnea=exp=1787753425~acl=/*~id=c8f6b0c27724ba2e4512ac1c9bf31216-1787710200527~hmac=45602be99e2cd7a6212292a48cfe1daebb77153388b6340e7a1437bc35ed601a
-
-#EXTINF:-1 tvg-id="11462" tvg-name="Sri Lanka vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="Sri Lanka vs India",Sri Lanka vs India | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.59/hls/IGGGAAaA.m3u8?
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | WILLOW - AQ
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | WILLOW - AQ" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=29d072b25f76b3780e17d9b234023ebd:e4fff1626205ed70ed25e551044afeb8
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bgaa4dgisl/out/v1/3266dcf325074b0082099977768f1e7a/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
 
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SKY CRICKET - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SKY CRICKET - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla
-https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | T SPORTS HD" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | T SPORTS HD
+https://tvsen7.aynascope.net/Sports1/index.m3u8
 
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | WILLOW - ALT
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=29d072b25f76b3780e17d9b234023ebd:e4fff1626205ed70ed25e551044afeb8
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/bgaa4dgisl/out/v1/3266dcf325074b0082099977768f1e7a/cenc.mpd
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | CRICFy LIVE" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | CRICFy LIVE
+https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
 
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36&Referer=https://www.tapmad.com/
-https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAMASHA - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAMASHA - AQ
-https://cdn06khi-n.tamashaweb.com:8087/jazzauth/PAKvsEng-Test-SVOD-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC8xOS8yMDI2IDk6NDQ6NDcgQU0maGFzaF92YWx1ZT1VVmp4c1lmVFhEQ3hPNklqNDRUalV3PT0mdmFsaWRtaW51dGVzPTYw
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SKY SPORT NZ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SKY SPORT NZ
-https://tmaxapp.site/8wirwjs76erftg/skysport1nz15866.m3u8
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=34b56bf18c930ec829ab54053414be70-1787304603542
-https://sonymtmnew-akamaized.pages.dev/hls/live/20000296/England_2108/ENG/master.m3u8
-
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.194/hls/QQQQ.m3u8?
+#EXTINF:-1 tvg-id="11695" tvg-name="Top End T20 Series | FANCODE - IN" tvg-logo="https://styxsports.b-cdn.net/styxsports-public/tours/1787045529768-11144625.webp" group-title="Top End T20 Series",Top End T20 Series | FANCODE - IN
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
+https://in-mc-flive.fancode.com/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787806268~_GO=Generated~acl=/mumbai/4248442_english_hls_9dcd9a24b148467_1ta-di_h264/*~Signature=ARB3KG28LEUcaZYVqxtsLOhtMAoMYPNaCHxieJnckN28ngwdIRo64nayBKdpOsZj91phb7SgW0Xim-iIUWuXtVg70BkP
 
 #EXTINF:-1 tvg-id="11696" tvg-name="Thailand Women vs Hong Kong C. |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Thailand Women vs Hong Kong C.",Thailand Women vs Hong Kong C. |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -214,195 +268,137 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="11697" tvg-name="Sri Lanka Women vs United Arab Emirates Women |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11220/image/dark" group-title="Sri Lanka Women vs United Arab Emirates Women",Sri Lanka Women vs United Arab Emirates Women |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | TSN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | TSN SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=385ceb9714b75e0cef61254f80b31002:18dce92a2891fee68d21ede5173230f8
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/cscevwljkq/out/v1/972185041b244140860b7d56398e9aaf/cenc.mpd
-
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
-
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | SETANTA SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | SETANTA SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b62e606e6b577a47c0e3bd7e8bb5f979:0827a71f8cc3d9ee1074e6b9cd8ffdb0
-https://tvcdn.tv.telia.lt/live/eds/Setanta_Sports_HD_H/DASH_5_CPIX_NPVR/Setanta_Sports_HD_H.mpd
-
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | FANCODE - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
-
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | CazéTV - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | CazéTV - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4
-https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/3ynrpdanq2/out/v1/81fd4c26584044d2b1a1cc5b32fa9af0/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase
-
-#EXTINF:-1 tvg-id="11888" tvg-name="Real Madrid vs Real Sociedad | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Real Madrid vs Real Sociedad",Real Madrid vs Real Sociedad | HD SERVER
-https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TNT SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/tll6uwepxa/out/v1/a7f67cbb33df46539312956427343886/cenc.mpd
-
-#EXTINF:-1 tvg-id="11907" tvg-name="Vietnam vs Thailand | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/602/image/dark" group-title="Vietnam vs Thailand",Vietnam vs Thailand | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/GTTTAAA.m3u8?
-
-#EXTINF:-1 tvg-id="11940" tvg-name="Al Faisaly vs Al-Fateh |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al Faisaly vs Al-Fateh",Al Faisaly vs Al-Fateh |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11941" tvg-name="Al Diriyah vs Al-Kholood |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al Diriyah vs Al-Kholood",Al Diriyah vs Al-Kholood |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11942" tvg-name="Vasco da Gama vs Vitoria | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Vasco da Gama vs Vitoria",Vasco da Gama vs Vitoria | PREMIERE BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9dc40460c93087aea84d6315f08ecb64:f69c8d4624fddff4ca89bd0b31bdc4a7
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/oy6rp0jwmf/out/v1/580ecf12bad24979baf8dd993dce053e/cenc.mpd
-
-#EXTINF:-1 tvg-id="11943" tvg-name="Palmeiras vs Santos | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Palmeiras vs Santos",Palmeiras vs Santos | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
-
-#EXTINF:-1 tvg-id="11943" tvg-name="Palmeiras vs Santos | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Palmeiras vs Santos",Palmeiras vs Santos | PREMIERE BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
-
-#EXTINF:-1 tvg-id="11943" tvg-name="Palmeiras vs Santos | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/373/image/dark" group-title="Palmeiras vs Santos",Palmeiras vs Santos | D SPORTS - AQ
+#EXTINF:-1 tvg-id="11965" tvg-name="Celta Vigo vs Osasuna | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Celta Vigo vs Osasuna",Celta Vigo vs Osasuna | D SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=03f12d6a3dbfd3a6fa7dd7f6417e0c11:ea07b87acdf2e45be824cde4a1cf3504
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd
 
-#EXTINF:-1 tvg-id="11944" tvg-name="River Plate vs Independiente Santa Fe | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="River Plate vs Independiente Santa Fe",River Plate vs Independiente Santa Fe | beiN ENGLISH - AQ
+#EXTINF:-1 tvg-id="11966" tvg-name="FC Barcelona vs Athletic Club | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="FC Barcelona vs Athletic Club",FC Barcelona vs Athletic Club | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
+
+#EXTINF:-1 tvg-id="11966" tvg-name="FC Barcelona vs Athletic Club | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="FC Barcelona vs Athletic Club",FC Barcelona vs Athletic Club | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
 
-#EXTINF:-1 tvg-id="11944" tvg-name="River Plate vs Independiente Santa Fe | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="River Plate vs Independiente Santa Fe",River Plate vs Independiente Santa Fe | D SPORTS - AQ
+#EXTINF:-1 tvg-id="11966" tvg-name="FC Barcelona vs Athletic Club | SETANTA SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="FC Barcelona vs Athletic Club",FC Barcelona vs Athletic Club | SETANTA SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b62e606e6b577a47c0e3bd7e8bb5f979:0827a71f8cc3d9ee1074e6b9cd8ffdb0
+https://tvcdn.tv.telia.lt/live/eds/Setanta_Sports_HD_H/DASH_5_CPIX_NPVR/Setanta_Sports_HD_H.mpd
+
+#EXTINF:-1 tvg-id="11966" tvg-name="FC Barcelona vs Athletic Club | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="FC Barcelona vs Athletic Club",FC Barcelona vs Athletic Club | D SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
 
-#EXTINF:-1 tvg-id="11944" tvg-name="River Plate vs Independiente Santa Fe | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="River Plate vs Independiente Santa Fe",River Plate vs Independiente Santa Fe | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv1.m3u8
-
-#EXTINF:-1 tvg-id="11945" tvg-name="Bradford City vs Burnley |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Bradford City vs Burnley",Bradford City vs Burnley |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11946" tvg-name="Newcastle United vs West Bromwich Albion | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Newcastle United vs West Bromwich Albion",Newcastle United vs West Bromwich Albion | CBS SPORTS - AQ
+#EXTINF:-1 tvg-id="11966" tvg-name="FC Barcelona vs Athletic Club | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="FC Barcelona vs Athletic Club",FC Barcelona vs Athletic Club | FANCODE - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
-#KODIPROP:inputstream.adaptive.stream_headers=Origin=https://amazon.com&user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
 
-#EXTINF:-1 tvg-id="11946" tvg-name="Newcastle United vs West Bromwich Albion | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Newcastle United vs West Bromwich Albion",Newcastle United vs West Bromwich Albion | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv2.m3u8
+#EXTINF:-1 tvg-id="11967" tvg-name="Al-Riyadh vs Neom SC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Riyadh vs Neom SC",Al-Riyadh vs Neom SC |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11947" tvg-name="Tottenham Hotspur vs Charlton Athletic | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Tottenham Hotspur vs Charlton Athletic",Tottenham Hotspur vs Charlton Athletic | beiN ENGLISH - AQ
+#EXTINF:-1 tvg-id="11968" tvg-name="Al-Fayha vs Abha |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Fayha vs Abha",Al-Fayha vs Abha |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11969" tvg-name="Al-Khaleej vs Al-Hilal |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Khaleej vs Al-Hilal",Al-Khaleej vs Al-Hilal |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11970" tvg-name="Al-Nassr vs Al-Taawoun |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Taawoun",Al-Nassr vs Al-Taawoun |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11971" tvg-name="Chelsea vs Luton Town | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Chelsea vs Luton Town",Chelsea vs Luton Town | beiN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
 
-#EXTINF:-1 tvg-id="11947" tvg-name="Tottenham Hotspur vs Charlton Athletic | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Tottenham Hotspur vs Charlton Athletic",Tottenham Hotspur vs Charlton Athletic | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv1.m3u8
-
-#EXTINF:-1 tvg-id="11948" tvg-name="Preston North End vs Everton | beiN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Preston North End vs Everton",Preston North End vs Everton | beiN ENGLISH - AQ
+#EXTINF:-1 tvg-id="11971" tvg-name="Chelsea vs Luton Town | SETANTA SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Chelsea vs Luton Town",Chelsea vs Luton Town | SETANTA SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.license_key=60c452c4bc688bfdbebbe1a57fd5e59e:6d8296110d58f2fa54ddd2a31e5e900c
+https://tvcdn.tv.telia.lt/live/eds/Setanta_Sports2_HD_H/DASH_5_CPIX_NPVR/Setanta_Sports2_HD_H.mpd
+
+#EXTINF:-1 tvg-id="11972" tvg-name="Fulham vs AFC Wimbledon | CBS SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Fulham vs AFC Wimbledon",Fulham vs AFC Wimbledon | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
 
-#EXTINF:-1 tvg-id="11948" tvg-name="Preston North End vs Everton | SKY MAIN EVENT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Preston North End vs Everton",Preston North End vs Everton | SKY MAIN EVENT
-https://tmaxapp.site/8wirwjs76erftg/skysportsmainevent.m3u8
-
-#EXTINF:-1 tvg-id="11949" tvg-name="Al-Ahli vs Auckland FC |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/23674/image/dark" group-title="Al-Ahli vs Auckland FC",Al-Ahli vs Auckland FC |
+#EXTINF:-1 tvg-id="11973" tvg-name="AGF vs Benfica |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="AGF vs Benfica",AGF vs Benfica |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11950" tvg-name="Detroit Tigers vs Tampa Bay Rays |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Detroit Tigers vs Tampa Bay Rays",Detroit Tigers vs Tampa Bay Rays |
+#EXTINF:-1 tvg-id="11974" tvg-name="Ferencvaros TC vs Trabzonspor |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Ferencvaros TC vs Trabzonspor",Ferencvaros TC vs Trabzonspor |
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="11951" tvg-name="Arizona Diamondbacks vs Chicago Cubs |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Chicago Cubs",Arizona Diamondbacks vs Chicago Cubs |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11952" tvg-name="San Francisco Giants vs Cincinnati Reds |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Francisco Giants vs Cincinnati Reds",San Francisco Giants vs Cincinnati Reds |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11953" tvg-name="Los Angeles Angels vs Cleveland Guardians |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Angels vs Cleveland Guardians",Los Angeles Angels vs Cleveland Guardians |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11954" tvg-name="Seattle Mariners vs Philadelphia Phillies |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Seattle Mariners vs Philadelphia Phillies",Seattle Mariners vs Philadelphia Phillies |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11955" tvg-name="San Diego Padres vs Pittsburgh Pirates |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Diego Padres vs Pittsburgh Pirates",San Diego Padres vs Pittsburgh Pirates |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11956" tvg-name="Miami Marlins vs Boston Red Sox |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Miami Marlins vs Boston Red Sox",Miami Marlins vs Boston Red Sox |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11957" tvg-name="Washington Nationals vs Colorado Rockies |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Washington Nationals vs Colorado Rockies",Washington Nationals vs Colorado Rockies |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11958" tvg-name="New York Yankees vs Houston Astros |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Yankees vs Houston Astros",New York Yankees vs Houston Astros |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11959" tvg-name="Toronto Blue Jays vs Kansas City Royals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Kansas City Royals",Toronto Blue Jays vs Kansas City Royals |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11960" tvg-name="New York Mets vs Milwaukee Brewers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Mets vs Milwaukee Brewers",New York Mets vs Milwaukee Brewers |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11961" tvg-name="Atlanta Braves vs Los Angeles Dodgers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Atlanta Braves vs Los Angeles Dodgers",Atlanta Braves vs Los Angeles Dodgers |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11962" tvg-name="Chicago White Sox vs Texas Rangers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Texas Rangers",Chicago White Sox vs Texas Rangers |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11963" tvg-name="St. Louis Cardinals vs Baltimore Orioles |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="St. Louis Cardinals vs Baltimore Orioles",St. Louis Cardinals vs Baltimore Orioles |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="11964" tvg-name="Athletics vs Minnesota Twins |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Athletics vs Minnesota Twins",Athletics vs Minnesota Twins |
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy LIVE
+#EXTINF:-1 tvg-id="11976" tvg-name="Washington Nationals vs Colorado Rockies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Washington Nationals vs Colorado Rockies",Washington Nationals vs Colorado Rockies | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54800/load-playlist?
+https://chatgpt.hereisman.net/playlist/55304/load-playlist?
 
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | HD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | HD SERVER
+#EXTINF:-1 tvg-id="11976" tvg-name="Washington Nationals vs Colorado Rockies | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Washington Nationals vs Colorado Rockies",Washington Nationals vs Colorado Rockies | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/zeuryuegn48.m3u8
+https://edgestream2.pro/hls/dazhfiach15.m3u8
 
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | SD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | SD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.49/hls/ZSZSZSX.m3u8
+#EXTINF:-1 tvg-id="11977" tvg-name="St. Louis Cardinals vs Baltimore Orioles |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="St. Louis Cardinals vs Baltimore Orioles",St. Louis Cardinals vs Baltimore Orioles |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11978" tvg-name="New York Yankees vs Houston Astros |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Yankees vs Houston Astros",New York Yankees vs Houston Astros |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11979" tvg-name="New York Mets vs Milwaukee Brewers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Mets vs Milwaukee Brewers",New York Mets vs Milwaukee Brewers |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11980" tvg-name="Toronto Blue Jays vs Kansas City Royals |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Kansas City Royals",Toronto Blue Jays vs Kansas City Royals |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11981" tvg-name="San Francisco Giants vs Arizona Diamondbacks |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="San Francisco Giants vs Arizona Diamondbacks",San Francisco Giants vs Arizona Diamondbacks |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11982" tvg-name="Atlanta Braves vs Los Angeles Dodgers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Atlanta Braves vs Los Angeles Dodgers",Atlanta Braves vs Los Angeles Dodgers |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11983" tvg-name="Cleveland Browns vs New England Patriots |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Cleveland Browns vs New England Patriots",Cleveland Browns vs New England Patriots |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11984" tvg-name="Buffalo Bills vs Pittsburgh Steelers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Buffalo Bills vs Pittsburgh Steelers",Buffalo Bills vs Pittsburgh Steelers |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11985" tvg-name="Las Vegas Raiders vs San Francisco 49ers |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Las Vegas Raiders vs San Francisco 49ers",Las Vegas Raiders vs San Francisco 49ers |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11986" tvg-name="Los Angeles Chargers vs Los Angeles Rams |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9465/image/dark" group-title="Los Angeles Chargers vs Los Angeles Rams",Los Angeles Chargers vs Los Angeles Rams |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11987" tvg-name="Namibia vs South Africa |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35293/image/dark" group-title="Namibia vs South Africa",Namibia vs South Africa |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11988" tvg-name="Hibernian vs KAA Gent |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Hibernian vs KAA Gent",Hibernian vs KAA Gent |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11989" tvg-name="FK Partizan vs Getafe | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Partizan vs Getafe",FK Partizan vs Getafe | CRICFy LIVE
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11990" tvg-name="HNK Rijeka vs FC Midtjylland |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="HNK Rijeka vs FC Midtjylland",HNK Rijeka vs FC Midtjylland |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11991" tvg-name="Brighton Hove Albion vs Troms IL |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Brighton Hove Albion vs Troms IL",Brighton Hove Albion vs Troms IL |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+
+#EXTINF:-1 tvg-id="11992" tvg-name="AFC Ajax vs FC Sion |" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs FC Sion",AFC Ajax vs FC Sion |
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
