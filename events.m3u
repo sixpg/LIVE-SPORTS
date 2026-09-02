@@ -2,8 +2,8 @@
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2d4fd63a677fb3fb2cec81aba6893bc3:86afdab67b583024b92f7f58b1295fc6
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/1ylx5xgker/out/v1/d2e04639c946424a931b32475bfd637a/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=6adfff4ab1f59be0effdbfc85e490b2c:2c7bcb9831fa6dc53cb66d980d245108
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/lu8bprbafg/out/v1/470668b5e98043e6b64e91052f10bcf2/cenc.mpd
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TNT SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TNT SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -15,8 +15,8 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - ALT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2d4fd63a677fb3fb2cec81aba6893bc3:86afdab67b583024b92f7f58b1295fc6
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/1ylx5xgker/out/v1/d2e04639c946424a931b32475bfd637a/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=6adfff4ab1f59be0effdbfc85e490b2c:2c7bcb9831fa6dc53cb66d980d245108
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/lu8bprbafg/out/v1/470668b5e98043e6b64e91052f10bcf2/cenc.mpd
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TAPMAD - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TAPMAD - AQ
 #KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
@@ -27,6 +27,49 @@ https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW HD
 http://tvsen5.aynascope.net/willowhd/index.m3u8
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | PREMIER SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | D SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | ITALIA 1 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
+https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | PARAMOUNT+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/55670/load-playlist?
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | ARENA PREMIUM HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | ARENA PREMIUM HD
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://iplayer.is/
+https://netanjahu.hls.st/t/703a37b34bcbd91bb9a07f6e9894469d/index.m3u8
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | SPORT TV HD
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://iplayer.is/
+https://netanjahu.hls.st/t/abb0f97b98fb8e4b37378373881dd72f/index.m3u8
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://iplayer.is/
+https://netanjahu.hls.st/t/db41bd0cd89da8c804aba9ff7a01539d/index.m3u8
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://iframe.rumsport8.live/&Origin=https://livecdn-tc-livestream.rumsport10.live&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://livecdn-tc-livestream.rumsport10.live/sla/1-6a853f66018287f1cee2af15-hd/chunks.m3u8?is_vip=false&token=1788439662-Kv4cPTAAP5YTi-edcb381b402a9d3b83c369dc063ab6747063ec51-ef44cf1d2748da9bee61f5454b182ffa
+
+#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/PTTTQQQQQQAAA.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | APPLE TV - AQ" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Formula_One_logo.svg/1280px-Formula_One_logo.svg.png" group-title="Formula 1",Formula 1 | APPLE TV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -317,25 +360,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="12222" tvg-name="Namibia vs South Africa | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/35293/image/dark" group-title="Namibia vs South Africa",Namibia vs South Africa | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1444f4235529f183f0a5a486befe9cdb:e5e3fec67a1bb3472a2089c8a0a2557f
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/m6sqanvm2m/out/v1/f6beb46c6e9a4132ad739f3ca27df6aa/cenc.mpd
-
-#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | D SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | D SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f836853d8eac19446ed9535f5fc568b1:b3bc5ef00602b29abac7e482d3d9fbf3
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z5oyxzsxdk/out/v1/7695a0f64a0e424b973d5b09a2a3eb91/cenc.mpd
-
-#EXTINF:-1 tvg-id="12223" tvg-name="Sassuolo vs Frosinone | ITALIA 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Sassuolo vs Frosinone",Sassuolo vs Frosinone | ITALIA 1 - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=00f9f3c0783536b8ee91704e23b78016:bfd04d6f544c9cc4d35cb13ab6778587
-https://live03p-seg.msf.cdn.mediaset.net/live/ch-i1/i1-dash-widevine.isml/manifest.mpd
 
 #EXTINF:-1 tvg-id="12224" tvg-name="Udinese vs Venezia | PREMIER SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/328/image/dark" group-title="Udinese vs Venezia",Udinese vs Venezia | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
