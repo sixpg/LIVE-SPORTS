@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shrey7nsh FB</title>
+
+    <!-- Shaka Player -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.16.2/controls.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.16.2/shaka-player.ui.min.js"></script>
+    <script src="https://lchdxfootball.pages.dev/cricxfootball.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            padding-bottom: 40px;
+        }
+
+        /* LOADING SCREEN */
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0b0c10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .loading-subtitle {
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            color: #a9a9a9;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .loading-bar-container {
+            width: 190px;
+            height: 4px;
+            background-color: #1f2833;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff003c, #ff4d00);
+            animation: load 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes load {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        #main-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PLAYER */
+
+        .portal-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #000000;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #1f2833;
+            overflow: hidden;
+        }
+
+        .portal-watermark-left {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.85);
+            z-index: 20;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        .portal-live-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ff003c;
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        .portal-live-badge::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .portal-display {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Shaka player container */
+
+        .shaka-player-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #000;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #000;
+            object-fit: contain;
+        }
+
+        .portal-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #a9a9a9;
+            line-height: 1.6;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 30px;
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Player loading overlay */
+
+        #loader {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
+
+        #loader.gone {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .player-loader {
+            width: 35px;
+            height: 35px;
+            border: 3px solid #333;
+            border-top-color: #ff003c;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* BRAND BAR */
+
+        .brand-section {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #14171c;
+            background-color: #0c0e12;
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-subtitle-top {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.75rem;
+            color: #7a7a7a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .brand-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .brand-desc {
+            font-size: 0.65rem;
+            color: #555c66;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .telegram-btn {
+            background: linear-gradient(135deg, #0088cc, #00a6ff);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+        }
+
+        .telegram-icon-img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        /* TAG BAR */
+
+        .tag-bar {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #08090c;
+            border-bottom: 1px solid #14171c;
+        }
+
+        .hd-tag {
+            background-color: rgba(255, 0, 60, 0.15);
+            color: #ff003c;
+            border: 1px solid rgba(255, 0, 60, 0.3);
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .current-stream-name {
+            font-size: 0.75rem;
+            color: #8e95a0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 480px) {
+
+            .loading-title {
+                font-size: 2.2rem;
+            }
+
+            .brand-title {
+                font-size: 1.5rem;
+            }
+
+            .telegram-btn {
+                padding: 9px 12px;
+                font-size: 0.7rem;
+            }
+
+            .telegram-btn {
+                gap: 5px;
+            }
+
+            .brand-desc {
+                font-size: 0.55rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ORIGINAL UI LOADING SCREEN -->
+
+    <div id="loading-screen">
+        <div class="loading-title">SHREY7NSH FB</div>
+        <div class="loading-subtitle">CONNECTING...</div>
+
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+
+    <div id="main-content">
+
+        <!-- PLAYER -->
+
+        <div class="portal-wrapper">
+
+            <div class="portal-watermark-left">
+                SHREY7NSH'S FB
+            </div>
+
+            <div class="portal-live-badge">
+                LIVE •
+            </div>
+
+            <div class="portal-display">
+
+                <div class="shaka-player-container"
+                     data-shaka-player-container>
+
+                    <video id="video"
+                           data-shaka-player
+                           playsinline
+                           autoplay>
+                    </video>
+
+                    <div class="portal-text" id="llbl">
+                        Watch Live AnyWhere-AnyTime
+                    </div>
+
+                    <div id="loader">
+                        <div class="player-loader"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BRAND SECTION -->
+
+        <div class="brand-section">
+
+            <div class="brand-info">
+
+                <span class="brand-subtitle-top">
+                    OFFICIAL CHANNEL
+                </span>
+
+                <div class="brand-title">
+                    SHREY7NSH'S FB
+                </div>
+
+                <span class="brand-desc">
+                    FREE STREAMS • LIVE SCORES • UPDATES
+                </span>
+
+            </div>
+
+
+            <a href="https://t.me/+l-BV45YWZoM3ZmE9"
+               target="_blank"
+               class="telegram-btn">
+
+                <img class="telegram-icon-img"
+                     src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                     alt="Telegram">
+
+                JOIN TELEGRAM CHANNEL
+
+            </a>
+
+        </div>
+
+
+        <!-- STREAM TAG -->
+
+        <div class="tag-bar">
+
+            <div class="hd-tag">
+                HD
+            </div>
+
+            <div class="current-stream-name"
+                 id="streamLabel">
+                NONE SELECTED
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /*
+        ============================================
+        ORIGINAL UI LOADING SCREEN
+        ============================================
+        */
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            setTimeout(() => {
+
+                const loader =
+                    document.getElementById('loading-screen');
+
+                const mainApp =
+                    document.getElementById('main-content');
+
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+
+                mainApp.style.display = 'block';
+
+                setTimeout(() => {
+
+                    mainApp.style.opacity = '1';
+                    mainApp.style.visibility = 'visible';
+
+                }, 50);
+
+            }, 2200);
+
+        });
+
+
+        /*
+        ============================================
+        SHAKA PLAYER
+        ============================================
+        */
+
+        document.addEventListener(
+            'shaka-ui-loaded',
+            initPlayer
+        );
+
+
+        async function initPlayer() {
+
+            const video =
+                document.getElementById('video');
+
+            const streamLabel =
+                document.getElementById('streamLabel');
+
+            const status =
+                document.getElementById('llbl');
+
+            const loader =
+                document.getElementById('loader');
+
+
+            /*
+            Get Shaka UI player
+            */
+
+            if (!video.ui) {
+
+                console.error(
+                    'Shaka UI is not initialized.'
+                );
+
+                status.textContent =
+                    'PLAYER FAILED';
+
+                loader.classList.add('gone');
+
+                return;
+            }
+
+
+            const player =
+                video.ui.getControls().getPlayer();
+
+
+            /*
+            Get ?id=
+            */
+
+            const params =
+                new URLSearchParams(
+                    window.location.search
+                );
+
+            const id =
+                params.get('id');
+
+
+            if (!id) {
+
+                status.textContent =
+                    'NO STREAM ID';
+
+                streamLabel.textContent =
+                    'NO STREAM ID';
+
+                loader.classList.add('gone');
+
+                return;
+            }
+
+
+            /*
+            Show ID while loading
+            */
+
+            streamLabel.textContent =
+                id.toUpperCase();
+
+            status.textContent =
+                'LOADING STREAM...';
+
+
+            try {
+
+                /*
+                ====================================
+                NETWORK REQUEST FILTER
+                ====================================
+                */
+
+                const networkingEngine =
+                    player.getNetworkingEngine();
+
+
+                if (networkingEngine) {
+
+                    networkingEngine.registerRequestFilter(
+                        (type, request) => {
+
+                            request.headers["Referer"] =
+                                "https://sportseera2.pages.dev/";
+
+                            request.headers["Origin"] =
+                                "https://sportseera2.pages.dev/";
+
+                        }
+                    );
+
+                }
+
+
+                /*
+                ====================================
+                FETCH STREAM DATA
+                ====================================
+                */
+
+                /*
+                 * ====================================
+                 * DECODE / FETCH STREAM DATA
+                 * ====================================
+                 *
+                 * The public URL contains the short channel ID
+                 * (example: ?id=ZS1). The decoder table in
+                 * cricxfootball.js converts that ID into the
+                 * obfuscated value expected by cxf.php.
+                 */
+
+                const encodedQuery =
+                    (typeof encodedChannelData !== 'undefined')
+                        ? encodedChannelData[id]
+                        : null;
+
+
+                if (!encodedQuery) {
+
+                    throw new Error(
+                        `UNKNOWN STREAM ID: ${id}`
+                    );
+
+                }
+
+
+                const apiUrl =
+                    `https://crickeera.kesug.com/SportsEera/cxf.php?query=${encodeURIComponent(encodedQuery)}`;
+
+
+                const res =
+                    await fetch(apiUrl, {
+                        cache: 'no-store'
+                    });
+
+
+                if (!res.ok) {
+
+                    throw new Error(
+                        `API returned ${res.status}`
+                    );
+
+                }
+
+
+                const contentType =
+                    res.headers.get('content-type') || '';
+
+                let data;
+
+                if (contentType.includes('application/json')) {
+
+                    data = await res.json();
+
+                } else {
+
+                    const text = await res.text();
+
+                    try {
+
+                        data = JSON.parse(text);
+
+                    } catch (e) {
+
+                        throw new Error(
+                            'DECODER API RETURNED INVALID JSON'
+                        );
+
+                    }
+
+                }
+
+
+                /*
+                ====================================
+                GET STREAM OBJECT
+                ====================================
+                */
+
+                const stream =
+                    data[id] ||
+                    data[
+                        Object.keys(data)[0]
+                    ];
+
+
+                if (!stream) {
+
+                    status.textContent =
+                        'STREAM NOT FOUND';
+
+                    streamLabel.textContent =
+                        'STREAM NOT FOUND';
+
+                    loader.classList.add('gone');
+
+                    return;
+                }
+
+
+                /*
+                ====================================
+                DRM CLEAR KEYS
+                ====================================
+                */
+
+                if (
+                    stream.keys &&
+                    typeof stream.keys === 'object'
+                ) {
+
+                    player.configure({
+
+                        drm: {
+
+                            clearKeys:
+                                stream.keys
+
+                        }
+
+                    });
+
+                }
+
+
+                /*
+                ====================================
+                LIVE EDGE SETTINGS
+                ====================================
+                */
+
+                player.configure({
+
+                    streaming: {
+
+                        lowLatencyMode: true,
+
+                        inaccurateManifestTolerance: 0
+
+                    }
+
+                });
+
+
+                /*
+                ====================================
+                LOAD MPD
+                ====================================
+                */
+
+                status.textContent =
+                    'CONNECTING...';
+
+
+                await player.load(
+                    stream.url
+                );
+
+
+                /*
+                ====================================
+                JUMP TO LIVE EDGE
+                ====================================
+                */
+
+                try {
+
+                    if (
+                        video.seekable &&
+                        video.seekable.length > 0
+                    ) {
+
+                        video.currentTime =
+                            video.seekable.end(
+                                video.seekable.length - 1
+                            );
+
+                    }
+
+                } catch (e) {
+
+                    console.warn(
+                        'Live edge unavailable:',
+                        e
+                    );
+
+                }
+
+
+                /*
+                ====================================
+                OPTIONAL POSTER
+                ====================================
+                */
+
+                if (stream.poster) {
+
+                    video.poster =
+                        stream.poster;
+
+                }
+
+
+                /*
+                ====================================
+                UPDATE UI
+                ====================================
+                */
+
+                status.style.display =
+                    'none';
+
+                streamLabel.textContent =
+                    (stream.name || id).toUpperCase();
+
+
+                /*
+                ====================================
+                HIDE PLAYER LOADER
+                ====================================
+                */
+
+                loader.classList.add('gone');
+
+
+                /*
+                ====================================
+                PLAY
+                ====================================
+                */
+
+                try {
+
+                    await video.play();
+
+                } catch (e) {
+
+                    console.log(
+                        'Autoplay requires user interaction.'
+                    );
+
+                }
+
+
+            } catch (e) {
+
+                console.error(
+                    'STREAM ERROR:',
+                    e
+                );
+
+
+                status.style.display =
+                    'block';
+
+                status.textContent =
+                    'STREAM FAILED';
+
+                streamLabel.textContent =
+                    'STREAM FAILED';
+
+                loader.classList.add('gone');
+
+            }
+
+        }
+
+
+        /*
+        ============================================
+        WAKE LOCK
+        ============================================
+        */
+
+        let wakeLock = null;
+
+
+        async function requestWakeLock() {
+
+            if (
+                'wakeLock' in navigator
+            ) {
+
+                try {
+
+                    wakeLock =
+                        await navigator.wakeLock.request(
+                            'screen'
+                        );
+
+                } catch (e) {
+
+                    console.log(
+                        'Wake Lock unavailable'
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        requestWakeLock();
+
+
+        /*
+        Re-request wake lock when page becomes
+        visible again.
+        */
+
+        document.addEventListener(
+            'visibilitychange',
+            () => {
+
+                if (
+                    document.visibilityState ===
+                    'visible'
+                ) {
+
+                    requestWakeLock();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
