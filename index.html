@@ -11,7 +11,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.16.2/controls.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.16.2/shaka-player.ui.min.js"></script>
-    <script src="https://lchdxfootball.pages.dev/cricxfootball.js"></script>
+    <script src="https://cxfbl.pages.dev/cricxfootball.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
@@ -732,11 +732,43 @@
                 ====================================
                 */
 
-                const stream =
-                    data[id] ||
-                    data[
-                        Object.keys(data)[0]
-                    ];
+                let stream = null;
+
+                if (data && typeof data === 'object') {
+
+                    // Support the original keyed response: { "ZS1": { ... } }
+                    if (data[id] && typeof data[id] === 'object') {
+                        stream = data[id];
+                    }
+
+                    // Support a direct decoder response: { url: "...", keys: { ... } }
+                    if (!stream && typeof data.url === 'string') {
+                        stream = data;
+                    }
+
+                    // Support a nested direct response: { stream: { url: "..." } }
+                    if (
+                        !stream &&
+                        data.stream &&
+                        typeof data.stream === 'object'
+                    ) {
+                        stream = data.stream;
+                    }
+
+                    // Fallback: find the first object containing a URL.
+                    if (!stream) {
+                        const candidate = Object.values(data).find(
+                            value =>
+                                value &&
+                                typeof value === 'object' &&
+                                typeof value.url === 'string'
+                        );
+
+                        if (candidate) {
+                            stream = candidate;
+                        }
+                    }
+                }
 
 
                 if (!stream) {
