@@ -16,20 +16,42 @@ https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=ui
 https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/el49ilt2iv/out/v1/262729d2402a49c081a83d907e33166c/cenc.mpd
 
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAPMAD - AQ
-https://saseries.akamaized.net/hls/live/2110097/2356jkiL-tapmad/master.m3u8
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com/
+https://d8j84o343a5m2.cloudfront.net/live/testtapmad2/master.m3u8
+
+#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TAMASHA - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TAMASHA - AQ
+https://cdn06khi-n.tamashaweb.com:8087/jazzauth/PAKvsEng-Test-SVOD-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OC8xOS8yMDI2IDk6NDQ6NDcgQU0maGFzaF92YWx1ZT1VVmp4c1lmVFhEQ3hPNklqNDRUalV3PT0mdmFsaWRtaW51dGVzPTYw
 
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | FOX CRICKET HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | FOX CRICKET HD
 https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
 
-#EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | TEN SPORTS HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | TEN SPORTS HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809396.m3u8
-
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | SonyLiv
-https://dai.google.com/ssai/event/BGeiS6N2TkKrvT0V9rigmQ/master.m3u8
+https://sonydaimenew.akamaized.net/hls/live/2037142/Criclive0909/ENG/std_lrh-800300010.m3u8?hdnea=exp=1788989480~acl=/*~id=85449057533037719004138080912642~hmac=8786d8140e8f82acd67b832583dfdc9547d2ff7fae2de4892ea2240a0c096a63
 
 #EXTINF:-1 tvg-id="11560" tvg-name="England vs Pakistan | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/18833/image/dark" group-title="England vs Pakistan",England vs Pakistan | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.42/hls/FTTTA.m3u8?
+http://193.47.62.41/hls/DDDDAAA.m3u8?
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cab8089ec22c79b7e48023d0f7cc3bd8:3baf207d85dfbfde3eeec1c7ae3cc4fc
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/4b6jcx4eov/out/v1/3173a9cf67484677816695ee5c7107eb/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - ALT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - ALT
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cab8089ec22c79b7e48023d0f7cc3bd8:3baf207d85dfbfde3eeec1c7ae3cc4fc
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/4b6jcx4eov/out/v1/3173a9cf67484677816695ee5c7107eb/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TAPMAD - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TAPMAD - AQ
+https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | FOX CRICKET HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW HD
+http://tvsen5.aynascope.net/willowhd/index.m3u8
 
 #EXTINF:-1 tvg-id="12507" tvg-name="Namibia vs South Africa | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11190/image/dark" group-title="Namibia vs South Africa",Namibia vs South Africa | FANCODE - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -256,27 +278,6 @@ https://saseries.akamaized.net/hls/live/2110097/tapmad123321/master.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
 https://otte.live.fly.ww.aiv-cdn.net/fra-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=35b232c321e2f405a140441419ad6bb8:bc22f933ebaca81b34891dc76c5ee815
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/dqodaw1doj/out/v1/754e4d553e6044b9b85067097a378f2a/cenc.mpd
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - ALT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - ALT
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=35b232c321e2f405a140441419ad6bb8:bc22f933ebaca81b34891dc76c5ee815
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/dqodaw1doj/out/v1/754e4d553e6044b9b85067097a378f2a/cenc.mpd
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TAPMAD - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TAPMAD - AQ
-https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | FOX CRICKET HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
-#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW HD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW HD
-http://tvsen5.aynascope.net/willowhd/index.m3u8
 
 #EXTINF:-1 tvg-id="12459" tvg-name="FC Barcelona vs Feyenoord | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/7/image/dark" group-title="FC Barcelona vs Feyenoord",FC Barcelona vs Feyenoord | TNT SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
