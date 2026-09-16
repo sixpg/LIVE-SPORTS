@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="12800" tvg-name="FC Seoul vs Persib Bandung | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="FC Seoul vs Persib Bandung",FC Seoul vs Persib Bandung | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/VTTTQQ.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -316,11 +320,9 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="12778" tvg-name="Levante UD vs Athletic Club | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/8/image/dark" group-title="Levante UD vs Athletic Club",Levante UD vs Athletic Club | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="12800" tvg-name="FC Seoul vs Persib Bandung | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="FC Seoul vs Persib Bandung",FC Seoul vs Persib Bandung | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12801" tvg-name="The Cong - Viettel vs Melbourne Victory | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="The Cong - Viettel vs Melbourne Victory",The Cong - Viettel vs Melbourne Victory | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="12801" tvg-name="The Cong - Viettel vs Melbourne Victory | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="The Cong - Viettel vs Melbourne Victory",The Cong - Viettel vs Melbourne Victory | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/FCCCQ.m3u8?
 
 #EXTINF:-1 tvg-id="12802" tvg-name="Al Khaldiya vs Nasaf Qarshi | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Al Khaldiya vs Nasaf Qarshi",Al Khaldiya vs Nasaf Qarshi | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -367,8 +369,9 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="12816" tvg-name="Sunderland vs AZ Alkmaar | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Sunderland vs AZ Alkmaar",Sunderland vs AZ Alkmaar | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="12817" tvg-name="Port FC vs Vissel Kobe | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/463/image/dark" group-title="Port FC vs Vissel Kobe",Port FC vs Vissel Kobe | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="12817" tvg-name="Port FC vs Vissel Kobe | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/463/image/dark" group-title="Port FC vs Vissel Kobe",Port FC vs Vissel Kobe | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.44/hls/FCCCQQ.m3u8?
 
 #EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -396,15 +399,3 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="12826" tvg-name="Botafogo vs Gremio | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Botafogo vs Gremio",Botafogo vs Gremio | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12791" tvg-name="Colorado Rockies vs San Diego Padres | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Colorado Rockies vs San Diego Padres",Colorado Rockies vs San Diego Padres | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream5.pro/hls/jzabfazkbf27.m3u8?
-
-#EXTINF:-1 tvg-id="12792" tvg-name="Arizona Diamondbacks vs Miami Marlins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Arizona Diamondbacks vs Miami Marlins",Arizona Diamondbacks vs Miami Marlins | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream5.pro/hls/hfzljfahzcax29.m3u8?
-
-#EXTINF:-1 tvg-id="12793" tvg-name="Los Angeles Angels vs Seattle Mariners | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Angels vs Seattle Mariners",Los Angeles Angels vs Seattle Mariners | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream1.pro/hls/hefbafbakx28.m3u8?
