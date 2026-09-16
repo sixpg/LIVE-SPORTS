@@ -1,11 +1,93 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="12830" tvg-name="Toronto Blue Jays vs Detroit Tigers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Detroit Tigers",Toronto Blue Jays vs Detroit Tigers | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/56539/load-playlist?
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=78a2ee35ebe3d529889f079d1a9c7eee:ffcd4e609f64e0fdfcfd6192f39b8257
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/o8nyyyttqm/out/v1/36b86367be03450fbf4ead4c839b97f3/cenc.mpd
 
-#EXTINF:-1 tvg-id="12830" tvg-name="Toronto Blue Jays vs Detroit Tigers | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Detroit Tigers",Toronto Blue Jays vs Detroit Tigers | HD SERVER
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
+http://tvsen5.aynascope.net/willowhd/index.m3u8?
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
+#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
+https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8?
+
+#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
+https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
+
+#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | beIN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
+
+#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | ESPN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | ESPN SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=cb004fb100bd92f23793562891e3236b:b3e4e74ae2080b137e68bbd0ef8a7e05
+https://vcdn.mn10.entel.bo/Content/DASH/Live/Channel(8757cb0a-3584-40cd-901e-8937c7deba83)/master.mpd
+
+#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv2.m3u8
+
+#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | beIN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | beIN ARABIC HD
+https://tmaxapp.site/8wirwjs76erftg/bein3ar.m3u8
+
+#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | beIN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | SPORT TV HD
+https://tmaxapp.site/pt658svs/sporttv1.m3u8
+
+#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | beIN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | beIN ARABIC HD
+https://tmaxapp.site/8wirwjs76erftg/bein4ar.m3u8
+
+#EXTINF:-1 tvg-id="12826" tvg-name="Botafogo vs Gremio | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Botafogo vs Gremio",Botafogo vs Gremio | PREMIERE BR - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
+
+#EXTINF:-1 tvg-id="12831" tvg-name="Cincinnati Reds vs Los Angeles Dodgers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs Los Angeles Dodgers",Cincinnati Reds vs Los Angeles Dodgers | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream7.pro/hls/dazhfiach15.m3u8?
+https://edgestream3.pro/hls/bzagLHzach19.m3u8?
+
+#EXTINF:-1 tvg-id="12832" tvg-name="Pittsburgh Pirates vs Milwaukee Brewers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Pittsburgh Pirates vs Milwaukee Brewers",Pittsburgh Pirates vs Milwaukee Brewers | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream5.pro/hls/jkzahzadach20.m3u8?
+
+#EXTINF:-1 tvg-id="12833" tvg-name="Tampa Bay Rays vs Athletics | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Athletics",Tampa Bay Rays vs Athletics | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream6.pro/hls/ojzkajnach21.m3u8?
+
+#EXTINF:-1 tvg-id="12834" tvg-name="Washington Nationals vs Philadelphia Phillies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Washington Nationals vs Philadelphia Phillies",Washington Nationals vs Philadelphia Phillies | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream5.pro/hls/ijfnakfidch22.m3u8?
+
+#EXTINF:-1 tvg-id="12835" tvg-name="New York Mets vs Baltimore Orioles | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Mets vs Baltimore Orioles",New York Mets vs Baltimore Orioles | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream7.pro/hls/jnzkdzjfanch23.m3u8?
+
+#EXTINF:-1 tvg-id="12836" tvg-name="Chicago Cubs vs Atlanta Braves | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs Atlanta Braves",Chicago Cubs vs Atlanta Braves | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream6.pro/hls/fskjanach24.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -164,29 +246,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/9v8cttmhcw/out/v1
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ccupb3gevq/out/v1/d9d54c61efab463981d1a7d04ceeb44c/cenc.mpd
 
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=78a2ee35ebe3d529889f079d1a9c7eee:ffcd4e609f64e0fdfcfd6192f39b8257
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/o8nyyyttqm/out/v1/36b86367be03450fbf4ead4c839b97f3/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TNT SPORTS - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | WILLOW HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | WILLOW HD
-http://tvsen5.aynascope.net/willowhd/index.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | TAPMAD - AQ" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://tapmad.com
-https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8?
-
-#EXTINF:-1 tvg-id="11180" tvg-name="CPL Caribbean Premier League | FOX CRICKET HD" tvg-logo="https://img.sofascore.com/api/v1/unique-tournament/11167/image" group-title="CPL Caribbean Premier League",CPL Caribbean Premier League | FOX CRICKET HD
-https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m3u8
-
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -312,43 +371,6 @@ https://tmaxapp.site/8wirwjs76erftg/skysportscricket.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=referer=http://www.fawanews.sc/
 http://193.47.62.59/hls/IVVVAAAAA.m3u8
 
-#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | SportDigital Fussball
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
-
-#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | beIN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd
-
-#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | ESPN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | ESPN SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=cb004fb100bd92f23793562891e3236b:b3e4e74ae2080b137e68bbd0ef8a7e05
-https://vcdn.mn10.entel.bo/Content/DASH/Live/Channel(8757cb0a-3584-40cd-901e-8937c7deba83)/master.mpd
-
-#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv2.m3u8
-
-#EXTINF:-1 tvg-id="12818" tvg-name="Atletico Mineiro vs Santos | beIN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/480/image/dark" group-title="Atletico Mineiro vs Santos",Atletico Mineiro vs Santos | beIN ARABIC HD
-https://tmaxapp.site/8wirwjs76erftg/bein3ar.m3u8
-
-#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | beIN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | SPORT TV HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | SPORT TV HD
-https://tmaxapp.site/pt658svs/sporttv1.m3u8
-
-#EXTINF:-1 tvg-id="12823" tvg-name="LDU vs Palmeiras | beIN ARABIC HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="LDU vs Palmeiras",LDU vs Palmeiras | beIN ARABIC HD
-https://tmaxapp.site/8wirwjs76erftg/bein4ar.m3u8
-
 #EXTINF:-1 tvg-id="12824" tvg-name="Corinthians vs Estudiantes de La Plata | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Corinthians vs Estudiantes de La Plata",Corinthians vs Estudiantes de La Plata | beIN ENGLISH - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -364,36 +386,6 @@ https://tmaxapp.site/8wirwjs76erftg/bein3ar.m3u8
 
 #EXTINF:-1 tvg-id="12825" tvg-name="Manchester City vs Norwich City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Manchester City vs Norwich City",Manchester City vs Norwich City | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12826" tvg-name="Botafogo vs Gremio | PREMIERE BR - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Botafogo vs Gremio",Botafogo vs Gremio | PREMIERE BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
-
-#EXTINF:-1 tvg-id="12831" tvg-name="Cincinnati Reds vs Los Angeles Dodgers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Cincinnati Reds vs Los Angeles Dodgers",Cincinnati Reds vs Los Angeles Dodgers | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream3.pro/hls/bzagLHzach19.m3u8?
-
-#EXTINF:-1 tvg-id="12832" tvg-name="Pittsburgh Pirates vs Milwaukee Brewers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Pittsburgh Pirates vs Milwaukee Brewers",Pittsburgh Pirates vs Milwaukee Brewers | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream5.pro/hls/jkzahzadach20.m3u8?
-
-#EXTINF:-1 tvg-id="12833" tvg-name="Tampa Bay Rays vs Athletics | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Tampa Bay Rays vs Athletics",Tampa Bay Rays vs Athletics | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream6.pro/hls/ojzkajnach21.m3u8?
-
-#EXTINF:-1 tvg-id="12834" tvg-name="Washington Nationals vs Philadelphia Phillies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Washington Nationals vs Philadelphia Phillies",Washington Nationals vs Philadelphia Phillies | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream5.pro/hls/ijfnakfidch22.m3u8?
-
-#EXTINF:-1 tvg-id="12835" tvg-name="New York Mets vs Baltimore Orioles | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="New York Mets vs Baltimore Orioles",New York Mets vs Baltimore Orioles | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream7.pro/hls/jnzkdzjfanch23.m3u8?
-
-#EXTINF:-1 tvg-id="12836" tvg-name="Chicago Cubs vs Atlanta Braves | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago Cubs vs Atlanta Braves",Chicago Cubs vs Atlanta Braves | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream6.pro/hls/fskjanach24.m3u8?
 
 #EXTINF:-1 tvg-id="12837" tvg-name="Texas Rangers vs Boston Red Sox | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Texas Rangers vs Boston Red Sox",Texas Rangers vs Boston Red Sox | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
@@ -800,3 +792,11 @@ https://chatgpt.hereisman.net/playlist/56533/load-playlist?
 #EXTINF:-1 tvg-id="12829" tvg-name="Minnesota Twins vs New York Yankees | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Minnesota Twins vs New York Yankees",Minnesota Twins vs New York Yankees | HD SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
 https://edgestream5.pro/hls/ihfazugfyjcazich17.m3u8??
+
+#EXTINF:-1 tvg-id="12830" tvg-name="Toronto Blue Jays vs Detroit Tigers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Detroit Tigers",Toronto Blue Jays vs Detroit Tigers | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/56539/load-playlist?
+
+#EXTINF:-1 tvg-id="12830" tvg-name="Toronto Blue Jays vs Detroit Tigers | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Toronto Blue Jays vs Detroit Tigers",Toronto Blue Jays vs Detroit Tigers | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
+https://edgestream7.pro/hls/dazhfiach15.m3u8?
