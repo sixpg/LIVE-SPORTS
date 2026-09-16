@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shaka Player</title>
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/shaka-player@4.16.4/dist/controls.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/shaka-player@4.16.4/dist/shaka-player.ui.min.js"></script>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+    }
+
+    #video-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #000;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #000;
+    }
+
+    #status {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 20;
+        padding: 8px 12px;
+        border-radius: 6px;
+        background: rgba(0,0,0,.75);
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        pointer-events: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="video-container">
+
+    <video
+        id="video"
+        autoplay
+        playsinline
+        controls>
+    </video>
+
+    <div id="status">Loading...</div>
+
+</div>
+
+<script>
+(async function () {
+
+    const MPD_URL =
+        "https://la.drmlive.net/tp/sling-2406.mpd";
+
+    const KEY_URL =
+        "https://la.drmlive.net/tp/sling_ck?id=2406";
+
+    const video =
+        document.getElementById("video");
+
+    const container =
+        document.getElementById("video-container");
+
+    const status =
+        document.getElementById("status");
+
+    function setStatus(text) {
+        status.textContent = text;
+    }
+
+    /*
+     * These are informational only.
+     *
+     * Browsers do NOT allow JavaScript to spoof:
+     *
+     * User-Agent
+     * Origin
+     * Referer
+     *
+     * Therefore don't expect these assignments to work
+     * as HTTP request headers in a normal browser.
+     */
+    const REQUEST_INFO = {
+        Referer: "https://la.drmlive.net/",
+        Origin: "https://la.drmlive.net/",
+        UserAgent: "OTT Navigator"
+    };
+
+    async function getKeyResponse() {
+
+        setStatus("Getting DRM information...");
+
+        const response = await fetch(KEY_URL, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                "Key endpoint returned HTTP " +
+                response.status
+            );
+        }
+
+        const text = await response.text();
+
+        let data;
+
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            return {
+                raw: text
+            };
+        }
+
+        return data;
+    }
+
+    function normaliseHex(value) {
+
+        if (!value)
+            return null;
+
+        if (typeof value !== "string")
+            return null;
+
+        return value
+            .replace(/[^0-9a-fA-F]/g, "")
+            .toLowerCase();
+    }
+
+    function convertClearKeyResponse(data) {
+
+        /*
+         * Standard ClearKey response:
+         *
+         * {
+         *   "keys": [
+         *     {
+         *       "kty": "oct",
+         *       "kid": "...",
+         *       "k": "..."
+         *     }
+         *   ],
+         *   "type": "temporary"
+         * }
+         */
+
+        if (!data || !Array.isArray(data.keys))
+            return null;
+
+        const clearKeys = {};
+
+        for (const item of data.keys) {
+
+            if (!item)
+                continue;
+
+            const kid = normaliseHex(item.kid);
+            const key = normaliseHex(item.k);
+
+            if (!kid || !key)
+                continue;
+
+            clearKeys[kid] = key;
+        }
+
+        if (Object.keys(clearKeys).length === 0)
+            return null;
+
+        return clearKeys;
+    }
+
+    async function init() {
+
+        if (!shaka.Player.isBrowserSupported()) {
+            throw new Error(
+                "This browser does not support Shaka Player."
+            );
+        }
+
+        const player =
+            new shaka.Player(video);
+
+        /*
+         * Shaka UI
+         */
+        const ui =
+            new shaka.ui.Overlay(
+                player,
+                container,
+                video
+            );
+
+        ui.configure({
+            controlPanelElements: [
+                "play_pause",
+                "time_and_duration",
+                "spacer",
+                "mute",
+                "volume",
+                "overflow_menu",
+                "fullscreen"
+            ],
+            overflowMenuButtons: [
+                "quality",
+                "language",
+                "captions",
+                "playback_rate"
+            ]
+        });
+
+        /*
+         * Error handling
+         */
+        player.addEventListener(
+            "error",
+            function (event) {
+
+                console.error(
+                    "Shaka error:",
+                    event.detail
+                );
+
+                setStatus(
+                    "Playback error: " +
+                    (
+                        event.detail &&
+                        event.detail.code
+                            ? event.detail.code
+                            : "unknown"
+                    )
+                );
+            }
+        );
+
+        /*
+         * First try the supplied key endpoint.
+         *
+         * If it returns a standard ClearKey JSON response,
+         * configure Shaka's ClearKey support.
+         */
+        try {
+
+            const keyData =
+                await getKeyResponse();
+
+            console.log(
+                "Key endpoint response:",
+                keyData
+            );
+
+            const clearKeys =
+                convertClearKeyResponse(keyData);
+
+            if (clearKeys) {
+
+                console.log(
+                    "ClearKey configuration:",
+                    clearKeys
+                );
+
+                player.configure({
+                    drm: {
+                        clearKeys: clearKeys
+                    }
+                });
+
+                setStatus(
+                    "ClearKey configured"
+                );
+            }
+
+        } catch (error) {
+
+            console.warn(
+                "Key endpoint could not be used:",
+                error
+            );
+
+            /*
+             * Don't stop here.
+             *
+             * The MPD itself contains DRM information.
+             */
+        }
+
+        setStatus("Loading stream...");
+
+        await player.load(MPD_URL);
+
+        setStatus("Playing");
+
+        console.log(
+            "Stream loaded successfully"
+        );
+
+        console.log(
+            "MPD:",
+            MPD_URL
+        );
+
+        console.log(
+            "Key endpoint:",
+            KEY_URL
+        );
+
+        console.log(
+            "Requested Referer:",
+            REQUEST_INFO.Referer
+        );
+
+        console.log(
+            "Requested Origin:",
+            REQUEST_INFO.Origin
+        );
+
+        console.log(
+            "Requested User-Agent:",
+            REQUEST_INFO.UserAgent
+        );
+    }
+
+    try {
+
+        await init();
+
+    } catch (error) {
+
+        console.error(error);
+
+        setStatus(
+            "Unable to play: " +
+            error.message
+        );
+    }
+
+})();
+</script>
+
+</body>
+</html>
