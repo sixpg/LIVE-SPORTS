@@ -1,4 +1,16 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="12845" tvg-name="Kitchee SC vs Gangwon FC | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Kitchee SC vs Gangwon FC",Kitchee SC vs Gangwon FC | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.52/hls/GRRRAA.m3u8?
+
+#EXTINF:-1 tvg-id="12846" tvg-name="Phnom Penh Crown vs Kuching City | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Phnom Penh Crown vs Kuching City",Phnom Penh Crown vs Kuching City | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.52/hls/GRRRAAA.m3u8?
+
+#EXTINF:-1 tvg-id="12847" tvg-name="Shanghai Shenhua vs Tampines Rovers | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Shanghai Shenhua vs Tampines Rovers",Shanghai Shenhua vs Tampines Rovers | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.52/hls/GRRRAAAA.m3u8?
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -182,14 +194,21 @@ https://raw.githubusercontent.com/IPTVFlixBD/OopsTv/refs/heads/main/nwp/809389.m
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=72c45829112c36ea39177f661043a4d1:ba4388e2df24761496415881d73ee373
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/z8ett7bmxa/out/v1/de11f96c14754e4fb2c2a10e15c79289/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=b5c753aa1a570084a6ce60b251d1193d:9c52c44a532dd1480f8f0be10351dbb1
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/u2nayx51ro/out/v1/7fbcd452bd79437d9e2d72ecbf757ea5/cenc.mpd
+
+#EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TNT SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | WILLOW - ALT" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=72c45829112c36ea39177f661043a4d1:ba4388e2df24761496415881d73ee373
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/z8ett7bmxa/out/v1/de11f96c14754e4fb2c2a10e15c79289/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=b5c753aa1a570084a6ce60b251d1193d:9c52c44a532dd1480f8f0be10351dbb1
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/u2nayx51ro/out/v1/7fbcd452bd79437d9e2d72ecbf757ea5/cenc.mpd
 
 #EXTINF:-1 tvg-id="11903" tvg-name="European T20 Premier League | TAPMAD - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQujBtPOgUpOHILwHzxdBP5T8Q4sgCfxOGrHdlJCHp2Rfd4Ep2UFJLSLbRP&s=10" group-title="European T20 Premier League",European T20 Premier League | TAPMAD - AQ
 https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8
@@ -203,8 +222,8 @@ http://tvsen5.aynascope.net/willowhd/index.m3u8
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=881660f21b521a54803840a388caaffa:b152a33ccb29c23fc05f8e6379f69551
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/8t3oqznxym/out/v1/49c0d8b9b6c5406492957674e591586f/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=8e802e5373c59195ff0a9838814db6f4:d76ecf4be947c06874c1b57427f9e85b
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/jiilpnzrrt/out/v1/fe73fae0c76146758ce185e49c411869/cenc.mpd
 
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | FANCODE - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -215,33 +234,29 @@ https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | WILLOW - ALT
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=881660f21b521a54803840a388caaffa:b152a33ccb29c23fc05f8e6379f69551
-https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/8t3oqznxym/out/v1/49c0d8b9b6c5406492957674e591586f/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=8e802e5373c59195ff0a9838814db6f4:d76ecf4be947c06874c1b57427f9e85b
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/jiilpnzrrt/out/v1/fe73fae0c76146758ce185e49c411869/cenc.mpd
 
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | TAPMAD - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | TAPMAD - AQ
-#KODIPROP:inputstream.adaptive.stream_headers=referer=https://www.tapmad.com/
-https://saseries.akamaized.net/hls/live/2110097/56408643-tapMad/master.m3u8
-
-#EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | SONY TEN 1 - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | SONY TEN 1 - IN
-https://dishmt.slivcdn.com/hls/live/2011747/TEN1HD/master.m3u8?hdnea=exp=1789518142~acl=/*~id=54530039747299703482845608434887~hmac=ad935b4a2639a31294597a08daa42ffb40d2d8ce45a7b95e3e730ac40b6832f3
-
-#EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | SONY TEN 3 - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | SONY TEN 3 - IN
-https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/master.m3u8?hdnea=exp=1789518142~acl=/*~id=54530039747299703482845608434887~hmac=ad935b4a2639a31294597a08daa42ffb40d2d8ce45a7b95e3e730ac40b6832f3
-
-#EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | SONY TEN 5 - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | SONY TEN 5 - IN
-https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/master.m3u8?hdnea=exp=1789518142~acl=/*~id=54530039747299703482845608434887~hmac=ad935b4a2639a31294597a08daa42ffb40d2d8ce45a7b95e3e730ac40b6832f3
+https://saseries.akamaized.net/hls/live/2110097/ZIMvsIND-3827e1/master.m3u8
 
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | FANCODE ENG - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | FANCODE ENG - IN
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/out/v1/ap-south-1/4248493_english_466708/ad-h264/index.m3u8
+https://dai-fancode.pages.dev/out/v1/ap-south-1/4248492_english_265127/ad-h264/index.m3u8
 
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | FANCODE HIN - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | FANCODE HIN - IN
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
-https://dai-fancode.pages.dev/out/v1/ap-south-1/4248493_hindi_150048/ad-h264/index.m3u8
+https://dai-fancode.pages.dev/out/v1/ap-south-1/4248492_hindi_109112/ad-h264/index.m3u8
+
+#EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | SONY TEN 4 - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | SONY TEN 4 - IN
+https://cloudplay-sonyliv.pages.dev/ten4hd.m3u8
+
+#EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | SONY TEN 5 - IN" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | SONY TEN 5 - IN
+https://cloudplay-sonyliv.pages.dev/ten5hd.m3u8
 
 #EXTINF:-1 tvg-id="12506" tvg-name="Afghanistan vs India | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Afghanistan vs India",Afghanistan vs India | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/CGGGQQQ.m3u8?
+http://193.47.62.52/hls/VAVAVAAAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="12635" tvg-name="Zimbabwe vs Australia | FANCODE - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11190/image/dark" group-title="Zimbabwe vs Australia",Zimbabwe vs Australia | FANCODE - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -305,24 +320,6 @@ https://tmaxapp.site/8wirwjs76erftg/skysportscricket.m3u8
 http://193.47.62.59/hls/IVVVAAAAA.m3u8
 
 #EXTINF:-1 tvg-id="12825" tvg-name="Manchester City vs Norwich City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Manchester City vs Norwich City",Manchester City vs Norwich City | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12842" tvg-name="Adelaide United vs Tai Po | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Adelaide United vs Tai Po",Adelaide United vs Tai Po | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12843" tvg-name="Lion City Sailors vs BG Pathum United | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Lion City Sailors vs BG Pathum United",Lion City Sailors vs BG Pathum United | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12844" tvg-name="Machida Zelvia vs Preah Khan Reach Svay Rieng FC | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Machida Zelvia vs Preah Khan Reach Svay Rieng FC",Machida Zelvia vs Preah Khan Reach Svay Rieng FC | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12845" tvg-name="Kitchee SC vs Gangwon FC | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Kitchee SC vs Gangwon FC",Kitchee SC vs Gangwon FC | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12846" tvg-name="Phnom Penh Crown vs Kuching City | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Phnom Penh Crown vs Kuching City",Phnom Penh Crown vs Kuching City | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="12847" tvg-name="Shanghai Shenhua vs Tampines Rovers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/668/image/dark" group-title="Shanghai Shenhua vs Tampines Rovers",Shanghai Shenhua vs Tampines Rovers | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="12848" tvg-name="Levski Sofia vs Red Bull Salzburg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Levski Sofia vs Red Bull Salzburg",Levski Sofia vs Red Bull Salzburg | CRICFy LIVE
