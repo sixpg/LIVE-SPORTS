@@ -1,11 +1,54 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="13094" tvg-name="Baltimore Orioles vs Toronto Blue Jays | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs Toronto Blue Jays",Baltimore Orioles vs Toronto Blue Jays | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream2.pro/hls/dazhfiach15.m3u8?
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/54800/load-playlist?
 
-#EXTINF:-1 tvg-id="13095" tvg-name="Detroit Tigers vs Washington Nationals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Detroit Tigers vs Washington Nationals",Detroit Tigers vs Washington Nationals | CRICFy LIVE
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | HD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | HD SERVER
+https://ubuntu.fromthyheart.site/dailymotion/live/playlist/1.m3u8
+
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy HD
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://streamscenter.online/&Origin=https://streamscenter.online
-https://edgestream6.pro/hls/16yuitzaerghbhc16.m3u8?
+https://edgestream2.pro/hls/zeuryuegn48.m3u8?
+
+#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | SD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | SD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.59/hls/K999QQ.m3u8?
+
+#EXTINF:-1 tvg-id="12965" tvg-name="Los Angeles Rams vs New York Giants | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Los Angeles Rams vs New York Giants",Los Angeles Rams vs New York Giants | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/56893/load-playlist?
+
+#EXTINF:-1 tvg-id="12965" tvg-name="Los Angeles Rams vs New York Giants | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Los Angeles Rams vs New York Giants",Los Angeles Rams vs New York Giants | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
+
+#EXTINF:-1 tvg-id="12965" tvg-name="Los Angeles Rams vs New York Giants | SD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Los Angeles Rams vs New York Giants",Los Angeles Rams vs New York Giants | SD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.50/hls/KKKA.m3u8
+
+#EXTINF:-1 tvg-id="12965" tvg-name="Los Angeles Rams vs New York Giants | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Los Angeles Rams vs New York Giants",Los Angeles Rams vs New York Giants | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.44/hls/KKKAA.m3u8
+
+#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fffbd595a239d4e97d8f4bc9704a2d76:614232c4a473ebbd72e77c860c03db2f
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/k8bzrz6q6c/out/v1/3271c6590df74153a1e57c50fe47b94b/cenc.mpd
+
+#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | WILLOW - ALT
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=fffbd595a239d4e97d8f4bc9704a2d76:614232c4a473ebbd72e77c860c03db2f
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/k8bzrz6q6c/out/v1/3271c6590df74153a1e57c50fe47b94b/cenc.mpd
+
+#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | SonyLiv
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=f691aae3d1074f653fce1065bfd82cfe-1790033404867
+https://sonymtmnew-akamaized.pages.dev/hls/live/2120300/AG2026_D2109/ENG/master.m3u8
+
+#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.59/hls/K999.m3u8?
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -93,18 +136,6 @@ https://ubuntu.fromthyheart.site/dailymotion/live/playlist/4.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/UIIIAAA.m3u8?
 
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/54800/load-playlist?
-
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | HD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/zeuryuegn48.m3u8
-
-#EXTINF:-1 tvg-id="1090" tvg-name="WWE Raw | SD SERVER" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="WWE Raw",WWE Raw | SD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.44/hls/DQQQAQQ.m3u8?
-
 #EXTINF:-1 tvg-id="12636" tvg-name="England vs Sri Lanka | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="England vs Sri Lanka",England vs Sri Lanka | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -135,18 +166,8 @@ https://tmaxapp.site/8wirwjs76erftg/skysportscricket.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.44/hls/JYYYAAAA.m3u8
 
-#EXTINF:-1 tvg-id="12965" tvg-name="Los Angeles Rams vs New York Giants | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Los Angeles Rams vs New York Giants",Los Angeles Rams vs New York Giants | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/JHDAJBDnjdna30.m3u8
-
 #EXTINF:-1 tvg-id="13013" tvg-name="Japan vs India | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="Japan vs India",Japan vs India | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | PTV SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | PTV SPORTS - AQ
-https://baila-lentoo.pages.dev/nwp/373120.m3u8
-
-#EXTINF:-1 tvg-id="13054" tvg-name="Pakistan Women vs Bangladesh Women | TAMASHA PRO - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Pakistan Women vs Bangladesh Women",Pakistan Women vs Bangladesh Women | TAMASHA PRO - AQ
-https://cdn04khi-n.tamashaweb.com:8087/jazzauth/AG-SVOD-A-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OS8xOC8yMDI2IDI6Mzg6MDIgQU0maGFzaF92YWx1ZT1IcjY1NVJWMitqejduaEZGdmpMWjhBPT0mdmFsaWRtaW51dGVzPTYw
 
 #EXTINF:-1 tvg-id="13055" tvg-name="Sri Lanka Women vs India Women | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11159/image/dark" group-title="Sri Lanka Women vs India Women",Sri Lanka Women vs India Women | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
@@ -310,3 +331,27 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ccupb3gevq/out/v1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a49085f8da5e65af1efff0edac830b1f:4659bc58a85c062e3fe0c039a446fe47
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/9v8cttmhcw/out/v1/df4c5196e3d74e7d8f484fc25d9034f1/cenc.mpd
+
+#EXTINF:-1 tvg-id="13094" tvg-name="Baltimore Orioles vs Toronto Blue Jays | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs Toronto Blue Jays",Baltimore Orioles vs Toronto Blue Jays | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://gooz.aapmains.net/new-stream-embed/56889?ad=111&Origin=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/56889/load-playlist?&.m3u8
+
+#EXTINF:-1 tvg-id="13094" tvg-name="Baltimore Orioles vs Toronto Blue Jays | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs Toronto Blue Jays",Baltimore Orioles vs Toronto Blue Jays | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/dazhfiach15.m3u8
+
+#EXTINF:-1 tvg-id="13094" tvg-name="Baltimore Orioles vs Toronto Blue Jays | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Baltimore Orioles vs Toronto Blue Jays",Baltimore Orioles vs Toronto Blue Jays | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.59/hls/bbbbaqqqqqa.m3u8
+
+#EXTINF:-1 tvg-id="13095" tvg-name="Detroit Tigers vs Washington Nationals | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Detroit Tigers vs Washington Nationals",Detroit Tigers vs Washington Nationals | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://gooz.aapmains.net/new-stream-embed/56891?ad=111&Origin=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/56891/load-playlist?&.m3u8
+
+#EXTINF:-1 tvg-id="13095" tvg-name="Detroit Tigers vs Washington Nationals | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Detroit Tigers vs Washington Nationals",Detroit Tigers vs Washington Nationals | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/16yuitzaerghbhc16.m3u8
+
+#EXTINF:-1 tvg-id="13095" tvg-name="Detroit Tigers vs Washington Nationals | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Detroit Tigers vs Washington Nationals",Detroit Tigers vs Washington Nationals | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.59/hls/bbbbaqqqqqaA.m3u8
