@@ -30,6 +30,7 @@ crossorigin="anonymous">
 
 html,
 body {
+  width: 100%;
   height: 100%;
   background: #000;
   overflow: hidden;
@@ -58,18 +59,27 @@ video {
   inset: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  color: #ff4444;
-  font-family: system-ui;
+  padding: 25px;
 
-  padding: 20px;
-  text-align: center;
+  color: #ff4444;
+
+  background: #000;
+
+  font-family: system-ui, Arial, sans-serif;
+
+  font-size: 14px;
+
+  text-align: left;
 
   white-space: pre-wrap;
 
-  z-index: 9999;
+  overflow: auto;
+
+  z-index: 99999;
 }
 
 </style>
@@ -80,13 +90,15 @@ video {
 <body>
 
 
-<div id="error" style="display:none"></div>
+<div
+  id="error"
+  style="display:none">
+</div>
 
 
 <div
   class="shaka-video-container"
-  data-shaka-player
->
+  data-shaka-player>
 
   <video
     autoplay
@@ -101,7 +113,7 @@ video {
 <script>
 
 /* =========================================================
-   JSON SOURCE
+   JSON CONFIGURATION
    ========================================================= */
 
 const JSON_URL =
@@ -114,41 +126,85 @@ const JSON_URL =
 
 async function getStreamConfig() {
 
-  const response = await fetch(
-    JSON_URL,
-    {
-      method: "GET",
-      cache: "no-store"
-    }
+  console.log(
+    "Loading JSON:",
+    JSON_URL
+  );
+
+
+  const response =
+    await fetch(
+      JSON_URL,
+      {
+        method: "GET",
+        cache: "no-store"
+      }
+    );
+
+
+  console.log(
+    "JSON HTTP status:",
+    response.status
   );
 
 
   if (!response.ok) {
 
     throw new Error(
-      "JSON request failed: HTTP " +
+      "JSON request failed\n\n" +
+      "HTTP Status: " +
       response.status
     );
 
   }
 
 
-  const data = await response.json();
+  const text =
+    await response.text();
 
 
-  if (!data || typeof data !== "object") {
+  console.log(
+    "JSON response:",
+    text
+  );
+
+
+  let data;
+
+
+  try {
+
+    data =
+      JSON.parse(text);
+
+  }
+
+  catch (error) {
 
     throw new Error(
-      "Invalid JSON response"
+      "The JSON endpoint did not return valid JSON.\n\n" +
+      error.message
     );
 
   }
 
 
-  if (!data.url) {
+  if (!data) {
 
     throw new Error(
-      "JSON does not contain a 'url' field"
+      "JSON response is empty."
+    );
+
+  }
+
+
+  if (
+    typeof data.url !== "string" ||
+    !data.url.trim()
+  ) {
+
+    throw new Error(
+      "JSON is missing the 'url' field."
     );
 
   }
@@ -160,10 +216,37 @@ async function getStreamConfig() {
   ) {
 
     throw new Error(
-      "JSON does not contain a valid 'clearKeys' object"
+      "JSON is missing the 'clearKeys' object."
     );
 
   }
+
+
+  const keyCount =
+    Object.keys(
+      data.clearKeys
+    ).length;
+
+
+  if (keyCount === 0) {
+
+    throw new Error(
+      "No ClearKey entries were found."
+    );
+
+  }
+
+
+  console.log(
+    "MPD:",
+    data.url
+  );
+
+
+  console.log(
+    "ClearKey count:",
+    keyCount
+  );
 
 
   return data;
@@ -171,233 +254,416 @@ async function getStreamConfig() {
 
 
 /* =========================================================
-   PLAYER
+   ERROR DISPLAY
+   ========================================================= */
+
+function showError(message) {
+
+  const errorBox =
+    document.getElementById(
+      "error"
+    );
+
+
+  errorBox.textContent =
+    message;
+
+
+  errorBox.style.display =
+    "flex";
+
+}
+
+
+/* =========================================================
+   FORMAT SHAKA ERROR
+   ========================================================= */
+
+function formatShakaError(error) {
+
+  let output =
+    "STREAM LOAD FAILED\n\n";
+
+
+  if (error) {
+
+    if (error.code !== undefined) {
+
+      output +=
+        "Code: " +
+        error.code +
+        "\n";
+
+    }
+
+
+    if (error.category !== undefined) {
+
+      output +=
+        "Category: " +
+        error.category +
+        "\n";
+
+    }
+
+
+    if (error.severity !== undefined) {
+
+      output +=
+        "Severity: " +
+        error.severity +
+        "\n";
+
+    }
+
+
+    if (error.message) {
+
+      output +=
+        "Message: " +
+        error.message +
+        "\n";
+
+    }
+
+
+    if (error.data) {
+
+      output +=
+        "\nData:\n" +
+        JSON.stringify(
+          error.data,
+          null,
+          2
+        ) +
+        "\n";
+
+    }
+
+
+    if (error.stack) {
+
+      output +=
+        "\nStack:\n" +
+        error.stack +
+        "\n";
+
+    }
+
+  }
+
+
+  return output;
+}
+
+
+/* =========================================================
+   AUTOPLAY
+   ========================================================= */
+
+function autoplay(video) {
+
+  video.muted = false;
+
+
+  const promise =
+    video.play();
+
+
+  if (
+    promise !== undefined
+  ) {
+
+    promise
+
+      .then(() => {
+
+        video.muted = false;
+
+      })
+
+      .catch(() => {
+
+        video.muted = true;
+
+
+        video.play()
+
+          .then(() => {
+
+            setTimeout(() => {
+
+              video.muted = false;
+
+            }, 300);
+
+          })
+
+          .catch(() => {
+
+            console.log(
+              "Autoplay was blocked."
+            );
+
+          });
+
+      });
+
+  }
+
+}
+
+
+/* =========================================================
+   MAIN
    ========================================================= */
 
 document.addEventListener(
   "DOMContentLoaded",
   async () => {
 
-
-    shaka.polyfill.installAll();
-
-
-    if (!shaka.Player.isBrowserSupported()) {
-
-      return showError(
-        "Browser not supported"
-      );
-
-    }
-
-
-    /* -----------------------------------------------------
-       GET MPD + CLEARKEY FROM JSON
-       ----------------------------------------------------- */
-
-    let params;
-
-
     try {
 
-      params =
-        await getStreamConfig();
+      /* ---------------------------------------------------
+         SHAKA POLYFILL
+         --------------------------------------------------- */
 
-      console.log(
-        "JSON configuration:",
-        params
-      );
-
-    }
-
-    catch (e) {
-
-      console.error(
-        "JSON loading error:",
-        e
-      );
-
-      return showError(
-        "Failed to load stream configuration\n\n" +
-        e.message
-      );
-
-    }
+      shaka.polyfill.installAll();
 
 
-    /* -----------------------------------------------------
-       VIDEO
-       ----------------------------------------------------- */
+      /* ---------------------------------------------------
+         BROWSER CHECK
+         --------------------------------------------------- */
 
-    const video =
-      document.querySelector("video");
+      if (
+        !shaka.Player.isBrowserSupported()
+      ) {
 
+        showError(
+          "This browser does not support Shaka Player."
+        );
 
-    /* -----------------------------------------------------
-       SHAKA PLAYER
-       ----------------------------------------------------- */
-
-    const player =
-      new shaka.Player(video);
-
-
-    window.player =
-      player;
-
-
-    /* -----------------------------------------------------
-       UI
-       ----------------------------------------------------- */
-
-    const container =
-      document.querySelector(
-        ".shaka-video-container"
-      );
-
-
-    const ui =
-      new shaka.ui.Overlay(
-        player,
-        container,
-        video
-      );
-
-
-    ui.configure({
-
-      controlPanelElements: [
-
-        "play_pause",
-
-        "time_and_duration",
-
-        "mute",
-
-        "volume",
-
-        "spacer",
-
-        "captions",
-
-        "quality",
-
-        "language",
-
-        "picture_in_picture",
-
-        "fullscreen"
-
-      ],
-
-      volumeBarColors: {
-
-        base:
-          "rgba(63, 187, 1, 1)",
-
-        level:
-          "rgb(255, 69, 0)"
-
-      },
-
-      seekBarColors: {
-
-        base:
-          "rgb(41, 41, 163)",
-
-        buffered:
-          "rgb(35, 99, 3)",
-
-        played:
-          "rgba(63, 187, 1, 1)"
+        return;
 
       }
 
-    });
+
+      /* ---------------------------------------------------
+         LOAD JSON
+         --------------------------------------------------- */
+
+      const params =
+        await getStreamConfig();
 
 
-    /* -----------------------------------------------------
-       SHAKA CONFIGURATION
-       ----------------------------------------------------- */
-
-    player.configure({
-
-      drm: {
-
-        clearKeys:
-          params.clearKeys
-
-      },
+      console.log(
+        "Stream configuration:",
+        params
+      );
 
 
-      streaming: {
+      /* ---------------------------------------------------
+         VIDEO
+         --------------------------------------------------- */
 
-        lowLatencyMode:
-          true,
-
-        bufferingGoal:
-          20,
-
-        rebufferingGoal:
-          5,
-
-        bufferBehind:
-          25,
+      const video =
+        document.querySelector(
+          "video"
+        );
 
 
-        retryParameters: {
+      /* ---------------------------------------------------
+         PLAYER
+         --------------------------------------------------- */
 
-          timeout:
-            8000,
+      const player =
+        new shaka.Player(
+          video
+        );
 
-          maxAttempts:
-            5,
 
-          baseDelay:
-            300,
+      window.player =
+        player;
 
-          backoffFactor:
-            1.2
+
+      /* ---------------------------------------------------
+         PLAYER ERROR EVENTS
+         --------------------------------------------------- */
+
+      player.addEventListener(
+        "error",
+        event => {
+
+          console.error(
+            "SHAKA ERROR EVENT:",
+            event.detail
+          );
+
+          showError(
+            formatShakaError(
+              event.detail
+            )
+          );
+
+        }
+      );
+
+
+      /* ---------------------------------------------------
+         UI
+         --------------------------------------------------- */
+
+      const container =
+        document.querySelector(
+          ".shaka-video-container"
+        );
+
+
+      const ui =
+        new shaka.ui.Overlay(
+          player,
+          container,
+          video
+        );
+
+
+      ui.configure({
+
+        controlPanelElements: [
+
+          "play_pause",
+
+          "time_and_duration",
+
+          "mute",
+
+          "volume",
+
+          "spacer",
+
+          "captions",
+
+          "quality",
+
+          "language",
+
+          "picture_in_picture",
+
+          "fullscreen"
+
+        ],
+
+        volumeBarColors: {
+
+          base:
+            "rgba(63, 187, 1, 1)",
+
+          level:
+            "rgb(255, 69, 0)"
+
+        },
+
+        seekBarColors: {
+
+          base:
+            "rgb(41, 41, 163)",
+
+          buffered:
+            "rgb(35, 99, 3)",
+
+          played:
+            "rgba(63, 187, 1, 1)"
+
+        }
+
+      });
+
+
+      /* ---------------------------------------------------
+         DRM + STREAMING CONFIG
+         --------------------------------------------------- */
+
+      player.configure({
+
+        drm: {
+
+          clearKeys:
+            params.clearKeys
 
         },
 
 
-        segmentRequestTimeout:
-          7000,
+        streaming: {
 
-        segmentPrefetchLimit:
-          3,
+          lowLatencyMode:
+            true,
 
-        useNativeHlsOnSafari:
-          true
+          bufferingGoal:
+            20,
 
-      },
+          rebufferingGoal:
+            5,
+
+          bufferBehind:
+            25,
 
 
-      manifest: {
+          retryParameters: {
 
-        retryParameters: {
+            timeout:
+              8000,
 
-          timeout:
-            8000,
+            maxAttempts:
+              5,
 
-          maxAttempts:
-            3
+            baseDelay:
+              300,
+
+            backoffFactor:
+              1.2
+
+          },
+
+
+          segmentRequestTimeout:
+            7000,
+
+          segmentPrefetchLimit:
+            3,
+
+          useNativeHlsOnSafari:
+            true
+
+        },
+
+
+        manifest: {
+
+          retryParameters: {
+
+            timeout:
+              8000,
+
+            maxAttempts:
+              3
+
+          }
 
         }
 
-      }
-
-    });
+      });
 
 
-    /* -----------------------------------------------------
-       LOAD MPD
-       ----------------------------------------------------- */
-
-    try {
+      /* ---------------------------------------------------
+         LOAD MPD
+         --------------------------------------------------- */
 
       console.log(
-        "Loading MPD:",
+        "Loading MPD..."
+      );
+
+
+      console.log(
         params.url
       );
 
@@ -408,100 +674,50 @@ document.addEventListener(
 
 
       console.log(
-        "Stream loaded successfully"
+        "MPD loaded successfully."
       );
 
 
-      autoplay(video);
+      /* ---------------------------------------------------
+         TRACK INFORMATION
+         --------------------------------------------------- */
+
+      console.log(
+        "Variant tracks:",
+        player.getVariantTracks()
+      );
+
+
+      console.log(
+        "Text tracks:",
+        player.getTextTracks()
+      );
+
+
+      /* ---------------------------------------------------
+         START PLAYBACK
+         --------------------------------------------------- */
+
+      autoplay(
+        video
+      );
 
     }
 
 
-    catch (e) {
+    catch (error) {
 
       console.error(
-        "Stream load failed:",
-        e
+        "PLAYER INITIALIZATION ERROR:",
+        error
       );
 
 
       showError(
-        "Stream load failed\n\n" +
-        (
-          e.message ||
-          String(e)
+        formatShakaError(
+          error
         )
       );
-
-    }
-
-
-    /* -----------------------------------------------------
-       AUTOPLAY
-       ----------------------------------------------------- */
-
-    function autoplay(v) {
-
-      v.muted = false;
-
-
-      const p =
-        v.play();
-
-
-      if (p !== undefined) {
-
-        p.then(() => {
-
-          v.muted = false;
-
-        })
-
-
-        .catch(() => {
-
-          v.muted = true;
-
-
-          v.play()
-
-            .then(() => {
-
-              setTimeout(() => {
-
-                v.muted = false;
-
-              }, 300);
-
-            })
-
-            .catch(() => {});
-
-        });
-
-      }
-
-    }
-
-
-    /* -----------------------------------------------------
-       ERROR
-       ----------------------------------------------------- */
-
-    function showError(msg) {
-
-      const e =
-        document.getElementById(
-          "error"
-        );
-
-
-      e.textContent =
-        msg;
-
-
-      e.style.display =
-        "flex";
 
     }
 
@@ -509,46 +725,6 @@ document.addEventListener(
 );
 
 </script>
-
-
-<!-- Anti-debugging -->
-
-<script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest">
-</script>
-
-<script>
-
-DisableDevtool({
-
-  disable: true,
-
-  disableMenu: true,
-
-  clearLog: true,
-
-  disableSelect: true,
-
-  disableCopy: true,
-
-  disableCut: true,
-
-  disablePaste: true,
-
-  interval: 10,
-
-  disableMobile: true,
-
-  ondevtoolopen: function () {
-
-    window.location.href =
-      "about:blank";
-
-  }
-
-});
-
-</script>
-
 
 </body>
 
