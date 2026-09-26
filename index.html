@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Link Converter</title>
+<style>
+:root{
+  --bg:#030817;
+  --panel:#07152d;
+  --panel2:#091b38;
+  --line:#164b8d;
+  --blue:#35a8ff;
+  --blue2:#5f7cff;
+  --purple:#9b5cff;
+  --text:#eef6ff;
+  --muted:#8fa9c9;
+  --shadow:0 20px 70px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 5%,rgba(35,93,255,.24),transparent 27%),
+    radial-gradient(circle at 91% 88%,rgba(137,57,255,.20),transparent 27%),
+    linear-gradient(145deg,#020613 0%,#06142b 48%,#05091b 100%);
+  overflow-x:hidden;
+}
+body:before,body:after{
+  content:"";position:fixed;pointer-events:none;z-index:-1;
+  width:430px;height:430px;border-radius:50%;
+  filter:blur(2px);opacity:.55;
+}
+body:before{
+  left:-280px;top:-280px;
+  border:2px solid rgba(57,122,255,.7);
+  box-shadow:0 0 80px rgba(57,122,255,.2);
+}
+body:after{
+  right:-300px;bottom:-300px;
+  border:2px solid rgba(154,79,255,.65);
+  box-shadow:0 0 90px rgba(154,79,255,.18);
+}
+.wrap{width:min(1400px,calc(100% - 32px));margin:auto}
+header{text-align:center;padding:28px 0 18px}
+.brand{
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  font-size:clamp(34px,4.5vw,58px);font-weight:900;letter-spacing:-2px;
+  line-height:1;
+  background:linear-gradient(90deg,#55bfff 0%,#68a9ff 48%,#a66bff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.brand-icon{
+  color:#55bfff;font-size:52px;filter:drop-shadow(0 0 14px rgba(48,169,255,.55));
+}
+.tagline{margin-top:10px;color:#9db6d6;font-size:15px;letter-spacing:.2px}
+.featurebar{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid rgba(45,113,205,.55);
+  background:rgba(4,16,37,.7);border-radius:14px;
+  box-shadow:var(--shadow);backdrop-filter:blur(18px);overflow:hidden;
+  margin:8px 0 18px;
+}
+.feature{display:flex;justify-content:center;align-items:center;gap:12px;padding:16px 10px;color:#b9d0ee;font-size:14px}
+.feature+ .feature{border-left:1px solid rgba(55,112,190,.35)}
+.feature b{color:#7e9cff;font-size:20px}
+.grid{
+  display:grid;grid-template-columns:1.3fr .96fr .86fr;gap:16px;
+}
+.card{
+  background:linear-gradient(145deg,rgba(8,25,51,.93),rgba(4,14,31,.92));
+  border:1px solid rgba(28,117,220,.72);
+  border-radius:16px;padding:20px;
+  box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.025);
+  backdrop-filter:blur(18px);
+  min-width:0;
+}
+.stephead{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.step{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-weight:800;font-size:19px;
+  background:radial-gradient(circle at 35% 30%,#428cff,#423dce 70%);
+  border:1px solid #6c8fff;box-shadow:0 0 20px rgba(64,111,255,.35);
+}
+h2{margin:0;font-size:20px;letter-spacing:.5px}
+.sub{color:#8da8ca;font-size:13px;margin-top:3px}
+.tabs{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid rgba(39,92,159,.7);border-radius:11px;overflow:hidden;
+  margin-bottom:14px;background:rgba(2,11,27,.6)
+}
+.tab{
+  border:0;background:transparent;color:#abc0dc;padding:12px 7px;
+  cursor:pointer;font-weight:700;font-size:12px
+}
+.tab.active{color:white;background:linear-gradient(100deg,#315ee7,#7160e9);box-shadow:0 0 20px rgba(79,99,235,.25)}
+textarea,input,select{
+  width:100%;color:#eaf4ff;background:rgba(2,12,29,.78);
+  border:1px solid rgba(40,104,180,.78);border-radius:10px;
+  outline:none;transition:.2s;
+}
+textarea{
+  height:335px;resize:vertical;padding:16px;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+input,select{height:48px;padding:0 14px;font-size:14px}
+textarea:focus,input:focus,select:focus{border-color:#4eaaff;box-shadow:0 0 0 3px rgba(55,151,255,.1),0 0 24px rgba(55,151,255,.1)}
+.field{margin-top:17px}
+label{display:block;font-size:13px;color:#c5d8ee;font-weight:650;margin-bottom:8px}
+.help{
+  margin-top:10px;padding:12px 13px;border:1px solid rgba(39,91,158,.5);
+  background:rgba(2,11,27,.5);border-radius:9px;color:#7894b8;font:12px/1.55 ui-monospace,monospace;
+}
+.checks{display:flex;flex-wrap:wrap;gap:13px;margin-top:10px}
+.check{display:flex;align-items:center;gap:7px;color:#b8cbe4;font-size:13px}
+.check input{width:18px;height:18px;accent-color:#765bff}
+.convert{
+  margin-top:20px;width:100%;height:62px;border:1px solid #559bff;border-radius:12px;
+  color:white;font-size:20px;font-weight:850;letter-spacing:.3px;cursor:pointer;
+  background:linear-gradient(100deg,#244bd5,#514bdc 55%,#774de4);
+  box-shadow:0 0 28px rgba(63,88,255,.25);transition:.2s;
+}
+.convert:hover{transform:translateY(-1px);box-shadow:0 0 38px rgba(73,106,255,.42)}
+.examples{display:flex;flex-direction:column;gap:11px}
+.example{
+  text-align:left;border:1px solid rgba(51,112,192,.62);border-radius:11px;
+  padding:15px;background:linear-gradient(100deg,rgba(8,27,57,.7),rgba(10,18,44,.72));
+  color:white;cursor:pointer;transition:.2s
+}
+.example:hover{border-color:#5b80ff;transform:translateX(2px)}
+.example strong{display:block;font-size:14px;margin-bottom:5px}
+.example span{font-size:11px;color:#819bc0}
+.example .arrow{float:right;font-size:24px;color:#94a8ff;margin-top:-25px}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.btn{
+  border:1px solid rgba(48,111,192,.65);background:rgba(4,17,38,.78);
+  color:#dceaff;border-radius:9px;padding:10px 15px;cursor:pointer;font-weight:700;font-size:12px
+}
+.btn:hover{border-color:#64aaff;background:rgba(16,39,78,.9)}
+.output-card{margin:16px 0 28px;padding:20px}
+.output-top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.output-title{display:flex;align-items:center;gap:12px}
+.output-tabs{display:flex;gap:9px;margin:18px 0 13px}
+.outtab{
+  border:1px solid rgba(49,108,187,.65);background:rgba(5,18,40,.8);color:#c1d4ed;
+  border-radius:9px;padding:11px 19px;cursor:pointer;font-weight:700;font-size:13px
+}
+.outtab.active{background:linear-gradient(100deg,#3d62e7,#7958e8);color:white;border-color:#6d9cff}
+.output{
+  min-height:180px;white-space:pre-wrap;overflow:auto;
+  border:1px solid rgba(46,111,191,.72);border-radius:11px;
+  background:rgba(1,10,25,.76);padding:18px;
+  color:#a9c4e5;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+.status{margin-top:9px;color:#6685aa;font-size:11px}
+.small-title{color:#8ca8ca;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:6px}
+footer{text-align:center;color:#536e93;font-size:11px;padding:0 0 22px}
+@media(max-width:1050px){
+  .grid{grid-template-columns:1fr 1fr}
+  .grid .card:nth-child(3){grid-column:1/-1}
+}
+@media(max-width:720px){
+  .wrap{width:min(100% - 18px,680px)}
+  .featurebar{grid-template-columns:1fr 1fr}
+  .feature{padding:12px 5px;font-size:11px}
+  .feature:nth-child(3){border-left:0;border-top:1px solid rgba(55,112,190,.35)}
+  .feature:nth-child(4){border-top:1px solid rgba(55,112,190,.35)}
+  .grid{grid-template-columns:1fr}
+  .grid .card:nth-child(3){grid-column:auto}
+  .tabs{grid-template-columns:1fr 1fr}
+  textarea{height:280px}
+  .brand{font-size:32px}
+  .brand-icon{font-size:38px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><span class="brand-icon">↗</span> LINK CONVERTER</div>
+  <div class="tagline">Convert raw stream information to your desired format</div>
+</header>
+
+<section class="featurebar">
+  <div class="feature"><b>▧</b> Supports JSON, MPD, KID:KEY</div>
+  <div class="feature"><b>▤</b> Multiple input formats</div>
+  <div class="feature"><b>➤</b> Generate player/telegram links</div>
+  <div class="feature"><b>◷</b> Fast &amp; Accurate</div>
+</section>
+
+<main class="grid">
+<section class="card">
+  <div class="stephead">
+    <div class="step">1</div><div><h2>INPUT</h2><div class="sub">Paste your raw information in any format</div></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-mode="json">JSON</button>
+    <button class="tab" data-mode="mpd">MPD + KEYS</button>
+    <button class="tab" data-mode="text">TEXT / MIXED</button>
+    <button class="tab" data-mode="multiple">MULTIPLE</button>
+  </div>
+
+  <textarea id="input" placeholder='Paste JSON, MPD link, KID:KEY or any raw information here...
+
+Example:
+{
+  "channel_name": "TSN 2",
+  "stream_url": "https://example.com/cenc.mpd",
+  "stream_keys": "kid:key"
+}
+
+Or simply:
+MPD: https://example.com/cenc.mpd
+KID: 385ceb...
+KEY: 18dce9...'></textarea>
+
+  <div class="actions">
+    <button class="btn" id="loadExample">▧ &nbsp; Load Example</button>
+    <button class="btn" id="clear">♜ &nbsp; Clear</button>
+  </div>
+</section>
+
+<section class="card">
+  <div class="stephead">
+    <div class="step">2</div><div><h2>SETTINGS</h2><div class="sub">Choose output format and options</div></div>
+  </div>
+
+  <div class="field">
+    <label>Output Format</label>
+    <select id="format">
+      <option value="p1">Player Format 1 (MPD + ClearKey)</option>
+      <option value="p2">Player Format 2 (MPD + Headers + ClearKey)</option>
+      <option value="url">MPD URL Only</option>
+      <option value="clearkey">ClearKey Only</option>
+      <option value="telegram">Telegram Format</option>
+    </select>
+    <div class="help" id="formatHelp">https://.../cenc.mpd?|drmScheme=clearkey&amp;drmLicense=KID:KEY</div>
+  </div>
+
+  <div class="field">
+    <label>Channel / Event Name (Optional)</label>
+    <input id="name" placeholder="Enter channel or event name">
+  </div>
+
+  <div class="field">
+    <label>Additional Headers (Optional)</label>
+    <div class="checks">
+      <label class="check"><input type="checkbox" id="cookie" checked> Cookie</label>
+      <label class="check"><input type="checkbox" id="ua" checked> User-Agent</label>
+      <label class="check"><input type="checkbox" id="referer" checked> Referer</label>
+      <label class="check"><input type="checkbox" id="origin" checked> Origin</label>
+    </div>
+  </div>
+
+  <button class="convert" id="convert">⚡ &nbsp; CONVERT &nbsp; ›</button>
+</section>
+
+<section class="card">
+  <div class="stephead">
+    <div class="step">3</div><div><h2>EXAMPLES</h2><div class="sub">Try with sample inputs</div></div>
+  </div>
+  <div class="examples">
+    <button class="example" data-example="simple"><strong>▤ &nbsp; Simple MPD + KID:KEY</strong><span>Basic input with MPD and keys</span><span class="arrow">›</span></button>
+    <button class="example" data-example="channel"><strong>▤ &nbsp; Channel JSON Format</strong><span>channel_name, stream_url, stream_keys</span><span class="arrow">›</span></button>
+    <button class="example" data-example="event"><strong>▤ &nbsp; Event JSON Format</strong><span>event_name, stream_url, keyid, key</span><span class="arrow">›</span></button>
+    <button class="example" data-example="hotstar"><strong>▤ &nbsp; Header Style Input</strong><span>Cookie, user-agent, referer, origin</span><span class="arrow">›</span></button>
+    <button class="example" data-example="multiple"><strong>♧ &nbsp; Multiple Channels</strong><span>Convert multiple entries at once</span><span class="arrow">›</span></button>
+  </div>
+</section>
+</main>
+
+<section class="card output-card">
+  <div class="output-top">
+    <div class="output-title">
+      <div class="step">4</div><div><h2>OUTPUT</h2><div class="sub">Your converted link will appear here</div></div>
+    </div>
+    <div class="actions" style="margin:0">
+      <button class="btn" id="copy">▣ &nbsp; Copy</button>
+      <button class="btn" id="copyAll">▣ &nbsp; Copy All</button>
+      <button class="btn" id="download">⇩ &nbsp; Download .txt</button>
+    </div>
+  </div>
+
+  <div class="output-tabs">
+    <button class="outtab active" data-output="normal">↗ &nbsp; Normal Output</button>
+    <button class="outtab" data-output="telegram">➤ &nbsp; Telegram Format</button>
+  </div>
+
+  <div class="output" id="output">Converted link will appear here...</div>
+  <div class="status" id="status">Ready</div>
+</section>
+
+<footer>LINK CONVERTER • Client-side formatter • No data is uploaded by this page</footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let currentOutput = "";
+let currentNormal = "";
+let currentTelegram = "";
+let inputMode = "json";
+let outputMode = "normal";
+
+const examples = {
+simple: `MPD: https://example.com/live/cenc.mpd
+KID: 385ceb9714b75e0cef61254f80b31002
+KEY: 18dce92a2891fee68d21ede5173230f8`,
+channel: `{
+  "id": "tsn2",
+  "channel_name": "TSN 2",
+  "stream_url": "https://example.com/live/cenc.mpd",
+  "stream_keys": "85b277daf5aae05833fe43a68f587968:d52d7e9bc0bcd98787efd547ac91eca0"
+}`,
+event: `{
+  "event_title": "Formula 1",
+  "event_id": 50002,
+  "event_cat": "F1",
+  "event_name": "Formula 1 - AZERBAIJAN GRAND PRIX",
+  "event_time": "2026-09-26 11:00",
+  "channel_title": "TSN SPORTS FHD",
+  "stream_url": "https://example.com/live/cenc.mpd",
+  "keyid": "385ceb9714b75e0cef61254f80b31002",
+  "key": "18dce92a2891fee68d21ede5173230f8"
+}`,
+hotstar: `https://example.com/live/index.mpd|Cookie=hdntl=example_cookie&User-Agent=Hotstar;Android/15&Referer=https://www.example.com/&Origin=https://www.example.com&drmScheme=clearkey&drmLicense=25259dff8eac47f68f4b12b72d2f0000:62631957eebd485a80cc165f0a4455d7`,
+multiple: `[
+  {
+    "channel_name": "Channel One",
+    "stream_url": "https://example.com/one.mpd",
+    "stream_keys": "11111111111111111111111111111111:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "channel_name": "Channel Two",
+    "stream_url": "https://example.com/two.mpd",
+    "stream_keys": "22222222222222222222222222222222:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  }
+]`
+};
+
+function stripQuotes(v){
+  return String(v ?? "").trim().replace(/^["']|["']$/g,"");
+}
+
+function findUrl(text){
+  const m = text.match(/https?:\/\/[^\s"'<>|]+/i);
+  return m ? m[0].replace(/[),]+$/,"") : "";
+}
+
+function cleanKey(v){
+  if(!v) return "";
+  v=stripQuotes(v).trim();
+  v=v.replace(/\s+/g,"");
+  return v;
+}
+
+function extractPairs(text){
+  const pairs=[];
+  const add=(kid,key)=>{
+    kid=cleanKey(kid); key=cleanKey(key);
+    if(kid && key && /^[a-fA-F0-9]{8,}$/.test(kid) && /^[a-fA-F0-9]{8,}$/.test(key))
+      pairs.push({kid,key});
+  };
+
+  // Common explicit fields
+  const kidMatches=[...text.matchAll(/["']?(?:kid|keyid|key_id|default_kid)["']?\s*[:=]\s*["']?([a-fA-F0-9]{8,})/gi)];
+  const keyMatches=[...text.matchAll(/["']?(?:key|stream_key|drm_key)["']?\s*[:=]\s*["']?([a-fA-F0-9]{8,})/gi)];
+  if(kidMatches.length && keyMatches.length){
+    for(let i=0;i<Math.min(kidMatches.length,keyMatches.length);i++) add(kidMatches[i][1],keyMatches[i][1]);
+  }
+
+  // kid:key / drmLicense / stream_keys
+  const pairRegex=/([a-fA-F0-9]{8,}):([a-fA-F0-9]{8,})/g;
+  for(const m of text.matchAll(pairRegex)) add(m[1],m[2]);
+
+  // Avoid duplicates
+  return pairs.filter((p,i,a)=>i===a.findIndex(x=>x.kid.toLowerCase()===p.kid.toLowerCase()&&x.key.toLowerCase()===p.key.toLowerCase()));
+}
+
+function normalizeObject(obj){
+  if(!obj || typeof obj!=="object") return null;
+  const name = obj.channel_name || obj.channel_title || obj.event_name || obj.event_title || obj.name || obj.title || obj.id || "";
+  const url = obj.stream_url || obj.mpd || obj.mpd_url || obj.url || obj.stream || obj.manifest || "";
+  let pairs=[];
+
+  if(obj.stream_keys) pairs.push(...extractPairs(String(obj.stream_keys)));
+  if(obj.api) pairs.push(...extractPairs(String(obj.api)));
+  if(obj.drmLicense) pairs.push(...extractPairs(String(obj.drmLicense)));
+  if(obj.keyid && obj.key) pairs.push({kid:cleanKey(obj.keyid),key:cleanKey(obj.key)});
+
+  // Header-like fields
+  const headers = {};
+  ["Cookie","cookie"].forEach(k=>{if(obj[k]) headers.Cookie=obj[k]});
+  ["User-Agent","user-agent","user_agent"].forEach(k=>{if(obj[k]) headers["User-Agent"]=obj[k]});
+  ["Referer","referer"].forEach(k=>{if(obj[k]) headers.Referer=obj[k]});
+  ["Origin","origin"].forEach(k=>{if(obj[k]) headers.Origin=obj[k]});
+
+  return {name, url:stripQuotes(url), pairs, headers};
+}
+
+function parseInput(raw){
+  const result=[];
+  raw=raw.trim();
+  if(!raw) return result;
+
+  try{
+    const json=JSON.parse(raw);
+    const arr=Array.isArray(json)?json:[json];
+    arr.forEach(o=>{
+      const n=normalizeObject(o);
+      if(n && (n.url || n.pairs.length)) result.push(n);
+    });
+    if(result.length) return result;
+  }catch(e){}
+
+  // Try JSON objects embedded in a larger text block
+  const objectMatches=raw.match(/\{[\s\S]*?\}(?=\s*,?\s*\{|\s*$)/g);
+  if(objectMatches && objectMatches.length>1){
+    for(const s of objectMatches){
+      try{
+        const n=normalizeObject(JSON.parse(s));
+        if(n) result.push(n);
+      }catch(e){}
+    }
+    if(result.length) return result;
+  }
+
+  // Existing pipe format: URL|headers...
+  const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+  let block={name:"",url:"",pairs:[],headers:{}};
+
+  for(const line of lines){
+    const url=findUrl(line);
+    if(url && !block.url) block.url=url;
+
+    let m=line.match(/(?:MPD|URL|STREAM[_ ]?URL|MANIFEST)\s*[:=]\s*(https?:\/\/\S+)/i);
+    if(m) block.url=m[1].replace(/[),]+$/,"");
+
+    m=line.match(/(?:channel_name|channel_title|event_name|event_title|title|name)\s*[:=]\s*["']?([^"',}\n]+)/i);
+    if(m) block.name=stripQuotes(m[1]);
+
+    m=line.match(/(?:stream_keys|drmLicense|api|KEYS?)\s*[:=]\s*["']?([^"'\n}]+)/i);
+    if(m) block.pairs.push(...extractPairs(m[1]));
+
+    m=line.match(/(?:KID|KEYID|KEY_ID|DEFAULT_KID)\s*[:=]\s*["']?([a-fA-F0-9]{8,})/i);
+    if(m){
+      const next=lines[lines.indexOf(line)+1]||"";
+      const km=next.match(/(?:KEY|VALUE)\s*[:=]\s*["']?([a-fA-F0-9]{8,})/i);
+      if(km) block.pairs.push({kid:cleanKey(m[1]),key:cleanKey(km[1])});
+    }
+
+    const headerMatch=line.match(/(?:^|\|)(Cookie|User-Agent|Referer|Origin)=([^&\n|]+)/i);
+    if(headerMatch) block.headers[headerMatch[1]]=headerMatch[2];
+  }
+
+  block.pairs.push(...extractPairs(raw));
+  block.pairs=block.pairs.filter((p,i,a)=>i===a.findIndex(x=>x.kid.toLowerCase()===p.kid.toLowerCase()&&x.key.toLowerCase()===p.key.toLowerCase()));
+
+  if(block.url || block.pairs.length) result.push(block);
+  return result;
+}
+
+function buildHeaders(headers){
+  const parts=[];
+  if($("cookie").checked && headers.Cookie) parts.push("Cookie="+headers.Cookie);
+  if($("ua").checked && headers["User-Agent"]) parts.push("User-Agent="+headers["User-Agent"]);
+  if($("referer").checked && headers.Referer) parts.push("Referer="+headers.Referer);
+  if($("origin").checked && headers.Origin) parts.push("Origin="+headers.Origin);
+  return parts;
+}
+
+function convertOne(item, fmt){
+  let url=item.url || "";
+  let pairs=item.pairs || [];
+  let license=pairs.map(p=>`${p.kid}:${p.key}`).join(",");
+  let headers=buildHeaders(item.headers||{});
+
+  // Recover headers and DRM from an already-formatted pipe URL
+  if(url.includes("|")){
+    const pieces=url.split("|");
+    url=pieces.shift();
+    const rest=pieces.join("|");
+    const h=rest.match(/(?:^|&)drmLicense=([^&]+)/i);
+    if(!license && h) license=decodeURIComponent(h[1]);
+    ["Cookie","User-Agent","Referer","Origin"].forEach(k=>{
+      const r=new RegExp("(?:^|&)"+k.replace("-","\\-")+"=([^&]+)","i").exec(rest);
+      if(r && !headers.some(x=>x.toLowerCase().startsWith(k.toLowerCase()+"="))) headers.push(k+"="+r[1]);
+    });
+  }
+
+  if(fmt==="url") return url;
+  if(fmt==="clearkey") return license ? `drmScheme=clearkey&drmLicense=${license}` : "No KID:KEY found";
+  if(fmt==="p2"){
+    const hp=headers.length ? "|"+headers.join("&") : "|";
+    return `${url}${hp}${license ? (hp==="|"?"":"&")+"drmScheme=clearkey&drmLicense="+license : ""}`;
+  }
+  // Player format 1 intentionally keeps the requested syntax.
+  return `${url}|${license ? "drmScheme=clearkey&drmLicense="+license : "drmScheme=clearkey"}`;
+}
+
+function render(){
+  const items=parseInput($("input").value);
+  if(!items.length){
+    currentNormal=currentTelegram="";
+    currentOutput="No usable MPD/stream URL or KID:KEY information found.";
+    $("output").textContent=currentOutput;
+    $("status").textContent="Nothing to convert";
+    return;
+  }
+
+  const fmt=$("format").value;
+  const normal=items.map((item,i)=>{
+    const explicitName=$("name").value.trim();
+    const name=item.name || explicitName || `Entry ${i+1}`;
+    const chosen=fmt==="telegram" ? "p1" : fmt;
+    return {name,text:convertOne(item,chosen)};
+  });
+
+  currentNormal=normal.map(x=>x.text).join("\n");
+  currentTelegram=normal.map(x=>`\`\`\`${x.name}\n${x.text}\n\`\`\``).join("\n\n");
+
+  currentOutput=outputMode==="telegram" ? currentTelegram : currentNormal;
+  $("output").textContent=currentOutput;
+  $("status").textContent=`Converted ${items.length} entr${items.length===1?"y":"ies"} • ${new Date().toLocaleTimeString()}`;
+}
+
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); inputMode=b.dataset.mode;
+});
+
+document.querySelectorAll(".outtab").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".outtab").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); outputMode=b.dataset.output;
+  currentOutput=outputMode==="telegram"?currentTelegram:currentNormal;
+  $("output").textContent=currentOutput || "Converted link will appear here...";
+});
+
+$("format").onchange=()=>{
+  const v=$("format").value;
+  $("formatHelp").innerHTML={
+    p1:"https://.../cenc.mpd?|drmScheme=clearkey&amp;drmLicense=KID:KEY",
+    p2:"https://.../cenc.mpd|Cookie=...&amp;User-Agent=...&amp;Referer=...&amp;Origin=...&amp;drmScheme=clearkey&amp;drmLicense=KID:KEY",
+    url:"https://.../cenc.mpd",
+    clearkey:"drmScheme=clearkey&amp;drmLicense=KID:KEY",
+    telegram:"```Channel Name<br>Player Format 1 link<br>```"
+  }[v];
+};
+
+$("convert").onclick=render;
+$("loadExample").onclick=()=>{
+  $("input").value=examples.channel;
+  $("name").value="";
+  render();
+};
+$("clear").onclick=()=>{
+  $("input").value="";$("name").value="";
+  currentOutput=currentNormal=currentTelegram="";
+  $("output").textContent="Converted link will appear here...";
+  $("status").textContent="Ready";
+};
+document.querySelectorAll(".example").forEach(b=>b.onclick=()=>{
+  $("input").value=examples[b.dataset.example];
+  $("name").value="";
+  if(b.dataset.example==="hotstar") $("format").value="p2";
+  else $("format").value="p1";
+  $("format").dispatchEvent(new Event("change"));
+  render();
+});
+
+$("copy").onclick=async()=>{
+  if(!currentOutput)return;
+  await navigator.clipboard.writeText(currentOutput);
+  $("status").textContent="Copied current output";
+};
+$("copyAll").onclick=async()=>{
+  const all=currentNormal+(currentTelegram?`\n\n${currentTelegram}`:"");
+  if(!all.trim())return;
+  await navigator.clipboard.writeText(all);
+  $("status").textContent="Copied all generated formats";
+};
+$("download").onclick=()=>{
+  if(!currentOutput)return;
+  const blob=new Blob([currentOutput],{type:"text/plain;charset=utf-8"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="converted-links.txt";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+$("input").addEventListener("paste",()=>setTimeout(render,50));
+</script>
+</body>
+</html>
