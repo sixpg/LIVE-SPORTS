@@ -1,4 +1,34 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="13232" tvg-name="Pakistan vs Hong Kong C. | WILLOW - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11158/image/dark" group-title="Pakistan vs Hong Kong C.",Pakistan vs Hong Kong C. | WILLOW - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4a2e91842dcb199f01178ea0c3d63b03:482194761e3cb8c3e37d09f246a3aa72
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/thgxqyztyu/out/v1/4f530bd9dae64942b85a2ddc080823c4/cenc.mpd
+
+#EXTINF:-1 tvg-id="13232" tvg-name="Pakistan vs Hong Kong C. | WILLOW - ALT" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11158/image/dark" group-title="Pakistan vs Hong Kong C.",Pakistan vs Hong Kong C. | WILLOW - ALT
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4a2e91842dcb199f01178ea0c3d63b03:482194761e3cb8c3e37d09f246a3aa72
+https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/thgxqyztyu/out/v1/4f530bd9dae64942b85a2ddc080823c4/cenc.mpd
+
+#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | TSN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | TSN SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd
+
+#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | TSN SPORTS 4 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | TSN SPORTS 4 - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=abc5b2883121012850ebda05b528c5ec:e5250924f4b738905f7163a0134587a7
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ihys8nw4wv/out/v1/fde190f369484bc6b6117cc16cd82a9f/cenc.mpd
+
+#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream2.pro/hls/jnfezkbfz43.m3u8
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -278,9 +308,6 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/index.
 #KODIPROP:inputstream.adaptive.stream_headers=cookie=__hdnea__=st=1790494202~exp=1790515802~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=c22ec6273fc8f6b6b3f1e334518c2a7d1da5b22d308a4340f7243ad6b9c6199b&drmScheme=clearkey&drmLicense=dc44fe6251825774b90d58dcfa7d94e0:63e3ae853f483a86752b5b9e6d61eb20
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd
 
-#EXTINF:-1 tvg-id="13232" tvg-name="Pakistan vs Hong Kong C. | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11158/image/dark" group-title="Pakistan vs Hong Kong C.",Pakistan vs Hong Kong C. | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
 #EXTINF:-1 tvg-id="13233" tvg-name="India vs Afghanistan | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11158/image/dark" group-title="India vs Afghanistan",India vs Afghanistan | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
@@ -292,24 +319,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="13263" tvg-name="Chicago Bears vs Philadelphia Eagles | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs Philadelphia Eagles",Chicago Bears vs Philadelphia Eagles | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | TSN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | TSN SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd
-
-#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | TSN SPORTS 4 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | TSN SPORTS 4 - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=abc5b2883121012850ebda05b528c5ec:e5250924f4b738905f7163a0134587a7
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ihys8nw4wv/out/v1/fde190f369484bc6b6117cc16cd82a9f/cenc.mpd
-
-#EXTINF:-1 tvg-id="13264" tvg-name="Denver Broncos vs Los Angeles Rams | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Denver Broncos vs Los Angeles Rams",Denver Broncos vs Los Angeles Rams | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/jnfezkbfz43.m3u8
 
 #EXTINF:-1 tvg-id="13280" tvg-name="Japan vs Venezuela | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/851/image/dark" group-title="Japan vs Venezuela",Japan vs Venezuela | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
