@@ -1,29 +1,17 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="13425" tvg-name="Denver Nuggets vs Utah Jazz | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2329/image/dark" group-title="Denver Nuggets vs Utah Jazz",Denver Nuggets vs Utah Jazz | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream6.pro/hls/bvnsqdfvgha70.m3u8
-
-#EXTINF:-1 tvg-id="13426" tvg-name="Los Angeles Clippers vs Golden State Warriors | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2329/image/dark" group-title="Los Angeles Clippers vs Golden State Warriors",Los Angeles Clippers vs Golden State Warriors | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream6.pro/hls/ztyarueaghj71.m3u8
-
-#EXTINF:-1 tvg-id="13464" tvg-name="Seattle Seahawks vs Los Angeles Chargers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Seattle Seahawks vs Los Angeles Chargers",Seattle Seahawks vs Los Angeles Chargers | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream5.pro/hls/wnbcnxbcs42.m3u8
-
-#EXTINF:-1 tvg-id="13465" tvg-name="San Francisco 49ers vs Denver Broncos | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="San Francisco 49ers vs Denver Broncos",San Francisco 49ers vs Denver Broncos | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/57606/load-playlist?
-
-#EXTINF:-1 tvg-id="13466" tvg-name="Las Vegas Raiders vs Kansas City Chiefs | DAZN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Las Vegas Raiders vs Kansas City Chiefs",Las Vegas Raiders vs Kansas City Chiefs | DAZN SPORTS - AQ
+#EXTINF:-1 tvg-id="13452" tvg-name="Los Angeles Dodgers vs Atlanta Braves | FOX SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Atlanta Braves",Los Angeles Dodgers vs Atlanta Braves | FOX SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d6450102c3e09221d8fde9129cce153a:ee9820ac8ea30d8f217f96f7a8c795d5
-https://otte.cache.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/czr0xkkcv2/out/v1/ce9facdf04b24f409e89decf0f5b8884/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/fsu3wl2rwb/out/v1/be61206c04e643349d53fb22301f3b50/cenc.mpd
 
-#EXTINF:-1 tvg-id="13466" tvg-name="Las Vegas Raiders vs Kansas City Chiefs | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Las Vegas Raiders vs Kansas City Chiefs",Las Vegas Raiders vs Kansas City Chiefs | CRICFy LIVE
+#EXTINF:-1 tvg-id="13452" tvg-name="Los Angeles Dodgers vs Atlanta Braves | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Atlanta Braves",Los Angeles Dodgers vs Atlanta Braves | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream6.pro/hls/ijzriafaq41.m3u8
+https://edgestream5.pro/hls/16yuitzaerghbhc16.m3u8
+
+#EXTINF:-1 tvg-id="13463" tvg-name="Carolina Panthers vs Detroit Lions | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Carolina Panthers vs Detroit Lions",Carolina Panthers vs Detroit Lions | CRICFy LIVE
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -235,21 +223,7 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 #EXTINF:-1 tvg-id="13434" tvg-name="Afghanistan vs Bangladesh | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11189/image/dark" group-title="Afghanistan vs Bangladesh",Afghanistan vs Bangladesh | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
-#EXTINF:-1 tvg-id="13452" tvg-name="Los Angeles Dodgers vs Atlanta Braves | FOX SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Atlanta Braves",Los Angeles Dodgers vs Atlanta Braves | FOX SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/fsu3wl2rwb/out/v1/be61206c04e643349d53fb22301f3b50/cenc.mpd
-
-#EXTINF:-1 tvg-id="13452" tvg-name="Los Angeles Dodgers vs Atlanta Braves | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Los Angeles Dodgers vs Atlanta Braves",Los Angeles Dodgers vs Atlanta Braves | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream5.pro/hls/16yuitzaerghbhc16.m3u8
-
 #EXTINF:-1 tvg-id="13462" tvg-name="New Orleans Saints vs Atlanta Falcons | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="New Orleans Saints vs Atlanta Falcons",New Orleans Saints vs Atlanta Falcons | CRICFy LIVE
-https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="13463" tvg-name="Carolina Panthers vs Detroit Lions | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Carolina Panthers vs Detroit Lions",Carolina Panthers vs Detroit Lions | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
 
 #EXTINF:-1 tvg-id="13469" tvg-name="France vs Belgium | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/10783/image/dark" group-title="France vs Belgium",France vs Belgium | CRICFy LIVE
@@ -312,6 +286,14 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ccupb3gevq/out/v1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a49085f8da5e65af1efff0edac830b1f:4659bc58a85c062e3fe0c039a446fe47
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/9v8cttmhcw/out/v1/df4c5196e3d74e7d8f484fc25d9034f1/cenc.mpd
+
+#EXTINF:-1 tvg-id="13425" tvg-name="Denver Nuggets vs Utah Jazz | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2329/image/dark" group-title="Denver Nuggets vs Utah Jazz",Denver Nuggets vs Utah Jazz | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream6.pro/hls/bvnsqdfvgha70.m3u8
+
+#EXTINF:-1 tvg-id="13426" tvg-name="Los Angeles Clippers vs Golden State Warriors | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2329/image/dark" group-title="Los Angeles Clippers vs Golden State Warriors",Los Angeles Clippers vs Golden State Warriors | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream6.pro/hls/ztyarueaghj71.m3u8
 
 #EXTINF:-1 tvg-id="13431" tvg-name="WCL World Championship of Legends | WILLOW - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkZ0c8Wb0slhQCjc_XsPzMuqyX52rG-yapyEgJpdSmSQ&s=10" group-title="WCL World Championship of Legends",WCL World Championship of Legends | WILLOW - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -729,6 +711,24 @@ https://edgestream7.pro/hls/oipozuezeji33.m3u8
 #EXTINF:-1 tvg-id="13461" tvg-name="Tampa Bay Buccaneers vs Green Bay Packers | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Tampa Bay Buccaneers vs Green Bay Packers",Tampa Bay Buccaneers vs Green Bay Packers | LOW QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
 http://193.47.62.50/hls/zcccqqq.m3u8
+
+#EXTINF:-1 tvg-id="13464" tvg-name="Seattle Seahawks vs Los Angeles Chargers | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Seattle Seahawks vs Los Angeles Chargers",Seattle Seahawks vs Los Angeles Chargers | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream5.pro/hls/wnbcnxbcs42.m3u8
+
+#EXTINF:-1 tvg-id="13465" tvg-name="San Francisco 49ers vs Denver Broncos | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="San Francisco 49ers vs Denver Broncos",San Francisco 49ers vs Denver Broncos | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/57606/load-playlist?
+
+#EXTINF:-1 tvg-id="13466" tvg-name="Las Vegas Raiders vs Kansas City Chiefs | DAZN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Las Vegas Raiders vs Kansas City Chiefs",Las Vegas Raiders vs Kansas City Chiefs | DAZN SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d6450102c3e09221d8fde9129cce153a:ee9820ac8ea30d8f217f96f7a8c795d5
+https://otte.cache.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/czr0xkkcv2/out/v1/ce9facdf04b24f409e89decf0f5b8884/cenc.mpd
+
+#EXTINF:-1 tvg-id="13466" tvg-name="Las Vegas Raiders vs Kansas City Chiefs | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Las Vegas Raiders vs Kansas City Chiefs",Las Vegas Raiders vs Kansas City Chiefs | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream6.pro/hls/ijzriafaq41.m3u8
 
 #EXTINF:-1 tvg-id="13467" tvg-name="Minnesota Vikings vs Miami Dolphins | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Minnesota Vikings vs Miami Dolphins",Minnesota Vikings vs Miami Dolphins | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
