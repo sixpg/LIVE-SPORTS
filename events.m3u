@@ -1,4 +1,15 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="13553" tvg-name="Chicago White Sox vs Cleveland Guardians | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Cleveland Guardians",Chicago White Sox vs Cleveland Guardians | TNT SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
+
+#EXTINF:-1 tvg-id="13553" tvg-name="Chicago White Sox vs Cleveland Guardians | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Cleveland Guardians",Chicago White Sox vs Cleveland Guardians | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream4.pro/hls/dazhfiach15.m3u8
+
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY Via APPLE TV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY Via APPLE TV
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -369,17 +380,6 @@ https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tear
 
 #EXTINF:-1 tvg-id="13552" tvg-name="Chicago Bulls vs Memphis Grizzlies | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/2329/image/dark" group-title="Chicago Bulls vs Memphis Grizzlies",Chicago Bulls vs Memphis Grizzlies | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
-
-#EXTINF:-1 tvg-id="13553" tvg-name="Chicago White Sox vs Cleveland Guardians | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Cleveland Guardians",Chicago White Sox vs Cleveland Guardians | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
-
-#EXTINF:-1 tvg-id="13553" tvg-name="Chicago White Sox vs Cleveland Guardians | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11205/image/dark" group-title="Chicago White Sox vs Cleveland Guardians",Chicago White Sox vs Cleveland Guardians | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream4.pro/hls/dazhfiach15.m3u8
 
 #EXTINF:-1 tvg-id="13554" tvg-name="Dallas Cowboys vs Tampa Bay Buccaneers | TSN SPORTS 1 - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Dallas Cowboys vs Tampa Bay Buccaneers",Dallas Cowboys vs Tampa Bay Buccaneers | TSN SPORTS 1 - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
