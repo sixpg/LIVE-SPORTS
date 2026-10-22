@@ -1,298 +1,41 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a0792c0c9b157d5e6a5239460936ff3b:459887781ab8b34c993cdd8c124fd3f6
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/bslade30ht/out/v1/d2f281563daa4c8da8e2fd168552b757/cenc.mpd
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58406/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630523.m3u8?txSecret=7b6f149bac39548865f86e595f5395af&txTime=6ADA6D5C
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream3.pro/hls/24SDAZFcsqnj24.m3u8
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=cb73708bf8ec8dae5186e528494403c2-1792695001279
-https://sonymtmnew.akamaized.net/hls/live/2120302/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14040" tvg-name="Bournemouth vs AC Milan | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Bournemouth vs AC Milan",Bournemouth vs AC Milan | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.41/hls/FAFAFAFA.m3u8
-
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | TNT SPORTS - AQ
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | TNT SPORTS - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | TNT SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd
 
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58410/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630522.m3u8?txSecret=49b44508d40697186e4e1e08d7d5fe94&txTime=6ADA6DB1
-
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream6.pro/hls/eJmauBDCIf.m3u8
-
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2018458/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14041" tvg-name="Besiktas JK vs Crystal Palace | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Besiktas JK vs Crystal Palace",Besiktas JK vs Crystal Palace | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/eeee.m3u8
-
-#EXTINF:-1 tvg-id="14042" tvg-name="TSG Hoffenheim vs Olympique Lyonnais | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="TSG Hoffenheim vs Olympique Lyonnais",TSG Hoffenheim vs Olympique Lyonnais | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630556.m3u8?txSecret=d16fe90fdae33ae1616125296cf34e32&txTime=6ADA6DE7
-
-#EXTINF:-1 tvg-id="14042" tvg-name="TSG Hoffenheim vs Olympique Lyonnais | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="TSG Hoffenheim vs Olympique Lyonnais",TSG Hoffenheim vs Olympique Lyonnais | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2094587/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14042" tvg-name="TSG Hoffenheim vs Olympique Lyonnais | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="TSG Hoffenheim vs Olympique Lyonnais",TSG Hoffenheim vs Olympique Lyonnais | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/V111AAA.m3u8
-
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | TNT SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | TNT SPORTS - AQ
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | FANCODE - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | FANCODE - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca
+#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
+https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
+
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | MotoGP - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | MotoGP - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e03f302ec4dabcccca82cc9f76731ec9:53ea1027d2bf2893a552cf15bc0366de
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/wjeweupwyc/out/v1/8197c8e055c94a868623653ac55c10bf/cenc.mpd
 
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=b3671425e0d166c2b74db9b9f818ddab:6e109c62794713118112874596d57a94
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tzsuwjomtc/out/v1/7c7d16e0b54848b0ba34ec2d68d0b638/cenc.mpd
-
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58412/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630537.m3u8?txSecret=86814aa0740e5a67f9bdc4e810ff8735&txTime=6ADA6DC2
-
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | HD SERVER
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | HD SERVER" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | HD SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream5.pro/hls/b0h5fNwDKH.m3u8
+https://edgestream2.pro/hls/oeenzgezcz47.m3u8
 
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2120308/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14043" tvg-name="Celtic vs Celta Vigo | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Celtic vs Celta Vigo",Celtic vs Celta Vigo | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.41/hls/FAFAFAFAA.m3u8
-
-#EXTINF:-1 tvg-id="14044" tvg-name="Jagiellonia Biaystok vs RSC Anderlecht | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Jagiellonia Biaystok vs RSC Anderlecht",Jagiellonia Biaystok vs RSC Anderlecht | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630562.m3u8?txSecret=ceebb2c1571d52fbcaae38e5e4f81558&txTime=6ADA6E0B
-
-#EXTINF:-1 tvg-id="14044" tvg-name="Jagiellonia Biaystok vs RSC Anderlecht | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Jagiellonia Biaystok vs RSC Anderlecht",Jagiellonia Biaystok vs RSC Anderlecht | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2005444/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14044" tvg-name="Jagiellonia Biaystok vs RSC Anderlecht | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Jagiellonia Biaystok vs RSC Anderlecht",Jagiellonia Biaystok vs RSC Anderlecht | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/V111A.m3u8
-
-#EXTINF:-1 tvg-id="14045" tvg-name="Lillestrm SK vs Real Sociedad | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Lillestrm SK vs Real Sociedad",Lillestrm SK vs Real Sociedad | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58411/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14045" tvg-name="Lillestrm SK vs Real Sociedad | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Lillestrm SK vs Real Sociedad",Lillestrm SK vs Real Sociedad | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630584.m3u8?txSecret=6399899ba26ccb55880c32a8cb631ff7&txTime=6ADA6DD4
-
-#EXTINF:-1 tvg-id="14045" tvg-name="Lillestrm SK vs Real Sociedad | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Lillestrm SK vs Real Sociedad",Lillestrm SK vs Real Sociedad | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=cb73708bf8ec8dae5186e528494403c2-1792695001279
-https://sonymtmnew.akamaized.net/hls/live/2022316/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14045" tvg-name="Lillestrm SK vs Real Sociedad | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Lillestrm SK vs Real Sociedad",Lillestrm SK vs Real Sociedad | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/V111AA.m3u8
-
-#EXTINF:-1 tvg-id="14046" tvg-name="NK Celje vs Red Bull Salzburg | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="NK Celje vs Red Bull Salzburg",NK Celje vs Red Bull Salzburg | VIX SPANISH - AQ
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | SPOTV - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | SPOTV - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a26846cbe377720907bdcae3d467cf50:a247d75916c386b8a23e65c79a865ae1
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/86ukmhi08m/out/v1/6a5582b3fd4e42b097a2394c5f65ccd4/cenc.mpd
+#KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
+https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd
 
-#EXTINF:-1 tvg-id="14046" tvg-name="NK Celje vs Red Bull Salzburg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="NK Celje vs Red Bull Salzburg",NK Celje vs Red Bull Salzburg | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630529.m3u8?txSecret=0db2e6aa11bfee9104ac0c8bc6db7cb3&txTime=6ADA6E1C
+#EXTINF:-1 tvg-id="866" tvg-name="Motogp | LOW SERVER" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
+http://193.47.62.41/hls/duuuAAAAAA.m3u8?
 
-#EXTINF:-1 tvg-id="14046" tvg-name="NK Celje vs Red Bull Salzburg | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="NK Celje vs Red Bull Salzburg",NK Celje vs Red Bull Salzburg | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2094589/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14046" tvg-name="NK Celje vs Red Bull Salzburg | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="NK Celje vs Red Bull Salzburg",NK Celje vs Red Bull Salzburg | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111AAA.m3u8
-
-#EXTINF:-1 tvg-id="14047" tvg-name="Olympiacos FC vs AC Sparta Praha | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Olympiacos FC vs AC Sparta Praha",Olympiacos FC vs AC Sparta Praha | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630617.m3u8?txSecret=4167ddabf65775bb78bab2e959428008&txTime=6ADA6E2E
-
-#EXTINF:-1 tvg-id="14047" tvg-name="Olympiacos FC vs AC Sparta Praha | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Olympiacos FC vs AC Sparta Praha",Olympiacos FC vs AC Sparta Praha | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2120307/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14047" tvg-name="Olympiacos FC vs AC Sparta Praha | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Olympiacos FC vs AC Sparta Praha",Olympiacos FC vs AC Sparta Praha | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.59/hls/FAFAFA.m3u8
-
-#EXTINF:-1 tvg-id="14048" tvg-name="Omonia Nicosia vs Benfica | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Omonia Nicosia vs Benfica",Omonia Nicosia vs Benfica | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58409/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14048" tvg-name="Omonia Nicosia vs Benfica | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Omonia Nicosia vs Benfica",Omonia Nicosia vs Benfica | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630623.m3u8?txSecret=56e3cf705eef8aa8c496a2b27db00781&txTime=6ADA6E3F
-
-#EXTINF:-1 tvg-id="14048" tvg-name="Omonia Nicosia vs Benfica | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Omonia Nicosia vs Benfica",Omonia Nicosia vs Benfica | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=cb73708bf8ec8dae5186e528494403c2-1792695001279
-https://sonymtmnew.akamaized.net/hls/live/2018457/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14048" tvg-name="Omonia Nicosia vs Benfica | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="Omonia Nicosia vs Benfica",Omonia Nicosia vs Benfica | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.59/hls/FAFAFAF.m3u8
-
-#EXTINF:-1 tvg-id="14049" tvg-name="FC Viktoria Plzen vs Levski Sofia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="FC Viktoria Plzen vs Levski Sofia",FC Viktoria Plzen vs Levski Sofia | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://player.online878.com/
-https://live.vivo155.com/live/hd-en-1-4630636.m3u8?txSecret=5538f25177e3de312d21101b76cba345&txTime=6ADA6DF7
-
-#EXTINF:-1 tvg-id="14049" tvg-name="FC Viktoria Plzen vs Levski Sofia | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="FC Viktoria Plzen vs Levski Sofia",FC Viktoria Plzen vs Levski Sofia | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2120300/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14049" tvg-name="FC Viktoria Plzen vs Levski Sofia | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/679/image/dark" group-title="FC Viktoria Plzen vs Levski Sofia",FC Viktoria Plzen vs Levski Sofia | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/V111AAAA.m3u8
-
-#EXTINF:-1 tvg-id="14060" tvg-name="AGF vs KF Egnatia | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AGF vs KF Egnatia",AGF vs KF Egnatia | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=5a8545c5d1fb241c2bdca03797584a42:24528e1e70bcf402da7734edd59430fe
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/4y1grvksop/out/v1/b55e36403f7042409bb6f5fcfcc160c4/cenc.mpd
-
-#EXTINF:-1 tvg-id="14060" tvg-name="AGF vs KF Egnatia | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AGF vs KF Egnatia",AGF vs KF Egnatia | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel8.m3u8
-
-#EXTINF:-1 tvg-id="14060" tvg-name="AGF vs KF Egnatia | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AGF vs KF Egnatia",AGF vs KF Egnatia | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111.m3u8
-
-#EXTINF:-1 tvg-id="14061" tvg-name="AFC Ajax vs Atalanta | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs Atalanta",AFC Ajax vs Atalanta | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3f2baebda6ca8366b4335b69426d648b:c75e019c75d22f28af42ad32c94ca967
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nutk9fsmtw/out/v1/90efc41f5f384e97be25bab0bfc53de9/cenc.mpd
-
-#EXTINF:-1 tvg-id="14061" tvg-name="AFC Ajax vs Atalanta | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs Atalanta",AFC Ajax vs Atalanta | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58408/load-playlist?
-
-#EXTINF:-1 tvg-id="14061" tvg-name="AFC Ajax vs Atalanta | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs Atalanta",AFC Ajax vs Atalanta | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel18.m3u8
-
-#EXTINF:-1 tvg-id="14061" tvg-name="AFC Ajax vs Atalanta | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs Atalanta",AFC Ajax vs Atalanta | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2118669/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14061" tvg-name="AFC Ajax vs Atalanta | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AFC Ajax vs Atalanta",AFC Ajax vs Atalanta | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111AAAAQQQ.m3u8
-
-#EXTINF:-1 tvg-id="14062" tvg-name="FK Borac Banja Luka vs Kuopion Palloseura | LOW SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FK Borac Banja Luka vs Kuopion Palloseura",FK Borac Banja Luka vs Kuopion Palloseura | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111A.m3u8
-
-#EXTINF:-1 tvg-id="14063" tvg-name="Sporting Braga vs KAA Gent | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Sporting Braga vs KAA Gent",Sporting Braga vs KAA Gent | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel13.m3u8
-
-#EXTINF:-1 tvg-id="14063" tvg-name="Sporting Braga vs KAA Gent | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Sporting Braga vs KAA Gent",Sporting Braga vs KAA Gent | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2118672/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14063" tvg-name="Sporting Braga vs KAA Gent | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Sporting Braga vs KAA Gent",Sporting Braga vs KAA Gent | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111AAAA.m3u8
-
-#EXTINF:-1 tvg-id="14064" tvg-name="FC Midtjylland vs Sint-Truidense VV | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FC Midtjylland vs Sint-Truidense VV",FC Midtjylland vs Sint-Truidense VV | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=35e04df74d889d031dbb28993eeae09e:e14b28ef8968699295b3a30b1cdf0eb0
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ttwuzepxug/out/v1/3bb7be9163524e72bc8ec72519235803/cenc.mpd
-
-#EXTINF:-1 tvg-id="14064" tvg-name="FC Midtjylland vs Sint-Truidense VV | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FC Midtjylland vs Sint-Truidense VV",FC Midtjylland vs Sint-Truidense VV | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel17.m3u8
-
-#EXTINF:-1 tvg-id="14064" tvg-name="FC Midtjylland vs Sint-Truidense VV | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FC Midtjylland vs Sint-Truidense VV",FC Midtjylland vs Sint-Truidense VV | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2118668/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14064" tvg-name="FC Midtjylland vs Sint-Truidense VV | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="FC Midtjylland vs Sint-Truidense VV",FC Midtjylland vs Sint-Truidense VV | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111AAAAQQ.m3u8
-
-#EXTINF:-1 tvg-id="14065" tvg-name="Lincoln Red Imps vs FC Twente | VIX SPANISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Lincoln Red Imps vs FC Twente",Lincoln Red Imps vs FC Twente | VIX SPANISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1efa5a5a68fe1fc27d73a7c5e95105bf:eec5933c23dc8a641ae9cdf8518cb675
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/eovn66qpnd/out/v1/bdab973002a441e59ec79082d0492fb6/cenc.mpd
-
-#EXTINF:-1 tvg-id="14065" tvg-name="Lincoln Red Imps vs FC Twente | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Lincoln Red Imps vs FC Twente",Lincoln Red Imps vs FC Twente | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel9.m3u8
-
-#EXTINF:-1 tvg-id="14065" tvg-name="Lincoln Red Imps vs FC Twente | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Lincoln Red Imps vs FC Twente",Lincoln Red Imps vs FC Twente | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2118676/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14065" tvg-name="Lincoln Red Imps vs FC Twente | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="Lincoln Red Imps vs FC Twente",Lincoln Red Imps vs FC Twente | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.55/hls/D111AAAAQ.m3u8
-
-#EXTINF:-1 tvg-id="14066" tvg-name="AS Monaco vs SC Freiburg | PARAMOUNT+ HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs SC Freiburg",AS Monaco vs SC Freiburg | PARAMOUNT+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58407/load-playlist-multi?
-
-#EXTINF:-1 tvg-id="14066" tvg-name="AS Monaco vs SC Freiburg | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs SC Freiburg",AS Monaco vs SC Freiburg | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://xlz.domainkqt.cc/&Origin=https://xlz.domainkqt.cc
-https://live1.quickscoreboardz.com/live/channel24.m3u8
-
-#EXTINF:-1 tvg-id="14066" tvg-name="AS Monaco vs SC Freiburg | SonyLiv" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs SC Freiburg",AS Monaco vs SC Freiburg | SonyLiv
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=b3499b41f8923f0356c8b7377458dbb4-1792696201474
-https://sonymtmnew.akamaized.net/hls/live/2118670/footlive2210/ENG/std_lrh-800300010.m3u8?hdnea=exp=1792715180~acl=/*~id=25029118503491533116734949005709~hmac=ea5462b55c1c775ad01858bfd9bc5f8040cfed41b86dc9133d8cc1aa1b8023da
-
-#EXTINF:-1 tvg-id="14066" tvg-name="AS Monaco vs SC Freiburg | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/17015/image/dark" group-title="AS Monaco vs SC Freiburg",AS Monaco vs SC Freiburg | LOW QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/V111.m3u8
+#EXTINF:-1 tvg-id="14069" tvg-name="Philadelphia 76ers vs Cleveland Cavaliers | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Philadelphia 76ers vs Cleveland Cavaliers",Philadelphia 76ers vs Cleveland Cavaliers | HD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream5.pro/hls/mlkijfezag65.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -346,40 +89,6 @@ https://edgestream3.pro/hls/hbfkazbkaznc49.m3u8?
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | LOW SERVER" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
 http://193.47.62.55/hls/NNNN.m3u8
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | TNT SPORTS - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | TNT SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | FANCODE - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | FANCODE - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca
-https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | MotoGP - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | MotoGP - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e03f302ec4dabcccca82cc9f76731ec9:53ea1027d2bf2893a552cf15bc0366de
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/wjeweupwyc/out/v1/8197c8e055c94a868623653ac55c10bf/cenc.mpd
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | HD SERVER" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | HD SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream2.pro/hls/oeenzgezcz47.m3u8
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | SPOTV - AQ" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | SPOTV - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed
-https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd
-
-#EXTINF:-1 tvg-id="866" tvg-name="Motogp | LOW SERVER" tvg-logo="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png" group-title="Motogp",Motogp | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
-http://193.47.62.41/hls/duuuAAAAAA.m3u8?
 
 #EXTINF:-1 tvg-id="1089" tvg-name="Smack Down | CRICFy LIVE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/WWE_Logo.svg/2243px-WWE_Logo.svg.png" group-title="Smack Down",Smack Down | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
@@ -598,10 +307,6 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1
 #KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
-
-#EXTINF:-1 tvg-id="14069" tvg-name="Philadelphia 76ers vs Cleveland Cavaliers | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Philadelphia 76ers vs Cleveland Cavaliers",Philadelphia 76ers vs Cleveland Cavaliers | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream5.pro/hls/mlkijfezag65.m3u8
 
 #EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
