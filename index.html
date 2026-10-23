@@ -8,39 +8,41 @@
 :root{color-scheme:dark;--red:#e50914;--panel:rgba(18,18,18,.92);--muted:#aaa}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif}
-body{padding:20px}
-.app{max-width:1200px;margin:auto}
+body{padding:12px}
+.app{max-width:1000px;margin:auto}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.brand{font-size:25px;font-weight:900;letter-spacing:1px}.brand span{color:var(--red)}
+.brand{font-size:21px;font-weight:900;letter-spacing:.7px}.brand span{color:var(--red)}
 .pill{font-size:11px;border:1px solid #444;border-radius:20px;padding:6px 10px;color:#ccc}
-.stage{position:relative;background:#000;aspect-ratio:16/9;max-height:70vh;overflow:hidden;border-radius:10px;box-shadow:0 12px 45px #000}
+.stage{position:relative;background:#000;aspect-ratio:16/9;max-height:66vh;overflow:hidden;border-radius:8px;box-shadow:0 8px 28px #000}
 video{width:100%;height:100%;display:block;background:#000}
 .overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .spinner{width:48px;height:48px;border:4px solid #ffffff35;border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 .stage.loading .spinner{display:block}
-.controls{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,rgba(0,0,0,.92),transparent 42%);opacity:1;transition:opacity .25s;padding:18px}
+.controls{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,rgba(0,0,0,.88),transparent 35%);opacity:1;transition:opacity .25s;padding:12px}
 .stage.idle .controls{opacity:0;pointer-events:none}
 .topline{position:absolute;top:18px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;text-shadow:0 2px 8px #000}
 .now{font-size:12px;letter-spacing:1.5px;color:#eee}
 .status{font-size:11px;color:#ddd;background:#0009;padding:6px 8px;border-radius:4px}
-.timeline{width:100%;accent-color:var(--red);cursor:pointer;margin:0 0 13px}
-.controlrow{display:flex;align-items:center;gap:14px}
+.timeline{width:100%;accent-color:var(--red);cursor:pointer;margin:0 0 8px;height:4px}
+.controlrow{display:flex;align-items:center;gap:9px;min-width:0}
 button,select,input,textarea{font:inherit}
-.iconbtn{border:0;background:transparent;color:#fff;cursor:pointer;font-size:22px;padding:5px;min-width:30px}
+.iconbtn{border:0;background:transparent;color:#fff;cursor:pointer;font-size:19px;padding:3px;min-width:27px;line-height:1.2}
 .iconbtn:hover{color:#ddd}
-.time{font-size:12px;color:#eee;white-space:nowrap}
+.time{font-size:11px;color:#eee;white-space:nowrap}
+.livebtn{font-size:10px!important;letter-spacing:.4px;background:#e50914!important;border-radius:4px;padding:5px 7px!important;min-width:auto!important;font-weight:800}
+.livebtn:not(.is-live){background:#242424!important;color:#bbb!important;border:1px solid #555!important}
 .spacer{flex:1}
 .ctrlselect{background:#151515;color:#fff;border:1px solid #555;border-radius:5px;padding:7px 8px;font-size:12px;max-width:125px}
-.panel{margin-top:18px;background:#111;border:1px solid #262626;border-radius:10px;padding:18px}
+.panel{margin-top:12px;background:#111;border:1px solid #262626;border-radius:8px;padding:14px}
 .panel h2{font-size:15px;margin:0 0 14px}
-.fields{display:grid;grid-template-columns:1fr;gap:12px}
+.fields{display:grid;grid-template-columns:1fr;gap:9px}
 label{display:block;font-size:12px;color:#ccc;margin-bottom:6px}
-input,textarea{width:100%;background:#080808;color:#fff;border:1px solid #393939;border-radius:6px;padding:11px 12px;outline:none}
+input,textarea{width:100%;background:#080808;color:#fff;border:1px solid #393939;border-radius:5px;padding:9px 10px;outline:none}
 input:focus,textarea:focus{border-color:#999}
-textarea{resize:vertical;min-height:110px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.5}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.action{border:0;border-radius:5px;padding:11px 16px;font-weight:700;cursor:pointer}
+textarea{resize:vertical;min-height:84px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.5}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.action{border:0;border-radius:5px;padding:9px 13px;font-weight:700;cursor:pointer;font-size:13px}
 .primary{background:var(--red);color:white}.secondary{background:#292929;color:white;border:1px solid #444}
 .message{margin-top:12px;color:#bbb;font-size:12px;line-height:1.5;min-height:18px;overflow-wrap:anywhere}
 .hint{font-size:12px;line-height:1.5;color:#999;margin:10px 0 0}
@@ -50,7 +52,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
 .stage:fullscreen video{width:100%;height:100%;object-fit:contain}
 .stage:-webkit-full-screen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto;border-radius:0}
 .stage:-webkit-full-screen video{width:100%;height:100%;object-fit:contain}
-@media(max-width:600px){body{padding:10px}.brand{font-size:21px}.stage{border-radius:5px}.controls{padding:9px}.topline{top:9px;left:10px;right:10px}.controlrow{gap:5px;flex-wrap:wrap}.iconbtn{font-size:19px;min-width:27px;padding:3px}.time{font-size:10px}.ctrlselect{max-width:82px;padding:5px 3px;font-size:10px}.panel{padding:13px}.status{font-size:9px}.stage:fullscreen,.stage:-webkit-full-screen{padding-bottom:env(safe-area-inset-bottom)}}
+@media(max-width:600px){body{padding:8px}.brand{font-size:19px}.stage{border-radius:5px;max-height:none}.controls{padding:8px}.topline{top:8px;left:9px;right:9px}.controlrow{gap:4px;flex-wrap:nowrap}.iconbtn{font-size:17px;min-width:24px;padding:2px}.time{font-size:9px}.ctrlselect{max-width:70px;padding:4px 2px;font-size:9px}#volume{display:none!important}.panel{padding:11px}.status{font-size:9px}.stage:fullscreen,.stage:-webkit-full-screen{padding-bottom:env(safe-area-inset-bottom)}}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.8/shaka-player.compiled.js"></script>
 </head>
@@ -66,6 +68,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     <input class="timeline" id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
     <div class="controlrow">
       <button class="iconbtn" id="play" aria-label="Play or pause">▶</button>
+      <button class="iconbtn" id="goLive" aria-label="Go to live edge" title="Go Live" style="display:none">● LIVE</button>
       <button class="iconbtn" id="back" aria-label="Back 10 seconds">↶</button>
       <button class="iconbtn" id="forward" aria-label="Forward 10 seconds">↷</button>
       <button class="iconbtn" id="mute" aria-label="Mute">🔊</button>
@@ -106,6 +109,38 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     t = Math.floor(t);
     const h=Math.floor(t/3600), m=Math.floor((t%3600)/60), s=t%60;
     return h ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${m}:${String(s).padStart(2,'0')}`;
+  }
+  function isLiveStream(){
+    if (!player) return false;
+    try {
+      const seek = player.seekRange();
+      return !!seek && Number.isFinite(seek.end) && seek.end > 0 &&
+        (!Number.isFinite(video.duration) || video.duration === Infinity || video.duration > seek.end + 2);
+    } catch (_) { return false; }
+  }
+  function refreshLiveButton(){
+    const btn = $('goLive');
+    if (!player) { btn.style.display='none'; return; }
+    const range = player.seekRange();
+    const live = isLiveStream();
+    btn.style.display = live ? 'inline-flex' : 'none';
+    const nearEdge = live && range && (range.end - video.currentTime) <= 15;
+    btn.textContent = nearEdge ? '● LIVE' : '↗ LIVE';
+    btn.classList.toggle('is-live', !!nearEdge);
+    btn.title = nearEdge ? 'At live edge' : 'Go back to live';
+    btn.setAttribute('aria-label', nearEdge ? 'At live edge' : 'Go back to live');
+  }
+  function goToLive(){
+    if (!player) return;
+    try {
+      const range = player.seekRange();
+      if (range && Number.isFinite(range.end)) {
+        video.currentTime = Math.max(range.start || 0, range.end - 1.5);
+        video.play().catch(()=>{});
+        setMessage('Jumped to the live edge.');
+      }
+    } catch (_) {}
+    showControls();
   }
   function showControls(){
     stage.classList.remove('idle');
@@ -152,6 +187,8 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     });
     player.addEventListener('adaptation', refreshQuality);
     player.addEventListener('trackschanged', refreshQuality);
+    player.addEventListener('loaded', refreshLiveButton);
+    player.addEventListener('seekrangechanged', refreshLiveButton);
     video.addEventListener('playing',()=>{ $('play').textContent='❚❚'; setStatus('PLAYING'); showControls(); });
     video.addEventListener('pause',()=>{ $('play').textContent='▶'; if(!video.ended)setStatus('PAUSED'); stage.classList.remove('loading'); stage.classList.remove('idle'); });
     video.addEventListener('waiting',()=>{stage.classList.add('loading');setStatus('BUFFERING');});
@@ -159,6 +196,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     video.addEventListener('timeupdate',()=>{
       $('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;
       if(!seeking && Number.isFinite(video.duration) && video.duration>0) $('seek').value=String(video.currentTime/video.duration*1000);
+      refreshLiveButton();
     });
     video.addEventListener('durationchange',()=>{$('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;});
     setStatus('READY');
@@ -182,6 +220,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
       stage.classList.add('loading');setStatus('LOADING');setMessage('Loading manifest and preparing playback…');
       await player.load(uri);
       $('streamTitle').textContent='NOW PLAYING';
+      refreshLiveButton();
       refreshQuality();
       setStatus('READY');setMessage('Stream loaded. Press Play if playback does not start automatically.');
       try{await video.play();}catch(_){setMessage('Stream loaded. Press Play to begin; your browser may require a user gesture.');}
@@ -218,6 +257,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     setMessage('Example keys filled. Add your MPD URL and load the stream.');
   });
   $('play').addEventListener('click',()=>video.paused ? video.play().catch(()=>{}) : video.pause());
+  $('goLive').addEventListener('click',goToLive);
   $('back').addEventListener('click',()=>{video.currentTime=Math.max(0,video.currentTime-10);showControls();});
   $('forward').addEventListener('click',()=>{video.currentTime=Math.min(video.duration||Infinity,video.currentTime+10);showControls();});
   $('mute').addEventListener('click',()=>{video.muted=!video.muted;$('mute').textContent=video.muted?'🔇':'🔊';});
