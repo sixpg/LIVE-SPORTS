@@ -45,7 +45,12 @@ textarea{resize:vertical;min-height:110px;font-family:ui-monospace,SFMono-Regula
 .message{margin-top:12px;color:#bbb;font-size:12px;line-height:1.5;min-height:18px;overflow-wrap:anywhere}
 .hint{font-size:12px;line-height:1.5;color:#999;margin:10px 0 0}
 footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
-@media(max-width:600px){body{padding:10px}.brand{font-size:21px}.stage{border-radius:5px}.controls{padding:9px}.topline{top:9px;left:10px;right:10px}.controlrow{gap:5px}.iconbtn{font-size:19px;min-width:27px;padding:3px}.time{font-size:10px}.ctrlselect{max-width:82px;padding:5px 3px;font-size:10px}.panel{padding:13px}.status{font-size:9px}}
+ .always-fullscreen{font-size:22px!important;min-width:34px!important;background:#0008;border-radius:5px;padding:4px 7px!important}
+.stage:fullscreen{width:100vw;height:100vh;height:100dvh;max-height:none;aspect-ratio:auto;border-radius:0}
+.stage:fullscreen video{width:100%;height:100%;object-fit:contain}
+.stage:-webkit-full-screen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto;border-radius:0}
+.stage:-webkit-full-screen video{width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){body{padding:10px}.brand{font-size:21px}.stage{border-radius:5px}.controls{padding:9px}.topline{top:9px;left:10px;right:10px}.controlrow{gap:5px;flex-wrap:wrap}.iconbtn{font-size:19px;min-width:27px;padding:3px}.time{font-size:10px}.ctrlselect{max-width:82px;padding:5px 3px;font-size:10px}.panel{padding:13px}.status{font-size:9px}.stage:fullscreen,.stage:-webkit-full-screen{padding-bottom:env(safe-area-inset-bottom)}}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.8/shaka-player.compiled.js"></script>
 </head>
@@ -56,7 +61,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
 <div class="stage" id="stage">
   <video id="video" playsinline crossorigin="anonymous"></video>
   <div class="overlay"><div class="spinner"></div></div>
-  <div class="topline"><div class="now" id="streamTitle">NOW PLAYING</div><div class="status" id="status">READY</div></div>
+  <div class="topline"><div class="now" id="streamTitle">NOW PLAYING</div><div style="display:flex;align-items:center;gap:8px"><div class="status" id="status">READY</div><button class="iconbtn always-fullscreen" id="fullscreenTop" aria-label="Enter fullscreen" title="Fullscreen">⛶</button></div></div>
   <div class="controls" id="controls">
     <input class="timeline" id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
     <div class="controlrow">
@@ -71,7 +76,7 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
       <select class="ctrlselect" id="speed" aria-label="Playback speed">
         <option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="1.75">1.75×</option><option value="2">2×</option>
       </select>
-      <button class="iconbtn" id="fullscreen" aria-label="Fullscreen">⛶</button>
+      <button class="iconbtn" id="fullscreen" aria-label="Fullscreen" title="Fullscreen">⛶</button>
     </div>
   </div>
 </div>
@@ -239,12 +244,23 @@ footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
     if(Number.isFinite(video.duration)&&video.duration>0)video.currentTime=Number($('seek').value)/1000*video.duration;
     seeking=false;showControls();
   });
-  $('fullscreen').addEventListener('click',()=>{
-    const target=stage;
-    if(document.fullscreenElement)document.exitFullscreen?.();
-    else if(target.requestFullscreen)target.requestFullscreen().catch(()=>{});
-    else if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();
-  });
+  async function toggleFullscreen(){
+    try {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) await document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        return;
+      }
+      if (stage.requestFullscreen) await stage.requestFullscreen();
+      else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
+      else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+      else setMessage('Fullscreen is not supported in this viewing mode. Open the HTML player in Chrome or deploy it to a website, then try again.');
+    } catch (e) {
+      setMessage('Fullscreen was blocked by this browser or preview. Open the player directly in Chrome or deploy it to a website and try again.');
+    }
+  }
+  $('fullscreen').addEventListener('click', toggleFullscreen);
+  $('fullscreenTop').addEventListener('click', toggleFullscreen);
   stage.addEventListener('mousemove',showControls);stage.addEventListener('touchstart',showControls,{passive:true});
   document.addEventListener('keydown',e=>{
     if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;
