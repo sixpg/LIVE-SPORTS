@@ -6,12 +6,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <!-- Netflix Skin CSS (SnehTV wala) -->
     <link rel="stylesheet" href="https://tulnit.fun/player.css" />
-    <script type="text/javascript" src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
-</head>
+    <script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
 
-<body>
     <style>
         html, body {
             background: #000;
@@ -27,17 +26,15 @@
             height: 100% !important;
         }
 
-        /* Netflix skin adjustments */
         .jw-skin-netflix .jw-display-icon-container {
             border-radius: 50%;
         }
 
-        /* Title hide */
-        .jw-title-primary, .jw-title-secondary {
+        .jw-title-primary,
+        .jw-title-secondary {
             display: none !important;
         }
 
-        /* VAST Skip button style */
         .jw-skip {
             background: rgba(0,0,0,0.7) !important;
             border: 1px solid rgba(255,255,255,0.5) !important;
@@ -47,20 +44,39 @@
             font-size: 14px !important;
             font-weight: 600 !important;
         }
+
+        #playerError {
+            display: none;
+            box-sizing: border-box;
+            color: #fff;
+            background: #111;
+            padding: 20px;
+            font: 15px/1.5 Arial, sans-serif;
+            overflow-wrap: anywhere;
+        }
     </style>
+</head>
 
+<body>
     <div id="myElement"></div>
+    <div id="playerError" role="alert"></div>
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', () => {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const playerElement = document.getElementById('myElement');
+            const errorElement = document.getElementById('playerError');
+
+            function showError(message) {
+                playerElement.style.display = 'none';
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+
             const params = new URLSearchParams(window.location.search);
             const mpd = params.get('mpd');
 
             if (!mpd) {
-                document.getElementById('myElement').textContent =
-                    'Please provide an MPD URL using ?mpd=YOUR_STREAM.mpd';
-                document.getElementById('myElement').style.color = '#fff';
-                document.getElementById('myElement').style.padding = '20px';
+                showError('Missing MPD URL. Add ?mpd=YOUR_STREAM.mpd to the page URL.');
                 return;
             }
 
@@ -73,29 +89,32 @@
                     throw new Error('Invalid protocol');
                 }
             } catch (error) {
-                document.getElementById('myElement').textContent =
-                    'Invalid MPD URL.';
-                document.getElementById('myElement').style.color = '#fff';
+                showError('The MPD URL is invalid.');
                 return;
             }
 
+            // Parse ClearKey parameters.
+            // Format: ?mpd=...&keyid=KID1,KID2&key=KEY1,KEY2
+            // Alternative: ?mpd=...&keys=KID1:KEY1,KID2:KEY2
             const keyIds = (params.get('keyid') || '')
                 .split(',').map(v => v.trim()).filter(Boolean);
 
             const keys = (params.get('key') || '')
                 .split(',').map(v => v.trim()).filter(Boolean);
 
-            // Alternative format: &keys=KID1:KEY1,KID2:KEY2
             const combinedKeys = params.get('keys');
             const clearKeys = {};
-            const isHexKey = value => /^[a-fA-F0-9]{32}$/.test(value);
+
+            function isHexKey(value) {
+                return /^[a-fA-F0-9]{32}$/.test(value);
+            }
 
             if (combinedKeys) {
                 for (const pair of combinedKeys.split(',')) {
                     const separator = pair.indexOf(':');
 
                     if (separator <= 0) {
-                        console.error('Invalid keys format. Use KID:KEY,KID:KEY.');
+                        showError('Invalid keys format. Expected KID:KEY,KID:KEY.');
                         return;
                     }
 
@@ -103,7 +122,7 @@
                     const key = pair.slice(separator + 1).trim();
 
                     if (!isHexKey(kid) || !isHexKey(key)) {
-                        console.error('Each KID and key must be 32 hexadecimal characters.');
+                        showError('Each KID and key must contain 32 hexadecimal characters.');
                         return;
                     }
 
@@ -111,37 +130,44 @@
                 }
             } else {
                 if (keyIds.length !== keys.length) {
-                    console.error('The number of keyid and key values must match.');
+                    showError('The number of keyid and key values must match.');
                     return;
                 }
 
                 for (let i = 0; i < keyIds.length; i++) {
                     if (!isHexKey(keyIds[i]) || !isHexKey(keys[i])) {
-                        console.error('Each KID and key must be 32 hexadecimal characters.');
+                        showError('Each KID and key must contain 32 hexadecimal characters.');
                         return;
                     }
 
-                    clearKeys[keyIds[i].toLowerCase()] = keys[i].toLowerCase();
+                    clearKeys[keyIds[i].toLowerCase()] =
+                        keys[i].toLowerCase();
                 }
+            }
+
+            // Ensure the JW Player library loaded.
+            if (typeof window.jwplayer !== 'function') {
+                showError('JW Player failed to load. Check the library URL, network connection, or browser console.');
+                return;
             }
 
             const playerConfig = {
                 title: '',
                 description: '',
-                skin: { name: "netflix" },
-                stretching: "exactfit",
+                skin: { name: 'netflix' },
+                stretching: 'exactfit',
                 aspectratio: '16:9',
                 width: '100%',
                 height: '100%',
                 autostart: true,
                 file: streamURL.href,
-                type: "dash"
+                type: 'dash'
             };
 
             if (Object.keys(clearKeys).length > 0) {
                 const kids = Object.keys(clearKeys);
 
-                // Preserves the original JW Player ClearKey configuration.
+                // Preserve the original single-key JW Player configuration.
                 playerConfig.drm = {
                     clearkey: {
                         keyId: kids[0],
@@ -151,19 +177,32 @@
 
                 if (kids.length > 1) {
                     console.warn(
-                        'Multiple keys parsed, but this JW Player configuration ' +
-                        'uses only the first pair. Multi-key playback requires ' +
-                        'a compatible DRM integration.'
+                        'Multiple keys were parsed, but this original JW Player ' +
+                        'configuration applies only the first key pair.'
                     );
                 }
             }
 
-            const player = jwplayer("myElement").setup(playerConfig);
+            try {
+                playerElement.style.display = 'block';
+                errorElement.style.display = 'none';
 
-            player.on('error', (e) => {
-                console.log("Error:", e.message);
-                setTimeout(() => player.play(), 3000);
-            });
+                const player = jwplayer('myElement').setup(playerConfig);
+
+                player.on('ready', function () {
+                    console.log('JW Player initialized.');
+                });
+
+                player.on('error', function (event) {
+                    console.error('JW Player error:', event);
+                    showError(
+                        'Player playback failed. Check the browser console for the exact error and verify that the MPD is accessible.'
+                    );
+                });
+            } catch (error) {
+                console.error('Player initialization error:', error);
+                showError('Player initialization failed: ' + error.message);
+            }
         });
     </script>
 </body>
