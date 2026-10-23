@@ -1,210 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <title>Shoeb Player | Netflix Style</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Netflix Skin CSS (SnehTV wala) -->
-    <link rel="stylesheet" href="https://tulnit.fun/player.css" />
-    <script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
-
-    <style>
-        html, body {
-            background: #000;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        #myElement {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        .jw-skin-netflix .jw-display-icon-container {
-            border-radius: 50%;
-        }
-
-        .jw-title-primary,
-        .jw-title-secondary {
-            display: none !important;
-        }
-
-        .jw-skip {
-            background: rgba(0,0,0,0.7) !important;
-            border: 1px solid rgba(255,255,255,0.5) !important;
-            color: #fff !important;
-            padding: 10px 20px !important;
-            border-radius: 4px !important;
-            font-size: 14px !important;
-            font-weight: 600 !important;
-        }
-
-        #playerError {
-            display: none;
-            box-sizing: border-box;
-            color: #fff;
-            background: #111;
-            padding: 20px;
-            font: 15px/1.5 Arial, sans-serif;
-            overflow-wrap: anywhere;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Stream — Shaka Player</title>
+<style>
+:root{color-scheme:dark;--red:#e50914;--panel:rgba(18,18,18,.92);--muted:#aaa}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif}
+body{padding:20px}
+.app{max-width:1200px;margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.brand{font-size:25px;font-weight:900;letter-spacing:1px}.brand span{color:var(--red)}
+.pill{font-size:11px;border:1px solid #444;border-radius:20px;padding:6px 10px;color:#ccc}
+.stage{position:relative;background:#000;aspect-ratio:16/9;max-height:70vh;overflow:hidden;border-radius:10px;box-shadow:0 12px 45px #000}
+video{width:100%;height:100%;display:block;background:#000}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.spinner{width:48px;height:48px;border:4px solid #ffffff35;border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stage.loading .spinner{display:block}
+.controls{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,rgba(0,0,0,.92),transparent 42%);opacity:1;transition:opacity .25s;padding:18px}
+.stage.idle .controls{opacity:0;pointer-events:none}
+.topline{position:absolute;top:18px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;text-shadow:0 2px 8px #000}
+.now{font-size:12px;letter-spacing:1.5px;color:#eee}
+.status{font-size:11px;color:#ddd;background:#0009;padding:6px 8px;border-radius:4px}
+.timeline{width:100%;accent-color:var(--red);cursor:pointer;margin:0 0 13px}
+.controlrow{display:flex;align-items:center;gap:14px}
+button,select,input,textarea{font:inherit}
+.iconbtn{border:0;background:transparent;color:#fff;cursor:pointer;font-size:22px;padding:5px;min-width:30px}
+.iconbtn:hover{color:#ddd}
+.time{font-size:12px;color:#eee;white-space:nowrap}
+.spacer{flex:1}
+.ctrlselect{background:#151515;color:#fff;border:1px solid #555;border-radius:5px;padding:7px 8px;font-size:12px;max-width:125px}
+.panel{margin-top:18px;background:#111;border:1px solid #262626;border-radius:10px;padding:18px}
+.panel h2{font-size:15px;margin:0 0 14px}
+.fields{display:grid;grid-template-columns:1fr;gap:12px}
+label{display:block;font-size:12px;color:#ccc;margin-bottom:6px}
+input,textarea{width:100%;background:#080808;color:#fff;border:1px solid #393939;border-radius:6px;padding:11px 12px;outline:none}
+input:focus,textarea:focus{border-color:#999}
+textarea{resize:vertical;min-height:110px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.5}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.action{border:0;border-radius:5px;padding:11px 16px;font-weight:700;cursor:pointer}
+.primary{background:var(--red);color:white}.secondary{background:#292929;color:white;border:1px solid #444}
+.message{margin-top:12px;color:#bbb;font-size:12px;line-height:1.5;min-height:18px;overflow-wrap:anywhere}
+.hint{font-size:12px;line-height:1.5;color:#999;margin:10px 0 0}
+footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
+@media(max-width:600px){body{padding:10px}.brand{font-size:21px}.stage{border-radius:5px}.controls{padding:9px}.topline{top:9px;left:10px;right:10px}.controlrow{gap:5px}.iconbtn{font-size:19px;min-width:27px;padding:3px}.time{font-size:10px}.ctrlselect{max-width:82px;padding:5px 3px;font-size:10px}.panel{padding:13px}.status{font-size:9px}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.8/shaka-player.compiled.js"></script>
 </head>
-
 <body>
-    <div id="myElement"></div>
-    <div id="playerError" role="alert"></div>
+<div class="app">
+<header><div class="brand"><span>STREAM</span> / PLAYER</div><div class="pill">DASH · CLEARKEY</div></header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const playerElement = document.getElementById('myElement');
-            const errorElement = document.getElementById('playerError');
+<div class="stage" id="stage">
+  <video id="video" playsinline crossorigin="anonymous"></video>
+  <div class="overlay"><div class="spinner"></div></div>
+  <div class="topline"><div class="now" id="streamTitle">NOW PLAYING</div><div class="status" id="status">READY</div></div>
+  <div class="controls" id="controls">
+    <input class="timeline" id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+    <div class="controlrow">
+      <button class="iconbtn" id="play" aria-label="Play or pause">▶</button>
+      <button class="iconbtn" id="back" aria-label="Back 10 seconds">↶</button>
+      <button class="iconbtn" id="forward" aria-label="Forward 10 seconds">↷</button>
+      <button class="iconbtn" id="mute" aria-label="Mute">🔊</button>
+      <input id="volume" type="range" min="0" max="1" step=".05" value="1" style="width:75px;accent-color:#fff" aria-label="Volume">
+      <span class="time" id="clock">0:00 / 0:00</span>
+      <div class="spacer"></div>
+      <select class="ctrlselect" id="quality" aria-label="Video quality"><option value="auto">Quality: Auto</option></select>
+      <select class="ctrlselect" id="speed" aria-label="Playback speed">
+        <option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="1.75">1.75×</option><option value="2">2×</option>
+      </select>
+      <button class="iconbtn" id="fullscreen" aria-label="Fullscreen">⛶</button>
+    </div>
+  </div>
+</div>
 
-            function showError(message) {
-                playerElement.style.display = 'none';
-                errorElement.textContent = message;
-                errorElement.style.display = 'block';
-            }
+<section class="panel">
+  <h2>Stream setup</h2>
+  <div class="fields">
+    <div><label for="mpd">MPD / DASH manifest URL</label><input id="mpd" type="url" placeholder="https://example.com/manifest.mpd" autocomplete="url"></div>
+    <div><label for="keys">ClearKeys — one KID:KEY pair per line (hex)</label><textarea id="keys" spellcheck="false" placeholder="a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84&#10;280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2&#10;79ed755f8949459a9469e2e5201db84b:fa70a243e0c04afe97f557871979b390&#10;e13f038261b9486abbd0b11e48d9d4d9:37c7f6f9a2e2403da1e63bd981626b88"></textarea></div>
+  </div>
+  <div class="actions"><button class="action primary" id="load">Load stream</button><button class="action secondary" id="stop">Stop</button><button class="action secondary" id="example">Fill example keys</button></div>
+  <div class="message" id="message" role="status">Enter a manifest URL and any authorized ClearKey pairs, then select Load stream.</div>
+  <p class="hint">Keys are applied locally in this browser session and are not sent to this page's creator. The manifest/CDN may still receive normal playback requests. This player does not bypass Widevine, PlayReady, or other DRM systems; it supports ClearKey streams that the browser and Shaka can play.</p>
+</section>
+<footer>Playback depends on manifest validity, network/CDN availability, CORS, browser support, and correct keys. “Auto” quality uses Shaka's adaptive bitrate selection when available.</footer>
+</div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const video = $('video'), stage = $('stage'), message = $('message');
+  let player = null, hideTimer = null, seeking = false;
 
-            const params = new URLSearchParams(window.location.search);
-            const mpd = params.get('mpd');
-
-            if (!mpd) {
-                showError('Missing MPD URL. Add ?mpd=YOUR_STREAM.mpd to the page URL.');
-                return;
-            }
-
-            let streamURL;
-
-            try {
-                streamURL = new URL(mpd);
-
-                if (!['http:', 'https:'].includes(streamURL.protocol)) {
-                    throw new Error('Invalid protocol');
-                }
-            } catch (error) {
-                showError('The MPD URL is invalid.');
-                return;
-            }
-
-            // Parse ClearKey parameters.
-            // Format: ?mpd=...&keyid=KID1,KID2&key=KEY1,KEY2
-            // Alternative: ?mpd=...&keys=KID1:KEY1,KID2:KEY2
-            const keyIds = (params.get('keyid') || '')
-                .split(',').map(v => v.trim()).filter(Boolean);
-
-            const keys = (params.get('key') || '')
-                .split(',').map(v => v.trim()).filter(Boolean);
-
-            const combinedKeys = params.get('keys');
-            const clearKeys = {};
-
-            function isHexKey(value) {
-                return /^[a-fA-F0-9]{32}$/.test(value);
-            }
-
-            if (combinedKeys) {
-                for (const pair of combinedKeys.split(',')) {
-                    const separator = pair.indexOf(':');
-
-                    if (separator <= 0) {
-                        showError('Invalid keys format. Expected KID:KEY,KID:KEY.');
-                        return;
-                    }
-
-                    const kid = pair.slice(0, separator).trim();
-                    const key = pair.slice(separator + 1).trim();
-
-                    if (!isHexKey(kid) || !isHexKey(key)) {
-                        showError('Each KID and key must contain 32 hexadecimal characters.');
-                        return;
-                    }
-
-                    clearKeys[kid.toLowerCase()] = key.toLowerCase();
-                }
-            } else {
-                if (keyIds.length !== keys.length) {
-                    showError('The number of keyid and key values must match.');
-                    return;
-                }
-
-                for (let i = 0; i < keyIds.length; i++) {
-                    if (!isHexKey(keyIds[i]) || !isHexKey(keys[i])) {
-                        showError('Each KID and key must contain 32 hexadecimal characters.');
-                        return;
-                    }
-
-                    clearKeys[keyIds[i].toLowerCase()] =
-                        keys[i].toLowerCase();
-                }
-            }
-
-            // Ensure the JW Player library loaded.
-            if (typeof window.jwplayer !== 'function') {
-                showError('JW Player failed to load. Check the library URL, network connection, or browser console.');
-                return;
-            }
-
-            const playerConfig = {
-                title: '',
-                description: '',
-                skin: { name: 'netflix' },
-                stretching: 'exactfit',
-                aspectratio: '16:9',
-                width: '100%',
-                height: '100%',
-                autostart: true,
-                file: streamURL.href,
-                type: 'dash'
-            };
-
-            if (Object.keys(clearKeys).length > 0) {
-                const kids = Object.keys(clearKeys);
-
-                // Preserve the original single-key JW Player configuration.
-                playerConfig.drm = {
-                    clearkey: {
-                        keyId: kids[0],
-                        key: clearKeys[kids[0]]
-                    }
-                };
-
-                if (kids.length > 1) {
-                    console.warn(
-                        'Multiple keys were parsed, but this original JW Player ' +
-                        'configuration applies only the first key pair.'
-                    );
-                }
-            }
-
-            try {
-                playerElement.style.display = 'block';
-                errorElement.style.display = 'none';
-
-                const player = jwplayer('myElement').setup(playerConfig);
-
-                player.on('ready', function () {
-                    console.log('JW Player initialized.');
-                });
-
-                player.on('error', function (event) {
-                    console.error('JW Player error:', event);
-                    showError(
-                        'Player playback failed. Check the browser console for the exact error and verify that the MPD is accessible.'
-                    );
-                });
-            } catch (error) {
-                console.error('Player initialization error:', error);
-                showError('Player initialization failed: ' + error.message);
-            }
-        });
-    </script>
+  function setMessage(s){ message.textContent = s; }
+  function setStatus(s){ $('status').textContent = s; }
+  function fmt(t){
+    if (!Number.isFinite(t) || t < 0) return '0:00';
+    t = Math.floor(t);
+    const h=Math.floor(t/3600), m=Math.floor((t%3600)/60), s=t%60;
+    return h ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${m}:${String(s).padStart(2,'0')}`;
+  }
+  function showControls(){
+    stage.classList.remove('idle');
+    clearTimeout(hideTimer);
+    if (!video.paused) hideTimer=setTimeout(()=>stage.classList.add('idle'),3000);
+  }
+  function parseKeys(text){
+    const pairs = text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    const clearKeys = {};
+    for (const pair of pairs){
+      const parts=pair.split(':');
+      if(parts.length!==2) throw new Error(`Invalid key line: ${pair}`);
+      const kid=parts[0].trim().replace(/-/g,'').toLowerCase();
+      const key=parts[1].trim().replace(/-/g,'').toLowerCase();
+      if(!/^[0-9a-f]{32}$/.test(kid) || !/^[0-9a-f]{32}$/.test(key))
+        throw new Error(`KID and KEY must each be 32 hexadecimal characters: ${pair}`);
+      clearKeys[kid]=key;
+    }
+    return clearKeys;
+  }
+  async function init(){
+    if (!window.shaka) {
+      setStatus('LIBRARY ERROR');
+      setMessage('Shaka Player could not load. Check your connection to the CDN or host shaka-player.compiled.js locally.');
+      return;
+    }
+    shaka.polyfill.installAll();
+    if (!shaka.Player.isBrowserSupported()){
+      setStatus('UNSUPPORTED');
+      setMessage('This browser does not support Shaka Player playback.');
+      return;
+    }
+    player = new shaka.Player();
+    await player.attach(video);
+    player.addEventListener('error', e=>{
+      const d=e.detail || {};
+      setStatus('PLAYBACK ERROR');
+      setMessage(`Shaka error ${d.code ?? ''}: ${d.message || 'Playback failed. Check the URL, CORS, key pairs, and browser console.'}`);
+      stage.classList.remove('loading');
+    });
+    player.addEventListener('buffering', e=>{
+      stage.classList.toggle('loading', !!e.buffering);
+      setStatus(e.buffering ? 'BUFFERING' : (video.paused ? 'PAUSED' : 'PLAYING'));
+    });
+    player.addEventListener('adaptation', refreshQuality);
+    player.addEventListener('trackschanged', refreshQuality);
+    video.addEventListener('playing',()=>{ $('play').textContent='❚❚'; setStatus('PLAYING'); showControls(); });
+    video.addEventListener('pause',()=>{ $('play').textContent='▶'; if(!video.ended)setStatus('PAUSED'); stage.classList.remove('loading'); stage.classList.remove('idle'); });
+    video.addEventListener('waiting',()=>{stage.classList.add('loading');setStatus('BUFFERING');});
+    video.addEventListener('canplay',()=>{stage.classList.remove('loading');});
+    video.addEventListener('timeupdate',()=>{
+      $('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;
+      if(!seeking && Number.isFinite(video.duration) && video.duration>0) $('seek').value=String(video.currentTime/video.duration*1000);
+    });
+    video.addEventListener('durationchange',()=>{$('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;});
+    setStatus('READY');
+  }
+  async function loadStream(){
+    if(!player){setMessage('Player is still initializing. Please wait a moment.');return;}
+    const uri=$('mpd').value.trim();
+    if(!uri){setMessage('Enter an MPD URL first.');$('mpd').focus();return;}
+    try{
+      const keys=parseKeys($('keys').value);
+      player.configure({
+        drm:{clearKeys:keys},
+        streaming:{
+          bufferingGoal:30,
+          rebufferingGoal:2,
+          bufferBehind:30,
+          retryParameters:{maxAttempts:3,baseDelay:500,backoffFactor:2,fuzzFactor:.5,timeout:15000}
+        },
+        abr:{enabled:true,defaultBandwidthEstimate:5000000}
+      });
+      stage.classList.add('loading');setStatus('LOADING');setMessage('Loading manifest and preparing playback…');
+      await player.load(uri);
+      $('streamTitle').textContent='NOW PLAYING';
+      refreshQuality();
+      setStatus('READY');setMessage('Stream loaded. Press Play if playback does not start automatically.');
+      try{await video.play();}catch(_){setMessage('Stream loaded. Press Play to begin; your browser may require a user gesture.');}
+    }catch(e){
+      stage.classList.remove('loading');setStatus('LOAD FAILED');
+      setMessage(e.message || String(e));
+    }
+  }
+  function refreshQuality(){
+    if(!player)return;
+    const sel=$('quality'), old=sel.value;
+    const tracks=player.getVariantTracks().filter(t=>t.type==='variant' && t.height);
+    const seen=new Map();
+    tracks.forEach(t=>{const label=`${t.height}p`;if(!seen.has(label))seen.set(label,t.height);});
+    sel.innerHTML='<option value="auto">Quality: Auto</option>';
+    [...seen.entries()].sort((a,b)=>b[1]-a[1]).forEach(([label,height])=>{
+      const o=document.createElement('option');o.value=String(height);o.textContent=label;sel.appendChild(o);
+    });
+    if([...sel.options].some(o=>o.value===old))sel.value=old;
+  }
+  $('load').addEventListener('click',loadStream);
+  $('stop').addEventListener('click',async()=>{
+    if(player){try{await player.unload();}catch(_){}}
+    video.pause();video.removeAttribute('src');video.load();
+    stage.classList.remove('loading');setStatus('STOPPED');setMessage('Playback stopped.');
+  });
+  $('example').addEventListener('click',()=>{
+    $('keys').value=[
+      'a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84',
+      '280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2',
+      '79ed755f8949459a9469e2e5201db84b:fa70a243e0c04afe97f557871979b390',
+      'e13f038261b9486abbd0b11e48d9d4d9:37c7f6f9a2e2403da1e63bd981626b88'
+    ].join('\n');
+    setMessage('Example keys filled. Add your MPD URL and load the stream.');
+  });
+  $('play').addEventListener('click',()=>video.paused ? video.play().catch(()=>{}) : video.pause());
+  $('back').addEventListener('click',()=>{video.currentTime=Math.max(0,video.currentTime-10);showControls();});
+  $('forward').addEventListener('click',()=>{video.currentTime=Math.min(video.duration||Infinity,video.currentTime+10);showControls();});
+  $('mute').addEventListener('click',()=>{video.muted=!video.muted;$('mute').textContent=video.muted?'🔇':'🔊';});
+  $('volume').addEventListener('input',()=>{video.volume=Number($('volume').value);video.muted=video.volume===0;$('mute').textContent=video.muted?'🔇':'🔊';});
+  $('speed').addEventListener('change',()=>{video.playbackRate=Number($('speed').value);});
+  $('quality').addEventListener('change',()=>{
+    if(!player)return;
+    const val=$('quality').value;
+    if(val==='auto'){player.configure({abr:{enabled:true}});setMessage('Adaptive quality enabled.');}
+    else{
+      player.configure({abr:{enabled:false}});
+      const track=player.getVariantTracks().filter(t=>t.height===Number(val)).sort((a,b)=>(b.bandwidth||0)-(a.bandwidth||0))[0];
+      if(track){player.selectVariantTrack(track,true);setMessage(`Selected ${val}p. If several tracks share this resolution, the highest-bandwidth matching track was selected.`);}
+    }
+  });
+  $('seek').addEventListener('input',()=>{
+    seeking=true;
+    if(Number.isFinite(video.duration)&&video.duration>0){
+      const t=Number($('seek').value)/1000*video.duration;
+      $('clock').textContent=`${fmt(t)} / ${fmt(video.duration)}`;
+    }
+  });
+  $('seek').addEventListener('change',()=>{
+    if(Number.isFinite(video.duration)&&video.duration>0)video.currentTime=Number($('seek').value)/1000*video.duration;
+    seeking=false;showControls();
+  });
+  $('fullscreen').addEventListener('click',()=>{
+    const target=stage;
+    if(document.fullscreenElement)document.exitFullscreen?.();
+    else if(target.requestFullscreen)target.requestFullscreen().catch(()=>{});
+    else if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();
+  });
+  stage.addEventListener('mousemove',showControls);stage.addEventListener('touchstart',showControls,{passive:true});
+  document.addEventListener('keydown',e=>{
+    if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;
+    if(e.code==='Space'){e.preventDefault();video.paused?video.play().catch(()=>{}):video.pause();}
+    else if(e.key==='ArrowLeft')video.currentTime=Math.max(0,video.currentTime-10);
+    else if(e.key==='ArrowRight')video.currentTime=Math.min(video.duration||Infinity,video.currentTime+10);
+    else if(e.key.toLowerCase()==='m'){$('mute').click();}
+    else if(e.key.toLowerCase()==='f'){$('fullscreen').click();}
+    showControls();
+  });
+  init().catch(e=>setMessage(`Initialization failed: ${e.message||e}`));
+})();
+</script>
 </body>
-
 </html>
