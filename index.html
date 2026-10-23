@@ -1,318 +1,826 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Stream — Shaka Player</title>
-<style>
-:root{color-scheme:dark;--red:#e50914;--panel:rgba(18,18,18,.92);--muted:#aaa}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif}
-body{padding:12px}
-.app{max-width:1000px;margin:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.brand{font-size:21px;font-weight:900;letter-spacing:.7px}.brand span{color:var(--red)}
-.pill{font-size:11px;border:1px solid #444;border-radius:20px;padding:6px 10px;color:#ccc}
-.stage{position:relative;background:#000;aspect-ratio:16/9;max-height:66vh;overflow:hidden;border-radius:8px;box-shadow:0 8px 28px #000}
-video{width:100%;height:100%;display:block;background:#000}
-.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-.spinner{width:48px;height:48px;border:4px solid #ffffff35;border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none}
-@keyframes spin{to{transform:rotate(360deg)}}
-.stage.loading .spinner{display:block}
-.controls{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(0deg,rgba(0,0,0,.88),transparent 35%);opacity:1;transition:opacity .25s;padding:12px}
-.stage.idle .controls{opacity:0;pointer-events:none}
-.topline{position:absolute;top:18px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;text-shadow:0 2px 8px #000}
-.now{font-size:12px;letter-spacing:1.5px;color:#eee}
-.status{font-size:11px;color:#ddd;background:#0009;padding:6px 8px;border-radius:4px}
-.timeline{width:100%;accent-color:var(--red);cursor:pointer;margin:0 0 8px;height:4px}
-.controlrow{display:flex;align-items:center;gap:9px;min-width:0}
-button,select,input,textarea{font:inherit}
-.iconbtn{border:0;background:transparent;color:#fff;cursor:pointer;font-size:19px;padding:3px;min-width:27px;line-height:1.2}
-.iconbtn:hover{color:#ddd}
-.time{font-size:11px;color:#eee;white-space:nowrap}
-.livebtn{font-size:10px!important;letter-spacing:.4px;background:#e50914!important;border-radius:4px;padding:5px 7px!important;min-width:auto!important;font-weight:800}
-.livebtn:not(.is-live){background:#242424!important;color:#bbb!important;border:1px solid #555!important}
-.spacer{flex:1}
-.ctrlselect{background:#151515;color:#fff;border:1px solid #555;border-radius:5px;padding:7px 8px;font-size:12px;max-width:125px}
-.panel{margin-top:12px;background:#111;border:1px solid #262626;border-radius:8px;padding:14px}
-.panel h2{font-size:15px;margin:0 0 14px}
-.fields{display:grid;grid-template-columns:1fr;gap:9px}
-label{display:block;font-size:12px;color:#ccc;margin-bottom:6px}
-input,textarea{width:100%;background:#080808;color:#fff;border:1px solid #393939;border-radius:5px;padding:9px 10px;outline:none}
-input:focus,textarea:focus{border-color:#999}
-textarea{resize:vertical;min-height:84px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.5}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
-.action{border:0;border-radius:5px;padding:9px 13px;font-weight:700;cursor:pointer;font-size:13px}
-.primary{background:var(--red);color:white}.secondary{background:#292929;color:white;border:1px solid #444}
-.message{margin-top:12px;color:#bbb;font-size:12px;line-height:1.5;min-height:18px;overflow-wrap:anywhere}
-.hint{font-size:12px;line-height:1.5;color:#999;margin:10px 0 0}
-footer{color:#666;font-size:11px;line-height:1.5;margin:14px 2px}
- .always-fullscreen{font-size:22px!important;min-width:34px!important;background:#0008;border-radius:5px;padding:4px 7px!important}
-.stage:fullscreen{width:100vw;height:100vh;height:100dvh;max-height:none;aspect-ratio:auto;border-radius:0}
-.stage:fullscreen video{width:100%;height:100%;object-fit:contain}
-.stage:-webkit-full-screen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto;border-radius:0}
-.stage:-webkit-full-screen video{width:100%;height:100%;object-fit:contain}
-@media(max-width:600px){body{padding:8px}.brand{font-size:19px}.stage{border-radius:5px;max-height:none}.controls{padding:8px}.topline{top:8px;left:9px;right:9px}.controlrow{gap:4px;flex-wrap:nowrap}.iconbtn{font-size:17px;min-width:24px;padding:2px}.time{font-size:9px}.ctrlselect{max-width:70px;padding:4px 2px;font-size:9px}#volume{display:none!important}.panel{padding:11px}.status{font-size:9px}.stage:fullscreen,.stage:-webkit-full-screen{padding-bottom:env(safe-area-inset-bottom)}}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.8/shaka-player.compiled.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaka Player – Bufferless ClearKey (Netflix UI)</title>
+  <!-- Shaka Player (compiled + UI) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.11.2/shaka-player.compiled.js"></script>
+  <style>
+    :root {
+      --netflix-red: #e50914;
+      --netflix-dark: #141414;
+      --netflix-gray: #808080;
+      --control-h: 56px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 40px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .setup {
+      width: 100%;
+      max-width: 960px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      border: 1px solid #333;
+    }
+
+    .setup label {
+      display: block;
+      font-size: 0.85rem;
+      color: #b3b3b3;
+      margin-bottom: 6px;
+    }
+
+    .setup input[type="text"],
+    .setup textarea {
+      width: 100%;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      margin-bottom: 14px;
+      resize: vertical;
+    }
+
+    .setup textarea { min-height: 110px; line-height: 1.45; }
+
+    .setup input:focus,
+    .setup textarea:focus {
+      outline: none;
+      border-color: var(--netflix-red);
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button.primary {
+      background: var(--netflix-red);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button.primary:hover { background: #f40612; }
+    button.primary:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #666;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    button.secondary:hover { border-color: #aaa; }
+
+    /* ===== PLAYER CONTAINER ===== */
+    .player-wrapper {
+      width: 100%;
+      max-width: 960px;
+      position: relative;
+      background: #000;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+      aspect-ratio: 16 / 9;
+    }
+
+    .player-wrapper video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      object-fit: contain;
+    }
+
+    /* Netflix-style overlay */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.4) 30%,
+        transparent 55%
+      );
+    }
+
+    .player-wrapper:hover .overlay,
+    .player-wrapper.show-controls .overlay,
+    .player-wrapper.paused .overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Big center play button */
+    .big-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.55);
+      border: 2px solid rgba(255,255,255,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .big-play:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+      background: rgba(229,9,20,0.85);
+      border-color: #fff;
+    }
+    .big-play svg { width: 32px; height: 32px; fill: #fff; margin-left: 3px; }
+    .player-wrapper:not(.paused) .big-play { display: none; }
+
+    /* Bottom control bar */
+    .controls {
+      padding: 0 16px 14px;
+      pointer-events: auto;
+    }
+
+    /* Progress / seek bar */
+    .progress-wrap {
+      position: relative;
+      height: 4px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 2px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: height 0.12s;
+    }
+    .progress-wrap:hover { height: 6px; }
+
+    .buffered {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      background: rgba(255,255,255,0.35);
+      border-radius: 2px;
+      width: 0%;
+      pointer-events: none;
+    }
+
+    .played {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      background: var(--netflix-red);
+      border-radius: 2px;
+      width: 0%;
+      pointer-events: none;
+    }
+
+    .progress-wrap:hover .played::after {
+      content: "";
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: var(--netflix-red);
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+
+    /* Button row */
+    .btn-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ctrl-btn {
+      background: transparent;
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .ctrl-btn:hover { background: rgba(255,255,255,0.15); }
+    .ctrl-btn svg { width: 22px; height: 22px; fill: currentColor; }
+
+    .time-display {
+      font-size: 0.85rem;
+      color: #e5e5e5;
+      margin-left: 8px;
+      font-variant-numeric: tabular-nums;
+      min-width: 110px;
+    }
+
+    .spacer { flex: 1; }
+
+    /* Volume */
+    .volume-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .volume-slider {
+      width: 0;
+      overflow: hidden;
+      transition: width 0.2s;
+    }
+    .volume-wrap:hover .volume-slider { width: 80px; }
+    .volume-slider input[type="range"] {
+      width: 80px;
+      height: 4px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+    .volume-slider input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Quality / settings dropdown */
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-menu {
+      position: absolute;
+      bottom: 48px;
+      right: 0;
+      background: rgba(28,28,28,0.95);
+      border: 1px solid #444;
+      border-radius: 4px;
+      min-width: 160px;
+      padding: 8px 0;
+      display: none;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+    }
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .dropdown-menu button:hover { background: rgba(255,255,255,0.1); }
+    .dropdown-menu button.active { color: var(--netflix-red); font-weight: 600; }
+
+    /* Loading spinner */
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: var(--netflix-red);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+      z-index: 10;
+    }
+    .player-wrapper.buffering .spinner { display: block; }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+    /* Status / error */
+    .status {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #aaa;
+      min-height: 1.2em;
+    }
+    .status.error { color: #ff6b6b; }
+
+    /* Hint */
+    .hint {
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* Fullscreen adjustments */
+    .player-wrapper:fullscreen,
+    .player-wrapper:-webkit-full-screen {
+      max-width: none;
+      border-radius: 0;
+      aspect-ratio: auto;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-<div class="app">
-<header><div class="brand"><span>STREAM</span> / PLAYER</div><div class="pill">DASH · CLEARKEY</div></header>
+  <h1>Shaka Player · Bufferless ClearKey · Netflix UI</h1>
 
-<div class="stage" id="stage">
-  <video id="video" playsinline crossorigin="anonymous"></video>
-  <div class="overlay"><div class="spinner"></div></div>
-  <div class="topline"><div class="now" id="streamTitle">NOW PLAYING</div><div style="display:flex;align-items:center;gap:8px"><div class="status" id="status">READY</div><button class="iconbtn always-fullscreen" id="fullscreenTop" aria-label="Enter fullscreen" title="Fullscreen">⛶</button></div></div>
-  <div class="controls" id="controls">
-    <input class="timeline" id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
-    <div class="controlrow">
-      <button class="iconbtn" id="play" aria-label="Play or pause">▶</button>
-      <button class="iconbtn" id="goLive" aria-label="Go to live edge" title="Go Live" style="display:none">● LIVE</button>
-      <button class="iconbtn" id="back" aria-label="Back 10 seconds">↶</button>
-      <button class="iconbtn" id="forward" aria-label="Forward 10 seconds">↷</button>
-      <button class="iconbtn" id="mute" aria-label="Mute">🔊</button>
-      <input id="volume" type="range" min="0" max="1" step=".05" value="1" style="width:75px;accent-color:#fff" aria-label="Volume">
-      <span class="time" id="clock">0:00 / 0:00</span>
-      <div class="spacer"></div>
-      <select class="ctrlselect" id="quality" aria-label="Video quality"><option value="auto">Quality: Auto</option></select>
-      <select class="ctrlselect" id="speed" aria-label="Playback speed">
-        <option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="1.75">1.75×</option><option value="2">2×</option>
-      </select>
-      <button class="iconbtn" id="fullscreen" aria-label="Fullscreen" title="Fullscreen">⛶</button>
+  <div class="setup">
+    <label for="mpdUrl">MPD / DASH URL</label>
+    <input type="text" id="mpdUrl" placeholder="https://example.com/stream.mpd" />
+
+    <label for="clearKeys">ClearKeys (one per line: kid:key in hex)</label>
+    <textarea id="clearKeys" placeholder="a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84
+280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2
+..."></textarea>
+
+    <div class="btn-row">
+      <button class="primary" id="loadBtn">Load &amp; Play</button>
+      <button class="secondary" id="stopBtn">Stop</button>
+      <button class="secondary" id="fillExample">Fill Example Keys</button>
+    </div>
+    <p class="hint">
+      Low-buffer mode is active (bufferingGoal ≈ 4 s, rebufferingGoal ≈ 1 s).  
+      Multiple ClearKeys are injected via <code>drm.clearKeys</code>. Works best in Chrome / Edge / Firefox.
+    </p>
+  </div>
+
+  <div class="player-wrapper paused" id="playerWrapper">
+    <video id="video" playsinline></video>
+    <div class="spinner" id="spinner"></div>
+
+    <div class="overlay" id="overlay">
+      <!-- Big center play -->
+      <div class="big-play" id="bigPlay" title="Play">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+
+      <div class="controls">
+        <!-- Seek bar -->
+        <div class="progress-wrap" id="progressWrap">
+          <div class="buffered" id="bufferedBar"></div>
+          <div class="played" id="playedBar"></div>
+        </div>
+
+        <div class="btn-bar">
+          <!-- Play / Pause -->
+          <button class="ctrl-btn" id="playPauseBtn" title="Play/Pause">
+            <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="iconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+
+          <!-- Rewind 10s -->
+          <button class="ctrl-btn" id="rewindBtn" title="Rewind 10s">
+            <svg viewBox="0 0 24 24"><path d="M12.5 3C17.15 3 21 6.85 21 11.5S17.15 20 12.5 20 4 16.15 4 11.5c0-1.56.43-3.03 1.18-4.3L2 4.5 5.5 8H12V3.5c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5h2c0 3.87-3.13 7-7 7s-7-3.13-7-7 3.13-7 7-7z"/><text x="9" y="15" font-size="7" fill="currentColor" font-family="sans-serif">10</text></svg>
+          </button>
+
+          <!-- Forward 10s -->
+          <button class="ctrl-btn" id="forwardBtn" title="Forward 10s">
+            <svg viewBox="0 0 24 24"><path d="M11.5 3C6.85 3 3 6.85 3 11.5S6.85 20 11.5 20 20 16.15 20 11.5c0-1.56-.43-3.03-1.18-4.3L22 4.5 18.5 8H12V3.5c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5h-2c0 3.87 3.13 7 7 7s7-3.13 7-7-3.13-7-7-7z"/><text x="8" y="15" font-size="7" fill="currentColor" font-family="sans-serif">10</text></svg>
+          </button>
+
+          <div class="volume-wrap">
+            <button class="ctrl-btn" id="muteBtn" title="Mute">
+              <svg id="iconVol" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              <svg id="iconMuted" viewBox="0 0 24 24" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+            </button>
+            <div class="volume-slider">
+              <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1" />
+            </div>
+          </div>
+
+          <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+
+          <div class="spacer"></div>
+
+          <!-- Quality -->
+          <div class="dropdown" id="qualityDropdown">
+            <button class="ctrl-btn" id="qualityBtn" title="Quality">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84a.48.48 0 0 0-.48.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.48-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
+            </button>
+            <div class="dropdown-menu" id="qualityMenu"></div>
+          </div>
+
+          <!-- Fullscreen -->
+          <button class="ctrl-btn" id="fsBtn" title="Fullscreen">
+            <svg id="iconFs" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            <svg id="iconFsExit" viewBox="0 0 24 24" style="display:none"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<section class="panel">
-  <h2>Stream setup</h2>
-  <div class="fields">
-    <div><label for="mpd">MPD / DASH manifest URL</label><input id="mpd" type="url" placeholder="https://example.com/manifest.mpd" autocomplete="url"></div>
-    <div><label for="keys">ClearKeys — one KID:KEY pair per line (hex)</label><textarea id="keys" spellcheck="false" placeholder="a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84&#10;280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2&#10;79ed755f8949459a9469e2e5201db84b:fa70a243e0c04afe97f557871979b390&#10;e13f038261b9486abbd0b11e48d9d4d9:37c7f6f9a2e2403da1e63bd981626b88"></textarea></div>
-  </div>
-  <div class="actions"><button class="action primary" id="load">Load stream</button><button class="action secondary" id="stop">Stop</button><button class="action secondary" id="example">Fill example keys</button></div>
-  <div class="message" id="message" role="status">Enter a manifest URL and any authorized ClearKey pairs, then select Load stream.</div>
-  <p class="hint">Keys are applied locally in this browser session and are not sent to this page's creator. The manifest/CDN may still receive normal playback requests. This player does not bypass Widevine, PlayReady, or other DRM systems; it supports ClearKey streams that the browser and Shaka can play.</p>
-</section>
-<footer>Playback depends on manifest validity, network/CDN availability, CORS, browser support, and correct keys. “Auto” quality uses Shaka's adaptive bitrate selection when available.</footer>
-</div>
-<script>
-(() => {
-  const $ = id => document.getElementById(id);
-  const video = $('video'), stage = $('stage'), message = $('message');
-  let player = null, hideTimer = null, seeking = false;
+  <div class="status" id="status"></div>
 
-  function setMessage(s){ message.textContent = s; }
-  function setStatus(s){ $('status').textContent = s; }
-  function fmt(t){
-    if (!Number.isFinite(t) || t < 0) return '0:00';
-    t = Math.floor(t);
-    const h=Math.floor(t/3600), m=Math.floor((t%3600)/60), s=t%60;
-    return h ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${m}:${String(s).padStart(2,'0')}`;
-  }
-  function isLiveStream(){
-    if (!player) return false;
-    try {
-      const seek = player.seekRange();
-      return !!seek && Number.isFinite(seek.end) && seek.end > 0 &&
-        (!Number.isFinite(video.duration) || video.duration === Infinity || video.duration > seek.end + 2);
-    } catch (_) { return false; }
-  }
-  function refreshLiveButton(){
-    const btn = $('goLive');
-    if (!player) { btn.style.display='none'; return; }
-    const range = player.seekRange();
-    const live = isLiveStream();
-    btn.style.display = live ? 'inline-flex' : 'none';
-    const nearEdge = live && range && (range.end - video.currentTime) <= 15;
-    btn.textContent = nearEdge ? '● LIVE' : '↗ LIVE';
-    btn.classList.toggle('is-live', !!nearEdge);
-    btn.title = nearEdge ? 'At live edge' : 'Go back to live';
-    btn.setAttribute('aria-label', nearEdge ? 'At live edge' : 'Go back to live');
-  }
-  function goToLive(){
-    if (!player) return;
-    try {
-      const range = player.seekRange();
-      if (range && Number.isFinite(range.end)) {
-        video.currentTime = Math.max(range.start || 0, range.end - 1.5);
-        video.play().catch(()=>{});
-        setMessage('Jumped to the live edge.');
-      }
-    } catch (_) {}
-    showControls();
-  }
-  function showControls(){
-    stage.classList.remove('idle');
-    clearTimeout(hideTimer);
-    if (!video.paused) hideTimer=setTimeout(()=>stage.classList.add('idle'),3000);
-  }
-  function parseKeys(text){
-    const pairs = text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-    const clearKeys = {};
-    for (const pair of pairs){
-      const parts=pair.split(':');
-      if(parts.length!==2) throw new Error(`Invalid key line: ${pair}`);
-      const kid=parts[0].trim().replace(/-/g,'').toLowerCase();
-      const key=parts[1].trim().replace(/-/g,'').toLowerCase();
-      if(!/^[0-9a-f]{32}$/.test(kid) || !/^[0-9a-f]{32}$/.test(key))
-        throw new Error(`KID and KEY must each be 32 hexadecimal characters: ${pair}`);
-      clearKeys[kid]=key;
+  <script>
+    // ---------- Example keys from user ----------
+    const EXAMPLE_KEYS = `a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84
+280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2
+79ed755f8949459a9469e2e5201db84b:fa70a243e0c04afe97f557871979b390
+e13f038261b9486abbd0b11e48d9d4d9:37c7f6f9a2e2403da1e63bd981626b88`;
+
+    // ---------- DOM ----------
+    const video          = document.getElementById('video');
+    const wrapper        = document.getElementById('playerWrapper');
+    const mpdUrlInput    = document.getElementById('mpdUrl');
+    const clearKeysInput = document.getElementById('clearKeys');
+    const loadBtn        = document.getElementById('loadBtn');
+    const stopBtn        = document.getElementById('stopBtn');
+    const fillExampleBtn = document.getElementById('fillExample');
+    const statusEl       = document.getElementById('status');
+    const playPauseBtn   = document.getElementById('playPauseBtn');
+    const iconPlay       = document.getElementById('iconPlay');
+    const iconPause      = document.getElementById('iconPause');
+    const bigPlay        = document.getElementById('bigPlay');
+    const rewindBtn      = document.getElementById('rewindBtn');
+    const forwardBtn     = document.getElementById('forwardBtn');
+    const muteBtn        = document.getElementById('muteBtn');
+    const iconVol        = document.getElementById('iconVol');
+    const iconMuted      = document.getElementById('iconMuted');
+    const volumeSlider   = document.getElementById('volumeSlider');
+    const timeDisplay    = document.getElementById('timeDisplay');
+    const progressWrap   = document.getElementById('progressWrap');
+    const playedBar      = document.getElementById('playedBar');
+    const bufferedBar    = document.getElementById('bufferedBar');
+    const qualityBtn     = document.getElementById('qualityBtn');
+    const qualityMenu    = document.getElementById('qualityMenu');
+    const qualityDropdown= document.getElementById('qualityDropdown');
+    const fsBtn          = document.getElementById('fsBtn');
+    const iconFs         = document.getElementById('iconFs');
+    const iconFsExit     = document.getElementById('iconFsExit');
+
+    let player = null;
+    let hideControlsTimer = null;
+
+    // ---------- Helpers ----------
+    function setStatus(msg, isError = false) {
+      statusEl.textContent = msg;
+      statusEl.className = 'status' + (isError ? ' error' : '');
     }
-    return clearKeys;
-  }
-  async function init(){
-    if (!window.shaka) {
-      setStatus('LIBRARY ERROR');
-      setMessage('Shaka Player could not load. Check your connection to the CDN or host shaka-player.compiled.js locally.');
-      return;
-    }
-    shaka.polyfill.installAll();
-    if (!shaka.Player.isBrowserSupported()){
-      setStatus('UNSUPPORTED');
-      setMessage('This browser does not support Shaka Player playback.');
-      return;
-    }
-    player = new shaka.Player();
-    await player.attach(video);
-    player.addEventListener('error', e=>{
-      const d=e.detail || {};
-      setStatus('PLAYBACK ERROR');
-      setMessage(`Shaka error ${d.code ?? ''}: ${d.message || 'Playback failed. Check the URL, CORS, key pairs, and browser console.'}`);
-      stage.classList.remove('loading');
-    });
-    player.addEventListener('buffering', e=>{
-      stage.classList.toggle('loading', !!e.buffering);
-      setStatus(e.buffering ? 'BUFFERING' : (video.paused ? 'PAUSED' : 'PLAYING'));
-    });
-    player.addEventListener('adaptation', refreshQuality);
-    player.addEventListener('trackschanged', refreshQuality);
-    player.addEventListener('loaded', refreshLiveButton);
-    player.addEventListener('seekrangechanged', refreshLiveButton);
-    video.addEventListener('playing',()=>{ $('play').textContent='❚❚'; setStatus('PLAYING'); showControls(); });
-    video.addEventListener('pause',()=>{ $('play').textContent='▶'; if(!video.ended)setStatus('PAUSED'); stage.classList.remove('loading'); stage.classList.remove('idle'); });
-    video.addEventListener('waiting',()=>{stage.classList.add('loading');setStatus('BUFFERING');});
-    video.addEventListener('canplay',()=>{stage.classList.remove('loading');});
-    video.addEventListener('timeupdate',()=>{
-      $('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;
-      if(!seeking && Number.isFinite(video.duration) && video.duration>0) $('seek').value=String(video.currentTime/video.duration*1000);
-      refreshLiveButton();
-    });
-    video.addEventListener('durationchange',()=>{$('clock').textContent=`${fmt(video.currentTime)} / ${fmt(video.duration)}`;});
-    setStatus('READY');
-  }
-  async function loadStream(){
-    if(!player){setMessage('Player is still initializing. Please wait a moment.');return;}
-    const uri=$('mpd').value.trim();
-    if(!uri){setMessage('Enter an MPD URL first.');$('mpd').focus();return;}
-    try{
-      const keys=parseKeys($('keys').value);
-      player.configure({
-        drm:{clearKeys:keys},
-        streaming:{
-          bufferingGoal:30,
-          rebufferingGoal:2,
-          bufferBehind:30,
-          retryParameters:{maxAttempts:3,baseDelay:500,backoffFactor:2,fuzzFactor:.5,timeout:15000}
-        },
-        abr:{enabled:true,defaultBandwidthEstimate:5000000}
+
+    function parseClearKeys(text) {
+      const map = {};
+      text.split(/\r?\n/).forEach(line => {
+        line = line.trim();
+        if (!line || line.startsWith('#')) return;
+        const parts = line.split(':');
+        if (parts.length >= 2) {
+          const kid = parts[0].trim().toLowerCase().replace(/-/g, '');
+          const key = parts.slice(1).join(':').trim().toLowerCase().replace(/-/g, '');
+          if (kid && key) map[kid] = key;
+        }
       });
-      stage.classList.add('loading');setStatus('LOADING');setMessage('Loading manifest and preparing playback…');
-      await player.load(uri);
-      $('streamTitle').textContent='NOW PLAYING';
-      refreshLiveButton();
-      refreshQuality();
-      setStatus('READY');setMessage('Stream loaded. Press Play if playback does not start automatically.');
-      try{await video.play();}catch(_){setMessage('Stream loaded. Press Play to begin; your browser may require a user gesture.');}
-    }catch(e){
-      stage.classList.remove('loading');setStatus('LOAD FAILED');
-      setMessage(e.message || String(e));
+      return map;
     }
-  }
-  function refreshQuality(){
-    if(!player)return;
-    const sel=$('quality'), old=sel.value;
-    const tracks=player.getVariantTracks().filter(t=>t.type==='variant' && t.height);
-    const seen=new Map();
-    tracks.forEach(t=>{const label=`${t.height}p`;if(!seen.has(label))seen.set(label,t.height);});
-    sel.innerHTML='<option value="auto">Quality: Auto</option>';
-    [...seen.entries()].sort((a,b)=>b[1]-a[1]).forEach(([label,height])=>{
-      const o=document.createElement('option');o.value=String(height);o.textContent=label;sel.appendChild(o);
-    });
-    if([...sel.options].some(o=>o.value===old))sel.value=old;
-  }
-  $('load').addEventListener('click',loadStream);
-  $('stop').addEventListener('click',async()=>{
-    if(player){try{await player.unload();}catch(_){}}
-    video.pause();video.removeAttribute('src');video.load();
-    stage.classList.remove('loading');setStatus('STOPPED');setMessage('Playback stopped.');
-  });
-  $('example').addEventListener('click',()=>{
-    $('keys').value=[
-      'a6be88ea454c43bcb4affec1466898c5:089c7fb2126748ca921ec700169a1a84',
-      '280c2e7c65bf40d7a048d90d5ea03d82:fc67e9582bf943de8567cf835b0608c2',
-      '79ed755f8949459a9469e2e5201db84b:fa70a243e0c04afe97f557871979b390',
-      'e13f038261b9486abbd0b11e48d9d4d9:37c7f6f9a2e2403da1e63bd981626b88'
-    ].join('\n');
-    setMessage('Example keys filled. Add your MPD URL and load the stream.');
-  });
-  $('play').addEventListener('click',()=>video.paused ? video.play().catch(()=>{}) : video.pause());
-  $('goLive').addEventListener('click',goToLive);
-  $('back').addEventListener('click',()=>{video.currentTime=Math.max(0,video.currentTime-10);showControls();});
-  $('forward').addEventListener('click',()=>{video.currentTime=Math.min(video.duration||Infinity,video.currentTime+10);showControls();});
-  $('mute').addEventListener('click',()=>{video.muted=!video.muted;$('mute').textContent=video.muted?'🔇':'🔊';});
-  $('volume').addEventListener('input',()=>{video.volume=Number($('volume').value);video.muted=video.volume===0;$('mute').textContent=video.muted?'🔇':'🔊';});
-  $('speed').addEventListener('change',()=>{video.playbackRate=Number($('speed').value);});
-  $('quality').addEventListener('change',()=>{
-    if(!player)return;
-    const val=$('quality').value;
-    if(val==='auto'){player.configure({abr:{enabled:true}});setMessage('Adaptive quality enabled.');}
-    else{
-      player.configure({abr:{enabled:false}});
-      const track=player.getVariantTracks().filter(t=>t.height===Number(val)).sort((a,b)=>(b.bandwidth||0)-(a.bandwidth||0))[0];
-      if(track){player.selectVariantTrack(track,true);setMessage(`Selected ${val}p. If several tracks share this resolution, the highest-bandwidth matching track was selected.`);}
+
+    function formatTime(s) {
+      if (!isFinite(s) || s < 0) return '0:00';
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = Math.floor(s % 60);
+      if (h > 0) return `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
+      return `${m}:${String(sec).padStart(2,'0')}`;
     }
-  });
-  $('seek').addEventListener('input',()=>{
-    seeking=true;
-    if(Number.isFinite(video.duration)&&video.duration>0){
-      const t=Number($('seek').value)/1000*video.duration;
-      $('clock').textContent=`${fmt(t)} / ${fmt(video.duration)}`;
+
+    function updatePlayPauseUI() {
+      const paused = video.paused;
+      wrapper.classList.toggle('paused', paused);
+      iconPlay.style.display  = paused ? 'block' : 'none';
+      iconPause.style.display = paused ? 'none'  : 'block';
     }
-  });
-  $('seek').addEventListener('change',()=>{
-    if(Number.isFinite(video.duration)&&video.duration>0)video.currentTime=Number($('seek').value)/1000*video.duration;
-    seeking=false;showControls();
-  });
-  async function toggleFullscreen(){
-    try {
-      if (document.fullscreenElement || document.webkitFullscreenElement) {
-        if (document.exitFullscreen) await document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+
+    function updateVolumeUI() {
+      const muted = video.muted || video.volume === 0;
+      iconVol.style.display   = muted ? 'none'  : 'block';
+      iconMuted.style.display = muted ? 'block' : 'none';
+      volumeSlider.value = muted ? 0 : video.volume;
+    }
+
+    function updateProgress() {
+      const dur = video.duration || 0;
+      const cur = video.currentTime || 0;
+      playedBar.style.width = dur ? (cur / dur * 100) + '%' : '0%';
+
+      // Buffered ranges
+      if (video.buffered.length) {
+        const end = video.buffered.end(video.buffered.length - 1);
+        bufferedBar.style.width = dur ? (end / dur * 100) + '%' : '0%';
+      } else {
+        bufferedBar.style.width = '0%';
+      }
+
+      timeDisplay.textContent = `${formatTime(cur)} / ${formatTime(dur)}`;
+    }
+
+    function showControlsTemporarily() {
+      wrapper.classList.add('show-controls');
+      clearTimeout(hideControlsTimer);
+      hideControlsTimer = setTimeout(() => {
+        if (!video.paused) wrapper.classList.remove('show-controls');
+      }, 3000);
+    }
+
+    // ---------- Shaka init ----------
+    async function initPlayer() {
+      if (!window.shaka) {
+        setStatus('Shaka Player failed to load from CDN.', true);
         return;
       }
-      if (stage.requestFullscreen) await stage.requestFullscreen();
-      else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
-      else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
-      else setMessage('Fullscreen is not supported in this viewing mode. Open the HTML player in Chrome or deploy it to a website, then try again.');
-    } catch (e) {
-      setMessage('Fullscreen was blocked by this browser or preview. Open the player directly in Chrome or deploy it to a website and try again.');
+      shaka.polyfill.installAll();
+
+      if (player) {
+        await player.destroy();
+        player = null;
+      }
+
+      player = new shaka.Player();
+      await player.attach(video);
+
+      // === BUFFERLESS / LOW-BUFFER CONFIG ===
+      player.configure({
+        streaming: {
+          bufferingGoal: 4,          // try to keep only ~4 s ahead
+          rebufferingGoal: 1,        // resume when 1 s is buffered
+          bufferBehind: 10,          // keep little history
+          retryParameters: {
+            maxAttempts: 4,
+            baseDelay: 200,
+            backoffFactor: 1.5,
+            fuzzFactor: 0.3,
+            timeout: 10000
+          },
+          alwaysStreamText: false,
+          segmentPrefetchLimit: 1
+        },
+        abr: {
+          enabled: true,
+          defaultBandwidthEstimate: 5e6
+        },
+        manifest: {
+          retryParameters: {
+            maxAttempts: 3,
+            baseDelay: 300,
+            timeout: 10000
+          }
+        }
+      });
+
+      // Error handler
+      player.addEventListener('error', (e) => {
+        const err = e.detail;
+        console.error('Shaka error', err);
+        setStatus(`Error ${err.code}: ${err.message || JSON.stringify(err.data)}`, true);
+        wrapper.classList.remove('buffering');
+      });
+
+      // Buffering state
+      player.addEventListener('buffering', (e) => {
+        wrapper.classList.toggle('buffering', e.buffering);
+      });
     }
-  }
-  $('fullscreen').addEventListener('click', toggleFullscreen);
-  $('fullscreenTop').addEventListener('click', toggleFullscreen);
-  stage.addEventListener('mousemove',showControls);stage.addEventListener('touchstart',showControls,{passive:true});
-  document.addEventListener('keydown',e=>{
-    if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;
-    if(e.code==='Space'){e.preventDefault();video.paused?video.play().catch(()=>{}):video.pause();}
-    else if(e.key==='ArrowLeft')video.currentTime=Math.max(0,video.currentTime-10);
-    else if(e.key==='ArrowRight')video.currentTime=Math.min(video.duration||Infinity,video.currentTime+10);
-    else if(e.key.toLowerCase()==='m'){$('mute').click();}
-    else if(e.key.toLowerCase()==='f'){$('fullscreen').click();}
-    showControls();
-  });
-  init().catch(e=>setMessage(`Initialization failed: ${e.message||e}`));
-})();
-</script>
+
+    // ---------- Load stream ----------
+    async function loadStream() {
+      const url = mpdUrlInput.value.trim();
+      if (!url) {
+        setStatus('Please enter an MPD URL.', true);
+        return;
+      }
+
+      const clearKeys = parseClearKeys(clearKeysInput.value);
+      const keyCount = Object.keys(clearKeys).length;
+
+      loadBtn.disabled = true;
+      setStatus(`Loading… (${keyCount} ClearKey${keyCount !== 1 ? 's' : ''})`);
+      wrapper.classList.add('buffering');
+
+      try {
+        if (!player) await initPlayer();
+
+        // Inject ClearKeys (forces ClearKey CDM)
+        if (keyCount > 0) {
+          player.configure({
+            drm: {
+              clearKeys: clearKeys
+            }
+          });
+        } else {
+          // Clear any previous keys
+          player.configure({ drm: { clearKeys: {} } });
+        }
+
+        await player.load(url);
+        setStatus(`Playing · ${keyCount} ClearKey(s) loaded · low-buffer mode`);
+        video.play().catch(() => {});
+        updatePlayPauseUI();
+        buildQualityMenu();
+      } catch (err) {
+        console.error(err);
+        setStatus(`Load failed: ${err.message || err}`, true);
+      } finally {
+        loadBtn.disabled = false;
+        wrapper.classList.remove('buffering');
+      }
+    }
+
+    async function stopStream() {
+      if (player) {
+        await player.unload();
+      }
+      video.removeAttribute('src');
+      video.load();
+      setStatus('Stopped');
+      updatePlayPauseUI();
+      updateProgress();
+      qualityMenu.innerHTML = '';
+    }
+
+    // ---------- Quality menu ----------
+    function buildQualityMenu() {
+      qualityMenu.innerHTML = '';
+      if (!player) return;
+
+      const tracks = player.getVariantTracks()
+        .filter(t => t.height)
+        .sort((a, b) => b.height - a.height);
+
+      // Auto
+      const autoBtn = document.createElement('button');
+      autoBtn.textContent = 'Auto';
+      autoBtn.classList.add('active');
+      autoBtn.onclick = () => {
+        player.configure({ abr: { enabled: true } });
+        [...qualityMenu.children].forEach(b => b.classList.remove('active'));
+        autoBtn.classList.add('active');
+        qualityDropdown.classList.remove('open');
+      };
+      qualityMenu.appendChild(autoBtn);
+
+      const seen = new Set();
+      tracks.forEach(t => {
+        const label = `${t.height}p`;
+        if (seen.has(label)) return;
+        seen.add(label);
+        const btn = document.createElement('button');
+        btn.textContent = label + (t.bandwidth ? ` · ${Math.round(t.bandwidth/1000)} kbps` : '');
+        btn.onclick = () => {
+          player.configure({ abr: { enabled: false } });
+          player.selectVariantTrack(t, /* clearBuffer= */ true);
+          [...qualityMenu.children].forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          qualityDropdown.classList.remove('open');
+        };
+        qualityMenu.appendChild(btn);
+      });
+    }
+
+    // ---------- Event wiring ----------
+    loadBtn.addEventListener('click', loadStream);
+    stopBtn.addEventListener('click', stopStream);
+    fillExampleBtn.addEventListener('click', () => {
+      clearKeysInput.value = EXAMPLE_KEYS;
+    });
+
+    playPauseBtn.addEventListener('click', () => {
+      if (video.paused) video.play();
+      else video.pause();
+    });
+    bigPlay.addEventListener('click', () => video.play());
+
+    video.addEventListener('play',  updatePlayPauseUI);
+    video.addEventListener('pause', updatePlayPauseUI);
+    video.addEventListener('timeupdate', updateProgress);
+    video.addEventListener('progress', updateProgress);
+    video.addEventListener('volumechange', updateVolumeUI);
+
+    rewindBtn.addEventListener('click', () => {
+      video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+    forwardBtn.addEventListener('click', () => {
+      video.currentTime = Math.min(video.duration || 0, video.currentTime + 10);
+    });
+
+    muteBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+    });
+    volumeSlider.addEventListener('input', () => {
+      video.volume = parseFloat(volumeSlider.value);
+      video.muted = video.volume === 0;
+    });
+
+    // Seek
+    progressWrap.addEventListener('click', (e) => {
+      const rect = progressWrap.getBoundingClientRect();
+      const pct = (e.clientX - rect.left) / rect.width;
+      if (video.duration) video.currentTime = pct * video.duration;
+    });
+
+    // Quality dropdown
+    qualityBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      qualityDropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', () => qualityDropdown.classList.remove('open'));
+
+    // Fullscreen
+    fsBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        wrapper.requestFullscreen?.() || wrapper.webkitRequestFullscreen?.();
+      } else {
+        document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+      }
+    });
+    document.addEventListener('fullscreenchange', () => {
+      const isFs = !!document.fullscreenElement;
+      iconFs.style.display     = isFs ? 'none'  : 'block';
+      iconFsExit.style.display = isFs ? 'block' : 'none';
+    });
+
+    // Show controls on interaction
+    wrapper.addEventListener('mousemove', showControlsTemporarily);
+    wrapper.addEventListener('touchstart', showControlsTemporarily);
+
+    // Keyboard shortcuts (Netflix-ish)
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      switch (e.key) {
+        case ' ':
+        case 'k':
+          e.preventDefault();
+          video.paused ? video.play() : video.pause();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          video.currentTime = Math.max(0, video.currentTime - 10);
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          video.currentTime = Math.min(video.duration || 0, video.currentTime + 10);
+          break;
+        case 'm':
+          video.muted = !video.muted;
+          break;
+        case 'f':
+          fsBtn.click();
+          break;
+      }
+    });
+
+    // Boot
+    initPlayer().then(() => {
+      setStatus('Ready – paste MPD URL + ClearKeys and hit Load');
+      clearKeysInput.value = EXAMPLE_KEYS; // pre-fill the keys you gave
+    });
+  </script>
 </body>
 </html>
