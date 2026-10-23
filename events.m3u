@@ -33,9 +33,66 @@ https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd
 #KODIPROP:inputstream.adaptive.stream_headers=Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/
 http://193.47.62.41/hls/duuuAAAAAA.m3u8?
 
-#EXTINF:-1 tvg-id="14069" tvg-name="Philadelphia 76ers vs Cleveland Cavaliers | HD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Philadelphia 76ers vs Cleveland Cavaliers",Philadelphia 76ers vs Cleveland Cavaliers | HD SERVER
+#EXTINF:-1 tvg-id="14068" tvg-name="Flamengo vs Estudiantes de La Plata | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Estudiantes de La Plata",Flamengo vs Estudiantes de La Plata | beIN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="14068" tvg-name="Flamengo vs Estudiantes de La Plata | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Estudiantes de La Plata",Flamengo vs Estudiantes de La Plata | SportDigital Fussball
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
+
+#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://gooz.aapmains.net/new-stream-embed/58434?ad=111&Origin=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/58434/load-playlist-multi?&.m3u8
+
+#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | CRICFy NBA" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | CRICFy NBA
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+https://www.rtmpcdn.com/live/8880ac57-3f3c-4035-b264-4a8b403f895a.m3u8
+
+#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | CRICFy HD" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | CRICFy HD
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+https://admin2.formaturamaxi.com.br/nba.m3u8
+
+#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | HD QUALITY
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream5.pro/hls/mlkijfezag65.m3u8
+https://edgestream5.pro/hls/wfazgsqtrezu66.m3u8
+
+#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.55/hls/CDDDAAAAA.m3u8
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | TSN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | TSN SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://gooz.aapmains.net/new-stream-embed/58424?ad=111&Origin=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/58424/load-playlist?&.m3u8
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | CRICFy NFL" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | CRICFy NFL
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+https://admin2.formaturamaxi.com.br/nfl.m3u8
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | HD QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
+https://edgestream5.pro/hls/JHDAJBDnjdna30.m3u8
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | SD SERVER" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | SD SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.44/hls/CDDDAAAAAA.m3u8
+
+#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | LOW QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | LOW QUALITY
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.41/hls/CDDDAAAAAAA.m3u8
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | SKY SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | SKY SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -293,35 +350,6 @@ https://dai.google.com/ssai/event/F_6lxVUnQ6Wq3OLoSvaeDQ/master.m3u8
 
 #EXTINF:-1 tvg-id="14009" tvg-name="New Zealand vs India | SonyLiv - Kannada" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/11191/image/dark" group-title="New Zealand vs India",New Zealand vs India | SonyLiv - Kannada
 https://dai.google.com/ssai/event/RyHp_zJIS62YupQ3gUIbSQ/master.m3u8
-
-#EXTINF:-1 tvg-id="14068" tvg-name="Flamengo vs Estudiantes de La Plata | beIN ENGLISH - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Estudiantes de La Plata",Flamengo vs Estudiantes de La Plata | beIN ENGLISH - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="14068" tvg-name="Flamengo vs Estudiantes de La Plata | SportDigital Fussball" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/384/image/dark" group-title="Flamengo vs Estudiantes de La Plata",Flamengo vs Estudiantes de La Plata | SportDigital Fussball
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
-
-#EXTINF:-1 tvg-id="14070" tvg-name="Oklahoma City Thunder vs Denver Nuggets | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/132/image/dark" group-title="Oklahoma City Thunder vs Denver Nuggets",Oklahoma City Thunder vs Denver Nuggets | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream1.pro/hls/wfazgsqtrezu66.m3u8
-
-#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | TSN SPORTS - AQ" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | TSN SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd
-
-#EXTINF:-1 tvg-id="14071" tvg-name="Chicago Bears vs New England Patriots | HD QUALITY" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/9464/image/dark" group-title="Chicago Bears vs New England Patriots",Chicago Bears vs New England Patriots | HD QUALITY
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=https://streame.center&Origin=https://streame.center
-https://edgestream1.pro/hls/JHDAJBDnjdna30.m3u8
 
 #EXTINF:-1 tvg-id="14072" tvg-name="Afghanistan vs Zimbabwe | CRICFy LIVE" tvg-logo="http://api.sofascore.com/api/v1/unique-tournament/37663/image/dark" group-title="Afghanistan vs Zimbabwe",Afghanistan vs Zimbabwe | CRICFy LIVE
 https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
