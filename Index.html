@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shoeb Player | Netflix Style</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Netflix Skin CSS (SnehTV wala) -->
+    <link rel="stylesheet" href="https://tulnit.fun/player.css" />
+    <script type="text/javascript" src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+</head>
+
+<body>
+    <style>
+        html, body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #myElement {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Netflix skin adjustments */
+        .jw-skin-netflix .jw-display-icon-container {
+            border-radius: 50%;
+        }
+
+        /* Title hide */
+        .jw-title-primary, .jw-title-secondary {
+            display: none !important;
+        }
+
+        /* VAST Skip button style */
+        .jw-skip {
+            background: rgba(0,0,0,0.7) !important;
+            border: 1px solid rgba(255,255,255,0.5) !important;
+            color: #fff !important;
+            padding: 10px 20px !important;
+            border-radius: 4px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+        }
+    </style>
+
+    <div id="myElement"></div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const mpd = params.get('mpd');
+
+            if (!mpd) {
+                document.getElementById('myElement').textContent =
+                    'Please provide an MPD URL using ?mpd=YOUR_STREAM.mpd';
+                document.getElementById('myElement').style.color = '#fff';
+                document.getElementById('myElement').style.padding = '20px';
+                return;
+            }
+
+            let streamURL;
+
+            try {
+                streamURL = new URL(mpd);
+
+                if (!['http:', 'https:'].includes(streamURL.protocol)) {
+                    throw new Error('Invalid protocol');
+                }
+            } catch (error) {
+                document.getElementById('myElement').textContent =
+                    'Invalid MPD URL.';
+                document.getElementById('myElement').style.color = '#fff';
+                return;
+            }
+
+            const keyIds = (params.get('keyid') || '')
+                .split(',').map(v => v.trim()).filter(Boolean);
+
+            const keys = (params.get('key') || '')
+                .split(',').map(v => v.trim()).filter(Boolean);
+
+            // Alternative format: &keys=KID1:KEY1,KID2:KEY2
+            const combinedKeys = params.get('keys');
+            const clearKeys = {};
+            const isHexKey = value => /^[a-fA-F0-9]{32}$/.test(value);
+
+            if (combinedKeys) {
+                for (const pair of combinedKeys.split(',')) {
+                    const separator = pair.indexOf(':');
+
+                    if (separator <= 0) {
+                        console.error('Invalid keys format. Use KID:KEY,KID:KEY.');
+                        return;
+                    }
+
+                    const kid = pair.slice(0, separator).trim();
+                    const key = pair.slice(separator + 1).trim();
+
+                    if (!isHexKey(kid) || !isHexKey(key)) {
+                        console.error('Each KID and key must be 32 hexadecimal characters.');
+                        return;
+                    }
+
+                    clearKeys[kid.toLowerCase()] = key.toLowerCase();
+                }
+            } else {
+                if (keyIds.length !== keys.length) {
+                    console.error('The number of keyid and key values must match.');
+                    return;
+                }
+
+                for (let i = 0; i < keyIds.length; i++) {
+                    if (!isHexKey(keyIds[i]) || !isHexKey(keys[i])) {
+                        console.error('Each KID and key must be 32 hexadecimal characters.');
+                        return;
+                    }
+
+                    clearKeys[keyIds[i].toLowerCase()] = keys[i].toLowerCase();
+                }
+            }
+
+            const playerConfig = {
+                title: '',
+                description: '',
+                skin: { name: "netflix" },
+                stretching: "exactfit",
+                aspectratio: '16:9',
+                width: '100%',
+                height: '100%',
+                autostart: true,
+                file: streamURL.href,
+                type: "dash"
+            };
+
+            if (Object.keys(clearKeys).length > 0) {
+                const kids = Object.keys(clearKeys);
+
+                // Preserves the original JW Player ClearKey configuration.
+                playerConfig.drm = {
+                    clearkey: {
+                        keyId: kids[0],
+                        key: clearKeys[kids[0]]
+                    }
+                };
+
+                if (kids.length > 1) {
+                    console.warn(
+                        'Multiple keys parsed, but this JW Player configuration ' +
+                        'uses only the first pair. Multi-key playback requires ' +
+                        'a compatible DRM integration.'
+                    );
+                }
+            }
+
+            const player = jwplayer("myElement").setup(playerConfig);
+
+            player.on('error', (e) => {
+                console.log("Error:", e.message);
+                setTimeout(() => player.play(), 3000);
+            });
+        });
+    </script>
+</body>
+
+</html>
