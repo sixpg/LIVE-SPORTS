@@ -1,72 +1,31 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="14378" tvg-name="Fiorentina vs Atalanta | beIN ENGLISH - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Fiorentina vs Atalanta",Fiorentina vs Atalanta | beIN ENGLISH - AQ
+#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | PREMIER SPORTS - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | PREMIER SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
 
-#EXTINF:-1 tvg-id="14378" tvg-name="Fiorentina vs Atalanta | SPORT 1 CZ - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Fiorentina vs Atalanta",Fiorentina vs Atalanta | SPORT 1 CZ - AQ
+#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | PREMIERE BR - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | PREMIERE BR - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
-https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
-
-#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | FOX DEPORTES - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | FOX DEPORTES - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
+#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
 
-#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | SporTV BR - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | SporTV BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=2357a3e2fe6f07c42c00ee9eec769a27:061d7a73d6f4b13160e3d9fdbc154a0a
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/orhlovwjv8/out/v1/3fbdf8c3ec6743d085d32dace1764176/cenc.mpd
-
-#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | SportDigital FussBall" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | SportDigital FussBall
+#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | SportDigital Fussball" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | SportDigital Fussball
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
 
-#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | FOX SOCCER+ HD" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | FOX SOCCER+ HD
-#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
-https://chatgpt.hereisman.net/playlist/58839/load-playlist?
-
-#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | LOW SERVER" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/GTTTTAA.m3u8
-
-#EXTINF:-1 tvg-id="14381" tvg-name="Al-Riyadh vs Al-Qadsiah | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Riyadh vs Al-Qadsiah",Al-Riyadh vs Al-Qadsiah | CRICFy LIVE
-https://sdn-global-live-streaming-packager-cache.3qsdn.com/77693/77693_264_live.m3u8
-
-#EXTINF:-1 tvg-id="14381" tvg-name="Al-Riyadh vs Al-Qadsiah | LOW SERVER" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Riyadh vs Al-Qadsiah",Al-Riyadh vs Al-Qadsiah | LOW SERVER
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.50/hls/GTTTTAAA.m3u8
-
-#EXTINF:-1 tvg-id="14382" tvg-name="Everton vs Newcastle United | beIN ENGLISH - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Everton vs Newcastle United",Everton vs Newcastle United | beIN ENGLISH - AQ
+#EXTINF:-1 tvg-id="14375" tvg-name="Vasco da Gama vs Flamengo | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Vasco da Gama vs Flamengo",Vasco da Gama vs Flamengo | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.license_key=332f62eb3cae824e98a4124da29a7d31:d1698cda3d040f9051125a61745b596b
 #KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
-
-#EXTINF:-1 tvg-id="14382" tvg-name="Everton vs Newcastle United | CBS SPORTS - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Everton vs Newcastle United",Everton vs Newcastle United | CBS SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
-
-#EXTINF:-1 tvg-id="14383" tvg-name="FK Austria Wien vs Juventus | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/696/image/dark" group-title="FK Austria Wien vs Juventus",FK Austria Wien vs Juventus | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.41/hls/jmmmA.m3u8
-
-#EXTINF:-1 tvg-id="14384" tvg-name="Paris FC vs BK Hacken FF | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/696/image/dark" group-title="Paris FC vs BK Hacken FF",Paris FC vs BK Hacken FF | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
-http://193.47.62.41/hls/jmmmAA.m3u8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/1obktrybht/out/v1/08265453c8f64d9fbeb3cf43764403a8/cenc.mpd
 
 #EXTINF:-1 tvg-id="591" tvg-name="Formula 1 | TSN SPORTS - AQ" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U1hs_95YIb02AiDL1JAgkqMNrA1SkPMUatqqPsO2ZqtNZdmj79TQ71k&s=10" group-title="Formula 1",Formula 1 | TSN SPORTS - AQ
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -462,34 +421,6 @@ https://baila-lentoo.pages.dev/all-sp/809382.m3u8
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=ReactNativeVideo/9.11.1 (Linux;Android 13) AndroidXMedia3/1.6.1&Referer=https://fancode.com/
 https://dai-fancode.pages.dev/mumbai/4250387_english_hls_b7a3c2c35c92425_1ta-di_h264/index.m3u8
 
-#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | PREMIER SPORTS - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | PREMIER SPORTS - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd
-
-#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | PREMIERE BR - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | PREMIERE BR - AQ
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=56b79c1782b30e6b6fc973b0e8fd4104:fa38aaa865a57eda7c77444697ba8ed3
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/nelfyucw9a/out/v1/6ffb2c365ad14f88b154591beb43d1f6/cenc.mpd
-
-#EXTINF:-1 tvg-id="14374" tvg-name="Atletico Mineiro vs Cruzeiro | SportDigital Fussball" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Atletico Mineiro vs Cruzeiro",Atletico Mineiro vs Cruzeiro | SportDigital Fussball
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd?
-
-#EXTINF:-1 tvg-id="14375" tvg-name="Vasco da Gama vs Flamengo | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Vasco da Gama vs Flamengo",Vasco da Gama vs Flamengo | CRICFy LIVE
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=332f62eb3cae824e98a4124da29a7d31:d1698cda3d040f9051125a61745b596b
-#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/1obktrybht/out/v1/08265453c8f64d9fbeb3cf43764403a8/cenc.mpd
-
 #EXTINF:-1 tvg-id="14376" tvg-name="Gremio vs Athletico | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/325/image/dark" group-title="Gremio vs Athletico",Gremio vs Athletico | CRICFy LIVE
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -549,3 +480,72 @@ https://chatgpt.hereisman.net/playlist/58838/load-playlist?
 #EXTINF:-1 tvg-id="14377" tvg-name="Frosinone vs Lecce | LOW SERVER" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Frosinone vs Lecce",Frosinone vs Lecce | LOW SERVER
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
 http://193.47.62.41/hls/jmmm.m3u8
+
+#EXTINF:-1 tvg-id="14378" tvg-name="Fiorentina vs Atalanta | beIN ENGLISH - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Fiorentina vs Atalanta",Fiorentina vs Atalanta | beIN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b42be2664d7e811d04f3e504e0924c5:ae24090123b8c72ac5404dc152847cb8
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/8m8cd46i1t/out/v1/83985c68e4174e90a58a1f2c024be4c9/cenc.mpd?
+
+#EXTINF:-1 tvg-id="14378" tvg-name="Fiorentina vs Atalanta | SPORT 1 CZ - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/23/image/dark" group-title="Fiorentina vs Atalanta",Fiorentina vs Atalanta | SPORT 1 CZ - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d
+https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd
+
+#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | FOX DEPORTES - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | FOX DEPORTES - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d1a163914db8ffad2c3e94f979896a0d:9728800a3959aafdd5b0bcfbf3768811
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/vkpoljjpkj/out/v1/502bcf68b3514cd28a220e6f0a43816f/cenc.mpd
+
+#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | SporTV BR - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | SporTV BR - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2357a3e2fe6f07c42c00ee9eec769a27:061d7a73d6f4b13160e3d9fdbc154a0a
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/orhlovwjv8/out/v1/3fbdf8c3ec6743d085d32dace1764176/cenc.mpd
+
+#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | SportDigital FussBall" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | SportDigital FussBall
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0ad4080cdff8c60b1233b22087f0b340:285f129c5eca01dd08a5d5a14ad801c8
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ssdefyhkkr/out/v1/cf01290cb7f64525bdf861580a016ca8/cenc.mpd
+
+#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | FOX SOCCER+ HD" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | FOX SOCCER+ HD
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://gooz.aapmains.net
+https://chatgpt.hereisman.net/playlist/58839/load-playlist?
+
+#EXTINF:-1 tvg-id="14380" tvg-name="Al-Nassr vs Al-Kholood | LOW SERVER" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Nassr vs Al-Kholood",Al-Nassr vs Al-Kholood | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.50/hls/GTTTTAA.m3u8
+
+#EXTINF:-1 tvg-id="14381" tvg-name="Al-Riyadh vs Al-Qadsiah | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Riyadh vs Al-Qadsiah",Al-Riyadh vs Al-Qadsiah | CRICFy LIVE
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/77693/77693_264_live.m3u8
+
+#EXTINF:-1 tvg-id="14381" tvg-name="Al-Riyadh vs Al-Qadsiah | LOW SERVER" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/955/image/dark" group-title="Al-Riyadh vs Al-Qadsiah",Al-Riyadh vs Al-Qadsiah | LOW SERVER
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.50/hls/GTTTTAAA.m3u8
+
+#EXTINF:-1 tvg-id="14382" tvg-name="Everton vs Newcastle United | beIN ENGLISH - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Everton vs Newcastle United",Everton vs Newcastle United | beIN ENGLISH - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd
+
+#EXTINF:-1 tvg-id="14382" tvg-name="Everton vs Newcastle United | CBS SPORTS - AQ" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/21/image/dark" group-title="Everton vs Newcastle United",Everton vs Newcastle United | CBS SPORTS - AQ
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9623774ac5c8c351aafe97c5fe70267:5164e6d05164a2d65fa8fcc962aa4861
+#KODIPROP:inputstream.adaptive.stream_headers=user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/5qz8wmdome/out/v1/b9323e853dce427eac214b77bd48a204/cenc.mpd
+
+#EXTINF:-1 tvg-id="14383" tvg-name="FK Austria Wien vs Juventus | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/696/image/dark" group-title="FK Austria Wien vs Juventus",FK Austria Wien vs Juventus | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.41/hls/jmmmA.m3u8
+
+#EXTINF:-1 tvg-id="14384" tvg-name="Paris FC vs BK Hacken FF | CRICFy LIVE" tvg-logo="http://img.sofascore.com/api/v1/unique-tournament/696/image/dark" group-title="Paris FC vs BK Hacken FF",Paris FC vs BK Hacken FF | CRICFy LIVE
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc
+http://193.47.62.41/hls/jmmmAA.m3u8
