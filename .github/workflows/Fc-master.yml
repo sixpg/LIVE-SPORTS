@@ -1,0 +1,238 @@
+
+name: FanCode Master M3U8 Auto Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate Master Playlists
+        env:
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          import urllib.request
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          SOURCE = (
+              "https://raw.githubusercontent.com/"
+              "sportlive18/Fancode-New-Auto-Update/"
+              "refs/heads/main/fancode3.json"
+          )
+
+          BASE = os.environ.get("SITE_BASE_URL", "").rstrip("/")
+
+          if not BASE.startswith("https://"):
+              raise ValueError(
+                  "Configure SITE_BASE_URL in GitHub Actions Variables."
+              )
+
+          # Fetch source JSON
+          request = urllib.request.Request(
+              SOURCE,
+              headers={"User-Agent": "Mozilla/5.0"}
+          )
+
+          with urllib.request.urlopen(request, timeout=30) as response:
+              data = json.loads(response.read().decode("utf-8"))
+
+          if not isinstance(data, dict) or not isinstance(
+              data.get("matches"), list
+          ):
+              raise ValueError("Invalid FanCode JSON structure.")
+
+          output_dir = Path("public")
+          output_dir.mkdir(exist_ok=True)
+
+          bandwidths = {
+              "240p": 350000,
+              "360p": 650000,
+              "480p": 1000000,
+              "540p": 1500000,
+              "720p": 2500000,
+              "1080p": 4500000
+          }
+
+          resolutions = {
+              "240p": "426x240",
+              "360p": "640x360",
+              "480p": "854x480",
+              "540p": "960x540",
+              "720p": "1280x720",
+              "1080p": "1920x1080"
+          }
+
+          generated = 0
+          updated = 0
+
+          for match in data["matches"]:
+
+              auto = match.get("auto_streams", {})
+
+              if not isinstance(auto, dict):
+                  continue
+
+              masters = {}
+
+              for language, info in auto.items():
+
+                  if not isinstance(info, dict):
+                      continue
+
+                  qualities = info.get("streams", {})
+
+                  if not isinstance(qualities, dict):
+                      continue
+
+                  variants = [
+                      quality
+                      for quality in bandwidths
+                      if qualities.get(quality)
+                  ]
+
+                  if not variants:
+                      continue
+
+                  # Get stream folder from original quality URL
+                  first_url = qualities[variants[0]]
+                  parsed = urlparse(first_url)
+
+                  path_parts = [
+                      part for part in parsed.path.split("/")
+                      if part
+                  ]
+
+                  if len(path_parts) < 2:
+                      print(
+                          f"Skipping invalid URL: {first_url}"
+                      )
+                      continue
+
+                  folder = path_parts[-2]
+
+                  # Generate master playlist
+                  master_path = (
+                      output_dir / folder / "index.m3u8"
+                  )
+
+                  master_path.parent.mkdir(
+                      parents=True,
+                      exist_ok=True
+                  )
+
+                  lines = [
+                      "#EXTM3U",
+                      "#EXT-X-VERSION:3"
+                  ]
+
+                  for quality in variants:
+
+                      original_url = qualities[quality]
+
+                      lines.extend([
+                          "",
+                          (
+                              "#EXT-X-STREAM-INF:"
+                              f"BANDWIDTH={bandwidths[quality]},"
+                              f"RESOLUTION={resolutions[quality]}"
+                          ),
+                          original_url
+                      ])
+
+                  master_path.write_text(
+                      "\n".join(lines) + "\n",
+                      encoding="utf-8"
+                  )
+
+                  # Build domain URL
+                  master_url = (
+                      f"{BASE}/{folder}/index.m3u8"
+                  )
+
+                  masters[language.upper()] = master_url
+                  generated += 1
+
+              if not masters:
+                  continue
+
+              # Select matching language master
+              language = match.get("language", "").upper()
+
+              master_url = masters.get(
+                  language,
+                  next(iter(masters.values()))
+              )
+
+              # Update ONLY these two stream fields
+              streams = match.setdefault("streams", {})
+
+              streams["primary"] = master_url
+              streams["fancode_cdn"] = master_url
+
+              # Remove original multiple-quality structure
+              match.pop("auto_streams", None)
+
+              updated += 1
+
+          if generated == 0:
+              raise ValueError(
+                  "No master playlists generated. "
+                  "Check the source JSON and quality URLs."
+              )
+
+          # Save final JSON without changing other metadata
+          result = output_dir / "fancode-master.json"
+
+          result.write_text(
+              json.dumps(
+                  data,
+                  indent=2,
+                  ensure_ascii=False
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print("--------------------------------")
+          print("FANCODE MASTER PLAYLIST UPDATE")
+          print("--------------------------------")
+          print(f"Matches updated: {updated}")
+          print(f"Master playlists: {generated}")
+          print(f"Output JSON: {result}")
+          print("--------------------------------")
+
+          PY
+
+      - name: Commit Updated Files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update FanCode master M3U8 playlists"
+            git push origin main
+          else
+            echo "No changes detected."
+          fi
