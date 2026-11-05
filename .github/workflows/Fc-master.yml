@@ -1,5 +1,4 @@
-
-name: FanCode Master M3U8 Auto Update
+name: FanCode JSON Auto Update
 
 on:
   workflow_dispatch:
@@ -10,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: fancode-master-update
+  group: fancode-json-update
   cancel-in-progress: false
 
 jobs:
@@ -28,17 +27,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate Master Playlists
-        env:
-          SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+      - name: Generate FanCode JSON
         run: |
           python - <<'PY'
-          import os
-          import re
           import json
           import urllib.request
+          import shutil
           from pathlib import Path
-          from urllib.parse import urlparse
 
           SOURCE = (
               "https://raw.githubusercontent.com/"
@@ -46,41 +41,20 @@ jobs:
               "refs/heads/main/fancode3.json"
           )
 
-          BASE = os.environ.get(
-              "SITE_BASE_URL", ""
-          ).strip().rstrip("/")
-
-          if not BASE.startswith("https://"):
-              raise ValueError(
-                  "Invalid SITE_BASE_URL secret."
-              )
-
-          # Quality configuration
-          BANDWIDTHS = {
-              "240p": 350000,
-              "360p": 650000,
-              "480p": 1000000,
-              "540p": 1500000,
-              "720p": 2500000,
-              "1080p": 4500000
-          }
-
-          RESOLUTIONS = {
-              "240p": "426x240",
-              "360p": "640x360",
-              "480p": "854x480",
-              "540p": "960x540",
-              "720p": "1280x720",
-              "1080p": "1920x1080"
-          }
+          QUALITY_ORDER = [
+              "1080p",
+              "720p",
+              "540p",
+              "480p",
+              "360p",
+              "240p"
+          ]
 
           print("Fetching FanCode source JSON...")
 
           request = urllib.request.Request(
               SOURCE,
-              headers={
-                  "User-Agent": "Mozilla/5.0"
-              }
+              headers={"User-Agent": "Mozilla/5.0"}
           )
 
           with urllib.request.urlopen(
@@ -98,38 +72,24 @@ jobs:
           if not isinstance(matches, list):
               raise ValueError("Missing matches array.")
 
-          print("Total matches:", len(matches))
-
-          PUBLIC = Path("public")
-          PUBLIC.mkdir(exist_ok=True)
-
-          generated = 0
-          updated = 0
-          skipped = 0
-
-          for match in matches:
-
-              if not isinstance(match, dict):
-                  continue
-
-              match_id = str(
-                  match.get("match_id", "unknown")
-              )
-
+          def get_best_stream(match):
               auto = match.get("auto_streams", {})
 
-              if not isinstance(auto, dict) or not auto:
-                  skipped += 1
-                  print(
-                      f"SKIPPED {match_id}: "
-                      "auto_streams empty"
+              if not isinstance(auto, dict):
+                  return None
+
+              preferred = str(
+                  match.get("language", "")
+              ).upper()
+
+              languages = sorted(
+                  auto.items(),
+                  key=lambda item: (
+                      str(item[0]).upper() != preferred
                   )
-                  continue
+              )
 
-              language_masters = {}
-
-              for language, info in auto.items():
-
+              for language, info in languages:
                   if not isinstance(info, dict):
                       continue
 
@@ -138,157 +98,66 @@ jobs:
                   if not isinstance(qualities, dict):
                       continue
 
-                  # Accept only valid HTTP quality URLs
-                  variants = []
-
-                  for quality, bandwidth in BANDWIDTHS.items():
-
-                      url = qualities.get(quality)
+                  for quality in QUALITY_ORDER:
+                      stream_url = qualities.get(quality)
 
                       if (
-                          isinstance(url, str)
-                          and url.startswith(("https://", "http://"))
-                      ):
-                          variants.append(
-                              (quality, url, bandwidth)
+                          isinstance(stream_url, str)
+                          and stream_url.startswith(
+                              ("https://", "http://")
                           )
+                      ):
+                          return stream_url
 
-                  if not variants:
-                      continue
+              return None
 
-                  # Identify original stream folder
-                  first_url = variants[0][1]
-                  parsed = urlparse(first_url)
+          updated = 0
+          skipped = 0
 
-                  folder = Path(
-                      parsed.path
-                  ).parent.name
-
-                  if not folder:
-                      folder = f"{match_id}_{language.lower()}"
-
-                  # Prevent unsafe folder names
-                  folder = re.sub(
-                      r"[^a-zA-Z0-9_.-]",
-                      "_",
-                      folder
-                  )
-
-                  if folder in ("", ".", ".."):
-                      print(
-                          f"INVALID FOLDER: {match_id}"
-                      )
-                      continue
-
-                  playlist_dir = PUBLIC / folder
-                  playlist_dir.mkdir(
-                      parents=True,
-                      exist_ok=True
-                  )
-
-                  master_path = (
-                      playlist_dir / "index.m3u8"
-                  )
-
-                  # Create master M3U8
-                  lines = [
-                      "#EXTM3U",
-                      "#EXT-X-VERSION:3"
-                  ]
-
-                  for quality, url, bandwidth in variants:
-
-                      lines.append("")
-                      lines.append(
-                          "#EXT-X-STREAM-INF:"
-                          f"BANDWIDTH={bandwidth},"
-                          f"RESOLUTION={RESOLUTIONS[quality]}"
-                      )
-                      lines.append(url)
-
-                  master_path.write_text(
-                      "\n".join(lines) + "\n",
-                      encoding="utf-8"
-                  )
-
-                  master_url = (
-                      f"{BASE}/{folder}/index.m3u8"
-                  )
-
-                  language_masters[
-                      language.upper()
-                  ] = master_url
-
-                  generated += 1
-
-                  print(
-                      f"GENERATED: {match_id} "
-                      f"{language} "
-                      f"({len(variants)} qualities)"
-                  )
-
-              # Skip matches without a generated master
-              if not language_masters:
-                  skipped += 1
+          for match in matches:
+              if not isinstance(match, dict):
                   continue
 
-              # Select matching language
-              language = str(
-                  match.get("language", "")
-              ).upper()
-
-              master_url = language_masters.get(
-                  language,
-                  next(iter(language_masters.values()))
+              match_id = str(
+                  match.get("match_id", "unknown")
               )
 
-              # Update only the requested stream fields
-              streams = match.get("streams")
+              stream_url = get_best_stream(match)
 
-              if not isinstance(streams, dict):
-                  streams = {}
-                  match["streams"] = streams
+              match.pop("auto_streams", None)
+              match.pop("master_m3u8", None)
 
-              streams["primary"] = master_url
-              streams["fancode_cdn"] = master_url
+              if stream_url:
+                  match["streams"] = {
+                      "primary": stream_url,
+                      "fancode_cdn": stream_url
+                  }
 
-              updated += 1
+                  updated += 1
+                  print(f"UPDATED: {match_id}")
 
-              print(
-                  f"UPDATED: {match_id} -> {master_url}"
-              )
+              else:
+                  match.pop("streams", None)
+                  skipped += 1
+                  print(f"SKIPPED: {match_id}")
 
-          print("--------------------------------")
-          print("FANCODE MASTER GENERATION REPORT")
-          print("--------------------------------")
-          print("Generated playlists:", generated)
-          print("Updated matches:", updated)
-          print("Skipped matches:", skipped)
-          print("--------------------------------")
+          print("Updated:", updated)
+          print("Skipped:", skipped)
 
-          # Do not replace the last published JSON
-          # when the source has no usable quality URLs.
-          if generated == 0:
-              print(
-                  "WARNING: No quality URLs available."
-              )
-              print(
-                  "Keeping previously published JSON "
-                  "and playlists unchanged."
-              )
+          if updated == 0:
+              print("No valid streams. Keeping previous JSON.")
               raise SystemExit(0)
 
-          # Remove auto_streams from published matches
-          for match in matches:
-              if isinstance(match, dict):
-                  match.pop("auto_streams", None)
+          # Remove old public folder and generated playlists
+          old_public = Path("public")
 
-          # Save original JSON structure
-          output_json = (
-              PUBLIC / "fancode-master.json"
-          )
+          if old_public.exists():
+              shutil.rmtree(old_public)
 
-          output_json.write_text(
+          # Generate JSON directly in repository root
+          output = Path("fancode.json")
+
+          output.write_text(
               json.dumps(
                   data,
                   indent=2,
@@ -297,9 +166,8 @@ jobs:
               encoding="utf-8"
           )
 
-          print("JSON generated:", output_json)
-          print("Master generation completed!")
-
+          print("Generated:", output)
+          print("FanCode JSON update completed!")
           PY
 
       - name: Commit Updated Files
@@ -307,10 +175,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add public/
+          git add -A -- fancode.json public/
 
           if ! git diff --cached --quiet; then
-            git commit -m "Update FanCode master playlists"
+            git commit -m "Update FanCode JSON"
             git push origin main
             echo "Changes successfully committed."
           else
