@@ -1,3 +1,4 @@
+
 name: FanCode JSON Auto Update
 
 on:
@@ -17,16 +18,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           ref: main
 
+      # Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
+      # Fetch and generate JSON
       - name: Generate FanCode JSON
         run: |
           python - <<'PY'
@@ -54,11 +58,14 @@ jobs:
 
           request = urllib.request.Request(
               SOURCE,
-              headers={"User-Agent": "Mozilla/5.0"}
+              headers={
+                  "User-Agent": "Mozilla/5.0"
+              }
           )
 
           with urllib.request.urlopen(
-              request, timeout=45
+              request,
+              timeout=45
           ) as response:
               data = json.loads(
                   response.read().decode("utf-8")
@@ -72,7 +79,10 @@ jobs:
           if not isinstance(matches, list):
               raise ValueError("Missing matches array.")
 
+          print("Total matches:", len(matches))
+
           def get_best_stream(match):
+
               auto = match.get("auto_streams", {})
 
               if not isinstance(auto, dict):
@@ -90,6 +100,7 @@ jobs:
               )
 
               for language, info in languages:
+
                   if not isinstance(info, dict):
                       continue
 
@@ -99,6 +110,7 @@ jobs:
                       continue
 
                   for quality in QUALITY_ORDER:
+
                       stream_url = qualities.get(quality)
 
                       if (
@@ -115,6 +127,7 @@ jobs:
           skipped = 0
 
           for match in matches:
+
               if not isinstance(match, dict):
                   continue
 
@@ -124,37 +137,73 @@ jobs:
 
               stream_url = get_best_stream(match)
 
+              # Remove temporary source fields
               match.pop("auto_streams", None)
               match.pop("master_m3u8", None)
 
               if stream_url:
+
+                  # Keep ONLY primary and fancode_cdn
                   match["streams"] = {
                       "primary": stream_url,
                       "fancode_cdn": stream_url
                   }
 
                   updated += 1
-                  print(f"UPDATED: {match_id}")
+
+                  print(
+                      f"UPDATED: {match_id}"
+                  )
 
               else:
+
+                  # No valid stream available
                   match.pop("streams", None)
+
                   skipped += 1
-                  print(f"SKIPPED: {match_id}")
 
-          print("Updated:", updated)
-          print("Skipped:", skipped)
+                  print(
+                      f"SKIPPED: {match_id} "
+                      "- No usable stream URL"
+                  )
 
+          print("--------------------------------")
+          print("FANCODE JSON REPORT")
+          print("--------------------------------")
+          print("Total matches:", len(matches))
+          print("Updated matches:", updated)
+          print("Skipped matches:", skipped)
+          print("--------------------------------")
+
+          # Preserve existing JSON if source has no streams
           if updated == 0:
-              print("No valid streams. Keeping previous JSON.")
+              print(
+                  "No usable streams found. "
+                  "Keeping previous JSON."
+              )
               raise SystemExit(0)
 
-          # Remove old public folder and generated playlists
+          # Remove old public folder and its contents
           old_public = Path("public")
 
           if old_public.exists():
               shutil.rmtree(old_public)
+              print("Removed old public folder.")
 
-          # Generate JSON directly in repository root
+          # Remove old generated playlist folders
+          # identified by containing index.m3u8
+          for playlist in Path(".").rglob("index.m3u8"):
+
+              if ".git" in playlist.parts:
+                  continue
+
+              folder = playlist.parent
+
+              if folder.exists():
+                  shutil.rmtree(folder)
+                  print("Removed:", folder)
+
+          # Generate JSON in repository root
           output = Path("fancode.json")
 
           output.write_text(
@@ -166,16 +215,18 @@ jobs:
               encoding="utf-8"
           )
 
+          print("--------------------------------")
           print("Generated:", output)
           print("FanCode JSON update completed!")
           PY
 
+      # Commit JSON and delete old generated files
       - name: Commit Updated Files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A -- fancode.json public/
+          git add -A
 
           if ! git diff --cached --quiet; then
             git commit -m "Update FanCode JSON"
