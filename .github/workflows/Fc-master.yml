@@ -26,7 +26,7 @@ jobs:
 
       - name: Generate Master Playlists
         env:
-          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
         run: |
           python - <<'PY'
           import os
