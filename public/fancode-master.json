@@ -1,9 +1,9 @@
 {
   "name": "FanCode Live Matches API",
-  "updatedAt": "5/11/2026, 10:27:15 pm",
+  "updatedAt": "5/11/2026, 10:39:22 pm",
   "total_matches": 39,
-  "live_matches": 3,
-  "upcoming_matches": 36,
+  "live_matches": 2,
+  "upcoming_matches": 37,
   "matches": [
     {
       "category": "Tennis",
@@ -15,8 +15,8 @@
       "image": "https://www.fancode.com/skillup-uploads/cms-media/Rolex-Paris-Masters_fc-web.jpg",
       "language": "ENGLISH",
       "streams": {
-        "primary": "https://fcodexfd.dpdns.org/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
-        "fancode_cdn": "https://fcodexfd.dpdns.org/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
+        "primary": "https://fancode.droozy.workers.dev/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
+        "fancode_cdn": "https://fancode.droozy.workers.dev/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
         "fancode_bd_cdn": "https://bd-mc-flive.fancode.com/mumbai/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
         "fancode_np_cdn": "https://np-mc-flive.fancode.com/mumbai/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
         "fancode_lk_cdn": "https://lk-mc-flive.fancode.com/mumbai/4250559_english_hls_cc6d0bad3541603_1ta-di_h264/index.m3u8",
@@ -33,29 +33,11 @@
       "image": "https://www.fancode.com/skillup-uploads/cms-media/Rolex-Paris-Masters_fc-web.jpg",
       "language": "ENGLISH",
       "streams": {
-        "primary": "https://fcodexfd.dpdns.org/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
-        "fancode_cdn": "https://fcodexfd.dpdns.org/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
+        "primary": "https://fancode.droozy.workers.dev/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
+        "fancode_cdn": "https://fancode.droozy.workers.dev/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
         "fancode_bd_cdn": "https://bd-mc-flive.fancode.com/mumbai/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
         "fancode_np_cdn": "https://np-mc-flive.fancode.com/mumbai/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
         "fancode_lk_cdn": "https://lk-mc-flive.fancode.com/mumbai/4250560_english_hls_bfc9da6b9213120_1ta-di_h264/index.m3u8",
-        "backup": {}
-      }
-    },
-    {
-      "category": "Tennis",
-      "title": "Court 2 [English]",
-      "tournament": "ATP Masters - Rolex Paris Masters 2026",
-      "match_id": "4250561",
-      "status": "LIVE",
-      "startTime": "03:30:00 PM 05-11-2026",
-      "image": "https://www.fancode.com/skillup-uploads/cms-media/Rolex-Paris-Masters_fc-web.jpg",
-      "language": "ENGLISH",
-      "streams": {
-        "primary": "https://fcodexfd.dpdns.org/4250561_english_hls_fb1c637ed552842_1ta-di_h264/index.m3u8",
-        "fancode_cdn": "https://fcodexfd.dpdns.org/4250561_english_hls_fb1c637ed552842_1ta-di_h264/index.m3u8",
-        "fancode_bd_cdn": "https://bd-mc-flive.fancode.com/mumbai/4250561_english_hls_fb1c637ed552842_1ta-di_h264/index.m3u8",
-        "fancode_np_cdn": "https://np-mc-flive.fancode.com/mumbai/4250561_english_hls_fb1c637ed552842_1ta-di_h264/index.m3u8",
-        "fancode_lk_cdn": "https://lk-mc-flive.fancode.com/mumbai/4250561_english_hls_fb1c637ed552842_1ta-di_h264/index.m3u8",
         "backup": {}
       }
     },
@@ -697,6 +679,24 @@
       "status": "UPCOMING",
       "startTime": "02:10:00 PM 07-11-2026",
       "image": "https://www.fancode.com/skillup-uploads/cms-media/4249854_53101_MLC_SYW_fc-Web_1792223294363.jpg",
+      "language": "ENGLISH",
+      "streams": {
+        "primary": "",
+        "fancode_cdn": "UNAVAILABLE",
+        "fancode_bd_cdn": "UNAVAILABLE",
+        "fancode_np_cdn": "UNAVAILABLE",
+        "fancode_lk_cdn": "UNAVAILABLE",
+        "backup": {}
+      }
+    },
+    {
+      "category": "Football",
+      "title": "Bam Khatoon FC vs Ayeyawady FC Women",
+      "tournament": "AFC Women's Champions League 2026-27",
+      "match_id": "4250253",
+      "status": "UPCOMING",
+      "startTime": "06:00:00 PM 07-11-2026",
+      "image": "https://www.fancode.com/skillup-uploads/cms-media/Football_FC-Web.png",
       "language": "ENGLISH",
       "streams": {
         "primary": "",
