@@ -1,0 +1,158 @@
+
+name: JSON to M3U Converter
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Convert JSON to M3U
+        env:
+          JSON_URL: ${{ secrets.JSON_URL }}
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import re
+          import os
+          from pathlib import Path
+
+          JSON_URL = os.environ.get("JSON_URL")
+          OUTPUT = "events.m3u"
+
+          if not JSON_URL:
+              raise ValueError("JSON_URL secret is missing!")
+
+          print("Downloading JSON source...")
+
+          req = urllib.request.Request(
+              JSON_URL,
+              headers={"User-Agent": "Mozilla/5.0"}
+          )
+
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = json.loads(response.read().decode("utf-8"))
+
+          events = data.get("events", [])
+
+          if not isinstance(events, list):
+              raise ValueError("Invalid JSON: events must be a list")
+
+          playlist = ["#EXTM3U"]
+          converted = 0
+
+          def clean(value):
+              return str(value or "").replace("\r", " ").replace("\n", " ").strip()
+
+          def safe_attr(value):
+              return clean(value).replace('"', "'")
+
+          for event in events:
+              event_title = clean(event.get("title")) or "Unknown Event"
+              category = clean(event.get("cat")) or "Live Events"
+
+              event_info = event.get("event") or {}
+              logo = clean(event_info.get("logo"))
+
+              streams = event.get("streams", [])
+
+              if not isinstance(streams, list):
+                  continue
+
+              for stream in streams:
+                  if not isinstance(stream, dict):
+                      continue
+
+                  url = clean(stream.get("link"))
+                  if not url:
+                      continue
+
+                  stream_title = clean(stream.get("title"))
+
+                  channel_name = (
+                      f"{event_title} - {stream_title}"
+                      if stream_title else event_title
+                  )
+
+                  stream_type = clean(stream.get("type"))
+                  api = clean(stream.get("api"))
+
+                  playlist.append(
+                      f'#EXTINF:-1 tvg-logo="{safe_attr(logo)}" '
+                      f'group-title="{safe_attr(category)}",'
+                      f'{channel_name}'
+                  )
+
+                  if stream_type == "7":
+                      playlist.append(
+                          "#KODIPROP:inputstream=inputstream.adaptive"
+                      )
+                      playlist.append(
+                          "#KODIPROP:inputstream.adaptive.manifest_type=mpd"
+                      )
+
+                      if api and ":" in api:
+                          kid, key = api.split(":", 1)
+                          kid = kid.strip()
+                          key = key.strip()
+
+                          if (
+                              re.fullmatch(r"[0-9a-fA-F]+", kid)
+                              and re.fullmatch(r"[0-9a-fA-F]+", key)
+                              and len(kid) % 2 == 0
+                              and len(key) % 2 == 0
+                          ):
+                              playlist.append(
+                                  "#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey"
+                              )
+                              playlist.append(
+                                  f"#KODIPROP:inputstream.adaptive.license_key={kid}:{key}"
+                              )
+                          else:
+                              print(f"Invalid ClearKey: {channel_name}")
+
+                  playlist.append(url)
+                  converted += 1
+
+          if converted == 0:
+              raise ValueError("No streams found. Playlist not generated.")
+
+          Path(OUTPUT).write_text(
+              "\n".join(playlist) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Successfully converted {converted} streams.")
+          print(f"Generated: {OUTPUT}")
+          print(f"Total events: {len(events)}")
+          PY
+
+      - name: Commit Updated Playlist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add events.m3u
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update events M3U playlist"
+            git push
+          else
+            echo "No playlist changes detected."
+          fi
