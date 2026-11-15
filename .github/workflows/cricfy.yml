@@ -1,4 +1,3 @@
-
 name: JSON to M3U Converter
 
 on:
@@ -34,7 +33,7 @@ jobs:
           from pathlib import Path
 
           JSON_URL = os.environ.get("JSON_URL")
-          OUTPUT = "events.m3u"
+          OUTPUT = "live-events.m3u"
 
           if not JSON_URL:
               raise ValueError("JSON_URL secret is missing!")
