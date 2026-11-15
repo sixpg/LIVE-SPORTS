@@ -65,11 +65,17 @@ jobs:
 
           for event in events:
               event_title = clean(event.get("title")) or "Unknown Event"
-              category = clean(event.get("cat")) or "Live Events"
 
               event_info = event.get("event") or {}
-              logo = clean(event_info.get("logo"))
 
+              # Categorise using event name, then category, then title
+              category = (
+                  clean(event_info.get("name"))
+                  or clean(event_info.get("category"))
+                  or event_title
+              )
+
+              logo = clean(event_info.get("logo"))
               streams = event.get("streams", [])
 
               if not isinstance(streams, list):
@@ -139,8 +145,8 @@ jobs:
           )
 
           print(f"Successfully converted {converted} streams.")
-          print(f"Generated: {OUTPUT}")
           print(f"Total events: {len(events)}")
+          print("Generated live-events.m3u")
           PY
 
       - name: Commit Updated Playlist
@@ -148,7 +154,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add events.m3u
+          git add live-events.m3u
 
           if ! git diff --cached --quiet; then
             git commit -m "Update events M3U playlist"
